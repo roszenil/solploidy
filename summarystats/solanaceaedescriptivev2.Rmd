@@ -1,0 +1,102 @@
+---
+title: "Descriptive analysis of Solanaceae"
+author: "Rosana Zenil-Ferguson"
+date: "4/20/2018"
+output:
+  html_document: default
+  pdf_document: default
+---
+```{r,error=FALSE, message=FALSE, warning=FALSE}
+library("knitr")
+setwd('~/Dropbox/solploidy/basicdata')
+library("ape")
+library("phytools")
+library("treeplyr")
+
+solanaceae.tree<-read.tree("solanaceae2013.tre")
+
+
+#idnumber, source,fullname, genus, species,cultivarhybrid,csomenumber,lifehistoryclean, ploidy #selfincomp, ploidybyZF
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
+
+species<-unique(solanaceae.allrecords$fullname)
+total.species<-length(species)# 2278 total species
+genera<-unique(solanaceae.allrecords$genus)
+total.genera<-length(genera)#97 genera
+
+Mode <- function(x) {
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+
+mode.csome<-rep(0,total.species)
+min.csome<-rep(0,total.species)
+mode.ploidy<-rep(0,total.species)
+min.ploidy<-rep(0,total.species)
+self.incomp<-rep(0,total.species)
+life.hist<-rep(0,total.species)
+
+for (i in 1:total.species){
+  index<-which(solanaceae.allrecords$fullname==species[i])
+  aux1<- solanaceae.allrecords$csomenumber[index]
+  if(all(is.na(aux1))){
+    mode.csome[i]<-NA
+    min.csome[i]<-NA
+  }else{
+    mode.csome[i]<-min(Mode(aux1))
+    min.csome[i]<-min(aux1,na.rm=TRUE)
+  }
+  aux2<- solanaceae.allrecords$ploidy[index]
+  if(all(is.na(aux2))){
+    mode.ploidy[i]<-NA
+    min.ploidy[i]<-NA
+  }else{
+    mode.ploidy[i]<-min(Mode(aux2))
+    min.ploidy[i]<-min(aux2,na.rm=TRUE)
+  }
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]
+}
+
+
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+
+per.genus.counts<-list()
+per.genus.table<-list()
+per.genus.countploidy<-list()
+per.genus.ploidy<-list()
+for(j in 1:total.genera){
+  index<-which(solanaceae.allrecords$genus==genera[j])
+  per.genus.counts[[j]]<-data.frame(species=solanaceae.allrecords$fullname[index], csome.number=solanaceae.allrecords$csomenumber[index])
+  per.genus.table[[j]]<-table(per.genus.counts[[j]]$species, per.genus.counts[[j]]$csome.number)
+  per.genus.countploidy[[j]]<-data.frame(species=solanaceae.allrecords$fullname[index], ploidy=solanaceae.allrecords$ploidy[index])
+   per.genus.ploidy[[j]]<-table(per.genus.countploidy[[j]]$species, per.genus.countploidy[[j]]$ploidy)
+}
+names(per.genus.counts)<-genera
+names(per.genus.countploidy)<-genera
+#Bar plots that show the variance of chromosome numbers per genus
+
+for(j in 1:length(genera)){
+  
+  aux1<-colnames(per.genus.table[[j]])
+  if(length(aux1)>0){
+  #print(per.genus.table[[j]])
+  #print(kable(per.genus.table[[j]],format = "markdown"))
+  #kable(aux2,format = "markdown")
+  barplot(per.genus.table[[j]],main=names(per.genus.counts)[j],border="white")
+  }
+  aux2<-colnames(per.genus.ploidy[[j]])
+  if(length(aux2)>0){
+  #print(kable(per.genus.countploidy[[j]],format = "markdown"))
+  #kable(aux2,format = "markdown")
+  barplot(per.genus.ploidy[[j]],main=names(per.genus.countploidy)[j],border="white")
+  }
+  }
+
+
+
+
+
+
+
+```

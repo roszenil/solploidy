@@ -1,0 +1,417 @@
+library("ape")
+50000/26
+5000/26
+?install.packages
+library
+?library
+setwd('~/Dropbox/solploidy')
+library("ape")
+library("phytools")
+solanaceae.tree<-read.tree("solanaceae2013.tre")
+solanaceaet.tree
+solanaceae.tree
+solanum.sarkinen<-read.tree(file="solanumbeast.tre")
+solanum.sarkinen
+solanaceae.tree<-read.tree("solanaceae2013.tre")
+solanaceae.allrecords<-read.csv("solanaceae.records")
+?read.csv
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",",stringsAsFactors=FALSE)
+head(solanaceae.allrecords)
+total.species<-unique(solanaceae.allrecords$fullname)
+length(total.species)
+total.genus<-unique(solanaceae.allrecords$genus)
+length(total.genus)
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2278 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera
+i<-1
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)
+index<-which(solanaceae.allrecords$fullname==species[i])
+index
+aux1<- solanaceae.allrecords$csomenumber[index]
+aux1
+mode.csome[i]<-min(Mode(aux1))
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}
+mode.csome[i]<-min(Mode(aux1))
+mode.csome[i]
+min.csome[i]<-min(aux1)
+min.csome[i]
+min.csome[i]<-min(aux1,rm.NA=TRUE)
+min.csome[i]
+min.csome[i]
+min.csome[i]<-min(aux1,rm.NA=TRUE)
+min.csome[i]
+min.csome[i]<-min(aux1,na.rm=TRUE)
+min.csome[i]
+aux2<- solanaceae.allrecords$ploidy[index]
+mode.ploidy[i]<-min(Mode(aux2))
+mode.ploidy[i]
+Mode(aux2)
+min.ploidy[i]<-min(aux2,na.rm=TRUE)
+min.ploidy[i]
+self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]
+elf.incomp[i]
+self.incomp[i]
+life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]
+life.hist[i]
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+data.frame(species,mode.csome,min.csome,mode.ploidy,min.ploidy,self.incomp.life.hist)
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+warnings()
+data.frame(species,mode.csome,min.csome,mode.ploidy,min.ploidy,self.incomp,life.hist)
+simplified.solanaceae<-data.frame(species,mode.csome,min.csome,mode.ploidy,min.ploidy,self.incomp,life.hist)
+head(simplified.solanaceae)
+i<-2
+index<-which(solanaceae.allrecords$fullname==species[i])
+index
+aux1<- solanaceae.allrecords$csomenumber[index]
+aux1
+mode.csome[i]<-min(Mode(aux1))
+min.csome[i]<-min(aux1,na.rm=TRUE)
+min.csome
+min.csome[i]<-min(aux1,na.rm=TRUE)
+min.csome
+min.csome[i]
+mode.csome[i]
+aux2<- solanaceae.allrecords$ploidy[index]
+aux2
+or (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+simplified.solanaceae<-data.frame(species,mode.csome,min.csome,mode.ploidy,min.ploidy,self.incomp,life.hist)
+head(simplified.solanaceae)
+simplified.solanaceae
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",",stringsAsFactors=FALSE)
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2278 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
+#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+simplified.solanaceae
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",",stringsAsFactors=FALSE)
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2278 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
+#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+head(simplified.solanaceae)
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",")
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2278 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
+#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+head(simplified.solanaceae)
+head(solanaceae.allrecords)
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",")
+head(solanaceae.allrecords)
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=TRUE)
+head(solanaceae.allrecords)
+?read.csv
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="NA")
+head(solanaceae.allrecords)
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="NA")
+head(solanaceae.allrecords)
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=TRUE, na.strings="NA")
+solanaceae.allrecords
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=TRUE, na.strings="NA")
+head(solanaceae.allrecords)
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="NA")
+head(solanaceae.allrecords)
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings=NA)
+head(solanaceae.allrecords)
+solanaceae.allrecords<-read.csv("solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
+head(solanaceae.allrecords)
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2278 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
+#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy.mode.ploidy)
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+head(simplified.solanaceae)
+per.genus.counts<-list()
+per.genus.table<-list()
+j=1
+index<-which(solanaceae.allrecords$genus==genera[j])
+index<-which(solanaceae.allrecords$genus==genera[j])
+index
+per.genus.counts[[j]]<-data.frame(species=solanaceae.allrecords$species[index], csome.number=solanacea.allrecordst$csomenumber[index])
+data.frame(species=solanaceae.allrecords$species[index], csome.number=solanacea.allrecords$csomenumber[index])
+per.genus.counts[[j]]<-data.frame(species=solanaceae.allrecords$species[index], csome.number=solanaceae.allrecords$csomenumber[index])
+per.genus.counts[[j]]
+per.genus.counts[[j]]<-data.frame(species=solanaceae.allrecords$fullname[index], csome.number=solanaceae.allrecords$csomenumber[index])
+per.genus.counts[[j]]
+per.genus.table[[j]]<-table(per.genus.counts[[j]]$species, per.genus.counts[[j]]csome.number)
+per.genus.table[[j]]<-table(per.genus.counts[[j]]$species, per.genus.counts[[j]]$csome.number)
+per.genus.table[[j]]
+per.genus.counts<-list()#
+per.genus.table<-list() #
+for(j in 1:total.genera){#
+	index<-which(solanaceae.allrecords$genus==genera[j])#
+	per.genus.counts[[j]]<-data.frame(species=solanaceae.allrecords$fullname[index], csome.number=solanaceae.allrecords$csomenumber[index])#
+per.genus.table[[j]]<-table(per.genus.counts[[j]]$species, per.genus.counts[[j]]$csome.number)#
+}#
+names(per.genus.counts)<-genera
+barplot(per.genus.table[[293]])
+barplot(per.genus.table[[3]])
+barplot(per.genus.table[[20]])
+barplot(per.genus.table[[3]])
+barplot(per.genus.table[[2]])
+barplot(per.genus.table[[1]])
+barplot(per.genus.table[[3]])
+names(per.genus.counts)
+solanaceae.tree<-read.tree("solanaceae2013.tre")
+plotTree(solanaceae.tree,plot=FALSE,type="fan")
+plotTree(solanaceae.tree,plot=FALSE,type="fan",cex=0.96)
+plotTree(solanaceae.tree,plot=FALSE,type="fan",cex=0.05)
+plotTree(solanaceae.tree,plot=FALSE,type="fan",cex=0.05)
+plotTree(solanaceae.tree,plot=FALSE,type="fan",fsize=0.05)
+plotTree(solanaceae.tree,plot=FALSE,type="fan",fsize=0.05,lwd=1)
+matched<-make.treedata(solanaceae.tree,simplified.solanaceae, name_column="fullname")
+library("treeplyr")
+matched<-make.treedata(solanaceae.tree,simplified.solanaceae, name_column="fullname")
+matched<-make.treedata(solanaceae.tree,simplified.solanaceae, name_column="species")
+matched
+which(matched$min.ploidy==NA)
+which(matched$dat$min.ploidy==NA)
+which(matched$dat$min.ploidy==NA)
+which(matched$dat$3[]==NA)
+which(matched$dat[,3]==NA)
+which(matched$dat[,3]=="NA")
+matched$dat[,3]
+which(is.na(matched$dat[,3])==TRUE)
+no.ploidy=which(is.na(matched$dat[,3])==TRUE)
+length(no.ploidy)
+plotTree(matched$phy,type="fan",fsize=0.1)
+plotTree(matched$phy,type="fan",fsize=0.1,lwd=1)
+head(simplified.solanaceae)
+no.csine=which(is.na(matched$dat[,1])==TRUE) #283
+length(no.csine)
+boxplot(matched$dat[,1])
+boxplot(matched$dat[,1])
+hist(matched$dat[,1])
+hist(as.numeric(matched$dat[,1]))
+no.si<-which(is.na(matched$dat[,6])==TRUE)
+length(no.si)
