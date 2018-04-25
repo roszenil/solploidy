@@ -106,6 +106,8 @@ matched2<-make.treedata(solanaceae.tree, csomefreq2, name_column="taxa")
 csomeseriesdat2<-data.frame(matched2$dat)
 row.names(csomeseriesdat2)<-matched2$phy$tip.label
 
+write.tree(matched2$phy,file="~/Dropbox/solploidy/csomeseries/soltreecsometaxa.tre")
+write.csv(csomeseriesdat2,file="~/Dropbox/solploidy/csomeseries/soldatacsometaxa.csv")
 
 
 ##TRYING TO PLOT THE DATA BUT NOT READY YET
