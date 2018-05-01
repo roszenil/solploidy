@@ -12,7 +12,7 @@
 
 # analysis settings
 analysis_name = "sol"
-rep = 1
+#rep = 1
 base_dir = ""
 mcmc_iterations = 2500
 burnin = 0
@@ -20,6 +20,7 @@ sample_freq = 1
 mi = 1
 max_chromo = 94
 total_species = 846 # TODO get the correct value
+setOption("useScaling", "true")
 
 rediploid = TRUE
 sample_ancestral_state = TRUE
