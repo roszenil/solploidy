@@ -55,14 +55,51 @@ for (i in 1:total.species){
 #Simplified contains summary stats for each spces
 simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
 
-#Matching for everything
-matched<-make.treedata(solanaceae.tree,simplified.solanaceae, name_column="species"). #846
+no.ploidy=which(is.na(simplified.solanaceae$mode.ploidy)==TRUE) #1366
+no.csome=which(is.na(simplified.solanaceae$mode.csome)==TRUE) #1248
+no.si<-which(is.na(simplified.solanaceae$self.incomp)==TRUE)#1749
 
-no.ploidy=which(is.na(matched$dat[,3])==TRUE) #283
-no.csome=which(is.na(matched$dat[,1])==TRUE) #253
-no.si<-which(is.na(matched$dat[,6])==TRUE)#351
-plotTree(matched$phy,type="fan",fsize=0.1,lwd=1)
-plotTree(matched$phy,type="fan",fsize=0.1,lwd=1)
+####Creating dataset with with ploidy and selfincompatibility info that matches the tree results in 220 species
+noploidyandsi<-union(no.ploidy, no.si)#1960 without ploidy or selfincompatibility
+#Dataset for all solanaceae that have ploidy and self incompatibility308 species
+ploidysi.solanaceae<-simplified.solanaceae[-c(noploidyandsi),]
+
+#Matching for everything
+matched<-make.treedata(solanaceae.tree,ploidysi.solanaceae, name_column="species") #220 out of 308 that match the tree
+
+ploidysi.dataset<-data.frame(matched$dat)
+row.names(ploidysi.dataset)<-matched$phy$tip.label
+ploidysi.tree<-matched$phy
+plotTree(ploidysi.tree,type="fan",fsize=0.4,lwd=1)
+a<-hist(ploidysi.dataset$mode.ploidy)
+barplot(ploidysi.dataset$self.incomp)
+
+write.tree(ploidysi.tree,file="~/Dropbox/solploidy/basicdata/ploidysi.tre")
+write.table(ploidysi.dataset,file="~/Dropbox/solploidy/basicdata/ploidysi.txt",sep=',',row.names=TRUE, col.names=TRUE)
+#######################
+####Creating dataset with with ploidy only that matches the tree results
+
+ploidy.solanaceae<-simplified.solanaceae[-c(no.ploidy),]
+
+#Matching for everything
+matched<-make.treedata(solanaceae.tree,ploidy.solanaceae, name_column="species") #423
+
+ploidy.dataset<-data.frame(matched$dat)
+row.names(ploidy.dataset)<-matched$phy$tip.label
+ploidy.tree<-matched$phy
+plotTree(ploidy.tree,type="fan",fsize=0.2,lwd=1)
+a<-hist(ploidy.dataset$mode.ploidy)
+
+write.tree(ploidy.tree,file="~/Dropbox/solploidy/basicdata/ploidy.tre")
+write.nexus(ploidy.tree, file="~/Dropbox/solploidy/basicdata/ploidy.nex")
+tip.names<-ploidy.tree$tip.labels
+write.table(ploidy.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=FALSE, col.names=TRUE)
+aux1<-which(ploidy.dataset$mode.ploidy==2)#360 diploids
+aux<-which(ploidy.dataset$mode.ploidy!=2)#63 polyploids 14.8% of the sample
+binary.var<-rep(1,423) 
+binary.var[aux1]=0
+write.table(binary.var,file="~/Dropbox/solploidy/basicdata/binaryploidy.txt",sep=',',row.names=FALSE, col.names=TRUE)
+
 ###########
 
 
