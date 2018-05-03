@@ -1,0 +1,80 @@
+\documentclass[11pt]{article}
+\usepackage{evolution}
+
+\begin{document}
+
+%--------------------------------------------------
+% Titlepage
+%--------------------------------------------------
+
+\begin{center}
+    \textbf{TITLE}
+\end{center}
+
+\vfill
+
+\noindent
+Someone's Name,%
+\endnote{Someone's Address}
+%
+and
+Another Name%
+\endnote{Another Address}
+
+\vfill
+
+\theendnotes
+
+\noindent
+Author for correspondence: XXX
+
+\vfill
+
+\noindent
+\textit{Running head:} XXX
+
+\vfill
+
+\noindent
+\textit{Keywords:} 
+XXX,
+YYY
+
+\vfill
+
+\linenumbers
+
+%--------------------------------------------------
+% Abstract
+%--------------------------------------------------
+
+\clearpage
+\input{abstract}
+
+%--------------------------------------------------
+% Main text
+%--------------------------------------------------
+
+\clearpage
+\input{introduction}
+\input{methods}
+\input{results}
+\input{discussion}
+
+%--------------------------------------------------
+\section{Acknowledgements}
+%--------------------------------------------------
+
+%--------------------------------------------------
+% References
+%--------------------------------------------------
+
+\clearpage
+
+\setstretch{1}
+\bibliography{refs}
+\bibliographystyle{evolution}
+\setstretch{\stretchby}
+
+
+\end{document}
