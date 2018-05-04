@@ -3,7 +3,7 @@
 # BiSSE diploid-polyploid solanaceae
 #
 # authors: Rosana Zenil-Ferguson modified from the BiSSE tutorial @RevBayes
-# last modified: 05/01/2018
+# last modified: 05/04/2018
 #########################################################################################################
 #######################
 # Reading in the Data #
@@ -12,8 +12,8 @@
 setOption("useScaling","true")
 NUM_STATES = 2
 ### Read in the data
-observed_phylogeny <- readTrees("ploidy.nex")[1]
-data <- readCharacterData("binaryploidy.txt")
+observed_phylogeny <- readTrees("basicdata/ploidy.nex")[1]
+data <- readCharacterDataDelimited("basicdata/binaryploidy.csv",stateLabels=2,type="NaturalNumbers",delimiter=",",headers=TRUE)
 
 # Get some useful variables from the data. We need these later on.
 taxa <- observed_phylogeny.taxa()
@@ -128,7 +128,9 @@ mymodel = model(rate_matrix)
 ### set up the monitors that will output parameter values to file and screen
 monitors[++mni] = mnFile(filename="output/BiSSE_polydip.trees", printgen=1, timetree)
 monitors[++mni] = mnModel(filename="output/BiSSE_polydip.log", printgen=1)
-monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="Standard", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_polydip.log")
+##This monitor was the one giving me trouble type has to be the same that data, however I'm not hundred percent sure whether tree should be the stochastic tree assigned by the clamp or the observed_phylogeny. Will and Sebastian have different inputs
+
+monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="output/anc_states_BiSSE_polydip.log")
 monitors[++mni] = mnScreen(printgen=10, rate_12, rate_21, speciation, extinction)
 
 
