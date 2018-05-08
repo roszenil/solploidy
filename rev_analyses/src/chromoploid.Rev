@@ -19,11 +19,11 @@ burnin = 0
 sample_freq = 1
 mi = 1
 max_chromo = 94
-total_species = 846 # TODO get the correct value
+total_species = 2700
 setOption("useScaling", "true")
 
 rediploid = TRUE
-sample_ancestral_state = TRUE
+sample_ancestral_states = TRUE
 sample_stochastic_maps = FALSE
 
 
