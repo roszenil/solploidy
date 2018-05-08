@@ -1,0 +1,314 @@
+library("ape")
+50000/26
+5000/26
+?install.packages
+library
+?library
+setwd('~/Dropbox/solploidy/summarystats')#
+library("ape")#
+library("phytools")#
+library("treeplyr")#
+solanaceae.tree<-read.tree("solanaceae2013.tre")
+solanaceae.tree<-read.tree("~/Dropbox/solploidy/basicdata/solcorrecttip.tre")
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidy/basicdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
+head(solanaceae.allrecords)
+species<-unique(solanaceae.allrecords$fullname)
+species
+total.species<-length(species)# 2278 total species
+total.species
+genera<-unique(solanaceae.allrecords$genus)
+total.genera<-length(genera)
+total.genera
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+head(simplified.solanaceae)
+matched<-make.treedata(solanaceae.tree,simplified.solanaceae, name_column="species")
+matched
+no.csome=which(is.na(matched$dat[,1])==TRUE) #257
+no.csome
+length(no.csome)
+max.chrom<-rep(0,total.species)
+max.chrom<-rep(0,total.species)#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  max.chrom[i]<-length(aux1)#
+  }
+max.chrom
+max(max.chrom)
+which.max(max.chrom)
+solanaceae.allrecords$ullname[1807,]
+solanaceae.allrecords$fullname[1807]
+i=1807
+index<-which(solanaceae.allrecords$fullname==species[i])
+index
+aux1<- solanaceae.allrecords$csomenumber[index]
+aux1
+length(aux1)
+table(aux1)
+a<-table(aux1)
+a
+a[1,1]
+a[[1]]
+a[[2]]
+names(a)
+as.numeric(names(a))
+a[[]]
+a[[1,]]
+a[[1:5]]
+str(a)
+a$aux1
+a
+as.numeric(a)
+max.chrom<-rep(0,total.species)#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- table(solanaceae.allrecords$csomenumber[index])#
+  csomes<-as.numeric(names(aux1))#
+  freq<-as.numeric(aux1)#
+  max.chrom[i]<-length(csomes)#
+  }
+max.chrom
+max(max.chrom)
+max.chrom<-data.frame()
+max.chrom<-data.frame(ncols=16)
+max.chrom
+max.chrom<-data.frame("Name",rep(0,30))
+max.chrom
+max.chrom<-data.frame(cbind("Name",rep(0,30)))
+max.chrom
+datamat<-rep(0,30)
+datamat<-matrix(rep(0,30*total.species),ncols=30)
+datamat<-matrix(rep(0,30*total.species),ncol=30)
+datamat
+datamat<-matrix(rep(0,30*total.species),ncol=30)#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- table(solanaceae.allrecords$csomenumber[index])#
+  csomes<-as.numeric(names(aux1))#
+  max.chrom<-length(csomes)#
+  if(max.chrom>0){#
+  datamat[i,1:length(csomes)]<-csomes#
+  freq<-as.numeric(aux1)#
+  datamat[i,16:(15+length(freq))]<-freq#
+  }#
+}
+datamat
+head(datamat)
+?data.frame
+csomefreq<-data.frame(species,datamat,stringsAsFactors=FALSE, row.names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15"))
+species
+total.species
+species
+csomefreq<-data.frame(species,datamat,stringsAsFactors=FALSE, row.names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15"))
+csomefreq<-data.frame(t(species),datamat,stringsAsFactors=FALSE, row.names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15"))
+size(datamat)
+dim(datamat)
+csomefreq<-data.frame(t(species),datamat,stringsAsFactors=FALSE )
+csomefreq<-data.frame(t(species),datamat,stringsAsFactors=FALSE col.names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15")
+csomefreq<-data.frame(t(species),datamat,stringsAsFactors=FALSE, col.names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15")
+csomefreq<-data.frame(t(species),datamat,stringsAsFactors=FALSE, col.names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15")
+csomefreq<-data.frame(t(species),datamat,stringsAsFactors=FALSE, col.names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15"))
+csomefreq<-data.frame(t(species),datamat,stringsAsFactors=FALSE, names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15"))
+csomefreq<-data.frame(t(species),datamat,stringsAsFactors=FALSE)
+head(csomefreq)
+csomefreq<-data.frame(species,datamat,stringsAsFactors=FALSE)
+head(csomefreq)
+names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15"))
+col.names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15"))
+csomefreq<-data.frame(species,datamat,stringsAsFactors=FALSE,col.names=c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15"))
+csomefreq<-data.frame(species,datamat,stringsAsFactors=FALSE)
+head(csomefreq)
+dim(csomefreq)
+names(csomefreq)<-c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15")
+head(csomefreq)
+datamat<-matrix(rep(NA,33*total.species),ncol=30)#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- table(solanaceae.allrecords$csomenumber[index])#
+  csomes<-as.numeric(names(aux1))#
+  max.chrom<-length(csomes)#
+  datamat[i, 32]<-max.chrom#
+  if(max.chrom>1){#
+  	datamat[i,33]<-1#
+  }#
+  if(max.chrom>0){#
+  datamat[i,1:length(csomes)]<-csomes#
+  freq<-as.numeric(aux1)#
+  datamat[i,16:(15+length(freq))]<-freq#
+  }#
+}
+datamat<-matrix(rep(NA,33*total.species),ncol=33)#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- table(solanaceae.allrecords$csomenumber[index])#
+  csomes<-as.numeric(names(aux1))#
+  max.chrom<-length(csomes)#
+  datamat[i, 32]<-max.chrom#
+  if(max.chrom>1){#
+  	datamat[i,33]<-1#
+  }#
+  if(max.chrom>0){#
+  datamat[i,1:length(csomes)]<-csomes#
+  freq<-as.numeric(aux1)#
+  datamat[i,16:(15+length(freq))]<-freq#
+  }#
+}
+csomefreq<-data.frame(species,datamat,stringsAsFactors=FALSE)#
+names(csomefreq)<-c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15","levels","chromseries")
+head(csomefreq)
+datamat<-matrix(rep(NA,32*total.species),ncol=32)#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- table(solanaceae.allrecords$csomenumber[index])#
+  csomes<-as.numeric(names(aux1))#
+  max.chrom<-length(csomes)#
+  datamat[i, 32]<-max.chrom#
+  if(max.chrom>1){#
+  	datamat[i,33]<-1#
+  }#
+  if(max.chrom>0){#
+  datamat[i,1:length(csomes)]<-csomes#
+  freq<-as.numeric(aux1)#
+  datamat[i,16:(15+length(freq))]<-freq#
+  }#
+}#
+#
+csomefreq<-data.frame(species,datamat,stringsAsFactors=FALSE)#
+names(csomefreq)<-c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15","levels","chromseries")
+datamat<-matrix(rep(NA,32*total.species),ncol=32)#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- table(solanaceae.allrecords$csomenumber[index])#
+  csomes<-as.numeric(names(aux1))#
+  max.chrom<-length(csomes)#
+  datamat[i, 31]<-max.chrom#
+  if(max.chrom>1){#
+  	datamat[i,32]<-1#
+  }#
+  if(max.chrom>0){#
+  datamat[i,1:length(csomes)]<-csomes#
+  freq<-as.numeric(aux1)#
+  datamat[i,16:(15+length(freq))]<-freq#
+  }#
+}#
+#
+csomefreq<-data.frame(species,datamat,stringsAsFactors=FALSE)#
+names(csomefreq)<-c("Taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15","levels","chromseries")
+head(csomefreq)
+which(csomefreq$chromseries==1)
+#Building table with species and csome number lists#
+datamat<-matrix(rep(NA,32*total.species),ncol=32)#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- table(solanaceae.allrecords$csomenumber[index])#
+  csomes<-as.numeric(names(aux1))#
+  max.chrom<-length(csomes)#
+  datamat[i, 31]<-max.chrom#
+  if(max.chrom>1){#
+  	datamat[i,32]<-1#
+  }#
+  if(max.chrom>0){#
+  datamat[i,1:length(csomes)]<-csomes#
+  freq<-as.numeric(aux1)#
+  datamat[i,16:(15+length(freq))]<-freq#
+  }#
+}#
+#
+csomefreq<-data.frame(species,datamat,stringsAsFactors=FALSE)#
+names(csomefreq)<-c("taxa","csome1","csome2","csome3","csome4","csome5","csome6","csome7","csome8","csome9","csome10","csome11","csome12","csome13","csome14","csome15","freq1","freq2","freq3","freq4","freq5","freq6","freq7","freq8","freq9","freq10","freq11","freq12","freq13","freq14","freq15","levels","chromseries")#
+#179 chromosome series taxa
+head(datamat)
+head(csomefreq)
+matched<-make.treedata(solanaceae.tree, csomefreq, name_column="taxa")
+matched
+no.csome=which(is.na(csomefreq$csome1)==TRUE)
+no.csome
+length(no.csome)
+dim(csomefreq
+)
+csomefreq2<-csomefreq[-no.csome,]
+dim(csomefreq)
+dim(csomefreq2)
+head(csomefreq2)
+matched<-make.treedata(solanaceae.tree, csomefreq2, name_column="taxa")
+matched
+matched1<-make.treedata(solanaceae.tree,csomefreq,name_column="taxa")
+matched1$phy
+846-593
+253/846
+matched1<-make.treedata(solanaceae.tree,csomefreq,name_column="taxa")
+matched1<-make.treedata(solanaceae.tree,csomefreq,name_column="taxa")
+matched2<-make.treedata(solanaceae.tree, csomefreq2, name_column="taxa")
+matched2
+head(matched2$dat)
+max(matched2$dat[,31])
+which.max(matched2$[,31])
+which.max(matched2$dat[,31])
+matched2$dat[,31]
+which.max(as.numeric(matched2$dat[,31]))
+which.max(matched2$dat[,31]==15)
+matched2$dat[347,]
+row.names(matched2$dat)<-matched2$phy$tip.labels
+head(matched2$dat)
+matched2$data
+matched2$dat
+csomeseriesdat<-matched2$dat
+csomeseriesdat
+csomeseriesdat<-data.frame(matched2$dat)
+csomeseriesdat
+row.names(csomeseriesdat)<-matched2$phy$tip.labels
+head(csomeseriesdat)
+matched2$phy$tip.labels
+row.names(csomeseriesdat)<-matched2$phy$tip.label
+matched2$phy$tip.label
+head(csomeseriesdat)
+which.max(matched2$dat[,31]==15)
+csomeseriesdat[347]
+csomeseriesdat[347,]
+write.tree(matched1$phy,file="~/Dropbox/solploidy/csomeseries/soltreealltaxa.tre")
+write.csv(csomeseriesdat1,file="~/Dropbox/solploidy/csomeseries/soldataalltaxa.csv",sep=',')
+csomeseriesdat1<-data.frame(matched1$dat)#
+row.names(csomeseriesdat1)<-matched1$phy$tip.label
+write.csv(csomeseriesdat1,file="~/Dropbox/solploidy/csomeseries/soldataalltaxa.csv")
+write.tree(matched2$phy,file="~/Dropbox/solploidy/csomeseries/soltreecsometaxa.tre")#
+write.csv(csomeseriesdat2,file="~/Dropbox/solploidy/csomeseries/soldatacsometaxa.csv")
+matched2<-make.treedata(solanaceae.tree, csomefreq2, name_column="taxa")#
+#
+csomeseriesdat2<-data.frame(matched2$dat)#
+row.names(csomeseriesdat2)<-matched2$phy$tip.label#
+#
+write.tree(matched2$phy,file="~/Dropbox/solploidy/csomeseries/soltreecsometaxa.tre")#
+write.csv(csomeseriesdat2,file="~/Dropbox/solploidy/csomeseries/soldatacsometaxa.csv")
