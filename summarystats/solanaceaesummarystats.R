@@ -91,12 +91,16 @@ plotTree(ploidy.tree,type="fan",fsize=0.2,lwd=1)
 a<-hist(ploidy.dataset$mode.ploidy)
 
 write.tree(ploidy.tree,file="~/Dropbox/solploidy/basicdata/ploidy.tre")
-tip.names<-ploidy.tree$tip.labels
+write.nexus(ploidy.tree, file="~/Dropbox/solploidy/basicdata/ploidy.nex")
+tip.names<-ploidy.tree$tip.label
 write.table(ploidy.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=FALSE, col.names=TRUE)
 aux1<-which(ploidy.dataset$mode.ploidy==2)#360 diploids
 aux<-which(ploidy.dataset$mode.ploidy!=2)#63 polyploids 14.8% of the sample
 binary.var<-rep(1,423) 
 binary.var[aux1]=0
+binary.var<-data.frame(binary.var)
+binary.table<-cbind(tip.names, binary.var)
+write.table(binary.table,file="~/Dropbox/solploidy/basicdata/binaryploidy.tsv",sep="\t",row.names=FALSE, col.names=FALSE)
 
 ###########
 
