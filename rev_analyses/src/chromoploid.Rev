@@ -156,12 +156,13 @@ for (i in 1:(max_chromo + 1)) {
     root_frequencies_prior[i] <- 1.0
 }
 for (i in (max_chromo + 2):(2 * (max_chromo + 1))) {
-    root_frequencies_prior[i] <- 0.01
+    #root_frequencies_prior[i] <- 0.01
+    root_frequencies_prior[i] <- 0.0
 }
-#root_frequencies <- simplex(root_frequencies_prior)
-root_frequencies ~ dnDirichlet(root_frequencies_prior)
-moves[mi++] = mvBetaSimplex(root_frequencies, alpha=0.5, weight=5)
-moves[mi++] = mvElementSwapSimplex(root_frequencies, weight=5)
+root_frequencies <- simplex(root_frequencies_prior)
+#root_frequencies ~ dnDirichlet(root_frequencies_prior)
+#moves[mi++] = mvBetaSimplex(root_frequencies, alpha=0.5, weight=5)
+#moves[mi++] = mvElementSwapSimplex(root_frequencies, weight=5)
 
 
 

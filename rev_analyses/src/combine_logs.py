@@ -7,7 +7,7 @@ import sys
 
 burnin = 10 # per trace
 sample_freq = 1 # number of iterations per sample
-n_runs = 10 # number of MCMC runs to combine
+n_runs = 20 # number of MCMC runs to combine
 models = ["sol"]
 
 csv.field_size_limit(sys.maxsize/2)
