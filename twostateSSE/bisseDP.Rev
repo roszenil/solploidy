@@ -152,7 +152,7 @@ mymcmc.run(generations=50000)
 ##############################
 
 
-anc_states = readAncestralStateTrace("output/anc_states_summaryBiSSE_polydip.log")
-anc_tree = ancestralStateTree(tree=observed_phylogeny, ancestral_state_trace_vector=anc_states, include_start_states=false, file="output/anc_states_summaryBiSSE_polydip.tree", burnin=0, summary_statistic="MAP", site=0)
+anc_states = readAncestralStateTrace("output/anc_states_BiSSE_polydip.log")
+anc_tree = ancestralStateTree(tree=observed_phylogeny, ancestral_state_trace_vector=anc_states, include_start_states=false, file="output/anc_states_summaryBiSSE_polydip.tree", burnin=1000000, summary_statistic="MAP", site=0)
 
 q()

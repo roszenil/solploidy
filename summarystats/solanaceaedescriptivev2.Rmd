@@ -2,13 +2,14 @@
 title: "Descriptive analysis of Solanaceae"
 author: "Rosana Zenil-Ferguson"
 date: "4/20/2018"
+#last modified 06/06/2018
 output:
   html_document: default
   pdf_document: default
 ---
 ```{r,error=FALSE, message=FALSE, warning=FALSE}
 library("knitr")
-setwd('~/Dropbox/solploidy/basicdata')
+setwd('~/Dropbox/solploidy')
 library("ape")
 library("phytools")
 library("treeplyr")
