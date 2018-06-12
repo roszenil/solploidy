@@ -70,12 +70,21 @@ matched<-make.treedata(solanaceae.tree,ploidysi.solanaceae, name_column="species
 ploidysi.dataset<-data.frame(matched$dat)
 row.names(ploidysi.dataset)<-matched$phy$tip.label
 ploidysi.tree<-matched$phy
-plotTree(ploidysi.tree,type="fan",fsize=0.4,lwd=1)
+plotTree(ploidysi.tree,type="fan",fsize=0.4,lwd=1) #220 tips
 a<-hist(ploidysi.dataset$mode.ploidy)
 barplot(ploidysi.dataset$self.incomp)
 
-write.tree(ploidysi.tree,file="~/Dropbox/solploidy/basicdata/ploidysi.tre")
-write.table(ploidysi.dataset,file="~/Dropbox/solploidy/basicdata/ploidysi.txt",sep=',',row.names=TRUE, col.names=TRUE)
+### Generating tree and values for ploidy and self-incomp analyses
+write.nexus(ploidysi.tree,file="~/Dropbox/solploidy/basicdata/ploidysi.nex")
+aux1<-which(ploidysi.dataset$mode.ploidy>2)# 33 polyploids
+aux2<-which(ploidysi.dataset$mode.ploidy==2 & ploidysi.dataset$self.incomp=="SI") # 74 Self-Incompatible 
+threestate.var<-rep(0,220) 
+threestate.var[aux1]=1
+threestate.var[aux2]=2
+threestate.var<-data.frame(threestate.var)
+threestate.table<-cbind(ploidysi.tree$tip.label, threestate.var)
+
+write.csv(threestate.table,file="~/Dropbox/solploidy/basicdata/ploidysi.csv",row.names=FALSE)
 #######################
 ####Creating dataset with with ploidy only that matches the tree results
 
@@ -102,7 +111,24 @@ binary.var<-data.frame(binary.var)
 binary.table<-cbind(tip.names, binary.var)
 write.table(binary.table,file="~/Dropbox/solploidy/basicdata/binaryploidy.tsv",sep="\t",row.names=FALSE, col.names=FALSE)
 
-###########
+########### Data set with only self incompatibility
+
+si.solanaceae<-simplified.solanaceae[-c(no.si),]
+matched<-make.treedata(solanaceae.tree,si.solanaceae, name_column="species") #347
+si.dataset<-data.frame(matched$dat)
+row.names(si.dataset)<-matched$phy$tip.label
+si.tree<-matched$phy
+tip.names<-si.tree$tip.label
+plotTree(si.tree,type="fan",fsize=0.2,lwd=1)
+write.tree(si.tree,file="~/Dropbox/solploidy/basicdata/si.tre")
+write.nexus(si.tree, file="~/Dropbox/solploidy/basicdata/si.nex")
+aux1<-which(si.dataset$self.incomp=="SC")#231 self compatible taxa
+aux<-which(si.dataset$self.incomp=="SI")#116 self incompatible txa
+binary.var<-rep(1,347) 
+binary.var[aux1]=0
+binary.var<-data.frame(binary.var)
+binary.table<-cbind(tip.names, binary.var)
+write.csv(binary.table,file="~/Dropbox/solploidy/basicdata/binarysi.csv",row.names=FALSE)
 
 
 #Building a dataset with species and all of their csome numbers not only a single summary
