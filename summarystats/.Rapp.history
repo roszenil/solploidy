@@ -1,21 +1,59 @@
-library("ape")
-50000/26
-5000/26
-?install.packages
-library
-?library
-setwd('~/Dropbox/solploidy/summarystats')#
-library("ape")#
-library("phytools")#
-library("treeplyr")#
+#How many species, how many genera#
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2268 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
 #
-## Solanaceae time-tree with corrected names Sarkinen et al 2013#
-solanaceae.tree<-read.tree("~/Dropbox/solploidy/basicdata/solcorrecttip.tre")#
+#Calculating the mode(s)#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
 #
-# Dataset created by RZF from CCDB and independent records by EEG#
-#idnumber, source,fullname, genus, species,cultivarhybrid,csomenumber,lifehistoryclean, ploidy selfincomp, ploidybyZF, namechangedfrom#
-solanaceae.allrecords<-read.csv("~/Dropbox/solploidy/basicdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")#
+#Creating a very simple database with summary stats#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
 #
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}#
+#
+#Simplified contains summary stats for each spces#
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)#
+#
+norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]#
+### Matching tree with matching dataset if they have either ploidy or self-incomp information that is 550 species#
+##Just checking here that all data has either ploidy or breeding system info#
+##nor.ploidysi2<-which(is.na(norploidysi.solanaceae[,5])==TRUE & is.na(norploidysi.solanaceae[,6])==TRUE)#
+#
+matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #550#
+write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")
+which(matched$dat[,4]>2 & matched$dat[,5]=="SI")
+matched$dat[c( 365,366, 382, 398),]
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidy/basicdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
 #How many species, how many genera#
 species<-unique(solanaceae.allrecords$fullname)#
 total.species<-length(species)# 2268 total species#
@@ -61,171 +99,916 @@ for (i in 1:total.species){#
 #Simplified contains summary stats for each spces#
 simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
 head(simplified.solanaceae)
-#Matching for everything#
-matched<-make.treedata(solanaceae.tree,simplified.solanaceae, name_column="species"). #846
-#Matching for everything#
-matched<-make.treedata(solanaceae.tree,simplified.solanaceae, name_column="species") #846
-matched
-no.ploidy=which(is.na(matched$dat[,3])==TRUE) #283
-no.si<-which(is.na(matched$dat[,6])==TRUE)#351
-ploidyandsi<-c(setdiff(no.ploidy, no.si),intersect(no.ploidy,no.si))
-setdiff(no.ploidy, no.si)
-intersect(no.ploidy,no.si)
-ploidyandsi<-c(setdiff(no.ploidy, no.si),intersect(no.ploidy,no.si))
-length(ploidyandsi)
-?union
-union(no.ploidy, no.si)
-noploidyandsi<-union(no.ploidy, no.si)
-length(noploidyandsi)
-ploidysi.dataset<-matched$dat[-c(noploidyandsi)]
-ploidysi.dataset<-matched$dat[-c(noploidyandsi),]
-head(ploidysi.dataset)
-dim(ploidysi.dataset)
-head(simplified.solanaceae)
-no.ploidy=which(is.na(simplified.solanaceae$mode.ploidy[,3])==TRUE) #283
-no.ploidy=which(is.na(simplified.solanaceae$mode.ploidy)==TRUE) #283
-length(no.ploidy)
-no.csome=which(is.na(simplified.solanaceae$mode.csome==TRUE) #253
-no.csome=which(is.na(simplified.solanaceae$mode.csome)==TRUE) #253
-length(no.csome)
-no.si<-which(is.na(simplified.solanaceae$self.incomp)==TRUE)#351
-length(no.si)
-noploidyandsi<-union(no.ploidy, no.si)#413 without ploidy or selfincompatibility
-noploidyandsi
-length(2951)
-length(noploidyandsi)
-ploidysi.solanaceae<-simplified.solanaceae[-c(noploidyandsi),]
-head(ploidysi.solanaceae)
-matched<-make.treedata(solanaceae.tree,ploidysi.solanaceae, name_column="species") #846
-matched
-dim(simplified.solanaceae)
-2268-1960
-dim(ploidysi.solanaceae)
-plotTree(matched$phy,type="fan",fsize=0.1,lwd=1)
-row.names(ploidysi.dataset)<-matched$phy$tip.label
-ploidysi.dataset<-matched$dat
-row.names(ploidysi.dataset)<-matched$phy$tip.label
-ploidysi.dataset
-ploidysi.dataset<-data.frame(matched$dat)
-row.names(ploidysi.dataset)<-matched$phy$tip.label
-ploidysi.tree<-matched$phy
-plotTree(ploidysi.tree,type="fan",fsize=0.5,lwd=1)
-plotTree(ploidysi.tree,type="fan",fsize=0.4,lwd=1)
-head(ploidysi.dataset)
-?barplot
-hist(ploidysi.dataset$mode.ploidy)
-dim(simplified.solanaceae)
-plotTree(ploidysi.tree,type="fan",fsize=0.4,lwd=1)
-hist(ploidysi.dataset$mode.ploidy)
-a<-hist(ploidysi.dataset$mode.ploidy)
-a
-hist(ploiysi.dataset$self.incomp)
-hist(ploidysi.dataset$self.incomp)
-baplot(ploidysi.dataset$self.incomp)
-barplot(ploidysi.dataset$self.incomp)
-length(which(ploidysi.dataset$self.incomp==SI))
-length(which(ploidysi.dataset$self.incomp=="SI"))
-?write.table
-write.tree(ploidysi.tree,file="~/Dropbox/solploidy/basicdata/ploidysi.tre")
-write.table(csomeseriesdat2,file="~/Dropbox/solploidy/basicdata/ploidysi.txt",sep=',',row.names=TRUE, col.names=TRUE)
-write.table(ploidysi.dataset,file="~/Dropbox/solploidy/basicdata/ploidysi.txt",sep=',',row.names=TRUE, col.names=TRUE)
-ploidysi.solanaceae<-simplified.solanaceae[-c(no.ploidy),]
-ploidy.solanaceae<-simplified.solanaceae[-c(no.ploidy),]
-matched<-make.treedata(solanaceae.tree,ploidy.solanaceae, name_column="species") #220 out of 208 that match the tree
-matched
-ploidy.dataset<-data.frame(matched$dat)
-row.names(ploidy.dataset)<-matched$phy$tip.label
-ploidy.tree<-matched$phy
-plotTree(ploidy.tree,type="fan",fsize=0.4,lwd=1)
-plotTree(ploidy.tree,type="fan",fsize=0.2,lwd=1)
-hist(ploidy.dataset$mode.ploidy)
-a<-hist(ploidy.dataset$mode.ploidy)
-a
-a<-hist(ploidy.dataset$mode.ploidy)
-ploidy.dataset$mode.ploidy
-write.tree(ploidy.tree,file="~/Dropbox/solploidy/basicdata/ploidy.tre")
-write.table(ploidysi.dataset,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=TRUE, col.names=TRUE)
-write.table(ploidysi.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=TRUE, col.names=TRUE)
-ploidy.dataset<-data.frame(matched$dat)
-row.names(ploidy.dataset)<-matched$phy$tip.label
-ploidy.tree<-matched$phy
-write.tree(ploidy.tree,file="~/Dropbox/solploidy/basicdata/ploidy.tre")
-write.table(ploidysi.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=TRUE, col.names=TRUE)
-write.table(ploidysi.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=row.names(ploidy.dataset), col.names=TRUE)
-write.table(ploidysi.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=ploidy.tre$tip.labels, col.names=TRUE)
-write.table(ploidysi.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=ploidy.tree$tip.labels, col.names=TRUE)
-tip.names<-ploidy.tree$tip.labels
-write.table(ploidysi.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=tip.names, col.names=TRUE)
-write.table(ploidysi.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=FALSE, col.names=TRUE)
-write.table(ploidy.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=tip.names, col.names=TRUE)
-tip.names<-ploidy.tree$tip.labels
-write.table(ploidy.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=tip.names, col.names=TRUE)
-write.table(ploidy.dataset$mode.ploidy,file="~/Dropbox/solploidy/basicdata/ploidy.txt",sep=',',row.names=FALSE, col.names=TRUE)
-aux1<-which(ploidy.dataset$mode.ploidy==2)
-aux<-which(ploidy.dataset$mode.ploidy!=2)
-length(aux1)
-length(aux)
-binary.var<-rep(1,423)
-binary.var[aux1]=0
-binary.var
-sum(binary.var)
-63?423
-63/423
-binary.var<- t(binary.var)
-binary.var
-write.table(binary.var),file="~/Dropbox/solploidy/basicdata/binaryploidy.txt",sep=',',row.names=FALSE, col.names=TRUE)
-write.table(binary.var,file="~/Dropbox/solploidy/basicdata/binaryploidy.txt",sep=',',row.names=FALSE, col.names=TRUE)
-binary.var<-rep(1,423) #
-binary.var[aux1]=0
-write.table(binary.var,file="~/Dropbox/solploidy/basicdata/binaryploidy.txt",sep=',',row.names=FALSE, col.names=TRUE)
-?abline
-write.nexus(ploidy.tree, file="~/Dropbox/solploidy/basicdata/ploidy.nex")
-binary.var<-data.frame(binary.var)
-row.names(binary.var)<-tip.names
-write.csv(binary.var,file="~/Dropbox/solploidy/basicdata/binaryploidy.csv",sep=',',row.names=TRUE, col.names=TRUE)
-col.names=TRUE
-write.csv(binary.var,file="~/Dropbox/solploidy/basicdata/binaryploidy.csv",row.names=TRUE, col.names=TRUE)
-binary.var
-names(binary.var)<-tip.names
-binary.var
-tip.names<-ploidy.tree$tip.labels
-tip.names
-tip.names<-ploidy.tree$tip.label
-tip.names
-row.names(binary.var)<-tip.names
-binary.var
-write.csv(binary.var,file="~/Dropbox/solploidy/basicdata/binaryploidy.csv",row.names=TRUE, col.names=TRUE)
-write.table(binary.var,file="~/Dropbox/solploidy/basicdata/binaryploidy.tsv",sep=" ",row.names=TRUE, col.names=TRUE)
-write.table(binary.var,file="~/Dropbox/solploidy/basicdata/binaryploidy.txt",sep=" ",row.names=TRUE, col.names=TRUE)
-binary.var<-rep(1,423) #
-binary.var[aux1]=0#
-binary.var<-data.frame(binary.var)
-binary.table<-cbind(tip.labels, binary.var)
-binary.table<-cbind(tip.names, binary.var)
-binary.table
-write.table(binary.table,file="~/Dropbox/solploidy/basicdata/binaryploidy.tsv",sep="\t",row.names=FALSE, col.names=FALSE)
-max(nodeHeights(ploidy.tree))
-library("devtools")
-install_github("revbayes/RevGagets")
-install_github(""revbayes/RevGadgets"")
-install_github("revbayes/RevGadgets")
-install.packages("ggplot2")
-library(RevGadgets)#
+which(simplified.solanaceae[,1]=="Solanum_oxycarpum")
+simplified.solanaceae[1845,]
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidy/basicdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
+#How many species, how many genera#
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2268 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
 #
-library(ggplot2)
-p = plot_ancestral_states(" ~/revbayes-master/projects/cmake/output/BiSSE_polydip.trees")
-?plot_ancestral_states
-?RevGadgets
-install.packges("ggtree")
-install_github("revbayes/RevGadgets")
-source("https://bioconductor.org/biocLite.R")#
-biocLite("ggtree")
-install_github("revbayes/RevGadgets")
-library(RevGadgets)
-p = plot_ancestral_states("~/revbayes-master/projects/cmake/output/BiSSE_polydip.trees")
-install.packages("treeio")
-biocLite("treeio")
-library(RevGadgets)
-install_github("revbayes/RevGadgets")
-library(RevGadgets)
-library(treeio)
+#Calculating the mode(s)#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+#Creating a very simple database with summary stats#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+simplified.solanaceae[1845,]
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/basicdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/basicdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")#
+#
+#How many species, how many genera#
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2268 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
+#
+#Calculating the mode(s)#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+#Creating a very simple database with summary stats#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}#
+#
+#Simplified contains summary stats for each spces#
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)#
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)#
+#
+norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]#
+### Matching tree with matching dataset if they have either ploidy or self-incomp information that is 550 species#
+##Just checking here that all data has either ploidy or breeding system info#
+##nor.ploidysi2<-which(is.na(norploidysi.solanaceae[,5])==TRUE & is.na(norploidysi.solanaceae[,6])==TRUE)#
+#
+matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #550#
+write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")#
+no.selfincomp<-which(is.na(matched$dat[,5])==TRUE)#
+no.ploidy<-which(is.na(matched$dat[,4])==TRUE)#
+polyploid<-which(matched$dat[,4]>2)#
+self.incomp<-which(matched$dat[,5]=="SI")#
+binary<-rep(0,550)#
+binary[polyploid]<-1#
+binary[no.ploidy]<-"?"#
+binary<-as.data.frame(binary)#
+row.names(binary)<-matched$phy$tip.label#
+write.table(binary,file="~/Dropbox/solploidy/basicdata/binaryploidy2.tsv",sep="\t")#
+#
+binary<-rep(0,550)#
+binary[self.incomp]<-1#
+binary[no.selfincomp]<-"?"#
+binary<-as.data.frame(binary)#
+row.names(binary)<-matched$phy$tip.label#
+write.table(binary,file="~/Dropbox/solploidy/basicdata/binarysi2.tsv",sep="\t")#
+#
+threestate<- rep(0,550)#
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")#
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#
+diploids<-which(matched$dat[,4]==2)#
+which(matched$dat[,4]>2 & matched$dat[,5]=="SI")
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
+#How many species, how many genera#
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2268 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
+#
+#Calculating the mode(s)#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+#Creating a very simple database with summary stats#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}#
+#
+#Simplified contains summary stats for each spces#
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)#
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)#
+#
+norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]#
+### Matching tree with matching dataset if they have either ploidy or self-incomp information that is 550 species#
+##Just checking here that all data has either ploidy or breeding system info#
+##nor.ploidysi2<-which(is.na(norploidysi.solanaceae[,5])==TRUE & is.na(norploidysi.solanaceae[,6])==TRUE)#
+#
+matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #550#
+write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")#
+no.selfincomp<-which(is.na(matched$dat[,5])==TRUE)#
+no.ploidy<-which(is.na(matched$dat[,4])==TRUE)#
+polyploid<-which(matched$dat[,4]>2)#
+self.incomp<-which(matched$dat[,5]=="SI")#
+binary<-rep(0,550)#
+binary[polyploid]<-1#
+binary[no.ploidy]<-"?"#
+binary<-as.data.frame(binary)#
+row.names(binary)<-matched$phy$tip.label#
+write.table(binary,file="~/Dropbox/solploidy/basicdata/binaryploidy2.tsv",sep="\t")#
+#
+binary<-rep(0,550)#
+binary[self.incomp]<-1#
+binary[no.selfincomp]<-"?"#
+binary<-as.data.frame(binary)#
+row.names(binary)<-matched$phy$tip.label#
+write.table(binary,file="~/Dropbox/solploidy/basicdata/binarysi2.tsv",sep="\t")#
+#
+threestate<- rep(0,550)#
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")#
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#
+diploids<-which(matched$dat[,4]==2)#
+which(matched$dat[,4]>2 & matched$dat[,5]=="SI")
+diploids
+a<-diploids[-c(diploidsi,diploidsc)]
+a
+length(a)
+lenght(diploids)
+length(diploids)
+length(diploidsi)
+length(diploidsc)
+361-113-75
+matched.dat[a,]
+matched$dat[a,]
+which(matched.dat$[5]=="NA")
+which(matched$dat[5]=="NA")
+which(matched$dat[5]==<NA>)
+which(matched$dat[5]=="")
+which(matched$dat[5]==NA)
+matched$dat[diploidsi,]
+diploidsna<-which(matched$dat[,4]==2& matched$dat[,5]!="SC" & matched$dat[,5]!="SI")
+length(diploidsna)
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="NA")
+head(solanaceae.allrecords)
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings=NA)
+head(solanaceae.allrecords)
+#How many species, how many genera#
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2268 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
+#
+#Calculating the mode(s)#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+#Creating a very simple database with summary stats#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}#
+#
+#Simplified contains summary stats for each spces#
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)#
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)#
+#
+norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]#
+### Matching tree with matching dataset if they have either ploidy or self-incomp information that is 550 species#
+##Just checking here that all data has either ploidy or breeding system info#
+##nor.ploidysi2<-which(is.na(norploidysi.solanaceae[,5])==TRUE & is.na(norploidysi.solanaceae[,6])==TRUE)#
+#
+matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #550#
+write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")#
+no.selfincomp<-which(is.na(matched$dat[,5])==TRUE)#
+no.ploidy<-which(is.na(matched$dat[,4])==TRUE)#
+polyploid<-which(matched$dat[,4]>2)#
+self.incomp<-which(matched$dat[,5]=="SI")#
+binary<-rep(0,550)#
+binary[polyploid]<-1#
+binary[no.ploidy]<-"?"#
+binary<-as.data.frame(binary)#
+row.names(binary)<-matched$phy$tip.label#
+write.table(binary,file="~/Dropbox/solploidy/basicdata/binaryploidy2.tsv",sep="\t")#
+#
+binary<-rep(0,550)#
+binary[self.incomp]<-1#
+binary[no.selfincomp]<-"?"#
+binary<-as.data.frame(binary)#
+row.names(binary)<-matched$phy$tip.label#
+write.table(binary,file="~/Dropbox/solploidy/basicdata/binarysi2.tsv",sep="\t")#
+#
+threestate<- rep(0,550)#
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")#
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#
+diploidsna<-which(matched$dat[,4]==2& matched$dat[,5]!="SC" & matched$dat[,5]!="SI")#
+which(matched$dat[,4]>2 & matched$dat[,5]=="SI")
+diploidsna
+head(matched$dat)
+is.na(matche$dat[1,5])
+is.na(matched$dat[1,5])
+diploidsna<-which(matched$dat[,4]==2& is.na(matched$dat[,5])!=TRUE)
+diploidsna
+length(diploidsna)
+length(diploidsc)
+length(diploidsi)
+188+113+75
+length(which(matched$dat[4]==2))
+length(which(matched$dat[,4]==2))
+which(diploidsna==diploidsc)
+intersect(diploidsna,diploidsc)
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")#
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#
+diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE)
+length(diploidsna)
+173+113+75
+which(matched$dat[,4]>2 & matched$dat[,5]=="SI")
+polyploids<-which(matche$dat[,4]>2)#
+si<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SI")#
+sc<-which(is.na(matche$dat[,4])==TRUE & matched$dat[,5]=="SC")
+sc<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SC")
+si
+sc
+length(polyploids)
+polyploids<-which(matched$dat[,4]>2)
+length(polyploids)
+length(si)
+length(sc)
+361+89+38+62
+threestate[diploidsc]="0"#
+threestate[polyploids]="1"#
+threestate[diploidsi]="2"#
+threestate[si]="3"#
+threestate[sc]="(0 1)"
+threestate
+threestate[diploidsc]="0"#
+threestate[polyploids]="1"#
+threestate[diploidsi]="2"#
+threestate[si]="2"#
+threestate[sc]="(0 1)"
+threestate
+threestate<-as.data.frame(threestate)#
+row.names(threestate)<-matched$phy$tip.label#
+#
+write.table(threestate,file="~/Dropbox/solploidy/basicdata/threestate2.tsv",sep="\t")
+threestate
+threestate
+setwd('~/Dropbox/solploidy/summarystats')#
+library("ape")#
+library("phytools")#
+library("treeplyr")#
+#
+## Solanaceae time-tree with corrected names Sarkinen et al 2013#
+solanaceae.tree<-read.tree("~/Dropbox/solploidy/basicdata/solcorrecttip.tre")#
+#
+# Dataset created by RZF from CCDB and independent records by EEG#
+#idnumber, source,fullname, genus, species,cultivarhybrid,csomenumber,lifehistoryclean, ploidy selfincomp, ploidybyZF, namechangedfrom#
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings=NA)
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2268 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
+#
+#Calculating the mode(s)#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+#Creating a very simple database with summary stats#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}#
+#
+#Simplified contains summary stats for each spces#
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)
+nor.ploidysi
+simplified.solanaceae
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)
+norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]
+dim(simplified.solanaceae)
+dim(norploidysi.solanaceae)
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="NA")
+How many species, how many genera#
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2268 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera#
+#
+#Calculating the mode(s)#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}#
+#
+#Creating a very simple database with summary stats#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)#
+#
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+#Simplified contains summary stats for each spces#
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)
+nor.ploidysi
+head(simplified.solanaceae)
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])=="")
+nor.ploidysi
+is.na(simplified.solanaceae[,6])==""
+is.na(simplified.solanaceae[,6])==TRUE
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & (simplified.solanaceae[,6])=="")
+nor.ploidysi
+simplified.ploidysi[nor.ploidysi[1],]
+simplified.solanaceae[nor.ploidysi[1],]
+simplified.solanaceae[nor.ploidysi[2],]
+simplified.solanaceae[nor.ploidysi[2],5]
+simplified.solanaceae[nor.ploidysi[2],6]
+solanaceae.tree<-read.tree("~/Dropbox/solploidy/basicdata/solcorrecttip.tre")
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="NA")
+?read.csv
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE)
+head(solanaceae.allrecords)
+is.na(solanaceae.allrecords$lifehistoryclean[5])
+(solanaceae.allrecords$lifehistoryclean[5])
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
+head(solanaceae.allrecords)
+is.na(solanaceae.allrecords$lifehistoryclean[5])
+is.na(solanaceae.allrecords$csomenumber[5])
+species<-unique(solanaceae.allrecords$fullname)#
+total.species<-length(species)# 2268 total species#
+genera<-unique(solanaceae.allrecords$genus)#
+total.genera<-length(genera)#97 genera
+total.species
+total.genera
+#Calculating the mode(s)#
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux)))]#
+}
+mode.csome<-rep(0,total.species)
+min.csome<-rep(0,total.species)
+mode.ploidy<-rep(0,total.species)
+min.ploidy<-rep(0,total.species)
+self.incomp<-rep(0,total.species)
+life.hist<-rep(0,total.species)
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+head(simplified.solanaceae)
+head(simplified.solanaceae)
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)
+nor.ploidysy
+nor.ploidisy
+nor.ploidysi
+simplified.solanaceae[nor.ploidysi,]
+simplified.solanaceae[nor.ploidysi[2262],]
+simplified.solanaceae[nor.ploidysi[1],]
+length(nor.ploidysi)
+simplified.solanaceae[nor.ploidysi[1153],]
+a1<-"Witheringia_maculata"
+index<-which(solanaceae.allrecords$fullname==a1 #species[i])
+)
+index
+aux1<- solanaceae.allrecords$csomenumber[index]
+aux1
+solanaceae.allrecords[c(10905:10906)]
+solanaceae.allrecords[c(10905:10906),]
+all(is.na(aux1))
+min(Mode(aux1))
+Mode(aux1)
+x<-aux1
+x
+ux <- unique(x)
+ux
+match(x, ux)
+tabulate(match(x, ux))
+?match
+which.max(tabulate(match(x, ux)))
+ux[which.max(tabulate(match(x, ux)))]
+ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux,incomparables=NA)))]
+ux <- unique(x)
+match(x, ux,incomparables=NA))
+match(x, ux,incomparables=NA)
+tabulate(match(x, ux,incomparables=NA))
+which.max(tabulate(match(x, ux,incomparables=NA)))
+ux[which.max(tabulate(match(x, ux,incomparables=NA)))]
+Mode <- function(x) {#
+  ux <- unique(x)#
+  ux[which.max(tabulate(match(x, ux,incomparables=NA)))]#
+}#
+#
+#Creating a very simple database with summary stats#
+mode.csome<-rep(0,total.species)#
+min.csome<-rep(0,total.species)#
+mode.ploidy<-rep(0,total.species)#
+min.ploidy<-rep(0,total.species)#
+self.incomp<-rep(0,total.species)#
+life.hist<-rep(0,total.species)
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==a1 #species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+for (i in 1:total.species){#
+  index<-which(solanaceae.allrecords$fullname==species[i])#
+  aux1<- solanaceae.allrecords$csomenumber[index]#
+  if(all(is.na(aux1))){#
+  	 mode.csome[i]<-NA#
+  	 min.csome[i]<-NA  	#
+  }else{#
+  mode.csome[i]<-min(Mode(aux1))#
+  min.csome[i]<-min(aux1,na.rm=TRUE)#
+  }#
+  aux2<- solanaceae.allrecords$ploidy[index]#
+  if(all(is.na(aux2))){#
+  	 mode.ploidy[i]<-NA#
+  	 min.ploidy[i]<-NA  	#
+  }else{#
+  mode.ploidy[i]<-min(Mode(aux2))#
+  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
+  }	#
+  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
+  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
+}
+simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+simplified.solanaceae[10905,]
+simplified.solanaceae[10906,]
+head(simplified.solanaceae)
+a1
+which(simplified.solanaceae$species=="Witheringia_maculata")
+simplified.solanaceae[2261,]
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)
+length(nor.ploidysi)
+simplified.solanaceae
+simplified.solanaceae[nor.ploidysi]
+simplified.solanaceae[nor.ploidysi,]
+norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]
+norploidysi.solanaceae
+matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #550
+matched
+write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")
+no.selfincomp<-which(is.na(matched$dat[,5])==TRUE)
+no.ploidy<-which(is.na(matched$dat[,4])==TRUE)
+polyploid<-which(matched$dat[,4]>2)
+self.incomp<-which(matched$dat[,5]=="SI")
+no.ploidy
+threestate<- rep(0,dim(matched$dat)[1])
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")
+diploidsc
+matched$dat[diploidsc,]
+diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE)
+polyploids<-which(matched$dat[,4]>2)
+si<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SI")
+sc<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SC")
+si
+sc
+threestate[diploidsc]="0"#
+threestate[polyploids]="1"#
+threestate[diploidsi]="2"#
+threestate[si]="2"#
+threestate[sc]="(0 1)"#
+threestate<-as.data.frame(threestate)#
+row.names(threestate)<-matched$phy$tip.label#
+#
+write.table(threestate,file="~/Dropbox/solploidy/basicdata/threestate2.tsv",sep="\t")
+threestate
+length(threestate)
+dim(threestate)
+matched$dat
+binary.ploidy<-rep(0,dim(matched$dat)[1])#
+binary.ploidy[diploidsc]<-"0"#
+binary.ploidy[diploidsi]<-"0"#
+binary.ploidy[polyploids]<-"1"#
+binary.ploidy[si]<-"0"#
+binary.ploidy[sc]<-"?"
+#Initializing salary matrix and a nice color for plots#
+mycol <- rgb(255, 0, 0, max = 255, alpha = 125)#
+salary<-matrix(rep(0,12),nrow=4)#
+colors=c("blue","blue","black")#
+#
+##### Analysis of differences in salary based on the same offer made to two assistant professors in the department of Botany and Biology#
+##Initial Salaries for 2016 obtained from Honolulu Civil Beat https://www.civilbeat.org/2016/01/civil-beat-database-of-public-employee-salaries/#
+##Scheduled Salary adjustments for 2017 and 2018 information from University of Hawai'i public assembly https://www.uhpa.org/contracts/2017-2021-uhpa-bor-contract/article-xxi-salaries/#
+# Here is approximately the initial offer made to us#
+offer<-86500#
+# Here are the salaries reported for 4 assistant professors (Honolulu Civic Beat) with 9 month appointments in 2016, first two for Botany ($77K), second two for Biology ($83K)#
+initial.salaries2016<-c(77700,77460,83820,83826)#
+salary[,1]<-initial.salaries2016#
+#
+# Salary adjustments effective in July 2017 were 2.13% to base salary plus 500 added to base salary (University of Hawaii Professional Assembly salary adjustmets part B)#
+#
+salaries.2017<- initial.salaries2016*(1.0213)+500#
+salary[,2]<-salaries.2017#
+#
+# Salary adjustments effective in July 2018 were 2.82% to base salary plus 500 added to base salary (University of Hawaii Professional Assembly salary adjustmets part B)#
+salaries.2018<-salaries.2017*1.0282+500#
+salary[,3]<-salaries.2018#
+# Now plotting the salaries and their differences#
+plot(salary[4,], type="l", col=mycol, lwd=8, xlab="Year", ylab="Assistant Professor 9mo", xaxt="n", xlim=c(1,6), ylim=c(76000, 91000))#
+axis(1, at=1:3, labels=c("2016","July 2017","July 2018"))#
+points(salary[4,],pch=19,col=mycol)#
+#
+colors=c("blue","blue","black")#
+for(i in 1:3){#
+lines(salary[i,], col=colors[i])#
+points(salary[i,],pch=19,col=colors[i])#
+}#
+legend(4,80000, legend=c("Botany","Biology Prof 1","Biology Prof 2"),col=c("blue",mycol,"black"), lty=1,lwd=c(1,5,1),cex=0.8)#
+# Now plotting the difference#
+points(3, offer,pch=15,cex=2)#
+text(4.1,offer,paste0("Initial offer ", offer ),cex=0.8)#
+# For Botany new assistant professors#
+difference_botany=offer-salary[2,3]#
+segments(3,salary[2,3],3,salary[2,3]+difference_botany,col="blue",lwd=2,lty=2)#
+text(4.6,salary[2,3]+difference_botany/2,paste0("Asst Prof in Botany in 2018 earns a difference of ",round(difference_botany)), col="blue", cex=0.8)#
+points#
+segments(1, salary[2,1],1,offer,lty=2,col="blue")#
+percentage_above<-(offer/salary[2,1]-1)*100#
+text(1.2,80000,paste0("+",round(percentage_above,digits=2),"%"),cex=0.5,col="blue")#
+# For Biology new assistant professors#
+difference_biology=offer-salary[3,3]#
+segments(3,salary[3,3],3,salary[3,3]+difference_biology,col="red",lwd=2,lty=2)#
+text(4.6,salary[3,3]+difference_biology/2,paste0("Asst Prof in Biology in 2018 earns a difference of ",round(difference_biology)), col="red", cex=0.8)#
+#
+points(1, offer,pch=15, cex=2)#
+segments(1.05, salary[3,1],1.05,offer,lty=2,col="red")#
+percentage_above<-(offer/salary[3,1]-1)*100#
+text(1.2,85000,paste0("+",round(percentage_above,digits=2),"%"),cex=0.5,col="red")
+binary.ploidy<-rep(0,dim(matched$dat)[1])#
+binary.ploidy[diploidsc]<-"0"#
+binary.ploidy[diploidsi]<-"0"#
+binary.ploidy[polyploids]<-"1"#
+binary.ploidy[si]<-"0"#
+binary.ploidy[sc]<-"?"#
+binary.ploidy<-as.data.frame(binary.ploidy)#
+row.names(binary.ploidy)<-matched$phy$tip.label
+binary.ploidy
+write.table(binary.ploidy,file="~/Dropbox/solploidy/basicdata/binaryploidy2.tsv",sep="\t")
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")#
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#
+diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE)#
+polyploids<-which(matched$dat[,4]>2)#
+si<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SI")#
+sc<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SC")#
+threestate<- rep(0,dim(matched$dat)[1])#
+threestate[diploidsc]="0"#
+threestate[polyploids]="1"#
+threestate[diploidsi]="2"#
+threestate[si]="2"#
+threestate[sc]="(0 1)"#
+threestata[diploidsna]<-"(0 2)"#
+threestate<-as.data.frame(threestate)#
+row.names(threestate)<-matched$phy$tip.label
+threestate
+diploidsna
+threestate<- rep(0,dim(matched$dat)[1])#
+threestate[diploidsc]="0"#
+threestate[polyploids]="1"#
+threestate[diploidsi]="2"#
+threestate[si]="2"#
+threestate[sc]="(0 1)"#
+threestata[diploidsna]<-"(0 2)"#
+threestate<-as.data.frame(threestate)#
+row.names(threestate)<-matched$phy$tip.label#
+#
+write.table(threestate,file="~/Dropbox/solploidy/basicdata/threestate2.tsv",sep="\t")
+which(matched$dat[,4]>2 & matched$dat[,5]=="SI")
+matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #613#
+write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")#
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")#
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#
+diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE)#
+polyploids<-which(matched$dat[,4]>2)#
+si<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SI")#
+sc<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SC")#
+threestate<- rep(0,dim(matched$dat)[1])#
+threestate[diploidsc]="0"#
+threestate[polyploids]="1"#
+threestate[diploidsi]="2"#
+threestate[si]="2"#
+threestate[sc]="(0 1)"#
+threestata[diploidsna]<-"(0 2)"#
+threestate<-as.data.frame(threestate)#
+row.names(threestate)<-matched$phy$tip.label#
+#
+write.table(threestate,file="~/Dropbox/solploidy/basicdata/threestate2.tsv",sep="\t")
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")#
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#
+diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE)#
+polyploids<-which(matched$dat[,4]>2)#
+si<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SI")#
+sc<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SC")#
+threestate<- rep(0,dim(matched$dat)[1])#
+threestate[diploidsc]="0"#
+threestate[polyploids]="1"#
+threestate[diploidsi]="2"#
+threestate[si]="2"#
+threestate[sc]="(0 1)"#
+threestate[diploidsna]<-"(0 2)"#
+threestate<-as.data.frame(threestate)#
+row.names(threestate)<-matched$phy$tip.label
+write.table(threestate,file="~/Dropbox/solploidy/basicdata/threestate2.tsv",sep="\t")
+binary.ploidy<-rep(0,dim(matched$dat)[1])#
+binary.ploidy[diploidsc]<-"0"#
+binary.ploidy[diploidsi]<-"0"#
+binary.ploidy[polyploids]<-"1"#
+binary.ploidy[si]<-"0"#
+binary.ploidy[sc]<-"?"#
+binary.ploidy[diploids]<-"0"#
+binary.ploidy<-as.data.frame(binary.ploidy)#
+row.names(binary.ploidy)<-matched$phy$tip.label
+#binary ploidy#
+binary.ploidy<-rep(0,dim(matched$dat)[1])#
+binary.ploidy[diploidsc]<-"0"#
+binary.ploidy[diploidsi]<-"0"#
+binary.ploidy[polyploids]<-"1"#
+binary.ploidy[si]<-"0"#
+binary.ploidy[sc]<-"?"#
+binary.ploidy[diploidsna]<-"0"#
+binary.ploidy<-as.data.frame(binary.ploidy)#
+row.names(binary.ploidy)<-matched$phy$tip.label#
+#
+write.table(binary.ploidy,file="~/Dropbox/solploidy/basicdata/binaryploidy2.tsv",sep="\t")
+##binary breeding system#
+binary.si<-rep(0,dim(matched$dat)[1])#
+binary.si[diploidsc]<-"0"#
+binary.si[diploidsi]<-"1"#
+binary.si[polyploids]<-"0"#
+binary.si[si]<-"1"#
+binary.si[sc]<-"0"#
+binary.si[diploidsna]<-"?"#
+binary.si<-as.data.frame(binary.si)#
+row.names(binary.si)<-matched$phy$tip.label#
+#
+write.table(binary.ploidy,file="~/Dropbox/solploidy/basicdata/binaryploidy2.tsv",sep="\t")
+length(binary.ploidy)
+matched$dat
+diploidsc
+##binary breeding system#
+binary.si<-rep(0,dim(matched$dat)[1])#
+binary.si[diploidsc]<-"0"#
+binary.si[diploidsi]<-"1"#
+binary.si[polyploids]<-"0"#
+binary.si[si]<-"1"#
+binary.si[sc]<-"0"#
+binary.si[diploidsna]<-"?"#
+binary.si<-as.data.frame(binary.si)#
+row.names(binary.si)<-matched$phy$tip.label#
+#
+write.table(binary.ploidy,file="~/Dropbox/solploidy/basicdata/binaryploidy2.tsv",sep="\t")
+dim(binary.ploidy)
+##binary ploidy#
+binary.ploidy<-rep(0,dim(matched$dat)[1])#
+binary.ploidy[diploidsc]<-"0"#
+binary.ploidy[diploidsi]<-"0"#
+binary.ploidy[polyploids]<-"1"#
+binary.ploidy[si]<-"0"#
+binary.ploidy[sc]<-"?"#
+binary.ploidy[diploidsna]<-"0"#
+binary.ploidy<-as.data.frame(binary.ploidy)#
+row.names(binary.ploidy)<-matched$phy$tip.label#
+#
+write.table(binary.ploidy,file="~/Dropbox/solploidy/basicdata/binaryploidy2.tsv",sep="\t")
+##binary breeding system#
+binary.si<-rep(0,dim(matched$dat)[1])#
+binary.si[diploidsc]<-"0"#
+binary.si[diploidsi]<-"1"#
+binary.si[polyploids]<-"0"#
+binary.si[si]<-"1"#
+binary.si[sc]<-"0"#
+binary.si[diploidsna]<-"?"#
+binary.si<-as.data.frame(binary.si)#
+row.names(binary.si)<-matched$phy$tip.label#
+#
+write.table(binary.si,file="~/Dropbox/solploidy/basicdata/binarysi2.tsv",sep="\t")
+a<-rexp(100, rate=0.5)
+density(a)
+hist(a)
+plot(density(a))
+a<-rexp(1000, rate=0.5)
+plot(density(a),col="red",lwd=2)
+a<-rexp(1000, rate=0.1)
+points(density(a),col="purple",lwd=2)
+plot(density(a),col="red",lwd=2)
+a<-rexp(1000, rate=0.5)
+lines(density(a),col="purple",lwd=2)
+plot(density(a),col="purple",lwd=2)
+a<-rexp(1000, rate=0.5)
+lines(density(a),col="red",lwd=2)
+a<-rexp(1000, rate=0.5)
+plot(density(a),col="red",lwd=2)
+a<-rexp(1000, rate=0.1)
+lines(density(a),col="purple",lwd=2)
+library("ggplot2")#
+library("RevGadgets")
+#2. Full BiSSE with 250K runs of MCMC#
+#
+p = plot_ancestral_states("~/Dropbox/solploidypersonal/bisse250K/anc_states_summaryBiSSEtree250K.tree", size=0.4, include_start_states=FALSE, summary_statistic="MAP",tip_label_size=0.45, tip_label_offset=0.4,tip_label_italics=TRUE,node_label_size=FALSE,node_label_nudge_x=0.1,shoulder_label_size=2,alpha=.3,node_size_range=c(2, 6))
+#2. Full BiSSE with 250K runs of MCMC#
+#
+p = plot_ancestral_states("~/Dropbox/solploidypersonal/bisse250K/anc_states_summaryBiSSEtree250K.tree", size=0.4, include_start_states=FALSE, summary_statistic="MAP",tip_label_size=0.45, tip_label_offset=0.4,tip_label_italics=TRUE,node_label_size=FALSE,node_label_nudge_x=0.1,shoulder_label_size=2,alpha=.3,node_size_range=c(2, 6))
+print(p)

@@ -25,10 +25,10 @@ NUM_RATES = NUM_STATES * NUM_HIDDEN
 
 ### Read in sequence data for both genes
 
-observed_phylogeny <- readTrees("/home/eeg/shared/twostatesse/hisse/fullmatchtree.nex")[1]
+observed_phylogeny <- readTrees("/home/eeg/shared/twostatesse/hissesinoret/fullmatchtree.nex")[1]
 
 #Reading correctly a csv file
-data <- readCharacterDataDelimited("/home/eeg/shared/twostatesse/bisse/binaryploidy2.tsv",stateLabels=2,type="NaturalNumbers",delimiter="\t",headers=FALSE)
+data <- readCharacterDataDelimited("/home/eeg/shared/twostatesse/hissesinoret/binarysi2.tsv",stateLabels=2,type="NaturalNumbers",delimiter="\t",headers=FALSE)
 # we need to expand the data to the hidden states
 data_exp <- data.expandCharacters( NUM_HIDDEN )
 
@@ -109,12 +109,12 @@ rate_pr := 1
 # character state transitions over the tree.
 # rate_pr := observed_phylogeny.treeLength() / 10
 
-rate_12 ~ dnGamma(shape=shape_pr, rate=rate_pr)
 rate_21 ~ dnGamma(shape=shape_pr, rate=rate_pr)
-moves[++mvi] = mvScale( rate_12, weight=2 )
+rate_12 = 0
 moves[++mvi] = mvScale( rate_21, weight=2 )
 
-Q := [ rate_12, rate_21 ]
+
+Q := [ 0, rate_21]
 
 
 #########################################################
@@ -181,9 +181,9 @@ timetree.clampCharData( data_exp )
 mymodel = model(rate_matrix)
 
 ### set up the monitors that will output parameter values to file and screen
-monitors[++mni] = mnFile(filename="/home/eeg/shared/twostatesse/hisse/output/HiSSE_polydip250K.trees", printgen=1, timetree)
-monitors[++mni] = mnModel(filename="/home/eeg/shared/twostatesse/hisse/output/HiSSE_polydip250K.log", printgen=1)
-monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="/home/eeg/shared/twostatesse/hisse/output/anc_states_HiSSE_polydip250K.log")
+monitors[++mni] = mnFile(filename="/home/eeg/shared/twostatesse/hissesinoret/output/HiSSE_sinoret250K.trees", printgen=1, timetree)
+monitors[++mni] = mnModel(filename="/home/eeg/shared/twostatesse/hissesinoret/output/HiSSE_sinoret250K.log", printgen=1)
+monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="/home/eeg/shared/twostatesse/hissesinoret/output/anc_states_HiSSE_sinoret250K.log")
 monitors[++mni] = mnScreen(printgen=10, Q, R)
 
 
@@ -205,8 +205,8 @@ mymcmc.run(generations=250000)
 ##############################
 
 
-#anc_states = readAncestralStateTrace("/home/eeg/shared/twostatesse/hisse/output/anc_states_HiSSE_polydip250K.log")
-#anc_tree = ancestralStateTree(tree=observed_phylogeny, ancestral_state_trace_vector=anc_states, include_start_states=false, file="/home/eeg/shared/twostatesse/hisse/output/anc_states_summaryHiSSEtree250K.tree", burnin=0, summary_statistic="MAP", site=0)
+anc_states = readAncestralStateTrace("/home/eeg/shared/twostatesse/hissesinoret/output/anc_states_HiSSE_sinoret250K.log")
+anc_tree = ancestralStateTree(tree=observed_phylogeny, ancestral_state_trace_vector=anc_states, include_start_states=false, file="/home/eeg/shared/twostatesse/hissesinoret/output/anc_states_summaryHiSSEsinorettree250K.tree", burnin=0, summary_statistic="MAP", site=0)
 
 q()
 

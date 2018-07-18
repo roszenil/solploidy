@@ -8,7 +8,7 @@ solanaceae.tree<-read.tree("~/Dropbox/solploidy/basicdata/solcorrecttip.tre")
 
 # Dataset created by RZF from CCDB and independent records by EEG
 #idnumber, source,fullname, genus, species,cultivarhybrid,csomenumber,lifehistoryclean, ploidy selfincomp, ploidybyZF, namechangedfrom
-solanaceae.allrecords<-read.csv("~/Dropbox/solploidy/basicdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
+solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
 
 #How many species, how many genera
 species<-unique(solanaceae.allrecords$fullname)
@@ -19,7 +19,7 @@ total.genera<-length(genera)#97 genera
 #Calculating the mode(s)
 Mode <- function(x) {
   ux <- unique(x)
-  ux[which.max(tabulate(match(x, ux)))]
+  ux[which.max(tabulate(match(x, ux,incomparables=NA)))]
 }
 
 #Creating a very simple database with summary stats
@@ -54,6 +54,71 @@ for (i in 1:total.species){
 
 #Simplified contains summary stats for each spces
 simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
+
+
+nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)
+
+norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]
+
+###########################################
+### Matching tree with matching dataset if they have either ploidy or self-incomp information that is 550 species
+
+
+##Just checking here that all data has either ploidy or breeding system info
+##nor.ploidysi2<-which(is.na(norploidysi.solanaceae[,5])==TRUE & is.na(norploidysi.solanaceae[,6])==TRUE)
+
+matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #613
+write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")
+
+
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")
+diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE)
+polyploids<-which(matched$dat[,4]>2)
+si<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SI")
+sc<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SC")
+threestate<- rep(0,dim(matched$dat)[1])
+threestate[diploidsc]="0"
+threestate[polyploids]="1"
+threestate[diploidsi]="2"
+threestate[si]="2"
+threestate[sc]="(0 1)"
+threestate[diploidsna]<-"(0 2)"
+threestate<-as.data.frame(threestate)
+row.names(threestate)<-matched$phy$tip.label
+
+write.table(threestate,file="~/Dropbox/solploidy/basicdata/threestate2.tsv",sep="\t")
+
+##binary ploidy
+binary.ploidy<-rep(0,dim(matched$dat)[1])
+binary.ploidy[diploidsc]<-"0"
+binary.ploidy[diploidsi]<-"0"
+binary.ploidy[polyploids]<-"1"
+binary.ploidy[si]<-"0"
+binary.ploidy[sc]<-"?"
+binary.ploidy[diploidsna]<-"0"
+binary.ploidy<-as.data.frame(binary.ploidy)
+row.names(binary.ploidy)<-matched$phy$tip.label
+
+write.table(binary.ploidy,file="~/Dropbox/solploidy/basicdata/binaryploidy2.tsv",sep="\t")
+
+##binary breeding system
+binary.si<-rep(0,dim(matched$dat)[1])
+binary.si[diploidsc]<-"0"
+binary.si[diploidsi]<-"1"
+binary.si[polyploids]<-"0"
+binary.si[si]<-"1"
+binary.si[sc]<-"0"
+binary.si[diploidsna]<-"?"
+binary.si<-as.data.frame(binary.si)
+row.names(binary.si)<-matched$phy$tip.label
+
+write.table(binary.si,file="~/Dropbox/solploidy/basicdata/binarysi2.tsv",sep="\t")
+
+
+#########################
+### Here are previous matches using full info but this make models non-comparable since the input is different sample sizes
+
 
 no.ploidy=which(is.na(simplified.solanaceae$mode.ploidy)==TRUE) #1366
 no.csome=which(is.na(simplified.solanaceae$mode.csome)==TRUE) #1248
