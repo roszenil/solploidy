@@ -7,4 +7,4 @@ main.pdf: main.tex abstract.tex introduction.tex methods.tex results.tex discuss
 	pdflatex main.tex
 
 clean:
-	rm -f *.bbl *.blg *.log *.aux *.toc *.fff *.ent
+	rm -f *.bbl *.blg *.log *.aux *.toc *.fff *.ent *.ttt *.synctex.gz

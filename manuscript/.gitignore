@@ -5,3 +5,5 @@
 *.toc
 *.fff
 *.ent
+*.ttt
+*.synctex.gz
