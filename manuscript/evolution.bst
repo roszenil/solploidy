@@ -951,8 +951,8 @@ FUNCTION {article}
       format.pages output
     }
   if$
-  new.block
-  format.url output
+  % new.block
+  % format.url output
   new.block
   format.note output
   fin.entry
