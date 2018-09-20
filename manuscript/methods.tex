@@ -2,23 +2,37 @@
 
 \subsection{Data}
 
-Chromosome number data was obtained from the Chromosome Count Database (CCDB, \citet{rice_2015}) for all taxa from Solanaceae family.
-The records obtained were first cleaned using CCDBcurator R package \citep{zenilferguson_2017}, to those we aggregated independent data of chromosome numbers and breeding systems recorded and curated by Emma Goldberg and Boris Igi\'c  (citations for original sources can be found in the supplementary information).
-In total we obtained 14,000 records of chromosome number and breeding system than were curated semi automatically by CCDBcurator and by hand to score the chromosome number and the breeding system with the most reconciliation.
-Furthermore, for the majority of taxa ploidy was assigned according to information from original sources and Kew Royal Botanic Gardens C-value DNA (bennett citation here dataset and the original sources agreggated by Goldberg and Igi\'c.
-For taxa without ploidy information but with information about chromosome number we assigned ploidy based on multiplicity of chromosomes within the genus.
-For example, \textit{Solanum betaceum} did not include information about ploidy level but its number of chromosomes is 24, since $x=12$ is the base chromosome number of the \textit{Solanum} genus we assigned  \textit{Solanum betaceum} as diploid. 
-Species with more than one ploidy level were assigned smallest most frequent ploidy level recorded.
-Domesticated taxa (\ie \textit{Solanum lycopersicon}) were removed to avoid since they contained multiple ploidy levels due to domestication and not spontaneous polyploidy.
-The remainder of taxa was then matched to largest time-calibrated phylogeny of Solanaceae and this process resulted in 595 taxa used in each of the diversification models.
+Chromosome number data were obtained for all Solanaceae taxa in the the Chromosome Counts Database \citep[CCDB;][]{rice_2015}, and the ca.\ 14,000 records were cleaned semi-automatically using the CCDBcurator R package \citep{zenilferguson_2017}.
+This large dataset includes the compilation of Solanaceae ploidy states from \citep{robertson_2011}.
+Species were coded as either diploid (D) or polyploid (P).
+For the majority of species, ploidy was assigned according to information from the original publications and the Kew Royal Botanic Gardens C-value DNA resource \citep{bennett_2005}.
+For taxa without ploidy information but with information about chromosome number, we assigned ploidy based on the multiplicity of chromosomes within the genus.
+For example, \textit{Solanum betaceum} did not include information about ploidy level but it has 24 chromosomes, so because $x=12$ is the base chromosome number of the \textit{Solanum} genus \citep{olmstead_2007}, we assigned \textit{S.~betaceum} as diploid. 
+Species with more than one ploidy level were assigned the smallest most frequent ploidy level recorded. % E: Does this apply to the diploid-polyploid levels?  If so, we need to explain how it is also reconciled against the SI/SC value.  Or is this sentence just about multiple levels of polyploidy, which wouldn't need to be mentioned here?
 
-% E: also need some text about how SI was scored
+Breeding system was scored as self-incompatible (SI) or self-compatible (SC) based on results hand-curated from the literature (as in \citealt{igic_2006, goldberg_2010, robertson_2011, goldberg_2012}).
+Most species could unambiguously be coded as either SI or SC \citep{raduski_2012}.
+Following previous work, we coded as SI any species with functional SI systems, even if SC or dioecy was also reported.
+Dioecious species without functional SI were coded as SC.
 
-Binary or three state classification of ploidy and breeding system for the 595 taxa  was done according to Table \autoref{tab:binaryclassifications}
-  
+To those existing data sets, we added some additional records for chromosome number and breeding system.
+The Supplementary Information contains citations for the numerous original sources for all of the data. % todo: add number of refs when we have it
+Synonymy followed Solanaceae Source \citep{solsource}.
+Hybrids and cultivars were excluded because ploidy and breeding system are likely to be altered by domestication.
+As in \citet{robertson_2011}, we examined closely the few species for which the merged ploidy and breeding system data indicated the presence of SI polyploids.
+Although SI populations frequently contain some SC individuals and diploid populations frequently contain some polyploid individuals, in no case did we find individuals that were both SI and polyploid.
+Because of this empirical observation and the functional explanation for whole genome duplication disabling gametophytic self-incompatibility \citep[reviewed in][]{ramsey_1998,stone_2002}, we consider only three observed character states: SI-D, SC-D, and SC-P.
+
+% E: We should probably include some more details about how many polymorphic species and how the particularly tricky ones were dealt with.
+
+Matching our character state data to the largest time-calibrated phylogeny of Solanaceae \citep{sarkinen_2013} yielded 595 species with ploidy and/or breeding system information on the tree.
+Binary or three-state classification of ploidy and breeding system for the 595 taxa is summarized in \cref{table:stateclassifications}. % E: I think you're still updating the state coding?
+We retained all of these species in each of the analyses below, because pruning away tips lacking breeding system in the ploidy-only analyses (and vice versa) would discard data that could inform the diversification models.
+% E: Though someone might ask why tips with no state data were pruned.  Analyses took long enough on even this-size tree.
+
 \subsection{Models}
 
-We first defined a binary state speciation and extinction model (BiSSE, \citet{maddison_2007})  for polyploidy evolution where taxa was classified as diploid (D=0) and polyploid (P=1) \cref{table:datatable}.
+We first defined a binary state speciation and extinction model (BiSSE, \citet{maddison_2007})  for polyploidy evolution where taxa was classified as diploid (D=0) and polyploid (P=1) \cref{table:stateclassifications}.
 In a Bayesian framework, we obtained posterior probability distributions of speciation rates ($\lambda_D$, $\lambda_P$), extinction rates ($\mu_D$, $\mu_P$) , net diversification rates ($r_D=\lambda_D-\mu_D, r_P=\lambda_P-\mu_P$), and  relative extinction rates ($\nu_D=\frac{\mu_D}{\lambda_D}, \nu_D=\frac{\mu_D}{\lambda_D}$) just as previously explored in \citet{mayrose_2011}.
 The cladogenetic changes explored in BiSSE were polyploidization rate are represented by parameter $\rho$ and by diploidization parameter rate $\delta$.
 % E: cladogenetic?
@@ -31,14 +45,14 @@ By including a hidden trait in a state speciation and extinction  model,  HiSSE-
 Therefore, HiSSE model for polyploidy linked to diversification has four states: diploid and polyploid subdivided by a binary hidden trait with states A and B for which we estimated the posterior probability distributions of speciation rates ($\lambda_{D_A},\lambda_{D_B}, \lambda_{P_A},\lambda_{P_B}$), extinction rates ($\mu_{D_A},\mu_{D_B}, \mu_{P_A},\mu_{P_B}$),  net diversification rates ($r_{D_A},r_{D_B},r_{P_A},r_{P_B}$), and relative extinction($\nu_{D_A},\nu_{D_B}, \nu_{PA},\nu_{P_B}$).
 The cladogenetic changes assumed by the fitted model are polyploidization rate $\rho$, diploidization rate $\rho$, and we assumed that the changes between every hidden state are symmetrical with rate $\alpha$.
 
-For breeding system both BiSSE and a HiSSE models were fitted independently by coding data as self-compatible (SC=0) or self-incompatible (SI=1) \cref{table:datatable}.
+For breeding system both BiSSE and a HiSSE models were fitted independently by coding data as self-compatible (SC=0) or self-incompatible (SI=1) \cref{table:stateclassifications}.
 The BiSSE model fitted to breeding system data was done with the goal of investigating if the effect of self-incompatibility in diversification was similar to the pattern found by \citet{goldberg_2012}.
 However, the HiSSE model on breeding system parses out if the effect of breeding system in diversification is significant  by minimizing type I error as mentioned above.
 For these models we assumed that self-compatibility is irreversible as discussed by \citet{igic_2013}, so we defined the transition rate $q_{IC}$ as the parameter for changes from self-incompatible to self-compatible state.
 % E: explain irreversibility assumption; fix ancestry instead?
 
 Next, we proposed a multivariate speciation and extinction model (MuSSE, \citet{fitzjohn_2012}) to investigate the link amongst diversification, breeding system, and polyploidy simultaneously.
-The MuSSE model is defined using three states self-compatible diploids (SC-D=0), polyploids that are always self-compatible (ref for this??) (P=1), and self-incompatible diploids (SI-D=2, see table \cref{table:datatable}) and contains ten parameters, six defining diversification ($\lambda_{SD}, \mu_{SD},\lambda_{P},\mu_{P}, \lambda_{ID},\mu_{ID}$) and the other four key cladogenetic changes that are: polyploidization of self-compatible diploids $\rho_{SD}$, diploidization $\delta$, polyploidization of self-incompatible diploids $\rho_{ID}$, and self-incompatible to self-compatible rate $q_{IC}$.
+The MuSSE model is defined using three states self-compatible diploids (SC-D=0), polyploids that are always self-compatible (ref for this??) (P=1), and self-incompatible diploids (SI-D=2, see table \cref{table:stateclassifications}) and contains ten parameters, six defining diversification ($\lambda_{SD}, \mu_{SD},\lambda_{P},\mu_{P}, \lambda_{ID},\mu_{ID}$) and the other four key cladogenetic changes that are: polyploidization of self-compatible diploids $\rho_{SD}$, diploidization $\delta$, polyploidization of self-incompatible diploids $\rho_{ID}$, and self-incompatible to self-compatible rate $q_{IC}$.
 % E: for SC, use C instead of S
 % E: lack of SI-P should maybe be explained in Intro?
 
@@ -51,12 +65,11 @@ Using MuHiSSE we estimated twelve speciation and extinction rates ($\lambda_{SD_
 % E: caetano ref; and huang
 
 All the models were performed using RevBayes \citep{hoehna_2016} software that performs Bayesian inference via MCMC using Metropolis-Hastings algorithm.
-A correction for sampling bias was done in all models by assuming that Solanaceae family has approximately 3,000 species ($s=595/3000$) as the Solanaceae Source project indicates \citep{source_2011}.
+A correction for sampling bias was done in all models by assuming that Solanaceae family has approximately 3,000 species ($s=595/3000$) as the Solanaceae Source project indicates \citep{solsource}.
 In all models, speciation and extinction parameters used log-normal prior distributions that with mean the expected net diversification rate $ ( \frac{(number of taxa)/2}{root age})$ and standard deviation $0.5$.
 Prior distributions for parameters defining cladogenetic changes were gamma distributed with parameters $k=0.5$ and $\theta=1$. 
 MCMC was performed for 96 hours in the cluster at Minnesota Supercomputing Instute which allowed for 5,000 generation of burn-in and a minimum of 200,000 generations of MCMC for each of the 6 models.
 Convergence of the MCMC was tested using R package coda (ref) and software Tracer (ref) to assess convergence and mixing (see supplementary information).
-% E: solsource ref
 
 
 \begin{table}
@@ -73,5 +86,5 @@ Unknown ploidy and self incompatible & 12 & 0 & 1 & 2 \\ \bottomrule
 \end{tabular}
 \caption{Binary and three state classifications for 595 taxa with ploidy and/or breeding system data. The number of taxa in the t he sample was maximize by including tips with only ploidy or only breeding system and assigned them as uncertain in the unknown character.}
 % E: but P are not SI
-\label{table:datatable}
+\label{table:stateclassifications}
 \end{table}
