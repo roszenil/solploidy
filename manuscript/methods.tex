@@ -32,12 +32,22 @@ We retained all of these species in each of the analyses below, because pruning 
 
 \subsection{Models}
 
+% E: There are so many models, I think we need to try hard to help the reader keep them straight.
+% I would avoid naming any states with numbers, except maybe within the stateclassification table and its caption.
+% I also still find bisse/hisse/muhisse terminology confusing, I think because it both describes a general class of model and applies to a specific analysis here, and because bisse and hisse are run separately on ploidy breeding system.
+% How about a model naming scheme like this?
+%   D/P
+%   D/P-A/B
+%   I/C
+%   I/C-A/B
+%   ID/CD/CP
+%   ID/CD/CP-A/B
+% Or something else more concise and descriptive?
+
 We first defined a binary state speciation and extinction model (BiSSE, \citet{maddison_2007})  for polyploidy evolution where taxa was classified as diploid (D=0) and polyploid (P=1) \cref{table:stateclassifications}.
 In a Bayesian framework, we obtained posterior probability distributions of speciation rates ($\lambda_D$, $\lambda_P$), extinction rates ($\mu_D$, $\mu_P$) , net diversification rates ($r_D=\lambda_D-\mu_D, r_P=\lambda_P-\mu_P$), and  relative extinction rates ($\nu_D=\frac{\mu_D}{\lambda_D}, \nu_D=\frac{\mu_D}{\lambda_D}$) just as previously explored in \citet{mayrose_2011}.
 The cladogenetic changes explored in BiSSE were polyploidization rate are represented by parameter $\rho$ and by diploidization parameter rate $\delta$.
 % E: cladogenetic?
-
-% E: above and below, drop numerical state names ... even in the table
 
 As a second step, we fitted a hidden state speciation and extinction model (HiSSE, \citet{beaulieu_2016}) to evaluate whether the differences in diversification rates were found due to a hidden trait associated to polyploidy.
 As discussed by \citet{beaulieu_2016} BiSSE-like models suffer from a large type I error because they fail to account as part of the null hypothesis heterogeneous diversification rate changes  that do not depend on the trait of interest.
@@ -54,7 +64,7 @@ For these models we assumed that self-compatibility is irreversible as discussed
 Next, we proposed a multivariate speciation and extinction model (MuSSE, \citet{fitzjohn_2012}) to investigate the link amongst diversification, breeding system, and polyploidy simultaneously.
 The MuSSE model is defined using three states self-compatible diploids (SC-D=0), polyploids that are always self-compatible (ref for this??) (P=1), and self-incompatible diploids (SI-D=2, see table \cref{table:stateclassifications}) and contains ten parameters, six defining diversification ($\lambda_{SD}, \mu_{SD},\lambda_{P},\mu_{P}, \lambda_{ID},\mu_{ID}$) and the other four key cladogenetic changes that are: polyploidization of self-compatible diploids $\rho_{SD}$, diploidization $\delta$, polyploidization of self-incompatible diploids $\rho_{ID}$, and self-incompatible to self-compatible rate $q_{IC}$.
 % E: for SC, use C instead of S
-% E: lack of SI-P should maybe be explained in Intro?
+% E: lack of SI-P is now mentioned in Data and should be explained in Intro
 
 Since the null hypothesis of the MuSSE model is that the diversification is equal and constant for all three states defined, it is possible that MuSSE can also suffer from large type I errors.
 In order to account for heterogeneity of the diversification rates and parse the signal in diversification coming from breeding system and polyploidy we extended MuSSE model to account for a hidden state, as \citet{beaulieu_2016} did in the bivariate case.
