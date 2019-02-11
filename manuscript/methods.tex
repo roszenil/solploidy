@@ -79,21 +79,21 @@ Using the marginal likelihood values we calculated fourteen different Bayes fact
 ; second, even when it is possible to re-write the polyploidy and diversification models to include a hidden state that would account for breeding system allowing to use the same input data, the re-written model would still not be comparable to the multivariate SSE models proposed for polyploidy and breeding system due to the hierarchical structure imposed by the interaction between breeding system and polyploidy. This second point has been recently denoted by \citet{tarasov_2019} as the lack of lumpability in Markov models for discrete traits.  In our particular case, polyploids cannot be self compatible, and the irreversibility of self-compatible to self-incompatible state makes the three-state Markov models non-lumpable into two-state models ultimately making  multivariate and the bivariate models incomparable.
 
 
-\begin{table}
-\begin{tabular}{@{}llccc@{}} \toprule
-\multicolumn{4}{r}{Models} \\ \cmidrule(r){3-5}
-Type & Total of & D/P and D/P-A/B& I/C and I/C-A/B & ID/P/CD and CD/P/ID-A/B\\ \midrule
-Diploid Self Compatible & 152 & 0 &  0 & 0 \\
-Diploid Self Incompatible& 97 & 0  & 1 & 2\\
-Diploid with unknown breeding system & 219 & 0 & (0,1) & (0,2) \\
-Polyploid & 81 & 1& 0 & 1 \\
-Unknow ploidy and self compatible& 34 & (0,1)& 0 & (0,1) \\ 
-Unknown ploidy and self incompatible & 12 & 0 & 1 & 2 \\ \bottomrule
-\end{tabular}
-\caption{Binary and three state classifications for 595 taxa with ploidy and/or breeding system data. The number of taxa in the t he sample was maximize by including tips with only ploidy or only breeding system and assigned them as uncertain in the unknown character.}
+%\begin{table}
+%\begin{tabular}{@{}llccc@{}} \toprule
+%\multicolumn{4}{r}{Models} \\ \cmidrule(r){3-5}
+%Type & Total of & D/P and D/P-A/B& I/C and I/C-A/B & ID/P/CD and CD/P/ID-A/B\\ \midrule
+%Diploid Self Compatible & 152 & 0 &  0 & 0 \\
+%Diploid Self Incompatible& 97 & 0  & 1 & 2\\
+%Diploid with unknown breeding system & 219 & 0 & (0,1) & (0,2) \\
+%Polyploid & 81 & 1& 0 & 1 \\
+%Unknow ploidy and self compatible& 34 & (0,1)& 0 & (0,1) \\ 
+%Unknown ploidy and self incompatible & 12 & 0 & 1 & 2 \\ \bottomrule
+%\end{tabular}
+%\caption{Binary and three state classifications for 595 taxa with ploidy and/or breeding system data. The number of taxa in the the sample was maximized by including tips with only ploidy or only breeding system and assigned them as uncertain in the unknown character.}
 % E: but P are not SI
-\label{table:stateclassifications}
-\end{table}
+%\label{table:stateclassifications}
+%\end{table}
 
 
 \begin{table}
@@ -140,9 +140,9 @@ Polyploidy Models & Breeding System Models & Polyploidy and Breeding System Mode
 } & 
 {\begin{tabular}{lcccc}
 & 7 & 8 & 9 & 10\\
-7. CD/P/ID & $\cdot$	&1.36 & -44.15&-40.95 \\
-8. CD/P/ID no $\delta$ & $\cdot$ & $\cdot$ & -45.51 &-42.31 \\
-9. CD/P/ID-A/B& $\cdot$ & $\cdot$ &$\cdot$	& 3.2 \\ 
+7. ID/P/CD & $\cdot$	&1.36 & -44.15&-40.95 \\
+8. ID/P/CD no $\delta$ & $\cdot$ & $\cdot$ & -45.51 &-42.31 \\
+\textbf{9. ID/P/CD-A/B}& $\cdot$ & $\cdot$ &$\cdot$	& 3.2 \\ 
 10. ID/P/CD no $\delta$-A/B & $\cdot$& $\cdot$&$\cdot$ & $\cdot$\\
 \end{tabular}
 }\\
