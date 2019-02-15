@@ -2,7 +2,7 @@
 
 \subsection{Data}
 
-Chromosome number data were obtained for all Solanaceae taxa in the the Chromosome Counts Database \citep[CCDB;][]{rice_2015}, and the ca.~14,000 records were cleaned semi-automatically using the CCDBcurator R package \citep{rivero_2019}. 
+Chromosome number data were obtained for all Solanaceae taxa in the the Chromosome Counts Database \citep[CCDB;][]{rice_2015}, and the ca.~14,000 records were cleaned semi-automatically using the CCDBcurator R package \citep{rivero_2019}. % what does "cleaned" mean?
 This large dataset includes the compilation of Solanaceae ploidy states from \citet{robertson_2011}.
 Species were coded as either diploid (D) or polyploid (P).
 For the majority of species, ploidy was assigned according to information from the original publications and the Kew Royal Botanic Gardens C-value DNA resource \citep{bennett_2005}.
@@ -11,19 +11,24 @@ For example, \textit{Solanum betaceum} did not include information about ploidy 
 Species with more than one ploidy level were assigned the smallest and most frequent ploidy level recorded.
 % E: There was more here about cross-verifying that no P species were SI.  I removed it because there were conflicts before, but we resolved them.  This is addressed in the next paragraph.
 %
-Breeding system was scored as self-incompatible (I) or self-compatible (C) based on results hand-curated from the literature \citep[as compiled in][]{igic_2006, goldberg_2010, robertson_2011, goldberg_2012}.
+Breeding system was scored as self-incompatible (I) or self-compatible (C) based on results curated from the literature and  original experimental crosses \citep[as compiled in][]{igic_2006, goldberg_2010, robertson_2011, goldberg_2012}.
 Most species could unambiguously be coded as either I or C \citep{raduski_2012}.
 Following previous work, we coded as I any species with functional I systems, even if C or dioecy was also reported.
 Dioecious species without functional I were coded as C.
 
+% B: It would be nice to clarify what was added--what is new--and separate the subsections of ploidy and breeding system data.
+%
 % E: I am trying to stick with I/C when talking about the state values, but using SI/SC when talking about the meaning of the trait (because this what people use normally).
 
 To those existing data sets, we added some additional records for chromosome number and breeding system.
-The Supplementary Information contains citations for the numerous original sources for all of the data. % todo: add number of refs when we have it
-Synonymy followed Solanaceae Source \citep{solsource}.
-Hybrids and cultivars were excluded because ploidy and breeding system are likely to be altered by domestication.
-As in \citet{robertson_2011}, we examined closely the few species for which the merged ploidy and breeding system data indicated the presence of self-incompatible polyploids.
-Although SI populations frequently contain some SC individuals and diploid populations frequently contain some polyploid individuals, in no case did we find individuals that were both SI and polyploid.
+The Supplementary Information contains citations for the numerous sources for the added data. % todo: add number of refs when we have it
+Resolution of taxonomic synonymy followed the conventions provided in Solanaceae Source \citep{solsource}. %B: was Synonymy followed Solanaceae Source \citep{solsource}.
+Hybrids and cultivars were excluded because ploidy and breeding system can be affected by artificial selection during domestication. %B: was: Hybrids and cultivars were excluded because ploidy and breeding system are likely to be altered by domestication.
+Following the reasoning outlined in \citet{robertson_2011}, we examined closely the few species for which the merged ploidy and breeding system data indicated the presence of self-incompatible polyploids.
+Although SI populations frequently contain some SC individuals, and diploid populations frequently contain some polyploid individuals, in no case did we find a convincing case of a naturally occurring SI and polyploid population.
+%B: Thus qualified, as above, I think this should be inserted for maximum Truth.
+The single instance of an SI and polyploid individual appears to be an allopentaploid hybrid of {\em Solanum oplocense} Hawkes x {\em Solanum gourlayii} Hawkes, reported by \citealt{camadro1981}.
+
 Because of this empirical observation and the functional explanation for whole genome duplication disabling gametophytic self-incompatibility \citep[reviewed in][]{ramsey_1998,stone_2002}, we consider only three observed character states: self-incompatible diploids (ID), self-compatible diploids (CD), and polyploids which are always self-compatible (CP).
 
 % E: Should we include more details about how many polymorphic species and how the particularly tricky ones were dealt with?
