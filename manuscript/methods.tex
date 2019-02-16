@@ -91,7 +91,7 @@ We thus fit a multi-state model that includes both traits \citep[MuSSE,][]{fitzj
 The three states in this model are self-incompatible diploids (ID), self-compatible diploids (CD), and polyploids, which are always self-compatible (CP).
 As explained above, we did not include a state for self-incompatible polyploids because they are not observed in the data, and   that trait combination state is mechanistically predicted not to occur.
 We call this the \textit{ID/CD/CP ploidy and breeding system} model.
-The model has ten parameters, six for diversification in each state ($\lambda_{ID},\ \lambda_{CD},\ \lambda_{CP}$ for speciation, $\mu_{ID},\ \mu_{CD},\ \mu_{CP}$ for extinction) and four for transitions between states ($\rho_I,\ \rho_C$ for polyploidization transitions from $ID$ and $CD$ to $CP$, respectively; $\delta$ for diploidization from $CP$ to $CD$; $q_{IC}$ for loss of self-incompatibility without polyploidization, from $ID$ to $CD$).
+The model has 10 parameters, six for diversification in each state ($\lambda_{ID},\ \lambda_{CD},\ \lambda_{CP}$ for speciation, $\mu_{ID},\ \mu_{CD},\ \mu_{CP}$ for extinction) and four for transitions between states ($\rho_I,\ \rho_C$ for polyploidization transitions from $ID$ and $CD$ to $CP$, respectively; $\delta$ for diploidization from $CP$ to $CD$; $q_{IC}$ for loss of self-incompatibility without polyploidization, from $ID$ to $CD$).
 The total rate of loss of self-incompatibility, \ie transitions out of $ID$, is $q_{IC} + \rho_I$.
 Diploidization from $CP$ to $ID$ is not allowed because it would represent a simultaneous regain of SI.
 
@@ -107,7 +107,8 @@ There are additionally twelve diversification rate parameters ($\lambda_{ID_A},\
 
 \subsection{Diploidization as an exploratory hypothesis}
 
-For all four models that consider ploidy changes, we allowed that diploidization could happen.
+%B: this section needs a motivation. Right now, that appears to be hung on an argument from a citation (mayrose_2010), which is not clarified. I think you guys may have the paleo-WGD literature in mind here. If so, perhaps simply stating something ought to be written about the expectations for capturing some underlying process we think is ongoing.
+For all four models that consider ploidy changes, we allowed diploidization.
 Previous modeling approaches \citep{mayrose_2011} have argued against inferring diploidization rates when using ploidy data that comes from classifications based on chromosome number multiplicity or chromosome number change models like chromEvol \citep{mayrose_2010}.
 These types of classifications do not allow for a ploidy reversion.
 Where indicated, the classification of ploidy for the data used in our models was based on chromosome multiplicity at the genus level.
@@ -119,28 +120,29 @@ In our case the diploidization parameter (or its absence, $\delta=0$) in our mod
 
 \subsection{Statistical inference under the models}
 
-Parameters for each of the ten diversification models were performed using custom code in the RevBayes \citep{hoehna_2016} environment.
-Code and results for all analyses is available at \url{https://github.com/roszenil/solploidy}.
-For all analyses, a correction for incomplete sampling was included, based on assuming that the Solanaceae family has approximately 3,000 species ($s=595/3000$) as estimated by the Solanaceae Source project \citep{solsource}.
-For all ten models, we assumed that speciation and extinction parameters  had log-normal prior distributions with means equal to the expected net diversification rate $(\text{number of taxa} / [2 \times \text{root age}])$ and standard deviation $0.5$.
+Parameters for each of the 10 diversification models were performed using custom code in the RevBayes \citep{hoehna_2016} environment. %B: fixme: I think the intent here is  "Parameter estimation [...] was peformed"
+Code for analyses and key results is available at \url{https://github.com/roszenil/solploidy}.
+We included a correction for incomplete sampling in all analyses, based on assuming that the Solanaceae family has approximately 3,000 species ($s=595/3000$) as estimated by the Solanaceae Source project \citep{solsource}.
+For all 10 models, we assumed that speciation and extinction parameters had log-normal prior distributions with means equal to the expected net diversification rate $(\text{number of taxa} / [2 \times \text{root age}])$ and standard deviation $0.5$.
 Priors for parameters defining trait changes were assumed to be gamma distributed with parameters $k=0.5$ and $\theta=1$. 
-For each model, an MCMC chain was run for 96 hours in the high-performance computational cluster at Minnesota Supercomputing Institute, which allowed for 5,000 generation of burn-in and a minimum of 200,000 generations of MCMC for each of the 6 models. 
-For each model, convergence and mixing of the MCMC was tested using the R package coda and the software Tracer (see supplementary information for convergence plots). % eventually, add supp info fig ref
+For each model, an MCMC chain was run for 96 hours in the high-performance computational cluster at the Minnesota Supercomputing Institute, which allowed for 5,000 generations of burn-in and a minimum of 200,000 generations of MCMC for each of the 6 models. %B: the number of models changes here?
+For each model, convergence and mixing of the MCMC was tested using the R library \texttt{coda} and the software package Tracer (see supplementary information for convergence plots). % fixme: eventually, add supp info fig ref
 
 \subsection{Model selection}
 
-We calculated the marginal likelihood for each of the ten models in RevBayes \citep{hoehna_2016}.
+We calculated the marginal likelihood for each of the 10 models in RevBayes \citep{hoehna_2016}.
 Marginal likelihoods were calculated using 50 stepping stone steps under the methodology of \citet{xie_2010}.
-Each stepping stone step was found by calculating 500 generations of burn-in followed by a total of 1000 MCMC steps (\cref{table:marginallike}).
+Each stepping stone step was found by calculating 500 generations of burn-in followed by a total of 1,000 MCMC steps (\cref{table:marginallike}).
 The calculation of each marginal likelihood ran for 24 hours on a high-performance computational cluster.
 
-Using the marginal likelihood values, we calculated thirteen different Bayes factors. % E: it said "fourteen" but I only count thirteen?
+Using the marginal likelihood values, we calculated thirteen different Bayes factors. % E: it said "fourteen" but I only count thirteen? %B: fixme: my count too.
 Six compared the models of polyploidy against each other (D/P and D/P--A/B, each with or without diploidization), one compared the breeding system models (I/C and I/C--A/B), and six compared the models with both traits (ID/CD/CP and ID/CD/CP--A/B, each with or without diploidization) (\cref{table:bayesfactors}).
 %
 Other comparisons between these models are not valid because the input data are different under the different state space codings (\cref{figure:stateclassifications}).
 In essence, the D/P, I/C, and ID/CD/CP state spaces are not lumpable with respect to one another \citep{tarasov_2019}.
 %R: Emma this is where the figure can be important to show that we have to make different input
 % E: I think this short explanation is clear enough, especially with the figure.  I'm not sure whether the hierarchical concept is exactly applicable here.
+%B: my TeX GUI (and my brain) underlined "lumpable", especially in the context of "with respect to one another." I think I get the gist, but I am not sure that I agree others will easily. I find it useful to imagine Spencer reading this, for example.
 
 %\begin{table}
 %\begin{tabular}{@{}llccc@{}} \toprule
@@ -188,7 +190,7 @@ Model& Model& Ploidy & Diploidization & Breeding  & Hidden & Parameters & Margin
 9. ID/P/CD-A/B & MuHiSSE &	Yes 	&Yes &	Yes &	Yes &	16 & \textbf{-1300.35} \\
 10.ID/P/CD no $\delta$-A/B &	 MuHiSSE	 & Yes & 	No	&Yes &	Yes	&15 &-1303.55 \\ \bottomrule
 \end{tabular}
-\caption{Marginal likelihoods for the ten diversification models proposed.}
+\caption{Marginal likelihoods for the 10 diversification models proposed.}
 \label{table:marginallike}
 \end{table}
 
