@@ -27,9 +27,9 @@
 % Line numbering
 %   put after amsmath, for better numbering
 %   ? though still need to wrap subequations in begin/end{linenomath*}
-\usepackage{lineno}
+\usepackage[mathlines]{lineno}
 \modulolinenumbers[5]
-% \linenumbers % put this after the titlepage 
+% \linenumbers % put this after the titlepage
 
 % Paragraphs
 \setlength{\parindent}{0.5in}
@@ -43,12 +43,17 @@
 \setlength\heavyrulewidth{0.15em}
 \cmidrulekern 0.2em
 
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[name=Figure]{suppfigure}
+\renewcommand\thesuppfigure{S\arabic{suppfigure}}
+
 \usepackage{caption}
 \captionsetup{font={stretch=\stretchby}}
-\usepackage{subcaption}
+% \usepackage{subcaption}
 % push figures to end
 \usepackage[nolists,nomarkers]{endfloat}
 % \renewcommand{\efloatseparator}{\mbox{}} % don't clearpage after each float
+\DeclareDelayedFloat{suppfigure}{Supplemental Figures}
 
 % \usepackage{sidecap}
 % \usepackage{array}
@@ -58,17 +63,18 @@
 \usepackage{amsmath}
 
 % Citations
-\usepackage{natbib}
+\usepackage[authoryear,sectionbib]{natbib}
 \bibpunct{(}{)}{;}{a}{}{,}  % no comma between author and year
 \renewcommand{\bibsection}{\section{Literature Cited}}
-\setlength{\bibsep}{0pt}
+\setlength{\bibsep}{1pt}
 
 % Cross-refs
 \usepackage[hidelinks]{hyperref} % needs to be loaded before cleveref
-\usepackage[capitalize, sort&compress]{cleveref}
+\usepackage[capitalize,sort&compress]{cleveref}
 \newcommand{\crefrangeconjunction}{--}
 \crefname{figure}{Fig.}{Figs.}
 \crefname{table}{Table}{Tables}
+\crefname{suppfigure}{Fig.}{Figs.}
 
 % Used on the title page
 \usepackage{endnotes}
