@@ -57,6 +57,8 @@ In a Bayesian framework, we obtained posterior probability distributions of spec
 This analysis explores the same question as \citet{mayrose_2011, mayrose_2015}, but our analyses differ because we include not only polyploidization (parameter $\rho$, the transition rate from $D$ to $P$), but also diploidization (parameter $\delta$, the transition rate from $P$ to $D$). % E: presumably the motivation will be explained in the Intro
 %B: should the term above be "re-diploidization" or "diploidization" (as now)?
 
+% B (via E): need some explanation of what \delta means, biologically, when ploidy is scored like this
+
 Our second model assesses the signal of diversification due to ploidy differences while also parsing out the heterogeneity of diversification rates due a possible unobserved trait.
 BiSSE-like models can suffer from a large false discovery rate because they fail to account for diversification rate changes that do not directly depend on the trait of interest \citep{rabosky_2015, beaulieu_2016}.
 Diversification rate differences explained by something (trait) other than ploidy, are accommodated by adding a hidden state (HiSSE model; \citealt{beaulieu_2016}). %B: inserted "(trait)", because that seems to be the goal - a biological explanation?
@@ -104,6 +106,8 @@ Because our goal was to look for diversification rate differences associated wit
 The reduction in parameter space is achieved by fixing the rates for transitions among hidden states to be equal with rate $\alpha$, and fixing the transition rates between observed states to be independent of the hidden state (rates $\rho_I,\ \rho_C,\ \delta,\ q_{IC}$ as defined for the ID/CD/CP model).
 There are additionally twelve diversification rate parameters ($\lambda_{ID_A},\ \lambda_{ID_B},\ \lambda_{CD_A},\ \lambda_{CD_B},\ \lambda_{CP_A},\ \lambda_{CP_B},\ \mu_{ID_A},\ \mu_{ID_B},\ \mu_{CD_A},\ \mu_{CD_B},\ \mu_{CP_A},\ \mu_{CP_B}$).
 %B: I can't tell, but it seems to me that this 26->16 parameter reduction makes it possible to underestimate the effect of these hidden states. Perhaps this complication is covered in the Discussion section.
+
+% E todo: explain "pathway" method of robertson2011
 
 \subsection{Diploidization as an exploratory hypothesis}
 
@@ -249,3 +253,5 @@ Ploidy Models & Breeding System Models & Ploidy and Breeding System Models \\ \m
 %10.ID/P/CD no $\delta$-A/B &
 %\bottomrule
 %\end{tabular}
+
+% E: Could we include a figure of the traits on the tree?  At least as supp info. TODO

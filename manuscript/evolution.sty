@@ -45,7 +45,9 @@
 
 \usepackage{newfloat}
 \DeclareFloatingEnvironment[name=Figure]{suppfigure}
+\DeclareFloatingEnvironment[name=Table]{supptable}
 \renewcommand\thesuppfigure{S\arabic{suppfigure}}
+\renewcommand\thesupptable{S\arabic{supptable}}
 
 \usepackage{caption}
 \captionsetup{font={stretch=\stretchby}}
@@ -54,6 +56,7 @@
 \usepackage[nolists,nomarkers]{endfloat}
 % \renewcommand{\efloatseparator}{\mbox{}} % don't clearpage after each float
 \DeclareDelayedFloat{suppfigure}{Supplemental Figures}
+\DeclareDelayedFloat{supptable}{Supplemental Tables}
 
 % \usepackage{sidecap}
 % \usepackage{array}
@@ -75,6 +78,7 @@
 \crefname{figure}{Fig.}{Figs.}
 \crefname{table}{Table}{Tables}
 \crefname{suppfigure}{Fig.}{Figs.}
+\crefname{supptable}{Table}{Tables}
 
 % Used on the title page
 \usepackage{endnotes}

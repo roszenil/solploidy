@@ -32,8 +32,49 @@ The models that follow the diversification linked to both polyploidy and breedin
 Therefore, the models that were chosen were always the ones containing a hidden trait, and in the case of polyploidy models, the ones containing a diploidization parameter $\delta$ are preferable.
 
 
+% E & B:  We just spent awhile poring over the great supp figures of rate estimates, which are essential to grasp the uncertainties.  But to facilitate quick comparisons across models, could we have a table of the median rate estimates for all models?  Possibly like the format I've laid out below?  Or maybe there's a better way.
 
-Example in \cref{DP}. % XXX
+\begin{supptable}
+    \begin{center}
+    \begin{tabular}{lcccccc}
+                       & D/P & D/P+A/B & I/C & I/C+A/B & ID/CD/CP & ID/CD/CP+A/B \\ \midrule
+        %
+        $r_D$          &     &         & --- & ---     & ---      & ---          \\
+        $r_P$          &     &         & --- & ---     & ---      & ---          \\
+        $r_I$          & --- & ---     &     &         & ---      & ---          \\
+        $r_C$          & --- & ---     &     &         & ---      & ---          \\
+        $r_{ID}$       & --- & ---     & --- & ---     &          &              \\
+        $r_{CD}$       & --- & ---     & --- & ---     &          &              \\
+        $r_{CP}$       & --- & ---     & --- & ---     &          &              \\
+        %
+        $\rho$         &     &         & --- & ---     & ---      & ---          \\
+        $\rho_I$       & --- & ---     & --- & ---     &          &              \\
+        $\rho_C$       & --- & ---     & --- & ---     &          &              \\
+        $\delta$       &     &         &     &         &          &              \\
+        $q_{IC}$       & --- & ---     &     &         &          &              
+    \end{tabular}
+
+    \vspace{12pt}
+    \begin{tabular}{lcccccc}
+                       & D/P & D/P+A/B & I/C & I/C+A/B & ID/CD/CP & ID/CD/CP+A/B \\ \midrule
+        %
+        $r_D$          &     &         & --- & ---     & ---      & ---          \\
+        $r_P$          &     &         & --- & ---     & ---      & ---          \\
+        $r_I$          & --- & ---     &     &         & ---      & ---          \\
+        $r_C$          & --- & ---     &     &         & ---      & ---          \\
+        $r_{ID}$       & --- & ---     & --- & ---     &          &              \\
+        $r_{CD}$       & --- & ---     & --- & ---     &          &              \\
+        $r_{CP}$       & --- & ---     & --- & ---     &          &              \\
+        %
+        $\rho$         &     &         & --- & ---     & ---      & ---          \\
+        $\rho_I$       & --- & ---     & --- & ---     &          &              \\
+        $\rho_C$       & --- & ---     & --- & ---     &          &              \\
+        $q_{IC}$       & --- & ---     &     &         &          &              
+    \end{tabular}
+    \end{center}
+    \caption{median rate estimates for all models (see supp figs for more details and uncertainties); when there are two numbers in one cell, they're for the A and B hidden states; --- means that parameter was not present in the model; upper section is for models with $\delta$ and lower section is for models without}
+    \label{table:estimates}
+\end{supptable}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{Netdiversificationallmodels.pdf}
@@ -41,13 +82,12 @@ Example in \cref{DP}. % XXX
 \label{figure:netdivall}
 \end{figure}
 
-<<<<<<< HEAD
 \begin{figure}
 \includegraphics[width=\textwidth]{netdiversificationallnodip.pdf}
   \caption{Net diversification rates for all models that do not include diploidization.}  
 \label{figure:netdivnodip}
 \end{figure}
-=======
+
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{bisseDPposteriordist.pdf}
 \caption{Posterior distribution for each of the parameters in the D/P polyploidy model} % XXX
@@ -63,6 +103,7 @@ Example in \cref{DP}. % XXX
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{hisseDPposteriordist.pdf}
 \caption{Posterior distribution for each of the parameters in the D/P-A/B polyploidy model} % XXX
+% fixme: offset plotting error in "relative extinction" panel
 \label{suppfigure:DPAB}
 \end{suppfigure}
 
@@ -108,4 +149,4 @@ Example in \cref{DP}. % XXX
 \label{suppfigure:IDCDCPnodipAB}
 \end{suppfigure}
 
->>>>>>> a54a445f0e9a2d2e164c90a5d8d3cb8bf583cc19
+% E or R todo: which pathway from SI-D to SC-P is more common, based on rate estimates?  apply procedure from robertson2011 to rates from ID/CD/CP model
