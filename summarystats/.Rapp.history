@@ -449,7 +449,6 @@ row.names(threestate)<-matched$phy$tip.label#
 #
 write.table(threestate,file="~/Dropbox/solploidy/basicdata/threestate2.tsv",sep="\t")
 threestate
-threestate
 setwd('~/Dropbox/solploidy/summarystats')#
 library("ape")#
 library("phytools")#
@@ -620,7 +619,6 @@ for (i in 1:total.species){#
 }
 simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
 head(simplified.solanaceae)
-head(simplified.solanaceae)
 nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)
 nor.ploidysy
 nor.ploidisy
@@ -672,27 +670,6 @@ self.incomp<-rep(0,total.species)#
 life.hist<-rep(0,total.species)
 for (i in 1:total.species){#
   index<-which(solanaceae.allrecords$fullname==a1 #species[i])#
-  aux1<- solanaceae.allrecords$csomenumber[index]#
-  if(all(is.na(aux1))){#
-  	 mode.csome[i]<-NA#
-  	 min.csome[i]<-NA  	#
-  }else{#
-  mode.csome[i]<-min(Mode(aux1))#
-  min.csome[i]<-min(aux1,na.rm=TRUE)#
-  }#
-  aux2<- solanaceae.allrecords$ploidy[index]#
-  if(all(is.na(aux2))){#
-  	 mode.ploidy[i]<-NA#
-  	 min.ploidy[i]<-NA  	#
-  }else{#
-  mode.ploidy[i]<-min(Mode(aux2))#
-  min.ploidy[i]<-min(aux2,na.rm=TRUE)#
-  }	#
-  self.incomp[i]<-solanaceae.allrecords$selfincomp[index[1]]#
-  life.hist[i]<-solanaceae.allrecords$lifehistoryclean[index[1]]#
-}
-for (i in 1:total.species){#
-  index<-which(solanaceae.allrecords$fullname==species[i])#
   aux1<- solanaceae.allrecords$csomenumber[index]#
   if(all(is.na(aux1))){#
   	 mode.csome[i]<-NA#
@@ -1008,7 +985,5 @@ library("RevGadgets")
 #2. Full BiSSE with 250K runs of MCMC#
 #
 p = plot_ancestral_states("~/Dropbox/solploidypersonal/bisse250K/anc_states_summaryBiSSEtree250K.tree", size=0.4, include_start_states=FALSE, summary_statistic="MAP",tip_label_size=0.45, tip_label_offset=0.4,tip_label_italics=TRUE,node_label_size=FALSE,node_label_nudge_x=0.1,shoulder_label_size=2,alpha=.3,node_size_range=c(2, 6))
-#2. Full BiSSE with 250K runs of MCMC#
-#
-p = plot_ancestral_states("~/Dropbox/solploidypersonal/bisse250K/anc_states_summaryBiSSEtree250K.tree", size=0.4, include_start_states=FALSE, summary_statistic="MAP",tip_label_size=0.45, tip_label_offset=0.4,tip_label_italics=TRUE,node_label_size=FALSE,node_label_nudge_x=0.1,shoulder_label_size=2,alpha=.3,node_size_range=c(2, 6))
 print(p)
+quit()
