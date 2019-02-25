@@ -1,31 +1,64 @@
 \section{Results}
 
-%B: IMO each instance of "(Figure 2(X))" ought be replaced with "(Figure 2x)", so that (Figure 2(A)) becomes (Figure 2a). Double-parentheses should be reserved for equations and we already use caps, for example C and D, for traits. I am happy to make the change in the text, which is trivial, but I am not sure how the PDF conversion through illustrator would fare.
- 
-\subsection{Polyploidy and Diversification Models}
-Similarly to the results obtained by \citet{mayrose_2011} and \citet{mayrose_2015}, we found that in the D/P polyploidy model the net diversification of diploids is larger than the the net diversification of polyploids since the net diversification distributions do not overlap (Figure 2(A)). This result holds true whether or not the diploidization parameter is present. However, in the presence of  the diploidization parameter the net diversification rate of polyploids is nonnegative with probability 1 (Figure 2(A)), whereas in the absence of diploidization the net diversification rate of polyploids can be negative with a probability 0.87 (FIGURE 3(A)). In terms of the relative extinction, when the diploidization parameter is present both polyploids and diploids have posterior distributions that overlap, but that pattern changes in the absence of the diploidization parameter leading to a significant difference between relative extinction where polyploids have a significant higher relative extinction rate (see Supplementary Information).\newline
+\subsection{Traits and diversification}
 
-For the D/P+A/B model with diploididization the diploid and polyploid net diversification rates are overlapping for both state A and B of the hidden trait (Figure 2(B)). In this model, the differences in net diversification are due to the presence of a hidden trait and not to the differences in ploidy. When diploidization parameter is absent the hidden state is still driving the differences in diversification rates (Figure 3(B)).
+% E: I brutally shortened the text here and hence put all the models into one section for the "diversification" question.  But I think I retained all the ideas that were written out before.
+% Much of what I removed was descriptions about which distributions are/aren't overlapping with one another.  I think that's easier for the reader to see in the figures than to read in the text.  But now the text says things like if some estimates are "different", so perhaps in Methods we should explain different = non-overlapping?
 
-\subsection{Polyploidy and Breeding System models}
-When breeding system is considered simultaneously from polyploidy, we found that in the ID/CD/CP model self-incompatible and diploid state (ID) has significantly larger net diversification rate compare to both self-compatible diploid (SD) and polyploid rates(CP). Meanwhile, both self-compatible diploid and polyploid net diversification rates have overlapping posterior distributions (Figure 2(E)). When hidden state was added, the ID/P/CD+A/B model, significant differences between self-compatible and self-incompatible diploids continue to be the truth for both A and B values of the hidden state. However, the posterior distribution for the net diversification rate of polyploids overlaps with both the self-compatible and self-incompatible posterior distributions for each value of the hidden state (Figure 2F). This result indicated that polyploid state was not significantly different from diploid from the net diversification perspective.  In the absence of diploidization, models ID/CD/CP no $/delta$ and ID/P/CD no $delta$ +A/B showed that the net diversification of polyploids is equivalent to the net diversification of self-compatible diploids. In the absence of diploidization, the net diversification rates of self-incompatible diploids are always faster than their self-compatible diploid and polyploid counterparts (Figures 3C and 3D). \newline
-Polyploidization rates from self-compatible diploid $\rho_{CD}$ and from self-incompatible diploid $\rho_{ID}$ are not significantly different (see supplementary information figures). However, the distribution of $\rho_{ID}$ seems to always consider faster values compare to the distribution of $\rho_{CD}$. This result is highlighted in ancestral reconstructions of the $ID/CD/CP$ model where transitions from ID to CP are more probable than transitions from CD to CP. % Emma here we put the figure?
+We found that when considered alone, ploidy and breeding system each showed significant associations with net diversification differences.
+When considered together, however, the effect of breeding system dominated the effect of ploidy, although hidden factors played an important role as well.
 
+For ploidy alone (D/P model), we found a larger net diversification rate for diploids than for polyploids, in agreement with \citep{mayrose_2011, mayrose_2015}.
+This result holds with (\cref{figure:netdivall}A) or without (\cref{figure:netdivnodip}A) the diploidization parameter, though including diploidization shifts the net diversification rate of polyploids to be non-negative.
+Incorporating a hidden state, however, removes the clear separation in diversification between diploids and polyploids (D/P+A/B model, \cref{figure:netdivall}B, \cref{figure:netdivnodip}B).
+Thus, differences in net diversification are better explained by an unknown factor than by ploidy.
+% E: I removed the description of relative extinction results.  We don't discuss it for other models or show it in the main text, and I never really know what to make of that compound parameter.  But it's good that it's in the supp info.
 
-\subsection{Diploidization as an exploratory hypothesis}
- For the two models that only consider diploid and polyploid state (D/P and D/P+A/B) the effect of removing parameter $\delta$ was that net diversification rate of polyploids can be negative with high probability (Figures 3A and 3B) . However, in the models that simultaneously considered polyploidy and breeding system, removing the $\delta$ parameter did not have much of an effect on the location of the posterior distribution of polyploid net diversification rate but on the credible interval width and overlap with net diversification of diploids.  When diploidization was absent, the net diversification of polyploids overlaps with the net diversification of self-compatible diploids but not with the one of self-incompatible diploids (Figures 3C and 3D).  For all models, the posterior distribution of diploidization rate is more uncertain than the one of polyploidization rates (See supplementary information figures). 
- 
- 
-\subsection{Modeling breeding system by itself }
-In the I/C breeding system model we found that the net diversification rate for self-incompatible state is larger than the net diversification rate for self-compatible state (Figure 2(C)). The net diversification rate for self-compatible has a probability distribution centered at zero.  \newline
-When a hidden state is added in the I/C+A/B model, we found that under the hidden state A the self-compatible and self-incompatible net diversification rates are different. Under the hidden state B, those two rates overlap. Furthermore, the net diversification of self-compatible taxa on hidden state B overlaps with the hidden state rate of self-incompatible taxa on state A  (Figure 2(D)). These results agree with previous results found by  \citet{goldberg_2012}. However, \citet{goldberg_2012} used a ClaSSE  approach since they were interested in anagenetic and cladogenetic changes for self-incompatibility using a smaller subset of the data presented in the current work. Transition rate between incompatible and compatible state are frequent with a rate $q_{IC}=0.3$ for both the  I/C and the I/C+A/B models.
+For breeding system alone, we found a larger net diversification rate for SI and for SC species, in agreement with \citep{goldberg_2010} (I/C model, \cref{figure:netdivall}C).
+When a hidden state is added to the model (I/C+A/B), the large net diversification difference persists for one of the hidden states but is removed for the other (\cref{figure:netdivall}D).
+Thus, differences in net diversification are best explained by both breeding system and an unknown factor.
+The transition rate from SI to SC is $q_{IC}=0.3$ for both the I/C and the I/C+A/B models.
+
+For ploidy and breeding system together (ID/CD/CP model), the net diversification rate for SI diploids (ID) was greater than for either SC diploids or SC polyploids, with or without diploidization (\cref{figure:netdivall}E, \cref{figure:netdivnodip}C).
+It thus appears that the difference in net diversification with breeding system persists when ploidy is included in the model, but not the reverse.
+The association of ploidy with net diversification (\cref{figure:netdivall}A, \cref{figure:netdivnodip}A) appears to be driven by the subset of diploids that are SI; among SC species, net diversification rates for diploids and polyploids are similar.
+%
+When a hidden state is included (IC/CD/CP+A/B model), the same general pattern remains when diploidization is excluded (\cref{figure:netdivnodip}D), although the higher net diversification rate of ID is less clear within one of the hidden states.
+With diploidization, the net diversification rate of ID is still greater than CD within each hidden state, but diversification for P is highly uncertain and perhaps bimodal.
+
+% E: I moved the discussion of \rho_I and \rho_C values into the Pathways section.
+
+% E note to self: keep editing from here XXX
 
 \subsection{Model selection}
+% E: Maybe incorporate this into the previous subsection?  It could make more sense to organize by question rather than by statistical method (param estimates vs model comparisons).
 
-In \cref{table:marginallike} we listed the marginal likelihood values calculated in log scale ($log(P(\mathbf{X}|M)$) for each of the models tested. The different components included and excluded for each model as a a summary of the diagrams from \cref{figure:netdivall} are indicated in each model. From the marginal likelihoods in log scale, the Bayes factors in log-scale($BF(M_0,M_1)=log(P(\mathbf{X}|M_0)-P(\mathbf{X}|M_0)$) were calculated as shown in table \cref{table:bayesfactors}. After testing every single pair of polyploidy models (1-4) we found overwhelming evidence that the best polyploidy model is always  the D/P+A/B, that is the model with hidden state and diploidization, that is Bayes factors were always  greater than 2 when D/P+A/B was the first model in the Bayes factor equation or negative when D/P+A/B was the second model in Bayes factor equation. \newline
-For the two models following the evolution of breeding system, the I/C+A/B is the best choice between models 3 and 4 (BF(IC, IC+A/B)=-39.5<0).\newline
-The four models that follow the diversification linked to both polyploidy and breeding system (models 5-8) where compared in pairs. Bayes factors show decisive evidence in favor of the  IC/P/CD+A/B over the rest, meaning that the model that has a hidden state and diploidization is chosen over the ones that lack either of both of those options \cref{table:bayesfactors} .\newline
+In \cref{table:marginallike} we listed the marginal likelihood values calculated in log scale ($log(P(\mathbf{X}|M)$) for each of the models tested.
+The different components included and excluded for each model as a a summary of the diagrams from \cref{figure:netdivall} are indicated in each model.
+From the marginal likelihoods in log scale, the Bayes factors in log-scale($BF(M_0,M_1)=log(P(\mathbf{X}|M_0)-P(\mathbf{X}|M_0)$) were calculated as shown in table \cref{table:bayesfactors}.
+After testing every single pair of polyploidy models (1-4) we found overwhelming evidence that the best polyploidy model is always the D/P+A/B, that is the model with hidden state and diploidization, that is Bayes factors were always greater than 2 when D/P+A/B was the first model in the Bayes factor equation or negative when D/P+A/B was the second model in Bayes factor equation.
+
+For the two models following the evolution of breeding system, the I/C+A/B is the best choice between models 3 and 4 (BF(IC, IC+A/B)=-39.5<0).
+%
+The four models that follow the diversification linked to both polyploidy and breeding system (models 5-8) where compared in pairs.
+Bayes factors show decisive evidence in favor of the IC/P/CD+A/B over the rest, meaning that the model that has a hidden state and diploidization is chosen over the ones that lack either of both of those options \cref{table:bayesfactors}.
+%
 Therefore, the models that were chosen were always the ones containing the hidden trait, or diploidization parameter $\delta$ when ploidy state was considered.
+
+\subsection{Diploidization as an exploratory hypothesis}
+
+For the two models that only consider diploid and polyploid state (D/P and D/P+A/B) the effect of removing parameter $\delta$ was that net diversification rate of polyploids can be negative with high probability (\cref{figure:netdivnodip}AB).
+However, in the models that simultaneously considered polyploidy and breeding system, removing the $\delta$ parameter did not have much of an effect on the location of the posterior distribution of polyploid net diversification rate but on the credible interval width and overlap with net diversification of diploids.
+When diploidization was absent, the net diversification of polyploids overlaps with the net diversification of self-compatible diploids but not with the one of self-incompatible diploids (\cref{figure:netdivnodip}CD).
+For all models, the posterior distribution of diploidization rate is more uncertain than the one of polyploidization rates (see supplementary information figures). 
+
+\subsection{Pathways to polyploidy}
+
+% E: If we're going to include pathway results for real, I need to write more in this section and incorporate the figure.  TODO
+
+Polyploidization rates from self-compatible diploid $\rho_{CD}$ and from self-incompatible diploid $\rho_{ID}$ are not significantly different (see supplementary information figures).
+However, the distribution of $\rho_{ID}$ seems to always consider faster values compare to the distribution of $\rho_{CD}$.
+This result is highlighted in ancestral reconstructions of the $ID/CD/CP$ model where transitions from ID to CP are more probable than transitions from CD to CP. % Emma here we put the figure?
 
 
 \begin{supptable}
