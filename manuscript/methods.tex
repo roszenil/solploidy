@@ -49,6 +49,8 @@ Including this many more species would have prohibitively slowed our analyses, e
 % ID/CD/CP ploidy and breeding system model
 % ID/CD/CP+A/B ploidy, breeding system, and hidden state model
 
+% NOTE: Should subtly rephrase so that the default models lack diploidization.
+
 \subsection{Models for ploidy and diversification}
 
 To investigate the association between ploidy level and diversification, we first defined a binary state speciation and extinction model (BiSSE, \citealt{maddison_2007}) in which taxa were classified as diploid (D) or polyploid (P) (\cref{figure:stateclassifications}).
@@ -76,7 +78,7 @@ To parse out the effect of breeding system on diversification, while allowing fo
 We call this HiSSE model the \textit{I/C+A/B breeding system and hidden state model}. 
 
 %B: we moved back from "SI" to "self-incompatibility" below. Maybe a no-no.
-For all breeding system models, we allow transitions from $I$ to $C$ (at rate $q_{IC}$) but not the reverse. %B: was "these and the subsequent models including breeding systems"
+For all breeding system models, we allow transitions from $I$ to $C$ (at rate $q_{IC}$) but not the reverse.
 Within Solanaceae, self-incompatibility is homologous in all species in which S-alleles were cloned, and controlled crosses performed.  
 All species sampled to date, possess a non-self recognition, RNase-based, gametophytic self-incompatibility \citep[shared even shared even with other euasterid families;][]{ramanauskas_2017}. %B: this now makes a narrower claim than igic_2001/steinbachs_2002, which includes Rosaceae and a bag of avoidable troubles. 
 Furthermore, species that are distantly related within this family carry closely-related alleles, with deep trans-specific polymorphism, at the S-locus, which controls the SI response \citep{ioerger_1990, igic_2006}. %B: may need to introduce "S-locus" earlier.
@@ -88,7 +90,7 @@ This represents very strong evidence that the SI mechanism, and our $I$ state is
 
 \subsection{Models for ploidy, breeding system, and diversification}
 
-If ploidy and breeding system each influence lineage diversification individually, it is logical to examine their possible joint effects. %B: unsure about edit, which was: "If both ploidy and breeding system have the potential to influence lineage diversification, we should logically consider their effects jointly."
+If ploidy and breeding system each influence lineage diversification individually, it is logical to examine their possible joint effects. %B: unsure about edit, which was: "If both ploidy and breeding system have the potential to influence lineage diversification, we should logically consider their effects jointly."  E: okay; also try to add that their transitions interact
 We thus fit a multi-state model that includes both traits \citep[MuSSE,][]{fitzjohn_2012}.
 The three states in this model are self-incompatible diploids (ID), self-compatible diploids (CD), and polyploids, which are always self-compatible (CP).
 As explained above, we did not include a state for self-incompatible polyploids because they are not observed in the data, and   that trait combination state is mechanistically predicted not to occur.
@@ -97,7 +99,7 @@ The model has 10 parameters, six for diversification in each state ($\lambda_{ID
 The total rate of loss of self-incompatibility, \ie transitions out of $ID$, is $q_{IC} + \rho_I$.
 Diploidization from $CP$ to $ID$ is not allowed because it would represent a simultaneous regain of SI.
 
-The ID/CD/CP model could potentially capture similar dynamics as earlier models, if the effects of the hidden state in D/P+A/B were effectively caused by breeding system (or its correlates), and the hidden state in I/C+A/B was effectively caused by ploidy. % B: I know that causation is not strict here, but it clarifies the intended biological explanation.
+The ID/CD/CP model could potentially capture similar dynamics as earlier models, if the effects of the hidden state in D/P+A/B were effectively caused by breeding system (or its correlates), and the hidden state in I/C+A/B was effectively caused by ploidy.
 There is also the potential, however, for a hidden factor to be influencing diversification beyond both of our focal traits, and this could again mislead inferences.
 We therefore added a hidden trait layer on top of our three-state model \citep[analogous to][]{caetano_2018, herrera_2018, huang_2018}.
 We refer to this as the \textit{ID/CD/CP+A/B} model.
@@ -122,6 +124,9 @@ In our case the diploidization parameter (or its absence, $\delta=0$) in our mod
 
 % \subsection{Pathways to polyploidy} % E todo
 % robertson2011 method, and then with diversification
+% propogation matrix, stable stage structure
+% avoid "probability" and "transition matrix"
+% analogous to Leslie matrix?
 
 \subsection{Statistical inference under the models}
 
@@ -132,6 +137,8 @@ For all 10 models, we assumed that speciation and extinction parameters had log-
 Priors for parameters defining trait changes were assumed to be gamma distributed with parameters $k=0.5$ and $\theta=1$. 
 For each model, an MCMC chain was run for 96 hours in the high-performance computational cluster at the Minnesota Supercomputing Institute, which allowed for 5,000 generations of burn-in and a minimum of 200,000 generations of MCMC for each of the 6 models. %B: the number of models changes here?
 For each model, convergence and mixing of the MCMC was tested using the R library \texttt{coda} and the software package Tracer (see supplementary information for convergence plots). % fixme: eventually, add supp info fig ref
+
+% R will add a bit about the ASR methods
 
 \subsection{Model selection}
 

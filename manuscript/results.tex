@@ -2,6 +2,8 @@
 
 \subsection{Traits and diversification}
 
+% NOTE: will need to update figure/panel refs if making no-delta models primary
+
 % E: I brutally shortened the text here and hence put all the models into one section for the "diversification" question.  But I think I retained all the ideas that were written out before.
 % Much of what I removed was descriptions about which distributions are/aren't overlapping with one another.  I think that's easier for the reader to see in the figures than to read in the text.  But now the text says things like if some estimates are "different", so perhaps in Methods we should explain different = non-overlapping?
 % For the former model comparison section, I moved the key conclusions into the paragraphs here and the mechanical details (bayes factor definition) into Methods.
@@ -41,6 +43,8 @@ For the two models that also included breeding system (ID/CD/CP and ID/CD/CP+A/B
 For all models, there is greater uncertainty in the estimate of diploidization rate than polyploidization rate, as judged by the width of the credibility intervals (see supplementary information figures). % todo: precise figure refs here
 % E: Rosana, would this also be a good place to say something about what we learned regarding the meaningfulness of diploidization in these data?
 %B: maybe meaning of the data could go to a dedicated Discussion subsection? The idea would be to reconcile variation in $\delta$ across (the best-fitting) models considered here, and how the implied values do (or do not) agree with chromosome number changes and WGD inference from tree reconciliation and Ks approaches. (I can help here, if needed.)
+
+% R will add a bit about param confidence
 
 \subsection{Pathways to polyploidy}
 
@@ -94,7 +98,7 @@ This result is highlighted in ancestral reconstructions of the $ID/CD/CP$ model 
 
     \end{center}
     \caption{
-        Median rate estimates for all fitted models. %B: "...all fitted/considered/evaluated models."
+        Median rate estimates for all fitted models.
         Units are per million years.
         Two comma-separated numbers refer to the $A$ and $B$ hidden states, and --- means the parameter was not present in the model.
     %B: perhaps include this in the table so lazies don't have to go seeking subscripts?
@@ -138,8 +142,7 @@ This result is highlighted in ancestral reconstructions of the $ID/CD/CP$ model 
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{hisseDPposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the D/P+A/B, polyploidy model} % XXX
-% fixme: offset plotting error in "relative extinction" panel
+\caption{Posterior distribution for each of the parameters in the D/P+A/B, polyploidy model.  The axis is offset in one location so that the two overlapping distributions can be seen.} % XXX
 \label{suppfigure:DPAB}
 \end{suppfigure}
 
