@@ -108,8 +108,32 @@ The reduction in parameter space is achieved by fixing the rates for transitions
 There are additionally twelve diversification rate parameters ($\lambda_{ID_A},\ \lambda_{ID_B},\ \lambda_{CD_A},\ \lambda_{CD_B},\ \lambda_{CP_A},\ \lambda_{CP_B},\ \mu_{ID_A},\ \mu_{ID_B},\ \mu_{CD_A},\ \mu_{CD_B},\ \mu_{CP_A},\ \mu_{CP_B}$).
 %B: I can't tell, but it seems to me that this 26->16 parameter reduction makes it possible to underestimate the effect of these hidden states. Perhaps this complication is covered in the Discussion section.
 
-\subsection{Diploidization as an exploratory hypothesis}
+\subsection{Pathways to polyploidy}
 
+Considering ploidy and breeding system together, there are two evolutionary pathways from SI diploid to SC polyploid \citep{brunet2001, robertson_2011}.
+In the one-step pathway, the CP state is produced directly from the ID state when whole genome duplication disables SI.
+In the two-step pathway, the CD state is an intermediate: SI is first lost, and later the SC diploid undergoes polyploidization.
+We quantify the relative contribution of these pathways to polyploidy in two ways, each using the MAP rate estimates from the IC/CD/CP model.
+
+Both of our methods are based on a propogation matrix that describes flow from ID to CP, as in \citet{robertson_2011}.
+We insert an artificial division in the CP state, so that one substate contains the CP species that arrived via the one-step pathway and the other substate contains the CP species that arrived via the two-step pathway.
+We consider only unidirectional change along each step of the pathway in order to separate them into clear alternatives, and because in this family there is no support for regain of SI, and not strong support for diploidization.
+First, we consider only the rates of transitions between these states, placing them in the propogation matrix \myvec{Q}.
+The matrix $\myvec{P} = \exp(\myvec{Q} t)$ then provides the probabilities of changing from one state to any other state after time $t$.
+Closed-form solutions for the two pathway probabilities are provided in \citet{robertson_2011}.
+Our results will differ from those of \citet{robertson_2011} because our transition rate estimates come from a dated phylogeny and a model that allows for state-dependent diversification.
+%
+Second, we consider not only transitions between states but also diversification within each state.
+State-dependent diversification can change the relative contributions of the two pathways.
+In particular, if the net diversification rate is small for CD, the two-step pathway will contribute relatively less.
+We therefore include the difference between speciation and extinction along the diagonal elements of the propogation matrix.
+As before matrix exponentiation provides the relative chance of changing from one state to any other state after time $t$.
+In this case, however, these are not probabilities because diversification changes the number of lineages as time passes.
+We can still use their ratios to consider the relative contribution of each pathway, though, analogous to the normalized age structure in a growing population.
+
+% E todo: for the case with net div, write out the propogation matrix and equations for pathway contributions
+
+\subsection{Diploidization as an exploratory hypothesis}
 
 For all four models that consider ploidy changes, we allowed diploidization.
 Previous modeling approaches \citep{mayrose_2011} have argued against inferring diploidization rates when using ploidy data that comes from classifications based on chromosome number multiplicity or chromosome number change models like chromEvol \citep{mayrose_2010}.
@@ -120,12 +144,6 @@ However, the majority of the ploidy classifications were adopted from original s
 Since it is not clear whether diploidization can be detected under alternative ploidy classifications or even classifications based on chromosome number multiplicity at the genus level, we also fit the models without diploidization in order to test  whether the conclusions about diversification are sensitive to including diploidization.
 As discussed by \citet{servedio_2014}, the presence or absence of a hypothesis can have an exploratory goal.
 In our case the diploidization parameter (or its absence, $\delta=0$) in our models is an opportunity to explore an assumption that might be important but that is not the single definitive process to understand the interactions among polyploidy, breeding system, and diversification.
-
-% \subsection{Pathways to polyploidy} % E todo
-% robertson2011 method, and then with diversification
-% propogation matrix, stable stage structure
-% avoid "probability" and "transition matrix"
-% analogous to Leslie matrix?
 
 \subsection{Statistical inference under the models}
 

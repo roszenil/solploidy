@@ -51,7 +51,7 @@ path.probs2 <- function(t, q13, q14, q34)
 # Wa = 1 -> 4
 # Wb = 1 -> 3 -> 4
 
-# MAP values
+# MAP values from EstimatesIDCDPnodelta.csv
 q14 <- 0.0681          # ID -> CP, rho_I
 q13 <- 0.2066          # ID -> CD, q_IC
 q34 <- 0.0370          # CD -> CP, rho_C
@@ -74,9 +74,12 @@ pp <- as.data.frame(t(sapply(times, path.probs2, q13, q14, q34)))
 pp <- as.data.frame(t(sapply(times, path.probs1, Q)))
 
 # plot
-plot(times, pp$Wa, type="l", lwd=3, xlab="elapsed time", ylab="probability", ylim=c(0,1))
+plot(times, pp$Wa, type="l", lwd=3, xlab="elapsed time (My)", ylab="probability", ylim=c(0,1))
 lines(times, pp$Wb, lwd=3, lty=2)
-legend("topleft", c("SI/D to SC/P", "SI/D to SC/D to SC/P"), lty=c(1, 2), lwd=3)
+legend("topleft", c("ID to CP", "ID to CD to CP"), lty=c(1, 2), lwd=3)
+
+plot(times, pp$Wa/pp$Wb, log="y", type="l", lwd=3, xlab="elapsed time (My)", ylab="one-step : two-step", ylim=c(0.3, 100))
+abline(h=1, lty=3)
 
 ### Try with diversification ###
 
@@ -97,19 +100,36 @@ plot(times, ppd$Wa, type="l", lwd=3, xlab="elapsed time", ylab="relative 'probab
 lines(times, ppd$Wb, lwd=3, lty=2)
 legend("topleft", c("SI/D to SC/P", "SI/D to SC/D to SC/P"), lty=c(1, 2), lwd=3)
 
+plot(times, ppd$Wa/ppd$Wb, log="y", type="l", lwd=3, xlab="elapsed time (My)", ylab="one-step : two-step", ylim=c(0.3, 100))
+abline(h=1, lty=3)
+
 #--------------------------------------------------
 # Final plot
 #--------------------------------------------------
 
-pdf(file="../manuscript/pathways.pdf", width=10, height=6)
-par(mfrow=c(1,2))
+pdf(file="../manuscript/pathways.pdf", width=8, height=7)
+par(mfrow=c(2,2), mar=c(4,4,0,2), oma=c(0,0,3,0))
 
-plot(times, pp$Wa, type="l", lwd=3, xlab="elapsed time", ylab="probability", ylim=c(0,1), main = "without diversification")
-lines(times, pp$Wb, lwd=3, lty=2)
-legend("topleft", c("SI/D to SC/P", "SI/D to SC/D to SC/P"), lty=c(1, 2), lwd=3)
+# trans only
+plot(times, pp$Wa, type="l", lty=2, lwd=3, xlab="", ylab="contribution of each pathway", ylim=c(0,1))
+lines(times, pp$Wb, lwd=3, lty=3)
+legend("topleft", c("one-step: ID to CP", "two-step: ID to CD to CP"), lty=c(2, 3), lwd=3)
+mtext("without diversification", line=1.5, font=3)
 
-plot(times, ppd$Wa, type="l", lwd=3, xlab="elapsed time", ylab="relative 'probability'", log="y", main = "with diversification")
-lines(times, ppd$Wb, lwd=3, lty=2)
-legend("topleft", c("SI/D to SC/P", "SI/D to SC/D to SC/P"), lty=c(1, 2), lwd=3)
+# with div
+plot(times, ppd$Wa, type="l", lty=2, lwd=3, xlab="", ylab="contribution of each pathway", log="y")
+lines(times, ppd$Wb, lwd=3, lty=3)
+legend("topleft", c("one-step: ID to CP", "two-step: ID to CD to CP"), lty=c(2, 3), lwd=3)
+mtext("with diversification", line=1.5, font=3)
+
+# trans only
+plot(times, pp$Wa/pp$Wb, log="y", type="l", lwd=3, xlab="elapsed time (My)", ylab="contribution ratio", ylim=c(0.3, 100))
+abline(h=1, lty=3)
+legend("topright", c("one-step / two-step"), lty=1, lwd=3)
+
+# with div
+plot(times, ppd$Wa/ppd$Wb, log="y", type="l", lwd=3, xlab="elapsed time (My)", ylab="contribution ratio", ylim=c(0.3, 100))
+abline(h=1, lty=3)
+legend("topright", c("one-step / two-step"), lty=1, lwd=3)
 
 dev.off()

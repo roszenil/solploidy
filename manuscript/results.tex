@@ -32,7 +32,17 @@ When a hidden state is included (IC/CD/CP+A/B model), the same general pattern r
 With diploidization, the net diversification rate of ID is still greater than CD within each hidden state, but diversification for P is highly uncertain and perhaps bimodal.
 Statistical model comparisons show very strong support for including the hidden state and at most positive support for including diploidization (\cref{table:bayesfactors}).
 
-% E: I moved the discussion of \rho_I and \rho_C values into the Pathways section.
+\subsection{Pathways to polyploidy}
+
+Evolution from SI diploids to SC polyploids can proceed through two different pathways.
+Determining the relative contribution of these pathways based on our estimated transition rates from the ID/CD/CP model, we find that the one-step pathway is more likely on short timescales and the two-step pathway is more likely on long timescales (\cref{figure:pathways}, left panels).
+When not much time has elapsed, the one-step pathway is more likely because only one event need happen.
+When more time has elapsed, the two-step pathway is more likely because the rate of loss of SI within diploids, $q_{IC}$, is greater than the rate of polyploidization for SI species, $\rho_I$ (\cref{suppfigure:IDCDCPnodip}).
+These conclusions are the same as those of \citet{robertson_2011} under one of their branch length approximations.
+
+When rates of lineage diversification are considered, however, the conclusions change.
+Even over long timescales, the two-step pathway contributes less (\cref{figure:pathways}, right panels).
+The lower rate of net diversification in the CD state, relative to ID, means that relatively fewer lineages are available to complete the second step of the two-step pathway.
 
 \subsection{Diploidization as an exploratory hypothesis}
 
@@ -44,15 +54,6 @@ For all models, there is greater uncertainty in the estimate of diploidization r
 %B: maybe meaning of the data could go to a dedicated Discussion subsection? The idea would be to reconcile variation in $\delta$ across (the best-fitting) models considered here, and how the implied values do (or do not) agree with chromosome number changes and WGD inference from tree reconciliation and Ks approaches. (I can help here, if needed.)
 
 % R will add a bit about param confidence
-
-\subsection{Pathways to polyploidy}
-
-% E: If we're going to include pathway results for real, I need to write more in this section and incorporate the figure.  TODO
-
-Polyploidization rates from self-compatible diploid $\rho_{CD}$ and from self-incompatible diploid $\rho_{ID}$ are not significantly different (see supplementary information figures).
-However, the distribution of $\rho_{ID}$ seems to always consider faster values compare to the distribution of $\rho_{CD}$.
-This result is highlighted in ancestral reconstructions of the $ID/CD/CP$ model where transitions from ID to CP are more probable than transitions from CD to CP. % Emma here we put the figure?
-%B: Something is off in the "However, " sentence. FIXME
 
 \begin{supptable}
     \begin{center}
@@ -115,6 +116,8 @@ This result is highlighted in ancestral reconstructions of the $ID/CD/CP$ model 
 % check values of delta and rho D/P+A/B with(out) delta
 % i.e. parameter values in figure S1 & S4 vs Table S2
 
+% TODO: swap panels between the figures so that the first is -delta and the second is +delta
+
 \begin{figure}
 \includegraphics[width=\textwidth]{Netdiversificationallmodels.pdf} % FIXME: The panel labels should use "+A/B" instead of "-A/B".  Rosana, if you add the .svg file for this figure, I can make small changes like this.
 \caption{Net diversification rates for all models that include diploidization.}  
@@ -125,6 +128,18 @@ This result is highlighted in ancestral reconstructions of the $ID/CD/CP$ model 
 \includegraphics[width=\textwidth]{netdiversificationallnodip.pdf} % FIXME: same note as above about "+A/B"
 \caption{Net diversification rates for all models that do not include diploidization.}  
 \label{figure:netdivnodip}
+\end{figure}
+
+% E todo: could make this look a little less klunky
+\begin{figure}
+    \centering \includegraphics[width=0.9\textwidth]{pathways}
+    \caption{
+        Contributions of the two pathways to polyploidy.
+        When considering only rates of transitions among the states (left), the one-step pathway dominates on short timescales and the two-step on long timescales.
+        When also considering diversification within each state (right), the one-step pathway dominates over any timescale.
+        The lower panels plot the ratio of the two pathway contributions in the upper panels.
+    }
+    \label{figure:pathways}
 \end{figure}
 
 \begin{suppfigure}
