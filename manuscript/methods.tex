@@ -14,12 +14,10 @@ Species with more than one ploidy level were assigned the smallest and most freq
 % E: There was more here about cross-verifying that no P species were SI.  I removed it because there were conflicts before, but we resolved them.  This is addressed in the next paragraph.
 %
 Breeding system was scored as self-incompatible (I) or self-compatible (C) based on results curated from the literature and  original experimental crosses \citep[as compiled in][]{igic_2006, goldberg_2010, robertson_2011, goldberg_2012}.
-Most species could unambiguously be coded as either I or C \citep{raduski_2012}.
+Most species could unambiguously be coded as either I or C \citep{raduski_2012}. %B: most? Any exceptions?
 Following previous work, we coded as I any species with functional I systems, even if C or dioecy was also reported.
 Dioecious species without functional I were coded as C.
 
-%B: It would be nice to clarify what was added--what is new--and separate the subsections of ploidy and breeding system data.
-%
 % E: I am trying to stick with I/C when talking about the state values, but using SI/SC when talking about the meaning of the trait (because this what people use normally).
 
 To those existing data sets, we added some additional records for chromosome number and breeding system.
@@ -33,7 +31,7 @@ The single instance of an SI and polyploid individual appears to be an allopenta
 Under exceedingly rare circumstances, it is possible for polyploids containing multiple copies of S-loci to remain SI, so long as they express a single allele at the S-locus (discussed in \citealt{robertson_2011}).
 Because of the resulting absence of SI and polyploid populations, as well as the linked functional explanation for disabling of gametophytic self-incompatibility systems with non-self recognition, following whole genome duplication \citep[reviewed in][]{ramsey_1998,stone_2002}, we consider only three observed character states: self-incompatible diploids (ID), self-compatible diploids (CD), and polyploids which are always self-compatible (CP).
 %B: I added the non-self recognition bit, because in Prunus, heteroallelic pollen may not cause SC.
-% E: Should we include more details about how many polymorphic species and how the particularly tricky ones were dealt with? %B: No and yes, maybe. Interested parties can go to data for part 1?
+% E: Should we include more details about how many polymorphic species and how the particularly tricky ones were dealt with? %B: No and yes, maybe.
 
 Matching our character state data to the largest time-calibrated phylogeny of Solanaceae \citep{sarkinen_2013} yielded 595 species with ploidy and/or breeding system information on the tree.
 Binary or three-state classification of ploidy and breeding system for the 595 taxa is summarized in \cref{figure:stateclassifications}.
@@ -80,13 +78,14 @@ We call this HiSSE model the \textit{I/C+A/B breeding system and hidden state mo
 %B: we moved back from "SI" to "self-incompatibility" below. Maybe a no-no.
 For all breeding system models, we allow transitions from $I$ to $C$ (at rate $q_{IC}$) but not the reverse.
 Within Solanaceae, self-incompatibility is homologous in all species in which S-alleles were cloned, and controlled crosses performed.  
-All species sampled to date, possess a non-self recognition, RNase-based, gametophytic self-incompatibility \citep[shared even shared even with other euasterid families;][]{ramanauskas_2017}. %B: this now makes a narrower claim than igic_2001/steinbachs_2002, which includes Rosaceae and a bag of avoidable troubles. 
+All species sampled to date, possess a non-self recognition, RNase-based, gametophytic self-incompatibility \citep[shared even with other euasterid families;][]{ramanauskas_2017}.
 Furthermore, species that are distantly related within this family carry closely-related alleles, with deep trans-specific polymorphism, at the S-locus, which controls the SI response \citep{ioerger_1990, igic_2006}. %B: may need to introduce "S-locus" earlier.
 This represents very strong evidence that the SI mechanism, and our $I$ state is ancestral to the Solanaceae, and did not arise independently within the family ($q_{CI}=0$). %B: I think I have this right <- someone please double-check.
 % This is an important assumption because ancestral state reconstruction in the models might differ when polyploidy and breeding system are analyzed as independent in the Solanaceae tree.
 % This irreversibility assumption prevents self-compatible state from evolving into self-incompatible state and as a result, the ancestral state of all taxa in this model has probability one of being self-incompatible.
-
-%B: What happens if SC->SI is not fixed? Asking for a friend.  E: Surprisingly, Rosana reports, results are not turned on their head.
+%
+%B: What happens if SC->SI is not fixed? Asking for a friend.  E: Surprisingly, Rosana reports, results are not turned on their head. 
+%B: Whew, I was worried. Er, "friend" says thanks.
 
 \subsection{Models for ploidy, breeding system, and diversification}
 
@@ -111,7 +110,7 @@ There are additionally twelve diversification rate parameters ($\lambda_{ID_A},\
 
 \subsection{Diploidization as an exploratory hypothesis}
 
-%B: this section needs a motivation. Right now, that appears to be hung on an argument from a citation (mayrose_2010), which is not clarified. I think you guys may have the paleo-WGD literature in mind here. If so, perhaps simply stating something ought to be written about the expectations for capturing some underlying process we think is ongoing.
+
 For all four models that consider ploidy changes, we allowed diploidization.
 Previous modeling approaches \citep{mayrose_2011} have argued against inferring diploidization rates when using ploidy data that comes from classifications based on chromosome number multiplicity or chromosome number change models like chromEvol \citep{mayrose_2010}.
 These types of classifications do not allow for a ploidy reversion.
@@ -154,8 +153,6 @@ Other comparisons between these models are not valid because the input data are 
 In mathematical terms, the D/P, I/C, and ID/CD/CP state spaces are not `lumpable' with respect to one another \citep{tarasov_2019}.
 %R: Emma this is where the figure can be important to show that we have to make different input
 % E: I think this short explanation is clear enough, especially with the figure.  I'm not sure whether the hierarchical concept is exactly applicable here.
-%B: my TeX GUI (and my brain) underlined "lumpable", especially in the context of "with respect to one another." I think I get the gist, but I am not sure that I agree others will easily. I find it useful to imagine Spencer reading this, for example.
-% E: "Lumpable" is the math word for a particular relation among state codings, used in that Tarasov paper.  I don't think we want to get into defining it precisely.  Instead, we want Fig 1 to make it intuitively clear, to Spencer and everyone else.  I added to the caption and the text above.  Okay, or more work needed?
 Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $BF(M_0,\ M_1) = \ln[ P(\mathbf{X} | M_0) - P(\mathbf{X} | M_1]$.
 There is `positive' support for $M_0$ when this value is more than 2, `strong' support when it is more than 6, and `very strong' support when it is more than 10 \citep{kass1995}.
 
@@ -186,6 +183,7 @@ For example, there are 34 species that are self-compatible and of unknown ploidy
 In all cases, species were coded as either $A$ or $B$ in the hidden state models.
 The models depicted in the different rows use state spaces that are not comparable with one another.
 For example, we cannot test whether the D/P model fits better than the I/C model because they use states that are not the same and are not `lumpable' \citep{tarasov_2019}.
+%B: Hmmm. The presentation is economical, true, and I think it is retrospectively clear, and valuable, now that I've been thinking about the paper for a while. But it will be very difficult as a source of clarity for someone reading the paper the first time. The top graphical layout also implicitly communicates the idea that all "I" species must be "D", and that all "P" species must be also "C", which is not intuited easily. (Are they encoded like that?) Moreover, it's not made clear that the 'species' in question are, in fact, often polymorphic, which makes DPIC possible. The subsequent models require a bit of thought, which is not too bad, but the treatment of the state coding and specifically the sentence "In all cases, species were coded as either A or B in the hidden state models." is a bit terse for someone not familiar with HiSSE. 
 }
 \label{figure:stateclassifications}
 \end{figure}
