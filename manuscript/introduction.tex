@@ -1,39 +1,42 @@
 \section{Introduction}
 
 Species accumulate around the tree of life at different rates.
-The search for traits that explain these differences has been accelerated by dramatic increases in phylogenetic data and, despite some setbacks \citep{maddison_2015, rabosky_2015}, advances in analytical methods \citep{maddison_2007, fitzjohn_2009, goldberg_2012, beaulieu_2016}. % todo more refs: papers with big trees; quasse, bisse-ness, fisse, abc-quasse, maybe hoehna-vs-rabosky
-In these studies, it is common to identify a single focal trait and investigate its association with rates of speciation and extinction. % (but see... ?) % refs: there must be some papers that musse on multiple traits? especially for geographic range?
+The search for traits that explain these differences has been accelerated by dramatic increases in phylogenetic data and, despite some setbacks \citep{maddison_2015, rabosky_2015, moore_2016}, advances in analytical methods \citep{maddison_2007, fitzjohn_2009, goldberg_2012, beaulieu_2016, rabosky_2017} are finding interesting lineages where potential interesting biological processes are changing the  diversification patterns. % todo more refs: papers with big trees; quasse, bisse-ness, fisse, abc-quasse, maybe hoehna-vs-rabosky- R: DONE, won't mention all or it will get really annoying.
 
-This is problematic because the context in which traits occur can lead to complex interactions, perhaps with other traits that make up an organism or its environment.
-Additionally, a lack of methods that allow for simultaneous inference of effects of other traits, which also influence diversification, can lead to incorrect conclusions about the focal trait \citep{rabosky_2015, beaulieu_2016}.
-One approach to this problem is to allow for a `hidden' or unspecified trait in the analysis \citep{beaulieu_2016}. % and an earlier beaulieu? applications of hisse? %B: perhaps above can begin with: "One proposed approach to accommodate..." 
-This can be effective, but it leaves behind the question of whether the hidden trait corresponds to a real trait that should be sought, or whether it is an approximation of some unknowable heterogeneity, as well as whether interactions between the known and hidden trait were modeled appropriately.
-Alternatively, we can simultaneously consider the effects of more than one known trait, especially in systems where multiple traits are suspected to influence diversification, and where interactions between those traits are well understood.
+In these studies, it is common to identify a single focal trait and investigate its association with rates of speciation and extinction. This is problematic because the context in which traits occur can lead to complex interactions. Scientists are well aware of the contribution of complex interactions to the diversification process, thus, investigating multivariate traits linked to diversification is becoming the next best step in the development of new models (see \citet{caetano_2018, herrera_2018}). % (but see... ?) % refs: there must be some papers that musse on multiple traits? especially for geographic range?: R-FIXED
+
+In this paper, we focus on two of the best studied traits in flowering plants, polyploidy and breeding system and their contributions to diversification with the goal of investigating how the complex interactions between these two traits can lead to problematic diversification patterns when considering them as independent. % R-This transition is still a little rough
+
+Polyploidy events multiply the genomic content of cells, and they consequently have the potential to affect many or all traits and a great variety of evolutionary \citep{ramsey_2002} and ecological processes\citep{sessa_2019}.
+It is also a mutation that occurs commonly in plants, at it is widespread at both population and lineage scales\citep{husband_2013, zenil_2017}.
+The prevalence of variation in chromosome number, and especially ploidy change, has been broadly considered a salient feature of flowering plants for nearly a century \citep{stebbins1938}. % B: instead of "ploidy" here, we may wish to use some stand-in for karyotype multiples, and stick to that language throughout. E: What word would that be? I was taking "ploidy" to mean "whatever multiple," but is that a terminological abuse? %B: sorry, that was supposed to complain about the use of "polyploidy" instead of "ploidy" to designate the trait. The trait is ploidy, and a state is polyploidy. Also, we should clarify that polyploidy is any of tetraploidy+. I am not sure what we did with 3x here. It's rather rare, but...?% R- I think the trait is polyploidy and the state is ploidy (as 2, or +2). I will go with everyone else in the literature and use polyploidy
+The prevalence of polyploidy, its variation across clades, and its large effects on genotypes and phenotypes raise the hypothesis that polyploidy plays an important role in shaping rates of speciation and extinction.
+However,  previous stochastic diversification models found a lower and negative rate of lineage diversification for polyploids \citet{mayrose_2011, mayrose_2015} when applied to 49 clades from the angiosperm phylogeny. 
+This key finding lead to a the renaissance of the ``polyploidy is an evolutionary dead-end" idea and initiated a discussion about the location and the diversification effect of  whole genome duplications in flowering plants. 
+Genomic evidence has shown that at the base of highly diverse  angiosperm clades (including  the root of all angiosperms \citep{jiao_2011}) it is possible to find at least a polyploidy event  \citet{soltis_2014}. Most recently, the genomic evidence  from the 1KP make it possible for scientist to locate 106  whole genome duplications in the angiosperm phylogeny, and using a state depended diversification model that accounted for  the frequency of whole genome duplications in a lineage  they found that approximately 60-\%  of these  whole genome duplications are enhancing diversification\citep{landis_2018}. % and tank2015?- tank is more about the lag-time between polyploidy and diversification, I prefer not to go into the leg of lags or a reviewer might ask us to try to incorporate that which is not possible since we don't have the location of WGD.
+This recent dramatic increases in the scale of available genome sequences uncovering ancient rounds of whole-genome duplications like\citet{landis_2018} work bring into question  the role of genome downsizing and diploidization in the diversification process\citep{soltis_2015diploidization, dodsworth_2015}. 
+The presence of  a significant  and positive net diversification rate for diploids can be  the result of a polyploid lineage that has been diploidized. Under this scenario, polyploidy could not longer be considered a macroevolutionary dead-end but instead, polyploidy would be the initiator of the diversification process. In the present work, we explore this polyploidy-diploidization scenario by adding diploidization rates in our proposed stochastic models.
+
+%Furthermore, we consider the interaction between polyploidy and other traits.
+
+%From the beginning, study of this variable cytogenetic property considered correlations with other traits \citep{stebbins1938}. %B: ploidy research, or nothing (as now); was: "From the very beginning of polyploidy research," polyploidy is a state of the trait.
+%Some of these associations are driven by indirect or ecological effects, such as the tendency for polyploidy, and other traits, to be found at higher latitudes or marginal habitats. % todo refs: husband etc
+%Other correlations may have a more direct, causal connection.
+
+Another approach useful to understand the differences between the net diversification processes of diploids and polyploids is the work of  \citet{beaulieu_2016}. Beaulieu et al.  proposed to  allow for a `hidden' or unspecified state linked to the trait of interest for models of trait linked to diversification. The presence of a hidden state can point out at sudden changes in the diversification rate under a value of a trait that are due to some unobserved source of heterogeneity.  % and an earlier beaulieu? applications of hisse? %B: perhaps above can begin with: "One proposed approach to accommodate..." - R. This is the earliest HiSSE, that paper took forever for them to publish, people did not get it on the first submissions, before that it was only MuSSE in terms of multivariate.
+
+The hidden-state  models have effectively shown that traits that were believed to be drivers of diversification, in reality are not, and that it is an unobserved but associated trait responsible for differences that are initially found.  When the hidden state and not the focal trait, is responsible for changes in the diversification process, it leaves behind the question of whether the hidden state corresponds to a real state of a trait that should be sought, or whether it is an approximation of some unknowable heterogeneity, as well as whether interactions between the known and hidden trait were modeled appropriately.
+Alternatively, one can simultaneously consider the effects of more than one known trait, especially in systems where multiple traits are suspected to influence diversification, and where interactions between those traits are well understood.
 % B: We can then have a good prior, reliable data, and replicate the studies.  E: Agree. But when I tried to add it, I realized hidden trait models can also be hypothesis-generating, with the purported hidden trait identified in the next clade. %B: I don't get "the next clade"?  E: I study trait X in clade A and based on the hidden state results, I hypothesize that trait Y may be the important hidden factor.  So in clade B I study both traits X and Y.
-In this paper, we focus on two of the best studied traits in flowering plants, ploidy and breeding system, and investigate their individual and joint effects on diversification.
 
-Polyploidization multiplies the genomic content of cells, and it consequently has the potential to affect many or all traits and a great variety of evolutionary processes.
-It is also a mutation that occurs commonly in plants, at it is widespread at both population and lineage scales.
-The prevalence of variation in chromosome number, and especially ploidy, has been broadly considered a salient feature of flowering plants for nearly a century \citep{stebbins1938}. % B: instead of "ploidy" here, we may wish to use some stand-in for karyotype multiples, and stick to that language throughout. E: What word would that be? I was taking "ploidy" to mean "whatever multiple," but is that a terminological abuse? %B: sorry, that was supposed to complain about the use of "polyploidy" instead of "ploidy" to designate the trait. The trait is ploidy, and a state is polyploidy. Also, we should clarify that polyploidy is any of tetrapoidy+. I am not sure what we did with 3x here. It's rather rare, but...?
-The recent dramatic increase in the scale of available genome sequences uncovered ancient rounds of whole-genome duplications, and subsequent diploidization, across angiosperms \citep{lynch2000, vision2000}.
-Nearly all lineages of flowering plants are thought to have undergone at least one or two rounds of polyploidization. % todo refs, jiao etc
-%
-The prevalence of polyploidy, its variation across clades, and its large effects on genotypes and phenotypes raises the hypothesis that ploidy plays an important role in shaping rates of speciation and extinction.
-This has led to a debate: \citet{mayrose_2011, mayrose_2015} found a lower rate of lineage diversification for polyploids, while \citet{soltis_2014} argued that polyploidy is not an evolutionary dead end because whole genome duplications occurred at the base of many successful angiosperm clades, and \citet{landis_2018} reported higher diversification rates following some whole genome duplications. % and tank2015?
-Our study revisits this question, additionally incorporating the process of diploidization.
-% E:  Rosana, could you add a little about the importance of including diploidization?  todo
-Furthermore, we consider the interaction between polyploidy and other traits.
 
-From the beginning, study of this variable cytogenetic property considered correlations with other traits \citep{stebbins1938}. %B: ploidy research, or nothing (as now); was: "From the very beginning of polyploidy research," polyploidy is a state of the trait.
-Some of these associations are driven by indirect or ecological effects, such as the tendency for polyploidy, and other traits, to be found at higher latitudes or marginal habitats. % todo refs: husband etc
-Other correlations may have a more direct, causal connection.
-Among the many changes associated with polyploidization, perhaps the most prominent is the association between polyploidy and propensity for self-fertilization \citep{stebbins1950}. %B: removed barrett1988, because he highlights correlation between polyploidy and self-compatibility, not self-fertilization.
+In the case of polyploidy,  one of the most prominent complex interactions known is the association between ploidy and propensity for self-fertilization \citep{stebbins1950}. %B: removed barrett1988, because he highlights correlation between polyploidy and self-compatibility, not self-fertilization.
 In some cases, the evidence for a correlated shift in mating system along with polyploidization appears limited and sometimes contradictory \citep{barringer2007, barrett2008, husband2008}.
 % barrett2008: "Because polyploidy affects the entire genome, it is perhaps not surprising that it influences many aspects of the phenotype, including the mating system. However, although it has long been recognized that the evolutionary transition from diploidy to polyploidy may result in correlated changes in mating patterns, the theoretical and empirical evidence is limited and often contradictory." (p.5)
 In other cases, however, polyploidy is not only a suspected correlate of breeding systems but indeed a causal link \citep{stout1942, lewis1947}.
 Doubled number of alleles in pollen is thought to effect disruption of the genetic mechanisms in gametophytic self-incompatibility systems, which prevent self-fertilization \citep{entani1999, tsukamoto2005, kubo2010}. 
 This creates a correlation between polyploidy and self-compatibility by precluding the existence of self-incompatible polyploids.
-In clades with these systems, it is thus natural to consider the simultanous macroevolution of ploidy and breeding system.
+In clades with these systems, it is thus natural to consider the simultaneous macroevolution of polyploidy and breeding system.
 
 Breeding system shifts---changes in the collection of physiological and morphological traits that determine the likelihood that any two gametes unite---are remarkably common and affect the distribution and amount of genetic variation in populations \citep{stebbins1974, barrett2013}.
 In particular, self-incompatibility (SI) systems cause a plant to reject its own pollen, and their loss, yielding self-compatibility (SC), is one of the most replicated transitions in flowering plant evolution. % refs: stebbins, igic
@@ -50,8 +53,17 @@ We revisit this question with a greatly improved phylogeny and methods that allo
 % note: saving trans-specific polymorphism for Methods
 % B: trans-polymorphism: We also have this great data for SI loci and the transition could be even more common, providing power to resolve the great diversification questions
 
-Here, we use extensive data on ploidy and breeding system in Solanaceae to investigate the associations of these two traits with lineage diversification.
+Here, we use extensive data on ploidy and breeding system in 595 Solanaceae taxa to investigate the associations of these two traits with lineage diversification.
 Considering each trait separately indicates that each is connected to diversification differences.
 Considering them jointly, however, reveals that the ploidy connection is removed by incorporating breeding system.
 We further show that the general results are robust to allowing for diploidization and a hidden trait, and something about pathways. % FIXME
 Our results emphasize the importance of considering traits not only in isolation, especially when there are strong correlations between them.
+
+
+
+%We investigate their individual and joint effects on diversification, and whether or not adding hidden states at different steps of modeling can help us generate hypothesis about the benefit of searching for a trait that can pass as a hidden state in a simple model. %R- I added this to link the paragraph before
+
+%Additionally, a lack of methods that allow for simultaneous inference of effects of other traits, which also influence diversification, can lead to incorrect conclusions about the focal trait \citep{rabosky_2015, beaulieu_2016}.
+
+
+
