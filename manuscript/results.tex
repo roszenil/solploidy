@@ -3,6 +3,7 @@
 \subsection{Traits and diversification}
 
 % NOTE: will need to update figure/panel refs if making no-delta models primary
+% R: I am changing no delta as just D/P and prevous D/P as +delta
 
 % E: I brutally shortened the text here and hence put all the models into one section for the "diversification" question.  But I think I retained all the ideas that were written out before.
 % Much of what I removed was descriptions about which distributions are/aren't overlapping with one another.  I think that's easier for the reader to see in the figures than to read in the text.  But now the text says things like if some estimates are "different", so perhaps in Methods we should explain different = non-overlapping?
@@ -34,7 +35,7 @@ Statistical model comparisons show very strong support for including the hidden 
 
 \subsection{Pathways to polyploidy}
 
-Evolution from SI diploids to SC polyploids can proceed through two different pathways.
+Evolution from self-incompatible diploids to self-compatible polyploids can proceed through two different pathways.
 Determining the relative contribution of these pathways based on our estimated transition rates from the ID/CD/CP model, we find that the one-step pathway is more likely on short timescales and the two-step pathway is more likely on long timescales (\cref{figure:pathways}, left panels).
 When not much time has elapsed, the one-step pathway is more likely because only one event need happen.
 When more time has elapsed, the two-step pathway is more likely because the rate of loss of SI within diploids, $q_{IC}$, is greater than the rate of polyploidization for SI species, $\rho_I$ (\cref{suppfigure:IDCDCPnodip}).
@@ -119,14 +120,14 @@ For all models, there is greater uncertainty in the estimate of diploidization r
 % TODO: swap panels between the figures so that the first is -delta and the second is +delta
 
 \begin{figure}
-\includegraphics[width=\textwidth]{Netdiversificationallmodels.pdf} % FIXME: The panel labels should use "+A/B" instead of "-A/B".  Rosana, if you add the .svg file for this figure, I can make small changes like this.
-\caption{Net diversification rates for all models that include diploidization.}  
+\includegraphics[width=\textwidth]{allnetdivmodelswithoutdelta.pdf} % FIXME: The panel labels should use "+A/B" instead of "-A/B".  Rosana, if you add the .svg file for this figure, I can make small changes like this.
+\caption{Net diversification rates for all models.}  
 \label{figure:netdivall}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=\textwidth]{netdiversificationallnodip.pdf} % FIXME: same note as above about "+A/B"
-\caption{Net diversification rates for all models that do not include diploidization.}  
+\includegraphics[width=\textwidth]{allnetdivmodelsdiploidization.pdf} % FIXME: same note as above about "+A/B"
+\caption{Net diversification rates for all models that include diploidization.}  
 \label{figure:netdivnodip}
 \end{figure}
 
@@ -148,35 +149,34 @@ For all models, there is greater uncertainty in the estimate of diploidization r
     }
     
     
-   
-    the one-step pathway, from ID to CP 
-    
     \label{figure:pathways}
 \end{figure}
 
 \begin{suppfigure}
-\includegraphics[width=\textwidth]{bisseDPposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the D/P, polyploidy model} % XXX
-\label{suppfigure:DP}
-\end{suppfigure}
-
-\begin{suppfigure}
 \includegraphics[width=\textwidth]{bisseDPnodipposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the D/P no $\delta$, polyploidy model} % XXX
+\caption{Posterior distribution for each of the parameters in the D/P, polyploidy model} % XXX
 \label{suppfigure:DPnodip}
 \end{suppfigure}
 
 \begin{suppfigure}
-\includegraphics[width=\textwidth]{hisseDPposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the D/P+A/B, polyploidy model.  The axis is offset in one location so that the two overlapping distributions can be seen.} % XXX
-\label{suppfigure:DPAB}
+\includegraphics[width=\textwidth]{bisseDPposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the D/P+ $\delta$,polyploidy model} % XXX
+\label{suppfigure:DP}
 \end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{hisseDPnodipposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the D/P no $\delta$+A/B, polyploidy model} % XXX
+\caption{Posterior distribution for each of the parameters in the D/P+A/B, polyploidy model} % XXX
 \label{suppfigure:DPnodipAB}
 \end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{hisseDPposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the D/P+$\delta$+A/B, polyploidy model.  The axis is offset in one location so that the two overlapping distributions can be seen.} % XXX
+\label{suppfigure:DPAB}
+\end{suppfigure}
+
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{bisseSIposteriordist.pdf}
@@ -191,25 +191,27 @@ For all models, there is greater uncertainty in the estimate of diploidization r
 \end{suppfigure}
 
 \begin{suppfigure}
-\includegraphics[width=\textwidth]{musseDPSIposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the ID/CD/CP, polyploidy and breeding system model} % XXX
-\label{suppfigure:IDCDCP}
-\end{suppfigure}
-
-\begin{suppfigure}
 \includegraphics[width=\textwidth]{musseDPSInodipposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the ID/CD/CP no $\delta$, polyploidy and breeding system model} % XXX
+\caption{Posterior distribution for each of the parameters in the ID/CD/CP, polyploidy and breeding system model} % XXX
 \label{suppfigure:IDCDCPnodip}
 \end{suppfigure}
 
 \begin{suppfigure}
-\includegraphics[width=\textwidth]{muhisseDPSIposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the ID/CD/CP+A/B, polyploidy and breeding system model} % XXX
-\label{suppfigure:IDCDCPAB}
+\includegraphics[width=\textwidth]{musseDPSIposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the ID/CD/CP+$\delta$, polyploidy and breeding system model} % XXX
+\label{suppfigure:IDCDCP}
 \end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{muhisseDPSInodipposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the ID/CD/CP no $\delta$+A/B polyploidy and breeding system model} % XXX
+\caption{Posterior distribution for each of the parameters in the ID/CD/CP+A/B polyploidy and breeding system model} % XXX
 \label{suppfigure:IDCDCPnodipAB}
 \end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{muhisseDPSIposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the ID/CD/CP+$\delta$+A/B, polyploidy and breeding system model} % XXX
+\label{suppfigure:IDCDCPAB}
+\end{suppfigure}
+
+
