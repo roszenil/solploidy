@@ -43,27 +43,37 @@ This includes their joint influence on lineage diversification, and also potenti
 For example, do losses of SI more commonly occur tied to polyploidization, or without a ploidy shift?
 Do polyploids arise more commonly from self-incompatible or self-compatible diploids?
 \Citet{robertson_2011} found that the pathway from self-incompatible diploids to self-compatible polyploids is dominated by loss of self-incompatibility followed later by polyploidization over long timescales, but proceeds in one step via polyploidization of SI species over short timescales.
-We revisit this question with a greatly improved phylogeny and methods that allow for diversification rate differences. % E: Technically, we allow for div effects in the rate estimates, but not in the pathways.  If SC-D have so much extinction that the step to SC-P never happens, the old pathway methods won't see that.  I'll think about if this is easy to fix.
+Greatly improved phylogeny and methods that allow for diversification rate differences allow far more powerful approach to such problems. % E: Technically, we allow for div effects in the rate estimates, but not in the pathways.  If SC-D have so much extinction that the step to SC-P never happens, the old pathway methods won't see that.  I'll think about if this is easy to fix.
 % And, are diversification rates of polyploid SC lineages different if one or other path was taken? \citet{charlesworth1985} % E: This is a great question.  We don't answer it with this round of analyses.  Maybe when we have more time for the revision?
 % E: Relatedly, I'm wondering if pathways should be a separate paper.  There is the robertson2011 question, the modification that allows for diversification, and the charlesworth1985 question.  And dioecy.
-%B: Yes, let's. 
+%B: Yes, agreed.
 
-%B: STOPPED HERE. this is orphaned; we should not go to HiSSE before breeding systems. This yields an odd methods, traits, methods, traits, structure, where the methods are not related to the trait discussed.
- I will work on it in the next 24 hours. It logically flows from ploidy/BS and other trait existence that hidden state models ought to be useful 
-Another approach necessary to do a comprehensive evaluation of the role of polyploidy in diversification processes is the work proposed by \citet{beaulieu_2016}. 
-The authors proposed models to  allow for a `hidden' or unspecified state linked to the trait of interest for models of trait linked to diversification. 
-The presence of a hidden state can point out at sudden changes in the diversification rate under a value of a trait that are due to some unobserved source of heterogeneity and not the focal trait per se. 
-These hidden-state  models have effectively shown that traits that were believed to be drivers of diversification, in reality are not, and that it is an unobserved but associated trait responsible for differences that are initially found.  
+%B: STOPPED HERE. 
+Two methodological developments are critical for disentangling the relative importance of two or more traits in diversification.
+First, \citet{fitzjohn_2012} extended the state-dependent diversification ``*SSE" modeling framework \citep{maddison2007}, to allow estimating the effect of an arbitrary number of states (enabling multiple states, MuSSE, instead of binary states, BiSSE).
+This allows multiple states to represent trait combinations, particularly useful if one is interested in explicitly testing whether combinations of traits non-additively affect speciation or extinction.
+Second, \citet{beaulieu_2016} proposed an extension of the state-dependent diversification ``*SSE" model framework \citep{maddison2007}, which allows modelling `hidden' or unspecified traits, linked to the trait of interest.
+The presence of a hidden trait can uncover changes in the diversification rate due to unobserved sources of heterogeneity, not attributable to a focal trait.
+These hidden-state  models have effectively shown that traits that were believed to be drivers of diversification, in reality are not, and that it is an unobserved but associated trait responsible for differences that are initially found. 
 When the hidden state and not the focal trait, is responsible for changes in the diversification process, it leaves behind the question of whether the hidden state corresponds to a real state of a trait that should be sought, or whether it is an approximation of some unknowable heterogeneity, as well as whether interactions between the known and hidden trait were modeled appropriately.
 Alternatively, one can simultaneously consider the effects of more than one known trait, especially in systems where multiple traits are suspected to influence diversification, and where interactions between those traits are well understood.
 
-We present the most comprehensive data on ploidy and breeding system at species level in a phylogenetic context used in any trait linked diversification model. Our dataset consists of  a 595 dated Solanaceae phylogeny, with ploidy and/or breeding system information for the tips of the phylogeny to investigate the associations of these two traits with lineage diversification.
-In the present work, we propose a series of models that represent a comprehensive pathway of analyses that researchers need to follow when investigating complex interactions of traits in a diversification context. First, we present models where polyploidy and breeding system are modeled separatedly, and compare the resulting inferences to results of previous published models. Second, we add a hidden state to each of the models, in order to investigate if the focal trait maintains differences in diversification for focal states or if there is an unobserved but correlated hidden state that can drive the diversification pattern. Third, we ask if the hidden state is actually related to the complex interaction between breeding system and polyploidy and propose a model to consider both traits linked to diversification. In step four, we  ask if on top of the complex interaction there is a second unknown trait that can be driving differences in diversication, so we add to our bivariate diversification model a hidden trait.\newline
-Finallly, we ask if diploidization can be playing a role changing patterns of diversication. We perform model selection in a Bayesian framework to identify which models are fitting better the evidence of the Solanaceae data.
+% this paragraph had some line numbers and ligature-pasting problems?
+Here, we outline a broad strategy for the study of complex interactions among traits, in the context of diversification.
+The focus of our study is the individual role of ploidy and breeding systems, as well as their interaction, on the diversification process in Solanaceae. %sans pathway
+We rely on a comprehensive assembled dataset of ploidy and breeding system in nightshade species, and a large dated phylogeny, to evaluate a series of models and assess the influence of changes in these traits on speciation and extinction rates. %investigate
+First, we present models in which the effect of ploidy and breeding system are considered separately, and compare the inferences to previously published results. 
+Second, we consider the addition of a hidden trait to each of the models that examine traits individually, in order to investigate whether the focal trait directly affects differences in diversification, or if such differences are attributable to unobserved but correlated hidden states.
+Third, we ask whether the complex interaction between breeding system and ploidy may be explained by the hidden trait states. 
+We evaluate a multi-state model to consider both traits linked to diversification, and then consider whether an additional unobserved trait may be driving differences in diversification.
+Finally, we investigate the effects of diploidization in generating the patterns of diversification. 
+Our results highlight the importance of considering non-additive effects of traits on diversification, especially when there are strong biologically driven correlations between them.
+
+%BWe perform model selection in a Bayesian framework to identify which models are fitting better the evidence of the Solanaceae data.
 %Considering them jointly, however, reveals that the ploidy connection is removed by incorporating breeding system.
 %We further show that the general results are robust to allowing for diploidization and a hidden trait, and something about pathways. % FIXME
 %Our results emphasize the importance of considering traits not only in isolation, especially when there are strong correlations between them.
-%We investigate their individual and joint effects on diversification, and whether or not adding hidden states at different steps of modeling can help us generate hypothesis about the benefit of searching for a trait that can pass as a hidden state in a simple model. %R- I added this to link the paragraph before
+%We investigate their individual and joint effects on diversification, and whether or not adding hidden states at different steps of modeling can help us generate hypothesis about the benefit of searching for a trait that can pass as a hidden state in a simple model. 
 %Additionally, a lack of methods that allow for simultaneous inference of effects of other traits, which also influence diversification, can lead to incorrect conclusions about the focal trait \citep{rabosky_2015, beaulieu_2016}.
 
 
