@@ -81,6 +81,9 @@ legend("topleft", c("ID to CP", "ID to CD to CP"), lty=c(1, 2), lwd=3)
 plot(times, pp$Wa/pp$Wb, log="y", type="l", lwd=3, xlab="elapsed time (My)", ylab="one-step : two-step", ylim=c(0.3, 100))
 abline(h=1, lty=3)
 
+plot(times, pp$Wa / (pp$Wa + pp$Wb), type="l", lwd=3, xlab="elapsed time (My)", ylab="proportion one-step", ylim=c(0,1))
+abline(h=0.5, lty=3)
+
 ### Try with diversification ###
 
 r1 <-  0.4607
@@ -103,6 +106,9 @@ legend("topleft", c("SI/D to SC/P", "SI/D to SC/D to SC/P"), lty=c(1, 2), lwd=3)
 plot(times, ppd$Wa/ppd$Wb, log="y", type="l", lwd=3, xlab="elapsed time (My)", ylab="one-step : two-step", ylim=c(0.3, 100))
 abline(h=1, lty=3)
 
+plot(times, ppd$Wa / (ppd$Wa + ppd$Wb), type="l", lwd=3, xlab="elapsed time (My)", ylab="proportion one-step", ylim=c(0,1))
+abline(h=0.5, lty=3)
+
 #--------------------------------------------------
 # Final plot
 #--------------------------------------------------
@@ -123,13 +129,11 @@ legend("topleft", c("one-step: ID to CP", "two-step: ID to CD to CP"), lty=c(2, 
 mtext("with diversification", line=1.5, font=3)
 
 # trans only
-plot(times, pp$Wa/pp$Wb, log="y", type="l", lwd=3, xlab="elapsed time (My)", ylab="contribution ratio", ylim=c(0.3, 100))
-abline(h=1, lty=3)
-legend("topright", c("one-step / two-step"), lty=1, lwd=3)
+plot(times, pp$Wa / (pp$Wa + pp$Wb), type="l", lwd=3, xlab="elapsed time (My)", ylab="proportion of one-step", ylim=c(0,1))
+abline(h=0.5, lty=3)
 
 # with div
-plot(times, ppd$Wa/ppd$Wb, log="y", type="l", lwd=3, xlab="elapsed time (My)", ylab="contribution ratio", ylim=c(0.3, 100))
-abline(h=1, lty=3)
-legend("topright", c("one-step / two-step"), lty=1, lwd=3)
+plot(times, ppd$Wa / (ppd$Wa + ppd$Wb), type="l", lwd=3, xlab="elapsed time (My)", ylab="proportion of one-step", ylim=c(0,1))
+abline(h=0.5, lty=3)
 
 dev.off()
