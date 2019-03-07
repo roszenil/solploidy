@@ -73,7 +73,9 @@ To assess the effects of breeding system in the diversification process, we firs
 This is the same as the analysis of \citet{goldberg_2010}, save for an updated phylogeny \citep{sarkinen_2013}.
 We call this BiSSE model the \textit{I/C breeding system} model. 
 To parse out the effect of breeding system on diversification, while allowing for the possibility of heterogeneous diversification rates unrelated to breeding system, we subdivided each of those states into hidden states $A$ and $B$.
-We call this HiSSE model the \textit{I/C+A/B breeding system and hidden state model}. 
+We call this HiSSE model the \textit{I/C+A/B breeding system and hidden state model}.
+This model was previously used in \citet{freyman_2018} to examine the effect of
+breeding system on diversification in the plant family Onagraceae.
 
 %B: we moved back from "SI" to "self-incompatibility" below. Maybe a no-no.
 For all breeding system models, we allow transitions from $I$ to $C$ (at rate $q_{IC}$) but not the reverse.
@@ -137,7 +139,7 @@ We can still use their ratios to consider the relative contribution of each path
 \subsection{Diploidization as an exploratory hypothesis}
 
 For all four models that consider ploidy changes, we allowed diploidization by adding a parameter $\delta$ connecting polyploidy state back to diploid or to self-compatible diploid in the mult-state models (denoted by $+/delta$ in the models of  \cref{table:marginallike}).
-Previous modeling approaches \citep{mayrose_2011} have argued against inferring diploidization rates when using ploidy data that comes from classifications based on chromosome number multiplicity or chromosome number change models like chromEvol \citep{mayrose_2010}.
+Previous modeling approaches \citep{mayrose_2011} have argued against inferring diploidization rates when using ploidy data that comes from classifications based on chromosome number multiplicity or chromosome number change models \citep{mayrose_2010, glick2014chromevol, freyman_2017}.
 These types of classifications do not allow for a ploidy reversion.
 Where indicated, the classification of ploidy for the data used in our models was based on chromosome multiplicity at the genus level.
 % ref data/sources table?
@@ -148,16 +150,16 @@ In our case the diploidization parameter (or its absence, $\delta=0$) in our mod
 
 \subsection{Statistical inference under the models}
 
-Parameters for each of the 10 diversification models were estimated using custom code in the RevBayes \citep{hoehna_2016} environment.
-Code for analyses and key results is available at \url{https://github.com/roszenil/solploidy}.
-We included a correction for incomplete sampling in all analyses, based on assuming that the Solanaceae family has approximately 3,000 species ($s=595/3000$) as estimated by the Solanaceae Source project \citep{solsource}.
+Parameters for each of the 10 diversification models were estimated using RevBayes \citep{hoehna_2016}.
+Code for analyses and key results are available at \url{https://github.com/roszenil/solploidy}.
+We accounted for incomplete sampling in all analyses by fixing the probability of sampling a species at the present $s$ to $595/3000$ since the Solanaceae family has approximately 3,000 species as estimated by the Solanaceae Source project \citep{solsource}.
 For all 10 models, we assumed that speciation and extinction parameters had log-normal prior distributions with means equal to the expected net diversification rate $(\text{number of taxa} / [2 \times \text{root age}])$ and standard deviation $0.5$.
 Priors for parameters defining trait changes were assumed to be gamma distributed with parameters $k=0.5$ and $\theta=1$. 
-For each model, an MCMC chain was run for 96 hours in the high-performance computational cluster at the Minnesota Supercomputing Institute, which allowed for 5,000 generations of burn-in and a minimum of 200,000 generations of MCMC for each of the 10 models. %B: the number of models changes here? R-my mistake! fixed it
-For each model, convergence and mixing of the MCMC was tested using the R library \texttt{coda} and the software package Tracer (see supplementary information for convergence plots). % fixme: eventually, add supp info fig ref
+For each model, a Markov chain Monte Carlo \citep[MCMC;][]{metropolis1953equation,Hastings1970} was run for 96 hours in the high-performance computational cluster at the Minnesota Supercomputing Institute, which allowed for 5,000 generations of burn-in and a minimum of 200,000 generations of MCMC for each of the 10 models. %B: the number of models changes here? R-my mistake! fixed it
+Convergence and mixing of each MCMC 
+was determined by ensuring the effective sample size of each parameter was over 200.
 
-% R will add a bit about the ASR methods
-In the RevBayes code we calculated the probability of ancestral states at each node as performed chromosome number change models proposed in  \citet{freyman_2017}. Ancestral reconstructions for all models can be found in the supplementary information and show the maximum a posteriori of the marginal probability distributions for each of the 594 internal nodes for each of the 10 models.
+For each model, ancestral states at each node in the phylogeny were sampled jointly during the MCMC analyses. Ancestral state reconstructions for all models can be found in the supplementary information and show the maximum a posteriori of the marginal probability distributions for each of the 594 internal nodes for each of the 10 models.
 
 \subsection{Model selection}
 
