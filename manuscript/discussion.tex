@@ -2,7 +2,7 @@
 
 % - value of approach
 The present work shows the importance of considering the trait linked diversification patterns under a multivariate approach.
-Species are created and go extinct based un multiple and often highly correlated phenotypes, understanding the speciation and extinction processes requires understanding of the evolutionary consequences that those trait correlations produce in organisms.
+Species are created and go extinct based on multiple and often highly correlated phenotypes, understanding the speciation and extinction processes requires understanding of the evolutionary consequences that those trait correlations produce in organisms.
 In the present work we show how considering both polyploidy and breeding system can disentangle the importance (or the lack of) of polyploidy when confronted with the evidence brought by breeding system.
 
 % - what happens if PD only, Hidden states
@@ -24,6 +24,7 @@ Therefore, we consider that finding a heterogenous result in the hidden trait ap
 Pursuing knowledge of  such trait can result on a clearer picture of the importance of trait linked diversification patterns, but also on a better reconstruction on past events in phylogenies.
 
 
+
 % - diversification  (frame as no-delta first)
 
 
@@ -35,6 +36,37 @@ Pursuing knowledge of  such trait can result on a clearer picture of the importa
 
 % pathways: compare/contrast with robertson2011
 %     \rho_I > \rho_C in all!
+
+% Will: I really like the pathways analyses and have a couple comments
+%
+% 1) Were the "without diversification" and "with diversification" analyses computed
+%    using the same MAP transition rate estimates? Transition rates among states will
+%    be very different if estimated using a model that is diversification-independent 
+%    compared to when estimated with a trait-dependent diversification model. Since the point of 
+%    showing these side-by-side seems to be emphasizing the importance of considering trait-dependent
+%    diversification, I wonder how different the "without diversification" contributions would be
+%    if calculated from transition rates estimated using a diversification-independent model.
+%
+% 2) I think stochastic mapping would be another useful perspective on the pathways question
+%    (and yeah, its a bit late in the game to propose analyses, so maybe next time!). With stochastic 
+%    mapping we could use the entire posterior estimate of the transition rates rather than a point
+%    estimate. But more importantly we'd get the relative contributions of the pathways estimated 
+%    over the actual Solanceae tree (which has a lot of short interdependent branches rather than 
+%    hypothetical long branches). 
+%
+% 3) I'll bet allowing cladogenetic transitions would make the one-step ID/CP even more dominant.
+%    I added the paragraph below regarding cladogenetic transitions, but it doesn't really fit with
+%    the rest of the discussion, so modify or discard as needed:
+Our work shows that a diploid Solanaceae lineage is much more likely to take a
+one-step ID/CP pathway to polyploidy rather than a two-step ID/CD/CP pathway. 
+We modeled both of these pathways as anagenetic character changes occurring within a species.
+However \citet{goldberg_2012} showed that I/C transitions are often associated with speciation events, and similarly \citet{freyman_2017} demonstrated that D/P transitions may also be associated with speciation events. 
+Models that fail to consider transitions that occur at speciation (cladogenetic changes) may
+make misleading estimates of anagenetic transition rates.
+The HiSSE-based models introduced in our work here could be extended to incorporate cladogenetic transitions. 
+It is possible that allowing for cladogenetic transitions may enable the one-step pathway
+to even further dominate over the two-step pathway to polyploidy, but this remains to be tested in future work.
+
 
 % where WGD is in Solanaceae--motivation and delta rate analyses
 % diploidization: comment
