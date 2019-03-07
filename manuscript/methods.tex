@@ -4,22 +4,21 @@
 
 %B: IMO: The data subsection would be better organized with parts, (1) ploidy, (2) breeding system, (3) tree, (4) models, (5) model selection and statistical inference.
 
-Chromosome number data were obtained for all Solanaceae taxa in the Chromosome Counts Database \citep[CCDB;][]{rice_2015}, and the ca.~14,000 records were curated semi-automatically using the CCDBcurator R package \citep{rivero_2019}. CCDB contains records from original sources that have multiple complex symbol patterns denoting multivalence, or irregularites of chromosome counts. After a first full round of curation via CCDBcurator, we contrasted results by hand and corrected chromosomes where CCDBcurator's output was not able to curate.  Our hand curated records were also contrasted against the large dataset Solanaceae ploidy states from \citet{robertson_2011} and against ploidy data from the C-value DNA dataset from Kew royal botanic gardens \citep{bennett_2005}.
+Chromosome number data were obtained for all Solanaceae taxa in the Chromosome Counts Database \citep[CCDB;][]{rice_2015}, and the ca.~14,000 records were curated semi-automatically using the CCDBcurator R package \citep{rivero_2019}. CCDB contains records from original sources that have multiple complex symbol patterns denoting multivalence, or irregularites of chromosome counts. After a first full round of curation via CCDBcurator, we contrasted results by hand and corrected chromosomes where CCDBcurator's output was not able to adequately correct records.  Our hand-curated records were also contrasted against the ploidy dataset from \citet{robertson_2011} and against ploidy data in the  C-value DNA dataset from \citet{bennett_2005}.
   %B: perhaps "cleaned" should be explained, unless it's hard to identically repeat as-is. R- I added more (it only took 4months to hand-curate 14,000 entries
-By contrasting three sources of information, we were able to code taxa as diploid (D) or polyploid (P).
-For the majority of species, ploidy was assigned according to information from the original publications and the Kew royal botanic gardens C-value DNA resource \citep{bennett_2005}.
-For taxa without ploidy information but with information about chromosome number, we assigned ploidy based on the multiplicity of chromosomes within the genus or based on information of incompatibility. If a species was incompatible without any chromosomal information it was assigned as diploid.
-For example, \textit{Solanum betaceum} did not include information about ploidy level but it has 24 chromosomes, since $x=12$ is the base chromosome number of the \textit{Solanum} genus \citep{olmstead_2007}, we assigned \textit{S.~betaceum} as diploid. 
-Species with more than one ploidy level were assigned the smallest of most frequent ploidy level recorded.
+By comparing three different sources of information, we were able to code taxa as diploid (D) or polyploid (P).
+For the majority of species, ploidy was assigned according to information from the original publications included in the  C-value DNA dataset \citep{bennett_2005}.
+For taxa without ploidy information but with information about chromosome number, we assigned ploidy based on the multiplicity of chromosomes within the genus or based on SI/SC classification. For example, if a species was incompatible without any chromosomal information it was assigned as diploid.
+This was the case of  \textit{Solanum betaceum} that did not include information about ploidy level but it has 24 chromosomes, since $x=12$ is the base chromosome number of the \textit{Solanum} genus \citep{olmstead_2007}, we assigned \textit{S.~betaceum} as diploid. 
+Species with more than one ploidy level were assigned the most frequent ploidy level recorded or the smallest ploidy in case of frequency ties.
 % E: There was more here about cross-verifying that no P species were SI.  I removed it because there were conflicts before, but we resolved them.  This is addressed in the next paragraph.
 %
 Breeding system was scored as self-incompatible (I) or self-compatible (C) based on results curated from the literature and  original experimental crosses \citep[as compiled in][]{igic_2006, goldberg_2010, robertson_2011, goldberg_2012}.
-Most species could unambiguously be coded as either I or C \citep{raduski_2012}.  But for diploids without breeding system information taxa was coded as both I or C.%B: most? Any exceptions?
+Many species could unambiguously be coded as either I or C \citep{raduski_2012}.  But for diploids without breeding system information taxa was coded as both I or C. %B: most? Any exceptions? R- many 
 Following previous work, we coded as I any species with functional I systems, even if C or dioecy was also reported.
 Dioecious species without functional I were coded as C.
-
-% E: I am trying to stick with I/C when talking about the state values, but using SI/SC when talking about the meaning of the trait (because this what people use normally).
-
+% E: I am trying to stick with I/C when talking about the state values, but using SI/SC when talking about the meaning of the trait (because this what people use normally). 
+%R- Okay- I was getting confused as well thanks for clarifying
 To those existing data sets, we added some additional records for chromosome number and breeding system.
 The Supplementary Information contains citations for the numerous sources for the added data. % todo: add number of refs when we have it
 Resolution of taxonomic synonymy followed the conventions provided in Solanaceae Source \citep{solsource}. 
@@ -37,7 +36,8 @@ Matching our character state data to the largest time-calibrated phylogeny of So
 Binary or three-state classification of ploidy and breeding system for the 595 taxa is summarized in \cref{figure:stateclassifications}.
 We retained all of these species in each of the analyses below because pruning away tips lacking breeding system in the ploidy-only analyses (and vice versa) would discard data that could inform the diversification models.
 A total of 405 taxa without any information about breeding system or polyploidy were excluded.
-Tips without trait data are much less informative for diversification parameters linked to trait values.
+%Tips without trait data might not improve point estimation of diversification parameters while increasing uncertainty in the estimates of trait linked diversification
+% R-This is very important but I have removed it because I think it is a full on paper by its own
 Including this many more species would have prohibitively slowed our analyses, especially those implementing the most complex models.
 
 % D/P ploidy model
@@ -51,36 +51,36 @@ Including this many more species would have prohibitively slowed our analyses, e
 
 \subsection{Models for ploidy and diversification}
 
-To investigate the association between ploidy level and diversification, we first defined a binary state speciation and extinction model (BiSSE, \citealt{maddison_2007}) in which taxa were classified as diploid (D) or polyploid (P) (\cref{figure:stateclassifications}).
-We call this the \textit{D/P ploidy} model. %B: emphasis on introduced term (quotes awkward)
-In a Bayesian framework, we obtained posterior probability distributions of speciation rates ($\lambda_D$, $\lambda_P$), extinction rates ($\mu_D$, $\mu_P$), net diversification rates ($r_D=\lambda_D-\mu_D$, $r_P=\lambda_P-\mu_P$), and relative extinction rates ($\nu_D=\mu_D / \lambda_D$, $\nu_D=\mu_D / \lambda_D$) associated with each state.
-This analysis explores the same question as \citet{mayrose_2011, mayrose_2015}, using the polyploidization (parameter $\rho$, the transition rate from $D$ to $P$). % E: presumably the motivation will be explained in the Intro
+In order to investigate the association between ploidy level and diversification, we first defined a binary state speciation and extinction model (BiSSE, \citealt{maddison_2007}) in which taxa were classified as diploid (D) or polyploid (P) (\cref{figure:stateclassifications}).
+We call this the \textit{D/P ploidy} model. This model is identical to the model proposed by \citet{mayrose_2011, mayrose_2015}, but inferences were performed in a Bayesian framework.
+ %B: emphasis on introduced term (quotes awkward)
+We calculated the posterior probability distributions of speciation rates ($\lambda_D$, $\lambda_P$), extinction rates ($\mu_D$, $\mu_P$), net diversification rates ($r_D=\lambda_D-\mu_D$, $r_P=\lambda_P-\mu_P$), and relative extinction rates ($\nu_D=\mu_D / \lambda_D$, $\nu_D=\mu_D / \lambda_D$) associated with each state. Parameter $\rho$ represents the transition rate from $D$ to $P$. % E: presumably the motivation will be explained in the Intro
 %B: should the term above be "re-diploidization" or "diploidization" (as now)?
-
 % B (via E): need some explanation of what \delta means, biologically, when ploidy is scored like this
+% R- the explanation will happen in the discussion
 
-Our second model assesses the signal of diversification due to ploidy differences while also parsing out the heterogeneity of diversification rates due a possible unobserved trait.
-BiSSE-like models can suffer from a large false discovery rate because they fail to account for diversification rate changes that do not directly depend on the trait of interest \citep{rabosky_2015, beaulieu_2016}.
-Diversification rate differences explained by some trait other than ploidy, are accommodated by adding a hidden state (HiSSE model; \citealt{beaulieu_2016}). %B: inserted "(trait)", because that seems to be the goal - a biological explanation?
-In this model, each of the observed diploid and polyploid states is subdivided by a binary hidden trait with states $A$ and $B$.
-We call this the \textit{D/P+A/B ploidy and hidden state} model. 
-We estimated the posterior probability distributions of speciation rates ($\lambda_{D_A},\ \lambda_{D_B},\ \lambda_{P_A},\ \lambda_{P_B}$), extinction rates ($\mu_{D_A},\ \mu_{D_B},\ \mu_{P_A},\ \mu_{P_B}$), net diversification rates ($r_{D_A},\ r_{D_B},\ r_{P_A},\ r_{P_B}$), and relative extinction rates ($\nu_{D_A},\ \nu_{D_B},\ \nu_{P_A},\ \nu_{P_B}$).
-In this model polyploidization rate  is again represented by $\rho$  and hidden states are symmetrical with rate $\alpha$. %B: same dip vs. re-dip question, as above.
+Our second model addressed the diversification due to ploidy differences while also parsing out the heterogeneity of diversification rates due a possible unobserved trait.
+Diversification rate differences explained by some trait other than ploidy were accommodated by adding a hidden state (HiSSE model; \citealt{beaulieu_2016}). %B: inserted "(trait)", because that seems to be the goal - a biological explanation?
+% R- Now this is mentioned in the intro so that  makes it easier to write here
+In this model, each of the observed diploid and polyploid states were subdivided by a binary hidden trait with states $A$ and $B$.
+This model was called the \textit{D/P+A/B ploidy and hidden state} model. 
+Posterior probability distributions of speciation rates ($\lambda_{D_A},\ \lambda_{D_B},\ \lambda_{P_A},\ \lambda_{P_B}$), extinction rates ($\mu_{D_A},\ \mu_{D_B},\ \mu_{P_A},\ \mu_{P_B}$), net diversification rates ($r_{D_A},\ r_{D_B},\ r_{P_A},\ r_{P_B}$), and relative extinction rates ($\nu_{D_A},\ \nu_{D_B},\ \nu_{P_A},\ \nu_{P_B}$) were estimated.
+In this model polyploidization rate  is again represented by $\rho$  and hidden state rates are symmetrical with parameter  $\alpha$. %B: same dip vs. re-dip question, as above.
 
 \subsection{Models for breeding system and diversification}
 
-To assess the effects of breeding system in the diversification process, we first fit model in which the states are self-incompatible (I) or self-compatible (C).
-This is the same as the analysis of \citet{goldberg_2010}, save for an updated phylogeny \citep{sarkinen_2013}.
-We call this BiSSE model the \textit{I/C breeding system} model. 
-To parse out the effect of breeding system on diversification, while allowing for the possibility of heterogeneous diversification rates unrelated to breeding system, we subdivided each of those states into hidden states $A$ and $B$.
-We call this HiSSE model the \textit{I/C+A/B breeding system and hidden state model}. 
+The effects of breeding system in the diversification process were modeled using the self-incompatible (I) or self-compatible (C) states on the tips of the phylogeny.
+The proposed model is similar to the  analysis proposed by  \citet{goldberg_2010} but applied to the much larger dataset.
+The proposed model is also BiSSE-like and we refer to it as the \textit{I/C breeding system} model. 
+In order to parse out the effect of breeding system on diversification, while allowing for the possibility of heterogeneous diversification rates unrelated to breeding system, we subdivided each of those states into hidden states $A$ and $B$.
+We call this HiSSE model the \textit{I/C+A/B breeding system and hidden state model} . The I/C+A/B model is equivalent to the model used in \citet{freyman_2017} but we restricted the hidden state transition rates to be symmetrical. 
 
 %B: we moved back from "SI" to "self-incompatibility" below. Maybe a no-no.
-For all breeding system models, we allow transitions from $I$ to $C$ (at rate $q_{IC}$) but not the reverse.
-Within Solanaceae, self-incompatibility is homologous in all species in which S-alleles were cloned, and controlled crosses performed.  
+Self-incompatibility is homologous in all species in which S-alleles are cloned, and controlled crosses are performed. % R- Boris this phrase reads weird but I don't know how to fix it  
 All species sampled to date, possess a non-self recognition, RNase-based, gametophytic self-incompatibility \citep[shared even with other euasterid families;][]{ramanauskas_2017}.
 Furthermore, species that are distantly related within this family carry closely-related alleles, with deep trans-specific polymorphism, at the S-locus, which controls the SI response \citep{ioerger_1990, igic_2006}. %B: may need to introduce "S-locus" earlier.
-This represents very strong evidence that the self-incompatible mechanism, and our $I$ state is ancestral to the Solanaceae, and did not arise independently within the family ($q_{CI}=0$). %B: I think I have this right <- someone please double-check.
+This represents very strong evidence that the self-incompatible mechanism, and our $I$ state is ancestral to the Solanaceae, and did not arise independently within the family.Therefore, for all breeding system models, we estimated a transition rate from $I$ to $C$  but not the reverse ($q_{CI}=0$).
+ %B: I think I have this right <- someone please double-check.
 % This is an important assumption because ancestral state reconstruction in the models might differ when polyploidy and breeding system are analyzed as independent in the Solanaceae tree.
 % This irreversibility assumption prevents self-compatible state from evolving into self-incompatible state and as a result, the ancestral state of all taxa in this model has probability one of being self-incompatible.
 %
@@ -89,20 +89,19 @@ This represents very strong evidence that the self-incompatible mechanism, and o
 
 \subsection{Models for ploidy, breeding system, and diversification}
 
-If polyploidy and breeding system each influence lineage diversification individually, it is logical to examine their possible joint effects. %B: unsure about edit, which was: "If both ploidy and breeding system have the potential to influence lineage diversification, we should logically consider their effects jointly."  E: okay; also try to add that their transitions interact
-We thus fit a multi-state model that includes both traits \citep[MuSSE,][]{fitzjohn_2012}.
-The three states in this model are self-incompatible diploids (ID), self-compatible diploids (CD), and polyploids, which are always self-compatible (CP).
-As explained above, we did not include a state for self-incompatible polyploids because they are not observed in the data, and  that trait combination state is mechanistically predicted not to occur.
-We call this the \textit{ID/CD/CP ploidy and breeding system} model.
-The model has 9 parameters, six for diversification in each state ($\lambda_{ID},\ \lambda_{CD},\ \lambda_{CP}$ for speciation, $\mu_{ID},\ \mu_{CD},\ \mu_{CP}$ for extinction) and three for transitions between states ($\rho_I,\ \rho_C$ for polyploidization transitions from $ID$ and $CD$ to $CP$, respectively; $q_{IC}$ for loss of self-incompatibility without polyploidization, from $ID$ to $CD$).
+Polyploidy and breeding system might have changed lineage diversification individually but these two traits also have complex interactions in Solanaceae species. Therefore, a multi-state model that investigates the contribution of both traits and the possible transitions between them was proposed.  %B: unsure about edit, which was: "If both ploidy and breeding system have the potential to influence lineage diversification, we should logically consider their effects jointly."  E: okay; also try to add that their transitions interact
+% R- Is the above better?
+Self-incompatible diploids (ID), self-compatible diploids (CD), and polyploids, which are always self-compatible (CP) were used as input for a MuSSE model \citep{fitzjohn_2012}.
+We did not include a state for self-incompatible polyploids because they are not observed in the data, and  that trait combination state is mechanistically predicted not to occur.
+The proposed model is called the \textit{ID/CD/CP ploidy and breeding system} and has six parameters for diversification in each state: ($\lambda_{ID},\ \lambda_{CD},\ \lambda_{CP}$ for speciation, $\mu_{ID},\ \mu_{CD},\ \mu_{CP}$ for extinction), and three for transitions between states ($\rho_I,\ \rho_C$ for polyploidization transitions from $ID$ and $CD$ to $CP$, respectively; $q_{IC}$ for loss of self-incompatibility without polyploidization, from $ID$ to $CD$).
 The total rate of loss of self-incompatibility, \ie transitions out of $ID$, is $q_{IC} + \rho_I$.
 Diploidization from $CP$ to $ID$ is not allowed because it would represent a simultaneous regain of SI.
 
-The ID/CD/CP model could potentially capture similar dynamics as earlier models, if the effects of the hidden state in D/P+A/B were effectively caused by breeding system (or its correlates), and the hidden state in I/C+A/B was effectively caused by ploidy.
-There is also the potential, however, for a hidden factor to be influencing diversification beyond both of our focal traits, and this could again mislead inferences.
-We therefore added a hidden trait layer on top of our three-state model \citep[analogous to][]{caetano_2018, herrera_2018, huang_2018}.
+The ID/CD/CP model could also suffer from a hight type I error as the regular two state BiSSE model. 
+A hidden factor might alter diversification beyond both ploidy and breeding system misleading inferences \citep{rabosky_2015}.
+We therefore added a hidden trait layer on top of our three-state model \citep[analogous to][]{caetano_2018,  huang_2018}.
 We refer to this as the \textit{ID/CD/CP+A/B} model.
-A fully parameterized version of this model would have 26 rate parameters \citep{herrera_2018}. 
+A fully parameterized version of this model would have 26 rate parameters. 
 Because our goal was to look for diversification rate differences associated with ploidy and breeding system rather than the specific effects of the hidden states, we fitted a simplified version with 15 parameters.
 The reduction in parameter space is achieved by fixing the rates for transitions among hidden states to be equal with rate $\alpha$, and fixing the transition rates between observed states to be independent of the hidden state (rates $\rho_I,\ \rho_C,\ \delta,\ q_{IC}$ as defined for the ID/CD/CP model).
 There are additionally twelve diversification rate parameters ($\lambda_{ID_A},\ \lambda_{ID_B},\ \lambda_{CD_A},\ \lambda_{CD_B},\ \lambda_{CP_A},\ \lambda_{CP_B},\ \mu_{ID_A},\ \mu_{ID_B},\ \mu_{CD_A},\ \mu_{CD_B},\ \mu_{CP_A},\ \mu_{CP_B}$).
@@ -114,9 +113,9 @@ There are additionally twelve diversification rate parameters ($\lambda_{ID_A},\
 Considering ploidy and breeding system together, there are two evolutionary pathways from SI diploid to SC polyploid \citep{brunet2001, robertson_2011}.
 In the one-step pathway, the CP state is produced directly from the ID state when whole genome duplication disables SI.
 In the two-step pathway, the CD state is an intermediate: SI is first lost, and later the SC diploid undergoes polyploidization.
-We quantify the relative contribution of these pathways to polyploidy in two ways, each using the MAP rate estimates from the IC/CD/CP model.
+We quantify the relative contribution of these pathways to polyploidy in two ways, each using the maximum a posteriori (MAP) estimates of rates from the IC/CD/CP model.
 
-Both of our methods are based on a propogation matrix that describes flow from ID to CP, as in \citet{robertson_2011}.
+Both of our methods are based on a propagation matrix that describes flow from ID to CP, as in \citet{robertson_2011}.
 We insert an artificial division in the CP state, so that one substate contains the CP species that arrived via the one-step pathway and the other substate contains the CP species that arrived via the two-step pathway.
 We consider only unidirectional change along each step of the pathway in order to separate them into clear alternatives, and because in this family there is no support for regain of SI, and not strong support for diploidization.
 First, we consider only the rates of transitions between these states, placing them in the propogation matrix \myvec{Q}.
@@ -128,19 +127,20 @@ Second, we consider not only transitions between states but also diversification
 State-dependent diversification can change the relative contributions of the two pathways.
 In particular, if the net diversification rate is small for CD, the two-step pathway will contribute relatively less.
 We therefore include the difference between speciation and extinction along the diagonal elements of the propogation matrix.
-As before matrix exponentiation provides the relative chance of changing from one state to any other state after time $t$.
+As before, matrix exponentiation provides the relative chance of changing from one state to any other state after time $t$.
 In this case, however, these are not probabilities because diversification changes the number of lineages as time passes.
-We can still use their ratios to consider the relative contribution of each pathway, though, analogous to the normalized age structure in a growing population.
+We can still use their ratios to consider the relative contribution of each pathway, though, analogous to the normalized age structure in a growing population. % R- here a reference would be nice
 
 % E todo: for the case with net div, write out the propogation matrix and equations for pathway contributions
 
 \subsection{Diploidization as an exploratory hypothesis}
 
 For all four models that consider ploidy changes, we allowed diploidization by adding a parameter $\delta$ connecting polyploidy state back to diploid or to self-compatible diploid in the mult-state models (denoted by $+/delta$ in the models of  \cref{table:marginallike}).
-Previous modeling approaches \citep{mayrose_2011} have argued against inferring diploidization rates when using ploidy data that comes from classifications based on chromosome number multiplicity or chromosome number change models like chromEvol \citep{mayrose_2010}.
+Previous modeling approaches \citep{mayrose_2011} have argued against inferring diploidization rates when using ploidy data that comes from classifications based on chromosome number multiplicity or chromosome number change models like chromEvol \citep{mayrose_2010, mayrose_2015}.
 These types of classifications do not allow for a ploidy reversion.
-Where indicated, the classification of ploidy for the data used in our models was based on chromosome multiplicity at the genus level.
+Where indicated, the classification of ploidy for the data used in our models was based on chromosome multiplicity at the genus level (data available at https://www.github.com/roszenil/solploidy/datasets).
 % ref data/sources table?
+%github
 However, the majority of the ploidy classifications were adopted from original studies with alternative sources of information (\eg geographic distribution, genus ploidy distribution) where ploidy was defined by authors that found evidence for it.
 Since it is not clear whether diploidization can be detected under alternative ploidy classifications or even classifications based on chromosome number multiplicity at the genus level, we also fit the models without diploidization in order to test  whether the conclusions about diversification are sensitive to including diploidization.
 As discussed by \citet{servedio_2014}, the presence or absence of a hypothesis can have an exploratory goal.
