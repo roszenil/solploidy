@@ -67,14 +67,16 @@ norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]
 ##Just checking here that all data has either ploidy or breeding system info
 ##nor.ploidysi2<-which(is.na(norploidysi.solanaceae[,5])==TRUE & is.na(norploidysi.solanaceae[,6])==TRUE)
 
-matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #613
+matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #595
 write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")
 
 
-diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")
-diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")
-diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE)
-polyploids<-which(matched$dat[,4]>2)
+diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")# 97
+diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#152
+diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE) #223
+polyploids<-which(matched$dat[,4]>2) #86
+polyploidsc<-which(matched$dat[,4]>2 & matched$dat[,5]=="SC")#43
+polyploidsna<-which(matched$dat[,4]>2 & is.na(matched$dat[,5])==TRUE)#43
 si<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SI")
 sc<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SC")
 threestate<- rep(0,dim(matched$dat)[1])
