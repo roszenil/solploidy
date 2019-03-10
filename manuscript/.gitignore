@@ -1,3 +1,4 @@
+main.pdf
 *.bbl
 *.blg
 *.log
@@ -10,3 +11,8 @@
 *.efsuppfigure
 *.efsupptable
 *.synctex.gz
+*.diff.tex
+*.bak
+old/
+*.sh
+
