@@ -39,7 +39,7 @@ We retained all of these species in each of the analyses below because pruning a
 A total of 405 taxa without any information about breeding system or polyploidy were excluded.
 %Tips without trait data might not improve point estimation of diversification parameters while increasing uncertainty in the estimates of trait linked diversification
 % R-This is very important but I have removed it because I think it is a full on paper by its own
-Including this many more species would have prohibitively slowed our analyses, especially those implementing the most complex models.
+%Including this many more species would have prohibitively slowed our analyses, especially those implementing the most complex models.
 
 % D/P ploidy model
 % D/P+A/B ploidy hidden state model
@@ -52,7 +52,8 @@ Including this many more species would have prohibitively slowed our analyses, e
 
 In order to investigate the association between ploidy level and diversification, we first defined a binary state speciation and extinction model (BiSSE, \citealt{maddison_2007}) in which taxa were classified as diploid (D) or polyploid (P).
 We call this the D/P ploidy model.
-The model parameters are speciation rates ($\lambda_D$, $\lambda_P$) and extinction rates ($\mu_D$, $\mu_P$) for each state, and a rate of transition from D to P ($\rho$).
+The model parameters are speciation rates ($\lambda_D$, $\lambda_P$) and extinction rates ($\mu_D$, $\mu_P$) for each state, and a rate of transition from D to P ($\rho$). This is the same model fitted by \citet{mayrose_2011} but applied to the larger Solanaceae dataset.
+% R- Itay wanted to hightlight that is the same model. Definitely a BiSSE. He did the ClaSSE later in the 2014 response.
 
 % E: I moved r and nu to later, under statistical inference.  It made it seem like there were too many parameters here.
 % I also removed italics around the model names because we don't actually use those names later on (more just the state codes).
@@ -102,9 +103,9 @@ The ID/CD/CP model could also suffer from a high type I error, just like a two s
 We therefore added a hidden trait layer on top of our three-state model \citep[analogous to][]{caetano_2018,  huang_2018}.
 We refer to this as the ID/CD/CP+A/B model.
 A fully parameterized version of this model would have 26 rate parameters. 
-Because our goal was to look for diversification rate differences associated with ploidy and breeding system rather than the specific effects of the hidden states, we fit a simplified version with 15 parameters.
-The reduction in parameter space was achieved by fixing the rates for transitions among hidden states to be equal with rate $\alpha$, and fixing the transition rates between observed states to be independent of the hidden state (rates $\rho_I,\ \rho_C,\ \delta,\ q_{IC}$ as defined for the ID/CD/CP model).
-There are additionally twelve diversification rate parameters ($\lambda_{ID_A},\ \lambda_{ID_B},\ \lambda_{CD_A},\ \lambda_{CD_B},\ \lambda_{CP_A},\ \lambda_{CP_B},\ \mu_{ID_A},\ \mu_{ID_B},\ \mu_{CD_A},\ \mu_{CD_B},\ \mu_{CP_A},\ \mu_{CP_B}$).
+Because our goal was to look for diversification rate differences associated with ploidy and breeding system rather than the specific effects of the hidden states, we fit a simplified version with 16 parameters. % You were missing counting the alpha
+The reduction in parameter space was achieved by fixing the rates for transitions among hidden states to be equal with rate $\alpha$, and fixing the transition rates between observed states to be independent of the hidden state (rates $\rho_I,\rho_C,\ q_{IC}$ as defined for the ID/CD/CP model).
+There are additionally twelve diversification rate parameters ($\lambda_{ID_A},  \lambda_{ID_B},  \lambda_{CD_A}, \lambda_{CD_B}, \lambda_{CP_A}, \lambda_{CP_B}, \mu_{ID_A}, \mu_{ID_B}, \mu_{CD_A}, \mu_{CD_B},  \mu_{CP_A}, \mu_{CP_B}$).
 %B: I can't tell, but it seems to me that this 26->16 parameter reduction makes it possible to underestimate the effect of these hidden states.Perhaps this complication is covered in the Discussion section. 
 %R- It is possible, but adding all the parameters can also result in an underestimation of the hidden states contribution because it is not enough sample to accurately estimate transitions. In my simulations for diversification-free models, accurately estimating 10 parameters can only be achieved with trees with more than 500 tips. Because of that experience I think 16 parameters is already pushing really the inference machine hard. This happens because the phylogeny is not an independent sample so your ESS is much much smaller and you might end up over-parameterizing.
 
@@ -141,7 +142,7 @@ We did not allow transitions from CP back to ID because that would include regai
 The models are denoted with $+\delta$ in \cref{table:marginallike}.
 Previous modeling approaches \citep{mayrose_2011} have argued against inferring diploidization rates when using ploidy data that comes from classifications based on chromosome number multiplicity or chromosome number change models like chromEvol \citep{mayrose_2010, glick2014, mayrose_2015, freyman_2017}.
 These types of classifications do not allow for a ploidy reversion.
-Where indicated, the classification of ploidy for the data used in our models was based on chromosome multiplicity at the genus level (see Supplementary Information). % (data available at https://www.github.com/roszenil/solploidy/datasets).
+Where indicated, the classification of ploidy for the data used in our models was based on chromosome multiplicity at the genus level (see \url{https://github.com/roszenil/solploidy} for archived dataset). % (data available at https://www.github.com/roszenil/solploidy/datasets).
 However, the majority of the ploidy classifications were adopted from original studies with alternative sources of information (\eg geographic distribution, genus ploidy distribution) where ploidy was defined by authors that found evidence for it.
 Since it is not clear whether diploidization can be detected under alternative ploidy classifications or even classifications based on chromosome number multiplicity at the genus level, we fit models with and without diploidization in order to test  whether the conclusions about diversification are sensitive to including diploidization.
 As discussed by \citet{servedio_2014}, the presence or absence of a process can have an exploratory goal.
@@ -175,7 +176,7 @@ Other comparisons between these models are not valid because the input data are 
 In mathematical terms, the D/P, I/C, and ID/CD/CP state spaces are not `lumpable' with respect to one another \citep{tarasov_2019}.
 % E: I think this short explanation is clear enough, especially with the figure.  I'm not sure whether the hierarchical concept is exactly applicable here.
 %R: Boris in the introduction mentions this possible causal relationship would that be equivalent to say hierarchical?
-Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $BF(M_0,\ M_1) = \ln[ P(\mathbf{X} | M_0) - P(\mathbf{X} | M_1]$.
+Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $BF(M_0,\ M_1) = \ln[ P(\mathbf{X} | M_0) - P(\mathbf{X} | M_1)]$.
 There is `positive' support for $M_0$ when this value is more than 2, `strong' support when it is more than 6, and `very strong' support when it is more than 10 \citep{kass1995}.
 
 \begin{figure}

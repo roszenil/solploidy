@@ -25,7 +25,8 @@
 
 %B:  at least two surprising outcomes: (1)  D and P on background of C, and (2) SC not as dead of an end as it was in goldberg2010, if P is partitioned out (can be framed as kind of path-dependence, i.e. qIC path different than rho path, or same as (1), so that I and C are less different on the background of D.
 We investigated the individual and joint effects of ploidy and breeding system states in diversification of Solanaceae.
-Most significantly, we found that the effects of ploidy, inferred as significant when it is the only trait under consideration, are trumped by breeding systems when the two traits are considered jointly.  % E: is "trumped" too much like gloating?
+Most significantly, we found that the effects of ploidy, inferred as significant when it is the only trait under consideration, are trumped by hidden states and or/ breeding system when added to models.  % E: is "trumped" too much like gloating? - R-Haha
+%R- I added hidden states because that hasn't been discussed ever in polyploidy
 Interestingly, the difference in diversification rates between the diploids and polyploids is negligible on the background of self-compatibility.
 %B: should we mention here that the hidden states presage these results in each case? Maybe we don't want to make too much of that, but it is fairly interesting. Also possibly hit that in your paragraph(s), below.
 In the same vein, we recovered a smaller difference in diversification rates between self-incompatible and self-compatible lineages against diploid genomic background. %B: "in diploids" may work better?
@@ -37,7 +38,13 @@ Below, we discuss these key findings and outline a broad approach for applicatio
 
 % - value of approach
 Disentangling the patterns of diversification linked to  multiple traits allowed us the opportunity to model and test complex hypotheses about the heterogenous diversification process in Solanaceae.
-Species are created and go extinct based on multiple and often highly correlated phenotypes. However, estimating the speciation and extinction rates remains challenging. Estimating rates of trait linked diversification models is not only a problem of difficult parametric inference (as disscussed in  \citet{rabosky_2010, beaulieu_2015}),but also, a problem of inadequate model specification that can result in misleading inferences when the presence of a second trait has a complex interaction with the focus trait first used to model diversification. We presented a roadmap with a series of analyses that can help scientists to identify if an unknown or unobservable trait is worth pursuing. By carefully aggregating and curating ploidy and breeding system data for Solanaceae, we showed how  the complex interaction between ploidy and breeding system  can lead to diversification conclusions that differ from the diversification conclusions of models that focus on one trait at a time.
+Species are created and go extinct based on multiple and often highly correlated phenotypes. However, estimating the speciation and extinction rates remains challenging. 
+
+By carefully aggregating and curating ploidy and breeding system data for Solanaceae, we showed how  the complex interaction between ploidy and breeding system  can lead to diversification conclusions that differ from the diversification conclusions of models that focus on one trait at a time.
+
+
+
+
 
 % - what happens if PD only, Hidden states
 Previous analyses of polyploidy linked to diversification showed how diploids had greater net diversification rates than polyploids when exploring across multiple clades of the angiosperm phylogeny \citet{mayrose_2011, mayrose_2015}. 
@@ -113,7 +120,9 @@ In the cases where ploidy level was assigned by us based chromosome multiplicity
 Diploidization is widely considered to be relatively rare, compared with polyploidization, but flowering plant lineages are thought to have experienced at least one round of polyploidization in their evolutionary history. %cite
 As a consequence, it is possible that nearly all extant species classified as ``diploid" in our analyses, based on cytogenetic data, are possibly secondary diploids, having undergone both polyploidization and re-diploidization.
 Unduly ignoring secondary diploidization would clearly underestimate the rate of transitions from polyploids to diploids, and would likely cause inflated net diversification rates for diploids. % E: first clause seems like a tautology? second clause does not seem obvious, but could at least say that it could affect div rate estimates
-We find weak support for inclusion of diploidization. %cite fig and expand (FIXME).
+We find strong support in models that included diploidization \cref{table:bayesfactors}. However, estimating the rate at which it occurs based on ploidy level classifications is hard and highly uncertain (see parameter $\delta$ in \cref{suppfigure:DP,suppfigure:DPAB,suppfigure:IDCDCP,suppfigure:IDCDCPAB}) and can change the pattern of ancestral reconstructions (\cref{suppfigure:DPnodipasr,suppfigure:DPasr,suppfigure:DPnodipABasr,suppfigure:DPABasr,suppfigure:IDCDCPnodipasr,suppfigure:IDCDCPasr,suppfigure:IDCDCPnodipABasr,suppfigure:IDCDCPABasr}).
+%We find weak support for inclusion of diploidization. %cite fig and expand (FIXME).
+% R- I corrected the above phrase, we found strong support for the inclusion of diploidization, models that have it are always preferred over models that don't however that parameter is hard to estimate
 
 Genomic evidence indicates that a paleo-polyploidization may have occurred prior to the origin of the family Solanaceae, rendering all current `diploids' secondarily derived. 
 First, \citet{ku2000} and \citet{blanc2004} posited that the lineage leading to tomato, \textit{Solanum lycopersicum}, may have experienced one or more WGDs.
@@ -139,4 +148,12 @@ Despite the limitations of assignment of ploidy levels, we found some support fo
 %
 % issues
 %     irreversibility SI -> SC assumption
+
+
+% R-Here I copied the limitations of the models idea but needs to be reorganized to be cohesive % Fix this a lot more please
+% This is the idea on how thorough analyses should be done.
+Estimating rates of trait linked diversification models is not only a problem of difficult parametric inference (as disscussed in  \citet{rabosky_2010, beaulieu_2015}),but also, a problem of inadequate  ``*SSE'' model specification that can result in misleading inferences when the presence of a second trait has a complex interaction with the focus trait first used to model diversification. We presented a roadmap with a series of analyses that can help scientists to identify if an unknown or unobservable trait is worth pursuing. 
+In this roadmap, we have proposed fitting HiSSE models that have effectively shown that some binary states associated with diversification under BiSSE analyses are actually not different in net diversification terms, and instead a hidden state is linked to differences in the diversification rate \citep{beaulieu_2016}.  If that is the case on a system, raising the question of the identity of the hidden state should be considered as the next step in the modeling process. When considering  a second candidate trait, one can model the complex interactions via a MuSSE model, especially in systems where multiple traits are suspected to influence diversification, and where interactions between those traits are well understood. 
+Since MuSSE might also suffer from hight type I errors considering more heterogeneity using a hidden state model on top of the multistate SSE is necessary to adequately infer the effect of the complex interactions in the speciation and extinction process.
+
 
