@@ -185,14 +185,17 @@ There is `positive' support for $M_0$ when this value is more than 2, `strong' s
 \caption{
 Character states used for each of the models.
 Each species retained on the tree belonged to one of five possible categories, depending on whether ploidy and/or breeding system were known.
-The number of species in each is shown under the corresponding circles in the top row. % FIXME: Rosana, what are the numbers for CP and ?P ?
+The number of species in each is shown under the corresponding circles in the top row.
 These categories were then grouped in a manner appropriate to the states of each model.
-For example, there are 34 species that are self-compatible and of unknown ploidy; these are coded as either $D$ or $P$ in the D/P models (uncertain, or consistent with either state), as $C$ in the I/C models, and as either $CD$ or $CP$ in the ID/CD/CP models.
-In all cases, species were coded as either $A$ or $B$ in the hidden state models.
-The models depicted in the different rows use state spaces that are not comparable with one another.
-For example, we cannot test whether the D/P model fits better than the I/C model because they use states that are not the same and are not `lumpable' \citep{tarasov_2019}.
-%B: Hmmm. The presentation is economical, true, and I think it is retrospectively clear, and valuable, now that I've been thinking about the paper for a while. But it will be very difficult as a source of clarity for someone reading the paper the first time. The top graphical layout also implicitly communicates the idea that all "I" species must be "D", and that all "P" species must be also "C", which is not intuited easily. (Are they encoded like that?) Moreover, it's not made clear that the 'species' in question are, in fact, often polymorphic, which makes DPIC possible. The subsequent models require a bit of thought, which is not too bad, but the treatment of the state coding and specifically the sentence "In all cases, species were coded as either A or B in the hidden state models." is a bit terse for someone not familiar with HiSSE. 
-% E: Yes, all I species are D and all P species are C (no SI polyploids).  I don't think there are polymorphic species because species with some SI and some SC pops are called I, and the most common ploidy level was used.
+For example, there are 34 species that are self-compatible ($C$) with unknown ploidy, and 40 species known to be polyploid($P$), but without breeding system data; the latter can be inferred, because all polyploid species in the dataset are self-compatible (see \citealt{robertson_2011}, and text). %B: I added stuff here
+In the D/P models, these are coded as either $D$ or $P$ (uncertain/consistent with either state); in the I/C  models, they are coded as $C$; and in the ID/CD/CP models, they are coded as either $CD$ or $CP$.
+In the hidden state models, species were coded as either $A$ or $B$.
+The model-specific coding is shown in different rows. 
+%B: I think that these two sentences are more appropriate for the model comparison tables and Methods text. If we are admonished to cut text, they could go.
+They each use state spaces that are not directly comparable with one another.
+For example, we cannot test whether the D/P model fits better than the I/C model because they use states that are not the same, and are therefore not `lumpable' \citep{tarasov_2019}.
+%B: [This] will be very difficult as a source of clarity for someone reading the paper the first time.
+%E: Yes, all I species are D and all P species are C (no SI polyploids).  I don't think there are polymorphic species because species with some SI and some SC pops are called I, and the most common ploidy level was used.
 }
 \label{figure:stateclassifications}
 \end{figure}

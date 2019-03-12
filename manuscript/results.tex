@@ -44,9 +44,8 @@ The lower rate of net diversification in the CD state, relative to ID, means tha
 
 We considered models both with or without diploidization in order to explore its effects on the estimates of state-dependent diversification.
 For the two models that only include diploid and polyploid states (D/P and D/P+A/B), the net diversification rate of polyploid lineages is likely negative when diploidization (parameter $\delta$) is excluded but positive when $\delta$ is included (\cref{figure:netdivall}A versus \cref{figure:netdivnodip}A).
-For the two models that also included breeding system (ID/CD/CP and ID/CD/CP+A/B), the main effect of including diploidization is greatly increasing the uncertainty of the estimate of polyploid net diversification rate (\cref{figure:netdivall}EF versus \cref{figure:netdivnodip}CD).
+For the two models that also included breeding system (ID/CD/CP and ID/CD/CP+A/B), the main effect of including diploidization is greatly increasing the uncertainty of the estimate of polyploid net diversification rate (\cref{figure:netdivall}E,F versus \cref{figure:netdivnodip}C,D).
 For all models, there is greater uncertainty in the estimate of diploidization rate than polyploidization rate, as judged by the width of the credibility intervals (see \cref{suppfigure:DP,suppfigure:DPAB,suppfigure:IDCDCP,suppfigure:IDCDCPAB}).
-
 % R will add a bit about param confidence
 
 \begin{supptable}
@@ -105,15 +104,18 @@ For all models, there is greater uncertainty in the estimate of diploidization r
 % check values of delta and rho D/P+A/B with(out) delta
 % i.e. parameter values in figure S1 & S4 vs Table S2
 
+%B: heads up: I added two clarifying descriptive sentences in the two figures below. Maybe something about noting x-axis scale differences would be useful.
 \begin{figure}
 \includegraphics[width=\textwidth]{allnetdivmodelswithoutdelta.pdf}
-\caption{Net diversification rates for all models that exclude diploidization.}
+\caption{Net diversification rates for all models without diploidization rate estimate. 
+Each panel contains a graphical summary of estimated model parameters and displays posterior distributions for net diversification estimates.}
 \label{figure:netdivall}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=\textwidth]{allnetdivmodelsdiploidization.pdf}
-\caption{Net diversification rates for all models that include diploidization.}  
+\caption{Net diversification rates for all models that include diploidization ($\delta$). 
+Each panel contains a graphical summary of estimated model parameters and displays posterior distributions for net diversification estimates.}  
 \label{figure:netdivnodip}
 \end{figure}
 

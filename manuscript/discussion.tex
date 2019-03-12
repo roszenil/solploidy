@@ -1,40 +1,15 @@
 \section{Discussion}
 
-% outline
-% - disentangling effects
-% - general value of approach
-%  		another kind of confounding processes, not only transition and diversification, but "other diversifications" and "other transitions", esp. correlated
-%
-% - our study key findings and details
-% - effects of Ploidy (as %R)
-% - trumped by BS
-% - no difference on background of SC 
-% - discuss data/models and their long/shortcomings: 
-%	ClaSSE, will's idea for stochastic mapping
-%	irreversibility SI -> SC assumption
-% - how to improve / what next
-%  (may be useful to study in SC families)
-%
-% - pathways
-% 
-%- diploidization
-% - rate, effect
-% - history in solanaceae
-%
-% - summary
-
 %B:  at least two surprising outcomes: (1)  D and P on background of C, and (2) SC not as dead of an end as it was in goldberg2010, if P is partitioned out (can be framed as kind of path-dependence, i.e. qIC path different than rho path, or same as (1), so that I and C are less different on the background of D.
 We investigated the individual and joint effects of ploidy and breeding system states in diversification of Solanaceae.
-Most significantly, we found that the effects of ploidy, inferred as significant when it is the only trait under consideration, are trumped by hidden states and or/ breeding system when added to models.  % E: is "trumped" too much like gloating? - R-Haha
-%R- I added hidden states because that hasn't been discussed ever in polyploidy
+Most significantly, we found that the effects of ploidy, inferred as significant when it is the only trait under consideration, are overshadowed by hidden traits, or breeding system when added to models.  
 Interestingly, the difference in diversification rates between the diploids and polyploids is negligible on the background of self-compatibility.
-%B: should we mention here that the hidden states presage these results in each case? Maybe we don't want to make too much of that, but it is fairly interesting. Also possibly hit that in your paragraph(s), below.
-In the same vein, we recovered a smaller difference in diversification rates between self-incompatible and self-compatible lineages against diploid genomic background. %B: "in diploids" may work better?
-%B: need help with pathway single-sentence summary
-Motivated by the widespread findings of paleopolyploid ancestry across angiosperms, we also examined support for diploidization in the history of the family, which appears to be weak. %B: "mixed" "not strong" what's the right word here?  E: not "weak", maybe "not strong" or "not nearly as strong as anything else"
-Disentangling the patterns of diversification linked to multiple traits is difficult, but our strategy allows tests of complex hypotheses regarding a heterogenous diversification process.
-Below, we discuss these key findings and outline a broad approach for application of phylogenetic comparative methods in the context of interactions among traits and diversification process. 
-
+In the same vein, we recovered a smaller difference in diversification rates between self-incompatible and self-compatible lineages against the diploid genomic background.
+%Inference of transition rates can appreciably across 
+Motivated by the widespread findings of paleopolyploid ancestry across angiosperms, we also examined and found modest support for diploidization in the history of the family. %B: "mixed" "not strong" what's the right word here?  E: not "weak", maybe "not strong" or "not nearly as strong as anything else"
+Disentangling the patterns of diversification linked to multiple traits is difficult, but our strategy allows tests of intricate hypotheses regarding a heterogenous diversification process.
+Below, we discuss these key findings and detail their sometimes confusing and complex implications.
+We additionally provide an outline for broader application of phylogenetic comparative methods in the context of interactions among traits and diversification process. 
 
 % - value of approach
 Disentangling the patterns of diversification linked to  multiple traits allowed us the opportunity to model and test complex hypotheses about the heterogenous diversification process in Solanaceae.
@@ -155,5 +130,49 @@ Despite the limitations of assignment of ploidy levels, we found some support fo
 Estimating rates of trait linked diversification models is not only a problem of difficult parametric inference (as disscussed in  \citet{rabosky_2010, beaulieu_2015}),but also, a problem of inadequate  ``*SSE'' model specification that can result in misleading inferences when the presence of a second trait has a complex interaction with the focus trait first used to model diversification. We presented a roadmap with a series of analyses that can help scientists to identify if an unknown or unobservable trait is worth pursuing. 
 In this roadmap, we have proposed fitting HiSSE models that have effectively shown that some binary states associated with diversification under BiSSE analyses are actually not different in net diversification terms, and instead a hidden state is linked to differences in the diversification rate \citep{beaulieu_2016}.  If that is the case on a system, raising the question of the identity of the hidden state should be considered as the next step in the modeling process. When considering  a second candidate trait, one can model the complex interactions via a MuSSE model, especially in systems where multiple traits are suspected to influence diversification, and where interactions between those traits are well understood. 
 Since MuSSE might also suffer from hight type I errors considering more heterogeneity using a hidden state model on top of the multistate SSE is necessary to adequately infer the effect of the complex interactions in the speciation and extinction process.
+
+
+ %%%%%%%%%%%
+ %% Notes to Self %%
+ %%%%%%%%%%%
+
+% outline
+% - disentangling effects
+% - general value of approach
+%  		another kind of confounding processes, not only transition and diversification, but "other diversifications" and "other transitions", esp. correlated
+%
+% - our study key findings and details
+% - effects of Ploidy (as %R)
+% - trumped by BS
+% - no difference on background of SC 
+% - discuss data/models and their long/shortcomings: 
+%	ClaSSE, will's idea for stochastic mapping
+%	irreversibility SI -> SC assumption
+% - how to improve / what next
+%  (may be useful to study in SC families)
+%
+% - pathways
+% 
+%- diploidization
+% - rate, effect
+% - history in solanaceae
+%
+% - summary
+%
+% B: NEW REORG COMMENTS: 
+
+% First, include all straightforward Results and related observations
+%
+% Then try to square the oval of history of DP and IC. Specifically, it is difficult to know what to make of the delta models. Their inclusion is 'positively' supported, but yields results that are hard to reconcile with other data. This is one of the more interesting tensions of the paper, in the sense that it binds all of the discussion point and something here has to come to a head. 
+%Either what we think we know about SI/SC and reversals is wrong, or something about diploidization inference is wrong. Why? It is hard to square that we don't see IP state, almost ever!, but it's supposed to be the ancestral state, and not just in Solanaceae, across eudicots! Doesn't demand a full treatment here, but it's worth pointing out that if the SI/SC inference is wrong, then we must include reversals, qCI, here and elsewhere and it will change all kinds of inferences. Then, we'll have to explain maintenance of trans-generic polymorphism, ha, ha! Otherwise, something is off with the inference delta >> rho in some cases. If so, we'll have to explain paleo-WGD inference, etc. Either way, we fundamentally misunderstand the evolution of one of these two traits.
+
+% including delta makes for some nonsense: ancestral states are all P with rampant recent transitions to D (e.g. Fig. S4/S8. Not backed by any data, including synteny, S-allele trans-polymorphism, or anecdotally bearing experimental data about rates of spontaneous polyploidization and diploidization \citep{husband_2012}.
+
+% PATHWAYS -- mutational opportunity vs lineage transition rate reveals something about selection 
+%
+% Starting with SI-D, selection favoring establishment of SC-D seems more common than that of SC-P.
+% This is because the mutation rates are likely higher to SC-P, but rate 3x lower. "
+%Husband2012: The prevalence of polyploidy within plants has led to debate about the influence of genome duplication on net species diversification (Otto and Whitton 2000). Researchers have argued, on one hand, that polyploidy may simply accumulate as a unidirectional mutation with little influence on the rate or trajectory of evolutionary divergence (Stebbins 1971; Meyers and Levin 2006). This idea is based on the premise that ploidy is more likely to increase than decrease in time. Although reversals do occur, the resulting haploids are rela- tively rare and often of reduced fitness and high sterility (Stebbins 1980; Ramsey and Schemske 2002). Alternatively, polyploidy itself may enhance evolutionary diversification leading to increased divergence and species richness (Otto and Whitton 2000). Elevated diversification may occur if polyploidy accelerates adaptive divergence and evolution of reproductive isolation (Otto and Whitton 2000) or reduces species extinction. 
+%The presence of intraspecific ploidy diversity has three main causes. First, genome duplication is an ongoing genomic mutation within many natural populations and ploidy polymorphism is therefore expected when poly- ploid formation is common. In fact, Ramsey and Schemske (1998) estimated that polyploids form at the rate of 10 5 per individual per generation, well above the genic mutation rate, and in some cases it may be even higher than that (Husband 2004). Second, depending on the frequency and pathways of polyploid formation, diploids and polyploids may be maintained as genetically homogeneous populations, which are justifiably treated as single taxonomic species. Finally, ploidy polymorphism may arise as an artefact of our imperfect taxonomic approach. Since morphological divergence is often used as a criterion for species delinea- tion, polyploid lineages may not be recognized at the species level, especially in autopolyploids, which often have a close resemblance to their diploid progenitors (Soltis et al. 2007).
 
 
