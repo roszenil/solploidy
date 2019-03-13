@@ -7,7 +7,7 @@ We investigated the influence of two traits, ploidy and breeding system states, 
 Most significantly, we found that the effects of ploidy, inferred as significant when it is the only trait under consideration, are overshadowed by hidden traits, or breeding system when added to models.  %R: added hidden trait.
 Interestingly, the difference in diversification rates between the diploids and polyploids is negligible on the background of self-compatibility.
 In the same vein, we recovered a smaller difference in diversification rates between self-incompatible and self-compatible lineages against the diploid genomic background.
-Motivated by the widespread findings of paleopolyploid ancestry across angiosperms, we also examined and found modest support for diploidization in the history of the family. %B: how about "modest"? It's 3-ish, but "positive" seems like a really idiosyncratic usage to me, despite kass & raftery. was: %B: "mixed" "not strong" what's the right word here?  E: not "weak", maybe "not strong" or "not nearly as strong as anything else"
+Motivated by the widespread findings of paleopolyploid ancestry across angiosperms, we also examined and found modest support for diploidization in the history of the family, but without significant effects on inferences of diversification dynamics. %B: how about "modest"? It's 3-ish, but "positive" seems like a really idiosyncratic usage to me, despite kass & raftery. was: %B: "mixed" "not strong" what's the right word here?  E: not "weak", maybe "not strong" or "not nearly as strong as anything else"
 Disentangling the patterns of diversification linked to multiple traits is difficult, but our strategy allows tests of intricate hypotheses regarding a heterogenous diversification process.
 Below, we discuss key findings and highlight the most interesting and paradoxical implications.
 We additionally provide an outline for broader application of phylogenetic comparative methods in the context of interactions among traits and diversification process.
@@ -67,8 +67,8 @@ Moreover, these SC lineages may not constitute a dead end (with negative diversi
 % path-dependent net-diversification
 
 % qualifying paragraph for pathways
-We find that, in Solanaceae, SI diploid lineages are much more likely to take a
-one-step  ID$\rightarrow$CP pathway to polyploidy rather than a two-step ID$\rightarrow$CD$\rightarrow$CP pathway.
+We find that the SI diploid lineages are much more likely to take a
+one-step  ID$\rightarrow$CP pathway to polyploidy rather than a two-step ID$\rightarrow$CD$\rightarrow$CP pathway, in Solanaceae.
 This result is significant because it has a number of implications for the inference of history of breeding and sexual systems in flowering plants.
 First, support for the direct pathway lends credence to the idea that breakdown of SI by WGD---by generation of diploid `heteroalleleic' pollen---may often trigger the evolution of gender dimorphism across angiosperms \citep{miller_2000}.
 A more direct and definitive test of this hypothesis would additionally examine the propensity of polyploids generated through either pathway to become dioecious \citep{robertson_2011}.
@@ -78,6 +78,7 @@ Transitions depend on a combination of availability of individual mutation rates
 Estimates of mutation rates are highly uncertain, but the total rate of breakdown of SI within diploids ranges is estimated to be on the order of  $\mu_{IC} = 10^{-5}$ per pollen grain, and includes breakdown by tetraploidization \citep{lewis1979}, which is itself estimated to occur on the order of $\mu_{DP} = 10^{-5}$ \citep{ramsey_1998}. 
 Seemingly, then, the simple genic mutation rate that leads to loss of SI is at best equal to tetraploidization mutation rate, and possibly far lower.
 We nevertheless recover transition rates from ID to CD ($q_{IC}$) threefold greater than $\rho_{I}$, indicating that selection restricts the fixation rate of new polyploids compared with new SC mutants \citep{robertson_2011}.
+Overall, our findings suggest that the effect of ploidy is largely explained explained by its correlation with breeding system, and that other unknown factors work with breeding system to determine diversification rates.
 
 % qualifying paragraph for pathways
 We implicitly modeled trait changes in both of these pathways as anagenetic, transitions occurring within lineages, without associated speciation events.
@@ -106,13 +107,20 @@ Another useful line of inquiry would examine the path-dependent diversification 
 
 Diploidization is widely considered to be relatively rare, compared with polyploidization \citep{husband_2013}, but flowering plant lineages are thought to have experienced at least one round of polyploidization in their evolutionary history \citep{soltis_2015}.
 As a consequence, it is possible that nearly all extant species classified as ``diploid" in our analyses, based on cytogenetic data, are possibly secondary diploids, having undergone both polyploidization and re-diploidization.
-Unduly ignoring secondary diploidization would clearly underestimate the rate of transitions from polyploids to diploids, and would likely cause inflated net diversification rates for diploids. % E: first clause seems like a tautology? second clause does not seem obvious, but could at least say that it could affect div rate estimates
-We find strong support in models that included diploidization \cref{table:bayesfactors}. However, estimating the rate at which it occurs based on ploidy level classifications is hard and highly uncertain (see parameter $\delta$ in \cref{suppfigure:DP,suppfigure:DPAB,suppfigure:IDCDCP,suppfigure:IDCDCPAB}) and can change the pattern of ancestral reconstructions (\cref{suppfigure:DPnodipasr,suppfigure:DPasr,suppfigure:DPnodipABasr,suppfigure:DPABasr,suppfigure:IDCDCPnodipasr,suppfigure:IDCDCPasr,suppfigure:IDCDCPnodipABasr,suppfigure:IDCDCPABasr}).
-%We find weak support for inclusion of diploidization. %cite fig and expand (FIXME).
-% R- I corrected the above phrase, we found strong support for the inclusion of diploidization, models that have it are always preferred over models that don't however that parameter is hard to estimate
+Unduly ignoring secondary diploidization would clearly underestimate the rate of transitions from polyploids to diploids, and would then likely cause inflated net diversification rates for diploids, because species considered in the diploid state, may have been ancestrally polyploid, instead. 
+%B: This should be to mutual liking. IMO, the support is STRONG in the apparently meager analyses, one with only D/P), which yields highly unreasonable ancestral states. But it is decidedly not strong, i.e. "positive," in the apparently more informative joint trait analyses.
+We find strong support for including the diploidization rate parameter ($\delta$) in analyses that include only ploidy \cref{table:bayesfactors}. %B <- %Rosana, inspect this please. ->
+However, we find only modest support for diploidization in the joint model, and conclusions regarding the relative effects of ploidy and breeding system on diversification are robust to its inclusion.
+Also, estimating the rate at which it occurs, based on ploidy level classifications, is highly uncertain (see parameter $\delta$ in \cref{suppfigure:DP,suppfigure:DPAB,suppfigure:IDCDCP,suppfigure:IDCDCPAB}), and it can dramatically change ancestral reconstructions (\cref{suppfigure:DPnodipasr,suppfigure:DPasr,suppfigure:DPnodipABasr,suppfigure:DPABasr,suppfigure:IDCDCPnodipasr,suppfigure:IDCDCPasr,suppfigure:IDCDCPnodipABasr,suppfigure:IDCDCPABasr}).
 
-Genomic evidence indicates that a paleo-polyploidization may have occurred prior to the origin of the family Solanaceae, rendering all current `diploids' secondarily derived. 
-First, \citet{ku2000} and \citet{blanc2004} posited that the lineage leading to tomato, \textit{Solanum lycopersicum}, may have experienced one or more WGDs.
+% ***
+%B: FIXME/TODO Then try to square the oval of history of DP and IC. Specifically, it is difficult to know what to make of the delta models. Their inclusion is 'positively' supported, but yields results that are hard to reconcile with other data. This is one of the more interesting tensions of the paper, in the sense that it binds all of the discussion point and something here has to come to a head. 
+%Either what we think we know about SI/SC and reversals is wrong, or something about diploidization inference is wrong. Why? It is hard to square that we don't see IP state, almost ever!, but it's supposed to be the ancestral state, and not just in Solanaceae, across eudicots! Doesn't demand a full treatment here, but it's worth pointing out that if the SI/SC inference is wrong, then we must include reversals, qCI, here and elsewhere and it will change all kinds of inferences. Then, we'll have to explain maintenance of trans-generic polymorphism, ha, ha! Otherwise, something is off with the inference delta >> rho in some cases. If so, we'll have to explain paleo-WGD inference, etc. Either way, we fundamentally misunderstand the evolution of one of these two traits.
+% ***
+
+%B: "Genomic evidence" reads as if the genomes support this. They do not--the data used in studies, with requisite flaws and problems, are derived from genomes. But I don't think that it's okay to call it "genomic evidence". It would be a bit like referring to evidence in this paper as "evolutionary evidence".
+A few lines of evidence indicates that a paleo-polyploidization may have occurred prior to the origin of Solanaceae, rendering all current `diploids' secondarily derived. 
+First, \citet{ku2000} and \citet{blanc2004} posited that the lineage leading to tomato, \textit{Solanum lycopersicum}, may have experienced one or more rounds of WGDs.
 A subsequent analysis of synteny between grape and \textit{Solanum} genomes, as well as the distribution between inferred paralogs within genomes of \textit{Solanum} (tomato and potato) each suggested that this lineage experienced a likely round of ancient genome duplication or triplication \citep{tomato2012}. 
 The age of the peak of paralog Ks distances, is approximately 71 million years \citep{tomato2012}. 
 If this is the case, then all of the genomes may have been subsequently re-diploidized, yielding the common extant base chromosome numbers in this and related families, n=11-12, presently considered to be diploid \citep{robertson_2011}. 
@@ -120,11 +128,11 @@ If this is the case, then all of the genomes may have been subsequently re-diplo
 
 %B: incorporate ancestral states in absence of I/C consideration to rag on \delta
 %Natural and induced tetraploids from a variety of families, including Fabaceae, Onagraceae, Rosaceae, and Solanaceae, almost invariably lose gametophytic SI (reviewed in \citealt{ramsey_1998,stone_2002,mcclure_2009}).
-On the other hand, there is little evidence for occurrence of re-diploidization in the time frame we considered, within the nightshades.
+On the other hand, there is little evidence for the occurrence of re-diploidization in the time frame we considered, within the nightshades.
 First, the Ks-inferred duplication long pre-dates the origin of the family \citep{sarkinen_2013}. 
 The best-supported, most-recent WGD, which may represent a reversion from polyploidy to diploidy, is older than the lineage under consideration in this study.
 At best, the species we consider are ancestrally diploid, having re-diploidized after a suspected WGD.
-% E: But then how is there SI?! Agreed, I'll cover it.
+% E: But then how is there SI?! %B: Agreed, we'll cover it.
 Second, studies comparing map-based genome synteny within the family find no evidence for recent diploidization \citep{wu_2010a}.
 Instead, simple genome re-arrangements appear sufficient to explain chromosomal evolution between a number of species, including all of those in the relatively cytogenetically conserved `x=12' group, which includes tomato, potato, eggplant, pepper, and tobacco.
 %B: Once this is re-arranged, and made to fit with the rest of the discussion, add what this has to do with re-diploidization and how to interpret $\delta$.
@@ -138,8 +146,9 @@ Despite the limitations of assignment of ploidy levels, we found some support fo
 % issues
 %     irreversibility SI -> SC assumption
 
-
 \bigskip
+
+% B: STOPPED HERE
 
 \subsection*{Conclusions}
 % problems: this system has a big set of advantages - carefully curated (co-)occurrences of two traits, genetic basis, etc. and everything is still contradictory and opaque.
@@ -182,9 +191,6 @@ Since MuSSE might also suffer from hight type I errors considering more heteroge
 
 % First, include all straightforward Results and related observations
 %
-% Then try to square the oval of history of DP and IC. Specifically, it is difficult to know what to make of the delta models. Their inclusion is 'positively' supported, but yields results that are hard to reconcile with other data. This is one of the more interesting tensions of the paper, in the sense that it binds all of the discussion point and something here has to come to a head. 
-%Either what we think we know about SI/SC and reversals is wrong, or something about diploidization inference is wrong. Why? It is hard to square that we don't see IP state, almost ever!, but it's supposed to be the ancestral state, and not just in Solanaceae, across eudicots! Doesn't demand a full treatment here, but it's worth pointing out that if the SI/SC inference is wrong, then we must include reversals, qCI, here and elsewhere and it will change all kinds of inferences. Then, we'll have to explain maintenance of trans-generic polymorphism, ha, ha! Otherwise, something is off with the inference delta >> rho in some cases. If so, we'll have to explain paleo-WGD inference, etc. Either way, we fundamentally misunderstand the evolution of one of these two traits.
-
 % including delta makes for some nonsense: ancestral states are all P with rampant recent transitions to D (e.g. Fig. S4/S8. Not backed by any data, including synteny, S-allele trans-polymorphism, or anecdotally bearing experimental data about rates of spontaneous polyploidization and diploidization \citep{husband_2012}.
 
 % PATHWAYS -- mutational opportunity vs lineage transition rate reveals something about selection 
