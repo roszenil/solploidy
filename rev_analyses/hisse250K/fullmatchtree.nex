@@ -1,0 +1,1203 @@
+#NEXUS
+[R-package APE, Tue Jul 31 14:30:07 2018]
+
+BEGIN TAXA;
+	DIMENSIONS NTAX = 595;
+	TAXLABELS
+		Pantacantha_ameghinoi
+		Combera_paradoxa
+		Salpiglossis_sinuata
+		Browallia_speciosa
+		Streptosolen_jamesonii
+		Sessea_corymbiflora
+		Cestrum_megalophyllum
+		Cestrum_diurnum
+		Cestrum_tomentosum
+		Cestrum_nocturnum
+		Cestrum_aurantiacum
+		Cestrum_elegans
+		Cestrum_fasciculatum
+		Schwenckia_lateriflora
+		Metternichia_princeps
+		Espadaea_amoena
+		Goetzea_elegans
+		Schizanthus_porrigens
+		Schizanthus_pinnatus
+		Schizanthus_tricolor
+		Schizanthus_grahamii
+		Schizanthus_hookeri
+		Fabiana_imbricata
+		Calibrachoa_sellowiana
+		Calibrachoa_parviflora
+		Calibrachoa_pygmea
+		Petunia_axillaris
+		Petunia_exserta
+		Petunia_integrifolia
+		Petunia_mantiqueirensis
+		Petunia_bonjardinensis
+		Petunia_scheideana
+		Petunia_secreta
+		Petunia_altiplana
+		Petunia_reitzii
+		Petunia_saxicola
+		Brunfelsia_americana
+		Bouchetia_anomala
+		Bouchetia_erecta
+		Nierembergia_rigida
+		Nierembergia_rivularis
+		Nierembergia_repens
+		Nierembergia_graveolens
+		Nierembergia_aristata
+		Nierembergia_veitchii
+		Nierembergia_calycina
+		Nierembergia_linariifolia
+		Nierembergia_scoparia
+		Nierembergia_ericoides
+		Nierembergia_tucumanensis
+		Nierembergia_browallioides
+		Nierembergia_pulchella
+		Symonanthus_aromaticus
+		Symonanthus_bancroftii
+		Nicotiana_tabacum
+		Nicotiana_otophora
+		Nicotiana_kawakamii
+		Nicotiana_tomentosa
+		Nicotiana_tomentosiformis
+		Nicotiana_thyrsiflora
+		Nicotiana_wigandioides
+		Nicotiana_glutinosa
+		Nicotiana_arentsii
+		Nicotiana_undulata
+		Nicotiana_benavidesii
+		Nicotiana_raimondii
+		Nicotiana_cordifolia
+		Nicotiana_solanifolia
+		Nicotiana_paniculata
+		Nicotiana_knightiana
+		Nicotiana_rustica
+		Nicotiana_clevelandii
+		Nicotiana_quadrivalvis
+		Nicotiana_obtusifolia
+		Nicotiana_linearis
+		Nicotiana_spegazzinii
+		Nicotiana_miersii
+		Nicotiana_corymbosa
+		Nicotiana_acuminata
+		Nicotiana_pauciflora
+		Nicotiana_sylvestris
+		Nicotiana_nudicaulis
+		Nicotiana_repanda
+		Nicotiana_stocktonii
+		Nicotiana_alata
+		Nicotiana_langsdorffii
+		Nicotiana_bonariensis
+		Nicotiana_forgetiana
+		Nicotiana_longiflora
+		Nicotiana_plumbaginifolia
+		Nicotiana_acaulis
+		Nicotiana_glauca
+		Nicotiana_noctiflora
+		Nicotiana_petunioides
+		Nicotiana_occidentalis
+		Nicotiana_umbratica
+		Nicotiana_megalosiphon
+		Nicotiana_simulans
+		Nicotiana_excelsior
+		Nicotiana_maritima
+		Nicotiana_amplexicaulis
+		Nicotiana_suaveolens
+		Nicotiana_goodspeedii
+		Nicotiana_gossei
+		Nicotiana_rosulata
+		Nicotiana_velutina
+		Latua_pubiflora
+		Jaborosa_integrifolia
+		Jaborosa_sativa
+		Atropa_belladonna
+		Atropa_komarovii
+		Anisodus_tanguticus
+		Anisodus_carniolicoides
+		Anisodus_acutangulus
+		Anisodus_luridus
+		Hyoscyamus_turcomanicus
+		Hyoscyamus_pusillus
+		Hyoscyamus_albus
+		Hyoscyamus_niger
+		Hyoscyamus_muticus
+		Hyoscyamus_desertorum
+		Atropanthe_sinensis
+		Scopolia_japonica
+		Scopolia_carniolica
+		Scopolia_parviflora
+		Przewalskia_tangutica
+		Physochlaina_praealta
+		Physochlaina_orientalis
+		Sclerophylax_arnottii
+		Nolana_rupicola
+		Nolana_rostrata
+		Nolana_adansonii
+		Nolana_galapagensis
+		Nolana_plicata
+		Nolana_aticoana
+		Nolana_humifusa
+		Nolana_laxa
+		Lycium_tetrandrum
+		Lycium_acutifolium
+		Lycium_bosciifolium
+		Lycium_hirsutum
+		Lycium_villosum
+		Lycium_eenii
+		Lycium_schweinfurthii
+		Lycium_shawii
+		Lycium_depressum
+		Lycium_europaeum
+		Lycium_ruthenicum
+		Lycium_decumbens
+		Lycium_pumilum
+		Lycium_oxycarpum
+		Lycium_pilifolium
+		Lycium_gariepense
+		Lycium_tenue
+		Lycium_strandveldense
+		Lycium_amoenum
+		Lycium_grandicalyx
+		Lycium_arenicola
+		Lycium_cinereum
+		Lycium_afrum
+		Lycium_ferocissimum
+		Lycium_horridum
+		Lycium_schizocalyx
+		Lycium_pallidum
+		Lycium_cooperi
+		Lycium_macrodon
+		Lycium_puberulum
+		Lycium_californicum
+		Lycium_nodosum
+		Lycium_vimineum
+		Lycium_gilliesianum
+		Lycium_chilense
+		Lycium_ciliatum
+		Lycium_ameghinoi
+		Lycium_chanar
+		Lycium_fuscum
+		Lycium_minutifolium
+		Lycium_stenophyllum
+		Lycium_cestroides
+		Lycium_cuneatum
+		Lycium_morongii
+		Lycium_brevipes
+		Lycium_carolinianum
+		Lycium_rachidocladum
+		Lycium_tenuispinosum
+		Lycium_elongatum
+		Lycium_americanum
+		Lycium_infaustum
+		Lycium_minimum
+		Lycium_parishii
+		Lycium_torreyi
+		Lycium_andersonii
+		Lycium_berlandieri
+		Lycium_exsertum
+		Lycium_fremontii
+		Exodeconus_miersii
+		Solandra_grandiflora
+		Dyssochroma_viridiflora
+		Mandragora_caulescens
+		Mandragora_officinarum
+		Nicandra_physalodes
+		Brugmansia_sanguinea
+		Brugmansia_arborea
+		Brugmansia_aurea
+		Datura_discolor
+		Datura_metel
+		Datura_leichhardtii
+		Datura_ferox
+		Datura_quercifolia
+		Datura_stramonium
+		Datura_ceratocaula
+		Salpichroa_origanifolia
+		Lycianthes_shanesii
+		Lycianthes_biflora
+		Lycianthes_multiflora
+		Lycianthes_jalicensis
+		Lycianthes_heteroclita
+		Lycianthes_lycioides
+		Lycianthes_rantonnetii
+		Lycianthes_asarifolia
+		Lycianthes_acapulcensis
+		Lycianthes_ciliolata
+		Lycianthes_moziniana
+		Lycianthes_rzedowskii
+		Lycianthes_dejecta
+		Lycianthes_peduncularis
+		Capsicum_geminifolium
+		Capsicum_lanceolatum
+		Capsicum_ciliatum
+		Capsicum_rhomboideum
+		Capsicum_campylopodium
+		Capsicum_villosum
+		Capsicum_schottianum
+		Capsicum_recurvatum
+		Capsicum_flexuosum
+		Capsicum_cardenasii
+		Capsicum_eximium
+		Capsicum_pubescens
+		Capsicum_chacoense
+		Capsicum_baccatum
+		Capsicum_coccineum
+		Capsicum_annuum
+		Capsicum_chinense
+		Capsicum_frutescens
+		Capsicum_galapagoensis
+		Cuatresia_cuneata
+		Cuatresia_exiguiflora
+		Cuatresia_riparia
+		Nothocestrum_longifolium
+		Withania_coagulans
+		Withania_somnifera
+		Dunalia_obovata
+		Vassobia_breviflora
+		Dunalia_brachyacantha
+		Eriolarynx_lorentzii
+		Iochroma_australe
+		Iochroma_fuchsioides
+		Iochroma_lehmannii
+		Acnistus_arborescens
+		Iochroma_cyaneum
+		Witheringia_macrantha
+		Witheringia_meiantha
+		Physalis_alkekengi
+		Calliphysalis_carpenteri
+		Quincula_lobata
+		Chamaesaracha_coronopus
+		Chamaesaracha_sordida
+		Physalis_melanocystis
+		Physalis_acutifolia
+		Physalis_crassifolia
+		Physalis_philadelphica
+		Physalis_nicandroides
+		Physalis_patula
+		Physalis_peruviana
+		Physalis_angustiphysa
+		Physalis_longifolia
+		Physalis_glutinosa
+		Physalis_hederifolia
+		Physalis_sordida
+		Physalis_cordata
+		Physalis_ignota
+		Physalis_minima
+		Physalis_pruinosa
+		Physalis_lagascae
+		Physalis_angulata
+		Physalis_pubescens
+		Physalis_lanceolata
+		Physalis_heterophylla
+		Physalis_virginiana
+		Physalis_arenicola
+		Physalis_pumila
+		Physalis_cinerascens
+		Physalis_mollis
+		Physalis_viscosa
+		Jaltomata_darcyana
+		Jaltomata_repandidentata
+		Jaltomata_procumbens
+		Jaltomata_chihuahuensis
+		Jaltomata_grandiflora
+		Jaltomata_antillana
+		Jaltomata_auriculata
+		Jaltomata_oppositifolia
+		Jaltomata_salpoensis
+		Jaltomata_andersonii
+		Jaltomata_lezamae
+		Jaltomata_sinuosa
+		Jaltomata_viridiflora
+		Jaltomata_contumacensis
+		Jaltomata_biflora
+		Jaltomata_dentata
+		Jaltomata_bicolor
+		Jaltomata_umbellata
+		Jaltomata_cajacayensis
+		Jaltomata_lomana
+		Jaltomata_mionei
+		Jaltomata_aspera
+		Jaltomata_lojae
+		Jaltomata_lanata
+		Jaltomata_bernardelloana
+		Jaltomata_sagastegui
+		Jaltomata_paneroi
+		Jaltomata_herrerae
+		Jaltomata_yacheri
+		Jaltomata_weberbaueri
+		Jaltomata_ventricosa
+		Jaltomata_sanchez-vegae
+		Solanum_guineense
+		Solanum_terminale
+		Solanum_herculeum
+		Solanum_trisectum
+		Solanum_capsiciforme
+		Solanum_simile
+		Solanum_symonii
+		Solanum_vescum
+		Solanum_linearifolium
+		Solanum_laciniatum
+		Solanum_multivenosum
+		Solanum_aligerum
+		Solanum_laxum
+		Solanum_amygdalifolium
+		Solanum_crispum
+		Solanum_dulcamara
+		Solanum_lyratum
+		Solanum_palitans
+		Solanum_tripartitum
+		Solanum_triflorum
+		Solanum_physalifolium
+		Solanum_pallidum
+		Solanum_fiebrigii
+		Solanum_villosum
+		Solanum_scabrum
+		Solanum_opacum
+		Solanum_americanum
+		Solanum_nigrum
+		Solanum_ptychanthum
+		Solanum_taeniotrichum
+		Solanum_caripense
+		Solanum_fraxinifolium
+		Solanum_appendiculatum
+		Solanum_brevifolium
+		Solanum_etuberosum
+		Solanum_palustre
+		Solanum_lycopersicoides
+		Solanum_sitiens
+		Solanum_juglandifolium
+		Solanum_ochranthum
+		Solanum_habrochaites
+		Solanum_neorickii
+		Solanum_chilense
+		Solanum_peruvianum
+		Solanum_chmielewskii
+		Solanum_pennellii
+		Solanum_galapagense
+		Solanum_cheesmaniae
+		Solanum_pimpinellifolium
+		Solanum_bulbocastanum
+		Solanum_clarum
+		Solanum_morelliforme
+		Solanum_polyadenium
+		Solanum_ehrenbergii
+		Solanum_chomatophilum
+		Solanum_scabrifolium
+		Solanum_pinnatisectum
+		Solanum_immite
+		Solanum_piurae
+		Solanum_acroscopicum
+		Solanum_multiinterruptum
+		Solanum_andreanum
+		Solanum_doddsii
+		Solanum_stenophyllidium
+		Solanum_schenckii
+		Solanum_iopetalum
+		Solanum_violaceimarmoratum
+		Solanum_albicans
+		Solanum_boliviense
+		Solanum_raphanifolium
+		Solanum_lignicaule
+		Solanum_laxissimum
+		Solanum_longiconicum
+		Solanum_oxycarpum
+		Solanum_agrimoniifolium
+		Solanum_colombianum
+		Solanum_stipuloideum
+		Solanum_vernei
+		Solanum_candolleanum
+		Solanum_brevicaule
+		Solanum_demissum
+		Solanum_kurtzianum
+		Solanum_chacoense
+		Solanum_berthaultii
+		Solanum_infundibuliforme
+		Solanum_okadae
+		Solanum_stoloniferum
+		Solanum_hjertingii
+		Solanum_guerreroense
+		Solanum_hougasii
+		Solanum_latiflorum
+		Solanum_cacosmum
+		Solanum_exiguum
+		Solanum_diploconos
+		Solanum_pinetorum
+		Solanum_sciadostylis
+		Solanum_cylindricum
+		Solanum_glaucophyllum
+		Solanum_fusiforme
+		Solanum_melissarum
+		Solanum_confusum
+		Solanum_hibernum
+		Solanum_luteoalbum
+		Solanum_stuckertii
+		Solanum_oxyphyllum
+		Solanum_pendulum
+		Solanum_tobagense
+		Solanum_obliquum
+		Solanum_roseum
+		Solanum_maternum
+		Solanum_betaceum
+		Solanum_unilobum
+		Solanum_cajanumense
+		Solanum_fallax
+		Solanum_endopogon
+		Solanum_occultum
+		Solanum_sibundoyense
+		Solanum_proteanthum
+		Solanum_tegore
+		Solanum_circinatum
+		Solanum_tenuisetosum
+		Solanum_abutiloides
+		Solanum_rugosum
+		Solanum_asperum
+		Solanum_mauritianum
+		Solanum_cordovense
+		Solanum_reductum
+		Solanum_argentinum
+		Solanum_pseudocapsicum
+		Solanum_rovirosanum
+		Solanum_arboreum
+		Solanum_aphyodendron
+		Solanum_diphyllum
+		Solanum_allophyllum
+		Solanum_wendlandii
+		Solanum_gardneri
+		Solanum_microphyllum
+		Solanum_robustum
+		Solanum_stagnale
+		Solanum_paludosum
+		Solanum_palinacanthum
+		Solanum_mammosum
+		Solanum_platense
+		Solanum_capsicoides
+		Solanum_acerifolium
+		Solanum_atropurpureum
+		Solanum_tenuispinum
+		Solanum_incarceratum
+		Solanum_myriacanthum
+		Solanum_aculeatissimum
+		Solanum_viarum
+		Solanum_sessiliflorum
+		Solanum_quitoense
+		Solanum_felinum
+		Solanum_candidum
+		Solanum_lasiocarpum
+		Solanum_repandum
+		Solanum_stramoniifolium
+		Solanum_hirtum
+		Solanum_pectinatum
+		Solanum_hyporhodium
+		Solanum_pseudolulo
+		Solanum_vestissimum
+		Solanum_sisymbriifolium
+		Solanum_lycocarpum
+		Solanum_mitlense
+		Solanum_crinitum
+		Solanum_wrightii
+		Solanum_tenuipes
+		Solanum_johnstonii
+		Solanum_grayi
+		Solanum_lumholtzianum
+		Solanum_angustifolium
+		Solanum_fructu-tecto
+		Solanum_rostratum
+		Solanum_tribulosum
+		Solanum_heterodoxum
+		Solanum_citrullifolium
+		Solanum_davisense
+		Solanum_bahamense
+		Solanum_ensifolium
+		Solanum_carolinense
+		Solanum_aridum
+		Solanum_juvenale
+		Solanum_jamaicense
+		Solanum_lanceifolium
+		Solanum_donianum
+		Solanum_paniculatum
+		Solanum_bonariense
+		Solanum_asperolanatum
+		Solanum_chrysotrichum
+		Solanum_torvum
+		Solanum_hieronymi
+		Solanum_elaeagnifolium
+		Solanum_hindsianum
+		Solanum_houstonii
+		Solanum_aculeastrum
+		Solanum_coagulans
+		Solanum_marginatum
+		Solanum_giganteum
+		Solanum_dasyphyllum
+		Solanum_anguivi
+		Solanum_lidii
+		Solanum_vespertilio
+		Solanum_capense
+		Solanum_violaceum
+		Solanum_supinum
+		Solanum_insanum
+		Solanum_linnaeanum
+		Solanum_incanum
+		Solanum_campylacanthum
+		Solanum_pyracanthos
+		Solanum_oldfieldii
+		Solanum_coactiliferum
+		Solanum_gabrielae
+		Solanum_lasiophyllum
+		Solanum_cleistogamum
+		Solanum_horridum
+		Solanum_echinatum
+		Solanum_lucani
+		Solanum_cunninghamii
+		Solanum_dioicum
+		Solanum_leopoldensis
+		Solanum_petraeum
+		Solanum_tudununggae
+		Solanum_oedipus
+		Solanum_clarkiae
+		Solanum_melanospermum
+		Solanum_beaugleholei
+		Solanum_phlomoides
+		Solanum_chippendalei
+		Solanum_diversiflorum
+		Solanum_asymmetriphyllum
+		Solanum_hoplopetalum
+		Solanum_hystrix
+		Solanum_oligacanthum
+		Solanum_nummularium
+		Solanum_orbiculatum
+		Solanum_tetrathecum
+		Solanum_elachophyllum
+		Solanum_ditrichum
+		Solanum_vicinum
+		Solanum_campanulatum
+		Solanum_prinophyllum
+		Solanum_pungetium
+		Solanum_petrophilum
+		Solanum_sturtianum
+		Solanum_cinereum
+		Solanum_centrale
+		Solanum_esuriale
+		Solanum_dianthophorum
+		Solanum_ellipticum
+		Solanum_quadriloculatum
+		Solanum_inaequilaterum
+		Solanum_dimorphispinum
+		Solanum_viridifolium
+		Solanum_incompletum
+		Solanum_sandwicense
+		Solanum_semiarmatum
+		Solanum_cookii
+		Solanum_corifolium
+		Solanum_discolor
+		Solanum_stupefactum
+		Solanum_furfuraceum
+		Solanum_densevestitum
+		Solanum_nemophilum
+		Solanum_stelligerum
+		Solanum_chenopodinum
+		Solanum_ferocissimum
+	;
+END;
+BEGIN TREES;
+	TRANSLATE
+		1	Pantacantha_ameghinoi,
+		2	Combera_paradoxa,
+		3	Salpiglossis_sinuata,
+		4	Browallia_speciosa,
+		5	Streptosolen_jamesonii,
+		6	Sessea_corymbiflora,
+		7	Cestrum_megalophyllum,
+		8	Cestrum_diurnum,
+		9	Cestrum_tomentosum,
+		10	Cestrum_nocturnum,
+		11	Cestrum_aurantiacum,
+		12	Cestrum_elegans,
+		13	Cestrum_fasciculatum,
+		14	Schwenckia_lateriflora,
+		15	Metternichia_princeps,
+		16	Espadaea_amoena,
+		17	Goetzea_elegans,
+		18	Schizanthus_porrigens,
+		19	Schizanthus_pinnatus,
+		20	Schizanthus_tricolor,
+		21	Schizanthus_grahamii,
+		22	Schizanthus_hookeri,
+		23	Fabiana_imbricata,
+		24	Calibrachoa_sellowiana,
+		25	Calibrachoa_parviflora,
+		26	Calibrachoa_pygmea,
+		27	Petunia_axillaris,
+		28	Petunia_exserta,
+		29	Petunia_integrifolia,
+		30	Petunia_mantiqueirensis,
+		31	Petunia_bonjardinensis,
+		32	Petunia_scheideana,
+		33	Petunia_secreta,
+		34	Petunia_altiplana,
+		35	Petunia_reitzii,
+		36	Petunia_saxicola,
+		37	Brunfelsia_americana,
+		38	Bouchetia_anomala,
+		39	Bouchetia_erecta,
+		40	Nierembergia_rigida,
+		41	Nierembergia_rivularis,
+		42	Nierembergia_repens,
+		43	Nierembergia_graveolens,
+		44	Nierembergia_aristata,
+		45	Nierembergia_veitchii,
+		46	Nierembergia_calycina,
+		47	Nierembergia_linariifolia,
+		48	Nierembergia_scoparia,
+		49	Nierembergia_ericoides,
+		50	Nierembergia_tucumanensis,
+		51	Nierembergia_browallioides,
+		52	Nierembergia_pulchella,
+		53	Symonanthus_aromaticus,
+		54	Symonanthus_bancroftii,
+		55	Nicotiana_tabacum,
+		56	Nicotiana_otophora,
+		57	Nicotiana_kawakamii,
+		58	Nicotiana_tomentosa,
+		59	Nicotiana_tomentosiformis,
+		60	Nicotiana_thyrsiflora,
+		61	Nicotiana_wigandioides,
+		62	Nicotiana_glutinosa,
+		63	Nicotiana_arentsii,
+		64	Nicotiana_undulata,
+		65	Nicotiana_benavidesii,
+		66	Nicotiana_raimondii,
+		67	Nicotiana_cordifolia,
+		68	Nicotiana_solanifolia,
+		69	Nicotiana_paniculata,
+		70	Nicotiana_knightiana,
+		71	Nicotiana_rustica,
+		72	Nicotiana_clevelandii,
+		73	Nicotiana_quadrivalvis,
+		74	Nicotiana_obtusifolia,
+		75	Nicotiana_linearis,
+		76	Nicotiana_spegazzinii,
+		77	Nicotiana_miersii,
+		78	Nicotiana_corymbosa,
+		79	Nicotiana_acuminata,
+		80	Nicotiana_pauciflora,
+		81	Nicotiana_sylvestris,
+		82	Nicotiana_nudicaulis,
+		83	Nicotiana_repanda,
+		84	Nicotiana_stocktonii,
+		85	Nicotiana_alata,
+		86	Nicotiana_langsdorffii,
+		87	Nicotiana_bonariensis,
+		88	Nicotiana_forgetiana,
+		89	Nicotiana_longiflora,
+		90	Nicotiana_plumbaginifolia,
+		91	Nicotiana_acaulis,
+		92	Nicotiana_glauca,
+		93	Nicotiana_noctiflora,
+		94	Nicotiana_petunioides,
+		95	Nicotiana_occidentalis,
+		96	Nicotiana_umbratica,
+		97	Nicotiana_megalosiphon,
+		98	Nicotiana_simulans,
+		99	Nicotiana_excelsior,
+		100	Nicotiana_maritima,
+		101	Nicotiana_amplexicaulis,
+		102	Nicotiana_suaveolens,
+		103	Nicotiana_goodspeedii,
+		104	Nicotiana_gossei,
+		105	Nicotiana_rosulata,
+		106	Nicotiana_velutina,
+		107	Latua_pubiflora,
+		108	Jaborosa_integrifolia,
+		109	Jaborosa_sativa,
+		110	Atropa_belladonna,
+		111	Atropa_komarovii,
+		112	Anisodus_tanguticus,
+		113	Anisodus_carniolicoides,
+		114	Anisodus_acutangulus,
+		115	Anisodus_luridus,
+		116	Hyoscyamus_turcomanicus,
+		117	Hyoscyamus_pusillus,
+		118	Hyoscyamus_albus,
+		119	Hyoscyamus_niger,
+		120	Hyoscyamus_muticus,
+		121	Hyoscyamus_desertorum,
+		122	Atropanthe_sinensis,
+		123	Scopolia_japonica,
+		124	Scopolia_carniolica,
+		125	Scopolia_parviflora,
+		126	Przewalskia_tangutica,
+		127	Physochlaina_praealta,
+		128	Physochlaina_orientalis,
+		129	Sclerophylax_arnottii,
+		130	Nolana_rupicola,
+		131	Nolana_rostrata,
+		132	Nolana_adansonii,
+		133	Nolana_galapagensis,
+		134	Nolana_plicata,
+		135	Nolana_aticoana,
+		136	Nolana_humifusa,
+		137	Nolana_laxa,
+		138	Lycium_tetrandrum,
+		139	Lycium_acutifolium,
+		140	Lycium_bosciifolium,
+		141	Lycium_hirsutum,
+		142	Lycium_villosum,
+		143	Lycium_eenii,
+		144	Lycium_schweinfurthii,
+		145	Lycium_shawii,
+		146	Lycium_depressum,
+		147	Lycium_europaeum,
+		148	Lycium_ruthenicum,
+		149	Lycium_decumbens,
+		150	Lycium_pumilum,
+		151	Lycium_oxycarpum,
+		152	Lycium_pilifolium,
+		153	Lycium_gariepense,
+		154	Lycium_tenue,
+		155	Lycium_strandveldense,
+		156	Lycium_amoenum,
+		157	Lycium_grandicalyx,
+		158	Lycium_arenicola,
+		159	Lycium_cinereum,
+		160	Lycium_afrum,
+		161	Lycium_ferocissimum,
+		162	Lycium_horridum,
+		163	Lycium_schizocalyx,
+		164	Lycium_pallidum,
+		165	Lycium_cooperi,
+		166	Lycium_macrodon,
+		167	Lycium_puberulum,
+		168	Lycium_californicum,
+		169	Lycium_nodosum,
+		170	Lycium_vimineum,
+		171	Lycium_gilliesianum,
+		172	Lycium_chilense,
+		173	Lycium_ciliatum,
+		174	Lycium_ameghinoi,
+		175	Lycium_chanar,
+		176	Lycium_fuscum,
+		177	Lycium_minutifolium,
+		178	Lycium_stenophyllum,
+		179	Lycium_cestroides,
+		180	Lycium_cuneatum,
+		181	Lycium_morongii,
+		182	Lycium_brevipes,
+		183	Lycium_carolinianum,
+		184	Lycium_rachidocladum,
+		185	Lycium_tenuispinosum,
+		186	Lycium_elongatum,
+		187	Lycium_americanum,
+		188	Lycium_infaustum,
+		189	Lycium_minimum,
+		190	Lycium_parishii,
+		191	Lycium_torreyi,
+		192	Lycium_andersonii,
+		193	Lycium_berlandieri,
+		194	Lycium_exsertum,
+		195	Lycium_fremontii,
+		196	Exodeconus_miersii,
+		197	Solandra_grandiflora,
+		198	Dyssochroma_viridiflora,
+		199	Mandragora_caulescens,
+		200	Mandragora_officinarum,
+		201	Nicandra_physalodes,
+		202	Brugmansia_sanguinea,
+		203	Brugmansia_arborea,
+		204	Brugmansia_aurea,
+		205	Datura_discolor,
+		206	Datura_metel,
+		207	Datura_leichhardtii,
+		208	Datura_ferox,
+		209	Datura_quercifolia,
+		210	Datura_stramonium,
+		211	Datura_ceratocaula,
+		212	Salpichroa_origanifolia,
+		213	Lycianthes_shanesii,
+		214	Lycianthes_biflora,
+		215	Lycianthes_multiflora,
+		216	Lycianthes_jalicensis,
+		217	Lycianthes_heteroclita,
+		218	Lycianthes_lycioides,
+		219	Lycianthes_rantonnetii,
+		220	Lycianthes_asarifolia,
+		221	Lycianthes_acapulcensis,
+		222	Lycianthes_ciliolata,
+		223	Lycianthes_moziniana,
+		224	Lycianthes_rzedowskii,
+		225	Lycianthes_dejecta,
+		226	Lycianthes_peduncularis,
+		227	Capsicum_geminifolium,
+		228	Capsicum_lanceolatum,
+		229	Capsicum_ciliatum,
+		230	Capsicum_rhomboideum,
+		231	Capsicum_campylopodium,
+		232	Capsicum_villosum,
+		233	Capsicum_schottianum,
+		234	Capsicum_recurvatum,
+		235	Capsicum_flexuosum,
+		236	Capsicum_cardenasii,
+		237	Capsicum_eximium,
+		238	Capsicum_pubescens,
+		239	Capsicum_chacoense,
+		240	Capsicum_baccatum,
+		241	Capsicum_coccineum,
+		242	Capsicum_annuum,
+		243	Capsicum_chinense,
+		244	Capsicum_frutescens,
+		245	Capsicum_galapagoensis,
+		246	Cuatresia_cuneata,
+		247	Cuatresia_exiguiflora,
+		248	Cuatresia_riparia,
+		249	Nothocestrum_longifolium,
+		250	Withania_coagulans,
+		251	Withania_somnifera,
+		252	Dunalia_obovata,
+		253	Vassobia_breviflora,
+		254	Dunalia_brachyacantha,
+		255	Eriolarynx_lorentzii,
+		256	Iochroma_australe,
+		257	Iochroma_fuchsioides,
+		258	Iochroma_lehmannii,
+		259	Acnistus_arborescens,
+		260	Iochroma_cyaneum,
+		261	Witheringia_macrantha,
+		262	Witheringia_meiantha,
+		263	Physalis_alkekengi,
+		264	Calliphysalis_carpenteri,
+		265	Quincula_lobata,
+		266	Chamaesaracha_coronopus,
+		267	Chamaesaracha_sordida,
+		268	Physalis_melanocystis,
+		269	Physalis_acutifolia,
+		270	Physalis_crassifolia,
+		271	Physalis_philadelphica,
+		272	Physalis_nicandroides,
+		273	Physalis_patula,
+		274	Physalis_peruviana,
+		275	Physalis_angustiphysa,
+		276	Physalis_longifolia,
+		277	Physalis_glutinosa,
+		278	Physalis_hederifolia,
+		279	Physalis_sordida,
+		280	Physalis_cordata,
+		281	Physalis_ignota,
+		282	Physalis_minima,
+		283	Physalis_pruinosa,
+		284	Physalis_lagascae,
+		285	Physalis_angulata,
+		286	Physalis_pubescens,
+		287	Physalis_lanceolata,
+		288	Physalis_heterophylla,
+		289	Physalis_virginiana,
+		290	Physalis_arenicola,
+		291	Physalis_pumila,
+		292	Physalis_cinerascens,
+		293	Physalis_mollis,
+		294	Physalis_viscosa,
+		295	Jaltomata_darcyana,
+		296	Jaltomata_repandidentata,
+		297	Jaltomata_procumbens,
+		298	Jaltomata_chihuahuensis,
+		299	Jaltomata_grandiflora,
+		300	Jaltomata_antillana,
+		301	Jaltomata_auriculata,
+		302	Jaltomata_oppositifolia,
+		303	Jaltomata_salpoensis,
+		304	Jaltomata_andersonii,
+		305	Jaltomata_lezamae,
+		306	Jaltomata_sinuosa,
+		307	Jaltomata_viridiflora,
+		308	Jaltomata_contumacensis,
+		309	Jaltomata_biflora,
+		310	Jaltomata_dentata,
+		311	Jaltomata_bicolor,
+		312	Jaltomata_umbellata,
+		313	Jaltomata_cajacayensis,
+		314	Jaltomata_lomana,
+		315	Jaltomata_mionei,
+		316	Jaltomata_aspera,
+		317	Jaltomata_lojae,
+		318	Jaltomata_lanata,
+		319	Jaltomata_bernardelloana,
+		320	Jaltomata_sagastegui,
+		321	Jaltomata_paneroi,
+		322	Jaltomata_herrerae,
+		323	Jaltomata_yacheri,
+		324	Jaltomata_weberbaueri,
+		325	Jaltomata_ventricosa,
+		326	Jaltomata_sanchez-vegae,
+		327	Solanum_guineense,
+		328	Solanum_terminale,
+		329	Solanum_herculeum,
+		330	Solanum_trisectum,
+		331	Solanum_capsiciforme,
+		332	Solanum_simile,
+		333	Solanum_symonii,
+		334	Solanum_vescum,
+		335	Solanum_linearifolium,
+		336	Solanum_laciniatum,
+		337	Solanum_multivenosum,
+		338	Solanum_aligerum,
+		339	Solanum_laxum,
+		340	Solanum_amygdalifolium,
+		341	Solanum_crispum,
+		342	Solanum_dulcamara,
+		343	Solanum_lyratum,
+		344	Solanum_palitans,
+		345	Solanum_tripartitum,
+		346	Solanum_triflorum,
+		347	Solanum_physalifolium,
+		348	Solanum_pallidum,
+		349	Solanum_fiebrigii,
+		350	Solanum_villosum,
+		351	Solanum_scabrum,
+		352	Solanum_opacum,
+		353	Solanum_americanum,
+		354	Solanum_nigrum,
+		355	Solanum_ptychanthum,
+		356	Solanum_taeniotrichum,
+		357	Solanum_caripense,
+		358	Solanum_fraxinifolium,
+		359	Solanum_appendiculatum,
+		360	Solanum_brevifolium,
+		361	Solanum_etuberosum,
+		362	Solanum_palustre,
+		363	Solanum_lycopersicoides,
+		364	Solanum_sitiens,
+		365	Solanum_juglandifolium,
+		366	Solanum_ochranthum,
+		367	Solanum_habrochaites,
+		368	Solanum_neorickii,
+		369	Solanum_chilense,
+		370	Solanum_peruvianum,
+		371	Solanum_chmielewskii,
+		372	Solanum_pennellii,
+		373	Solanum_galapagense,
+		374	Solanum_cheesmaniae,
+		375	Solanum_pimpinellifolium,
+		376	Solanum_bulbocastanum,
+		377	Solanum_clarum,
+		378	Solanum_morelliforme,
+		379	Solanum_polyadenium,
+		380	Solanum_ehrenbergii,
+		381	Solanum_chomatophilum,
+		382	Solanum_scabrifolium,
+		383	Solanum_pinnatisectum,
+		384	Solanum_immite,
+		385	Solanum_piurae,
+		386	Solanum_acroscopicum,
+		387	Solanum_multiinterruptum,
+		388	Solanum_andreanum,
+		389	Solanum_doddsii,
+		390	Solanum_stenophyllidium,
+		391	Solanum_schenckii,
+		392	Solanum_iopetalum,
+		393	Solanum_violaceimarmoratum,
+		394	Solanum_albicans,
+		395	Solanum_boliviense,
+		396	Solanum_raphanifolium,
+		397	Solanum_lignicaule,
+		398	Solanum_laxissimum,
+		399	Solanum_longiconicum,
+		400	Solanum_oxycarpum,
+		401	Solanum_agrimoniifolium,
+		402	Solanum_colombianum,
+		403	Solanum_stipuloideum,
+		404	Solanum_vernei,
+		405	Solanum_candolleanum,
+		406	Solanum_brevicaule,
+		407	Solanum_demissum,
+		408	Solanum_kurtzianum,
+		409	Solanum_chacoense,
+		410	Solanum_berthaultii,
+		411	Solanum_infundibuliforme,
+		412	Solanum_okadae,
+		413	Solanum_stoloniferum,
+		414	Solanum_hjertingii,
+		415	Solanum_guerreroense,
+		416	Solanum_hougasii,
+		417	Solanum_latiflorum,
+		418	Solanum_cacosmum,
+		419	Solanum_exiguum,
+		420	Solanum_diploconos,
+		421	Solanum_pinetorum,
+		422	Solanum_sciadostylis,
+		423	Solanum_cylindricum,
+		424	Solanum_glaucophyllum,
+		425	Solanum_fusiforme,
+		426	Solanum_melissarum,
+		427	Solanum_confusum,
+		428	Solanum_hibernum,
+		429	Solanum_luteoalbum,
+		430	Solanum_stuckertii,
+		431	Solanum_oxyphyllum,
+		432	Solanum_pendulum,
+		433	Solanum_tobagense,
+		434	Solanum_obliquum,
+		435	Solanum_roseum,
+		436	Solanum_maternum,
+		437	Solanum_betaceum,
+		438	Solanum_unilobum,
+		439	Solanum_cajanumense,
+		440	Solanum_fallax,
+		441	Solanum_endopogon,
+		442	Solanum_occultum,
+		443	Solanum_sibundoyense,
+		444	Solanum_proteanthum,
+		445	Solanum_tegore,
+		446	Solanum_circinatum,
+		447	Solanum_tenuisetosum,
+		448	Solanum_abutiloides,
+		449	Solanum_rugosum,
+		450	Solanum_asperum,
+		451	Solanum_mauritianum,
+		452	Solanum_cordovense,
+		453	Solanum_reductum,
+		454	Solanum_argentinum,
+		455	Solanum_pseudocapsicum,
+		456	Solanum_rovirosanum,
+		457	Solanum_arboreum,
+		458	Solanum_aphyodendron,
+		459	Solanum_diphyllum,
+		460	Solanum_allophyllum,
+		461	Solanum_wendlandii,
+		462	Solanum_gardneri,
+		463	Solanum_microphyllum,
+		464	Solanum_robustum,
+		465	Solanum_stagnale,
+		466	Solanum_paludosum,
+		467	Solanum_palinacanthum,
+		468	Solanum_mammosum,
+		469	Solanum_platense,
+		470	Solanum_capsicoides,
+		471	Solanum_acerifolium,
+		472	Solanum_atropurpureum,
+		473	Solanum_tenuispinum,
+		474	Solanum_incarceratum,
+		475	Solanum_myriacanthum,
+		476	Solanum_aculeatissimum,
+		477	Solanum_viarum,
+		478	Solanum_sessiliflorum,
+		479	Solanum_quitoense,
+		480	Solanum_felinum,
+		481	Solanum_candidum,
+		482	Solanum_lasiocarpum,
+		483	Solanum_repandum,
+		484	Solanum_stramoniifolium,
+		485	Solanum_hirtum,
+		486	Solanum_pectinatum,
+		487	Solanum_hyporhodium,
+		488	Solanum_pseudolulo,
+		489	Solanum_vestissimum,
+		490	Solanum_sisymbriifolium,
+		491	Solanum_lycocarpum,
+		492	Solanum_mitlense,
+		493	Solanum_crinitum,
+		494	Solanum_wrightii,
+		495	Solanum_tenuipes,
+		496	Solanum_johnstonii,
+		497	Solanum_grayi,
+		498	Solanum_lumholtzianum,
+		499	Solanum_angustifolium,
+		500	Solanum_fructu-tecto,
+		501	Solanum_rostratum,
+		502	Solanum_tribulosum,
+		503	Solanum_heterodoxum,
+		504	Solanum_citrullifolium,
+		505	Solanum_davisense,
+		506	Solanum_bahamense,
+		507	Solanum_ensifolium,
+		508	Solanum_carolinense,
+		509	Solanum_aridum,
+		510	Solanum_juvenale,
+		511	Solanum_jamaicense,
+		512	Solanum_lanceifolium,
+		513	Solanum_donianum,
+		514	Solanum_paniculatum,
+		515	Solanum_bonariense,
+		516	Solanum_asperolanatum,
+		517	Solanum_chrysotrichum,
+		518	Solanum_torvum,
+		519	Solanum_hieronymi,
+		520	Solanum_elaeagnifolium,
+		521	Solanum_hindsianum,
+		522	Solanum_houstonii,
+		523	Solanum_aculeastrum,
+		524	Solanum_coagulans,
+		525	Solanum_marginatum,
+		526	Solanum_giganteum,
+		527	Solanum_dasyphyllum,
+		528	Solanum_anguivi,
+		529	Solanum_lidii,
+		530	Solanum_vespertilio,
+		531	Solanum_capense,
+		532	Solanum_violaceum,
+		533	Solanum_supinum,
+		534	Solanum_insanum,
+		535	Solanum_linnaeanum,
+		536	Solanum_incanum,
+		537	Solanum_campylacanthum,
+		538	Solanum_pyracanthos,
+		539	Solanum_oldfieldii,
+		540	Solanum_coactiliferum,
+		541	Solanum_gabrielae,
+		542	Solanum_lasiophyllum,
+		543	Solanum_cleistogamum,
+		544	Solanum_horridum,
+		545	Solanum_echinatum,
+		546	Solanum_lucani,
+		547	Solanum_cunninghamii,
+		548	Solanum_dioicum,
+		549	Solanum_leopoldensis,
+		550	Solanum_petraeum,
+		551	Solanum_tudununggae,
+		552	Solanum_oedipus,
+		553	Solanum_clarkiae,
+		554	Solanum_melanospermum,
+		555	Solanum_beaugleholei,
+		556	Solanum_phlomoides,
+		557	Solanum_chippendalei,
+		558	Solanum_diversiflorum,
+		559	Solanum_asymmetriphyllum,
+		560	Solanum_hoplopetalum,
+		561	Solanum_hystrix,
+		562	Solanum_oligacanthum,
+		563	Solanum_nummularium,
+		564	Solanum_orbiculatum,
+		565	Solanum_tetrathecum,
+		566	Solanum_elachophyllum,
+		567	Solanum_ditrichum,
+		568	Solanum_vicinum,
+		569	Solanum_campanulatum,
+		570	Solanum_prinophyllum,
+		571	Solanum_pungetium,
+		572	Solanum_petrophilum,
+		573	Solanum_sturtianum,
+		574	Solanum_cinereum,
+		575	Solanum_centrale,
+		576	Solanum_esuriale,
+		577	Solanum_dianthophorum,
+		578	Solanum_ellipticum,
+		579	Solanum_quadriloculatum,
+		580	Solanum_inaequilaterum,
+		581	Solanum_dimorphispinum,
+		582	Solanum_viridifolium,
+		583	Solanum_incompletum,
+		584	Solanum_sandwicense,
+		585	Solanum_semiarmatum,
+		586	Solanum_cookii,
+		587	Solanum_corifolium,
+		588	Solanum_discolor,
+		589	Solanum_stupefactum,
+		590	Solanum_furfuraceum,
+		591	Solanum_densevestitum,
+		592	Solanum_nemophilum,
+		593	Solanum_stelligerum,
+		594	Solanum_chenopodinum,
+		595	Solanum_ferocissimum
+	;
+	TREE * UNTITLED = [&R] (((1:8.428555294,2:8.428555293):18.50792989,(3:24.08145205,((4:10.06194192,5:10.06194192):11.71899399,(6:5.988123748,(7:4.078165383,(8:2.255623151,(9:1.691414909,((10:0.5776744612,11:0.5776744612):0.8632769561,(12:0.5600378971,13:0.560037897):0.8809135202):0.2504634918):0.5642082416):1.822542232):1.909958366):15.79281216):2.300516144):2.855034133):3.39024785,((14:27.7037748,((15:9.878567793,(16:1.708002746,17:1.708002746):8.170566046):13.68787807,((18:3.681458698,(19:1.267879503,20:1.267879503):2.413579196):1.297853541,(21:1.094380118,22:1.094380118):3.884931121):18.58713262):4.137328932):1.278376521,(((23:12.87583352,((24:3.766286838,(25:2.678169008,26:2.678169008):1.088117829):4.576573104,((27:1.122217871,28:1.122217871):1.714746017,(29:2.474460623,(30:1.799369935,((31:0.8457035851,32:0.8457035851):0.482288279,(33:0.9641000797,(34:0.6795622386,(35:0.1808370267,36:0.1808370267):0.4987252119):0.2845378411):0.3638917844):0.4713770713):0.6750916874):0.3625022651):5.505897054):4.532973582):12.337767,(37:22.92807001,((38:2.364924527,39:2.364924527):10.20197019,((40:1.629841581,(41:0.7522219411,42:0.752221941):0.8776196404):1.358325623,((43:2.138350978,(44:1.073119657,45:1.073119657):1.065230322):0.4820380874,(46:2.40428255,((47:0.6698383209,(48:0.3036900878,49:0.3036900878):0.3661472331):0.5797726682,(50:0.6853007975,(51:0.2924602515,52:0.2924602515):0.392839546):0.5643101917):1.154671561):0.2161065159):0.3677781392):9.57872851):10.3611743):2.285531508):2.764261471,(((53:1.131170878,54:1.131170878):13.44630352,(((55:5.117381779,(56:3.557786311,(57:1.240061719,(58:0.747109014,59:0.747109014):0.4929527053):2.317723592):1.559595468):2.253039212,(((60:2.655669734,61:2.655669734):1.031336148,(62:2.85683793,(63:0.299544,64:0.299544):2.55729393):0.830167952):1.642918818,((65:1.201505656,66:1.201505656):2.348004719,((67:1.791948639,68:1.791948639):1.089141286,(69:0.8993829328,(70:0.5946065215,71:0.5946065215):0.3047754113):1.981707993):0.6684194492):1.780414326):2.04049629):1.503995329,((72:2.812567864,(73:1.983447583,74:1.983447583):0.8291202814):4.213325237,(((75:1.1005051,76:1.1005051):2.068327654,(77:1.88296911,(78:1.151538328,(79:0.3837869421,80:0.3837869421):0.7677513861):0.7314317817):1.285862645):3.198399464,((81:4.370379384,((82:1.537343305,(83:0.7660610122,84:0.7660610122):0.7712832932):2.436944418,((85:1.783727264,86:1.783727264):0.7478469884,((87:0.6577276172,88:0.6577276172):1.253813142,(89:0.1906919393,90:0.1906919393):1.72084982):0.6200324925):1.442714471):0.3960906611):0.3327736741,((91:3.04862986,(92:2.441233324,(93:0.6574646875,94:0.6574646875):1.783768636):0.6073965367):0.9286958961,(95:2.23069565,((96:1.534713625,(97:0.9137727482,98:0.9137727482):0.6209408768):0.4827972526,(((99:0.9039002481,100:0.9039002481):0.5717202568,(101:1.132834946,102:1.132833946):0.3427865586):0.3564565401,((103:1.077844561,104:1.077844561):0.3662480917,(105:0.7324129195,106:0.7324129195):0.7116797337):0.3879843919):0.1854338326):0.2131837719):1.746630107):0.7258273017):1.664080161):0.6586608821):1.848522218):5.703058076):9.19023982,(((107:15.66915887,(108:6.514687074,109:6.514687074):9.154471801):2.337975435,(((110:0.9384942582,111:0.9384942582):10.92668121,((112:3.487675111,(113:1.72607804,(114:0.1448608887,115:0.1448608887):1.581217151):1.761597071):6.10725526,(((116:4.143836327,(117:3.419523089,(118:0.1660483729,119:0.1660483729):3.253474717):0.7243132372):1.003308038,(120:3.338264007,121:3.338264007):1.808880357):4.18872191,(122:8.826209188,((123:4.131561811,(124:1.167271208,125:1.167271208):2.964289603):2.325530884,(126:5.872140067,(127:3.542382151,128:3.542381151):2.329758916):0.5849526277):2.369116494):0.5096580867):0.2590640961):2.270244096):5.04984962,(129:12.20109236,((130:4.274806004,(131:4.193721995,((132:2.781574537,133:2.781574537):0.6428093312,(134:2.428755326,((135:0.9291698478,136:0.9291698478):0.9254555923,137:1.85462544):0.5741288859):0.9956285418):0.7693391263):0.08108300993):6.59504721,((((138:1.933191763,(139:1.516893806,((140:0.4861922936,(141:0.1987970001,142:0.1987970001):0.2873952935):0.7957704485,(143:1.115895645,(144:0.383217298,145:0.383217298):0.7326783474):0.1660680967):0.2349300636):0.4162989571):0.6287134197,((146:0.36691195,147:0.36691195):1.947003202,148:2.313915152):0.2479900304):0.4572003289,((149:0.09921851971,150:0.09921851971):2.160025655,((151:1.470238808,152:1.470238808):0.4513109935,((153:0.9825191363,154:0.9825191363):0.3613897781,((155:0.6704394793,(156:0.302240474,157:0.302240474):0.3681990053):0.4781832478,((158:0.1518219503,159:0.1518219503):0.469051061,(160:0.4082003521,(161:0.3116877096,(162:0.07545127006,163:0.07545127006):0.2362364395):0.09651264251):0.2126726592):0.5277497158):0.1952861873):0.5776408876):0.3376943729):0.7598623366):1.830855535,((164:1.842491461,(165:1.074635472,(166:0.8805858061,167:0.8805858061):0.1940496656):0.7678549889):2.795268597,(((168:1.874901836,(169:0.4031949731,170:0.4031949731):1.471706862):1.004538221,((171:2.282342174,(172:0.6703772614,173:0.6703772614):1.611965913):0.2833463593,((174:1.397839455,175:1.397839455):0.4403207799,(176:0.5416839217,(177:0.129266388,178:0.129266388):0.4124175337):1.296476314):0.7275282981):0.3137515228):0.5373281926,((179:2.279443752,(180:0.4251433131,181:0.4251433131):1.854300439):0.421091815,((182:1.388007756,(183:0.7380791239,(184:0.3473857445,185:0.3473857445):0.3906933794):0.6499286319):0.8492018701,((186:1.092437107,(187:0.1444871211,188:0.1444871211):0.947950986):0.7542602678,(189:1.523791851,((190:0.2999650738,191:0.2999650738):0.8945517995,((192:0.5339820993,193:0.5339820993):0.4656928058,(194:0.2120610714,195:0.2120610714):0.7876148337):0.1948409681):0.3292749774):0.3229065242):0.390512251):0.4633259414):0.7162336816):1.220991809):0.2122009886):6.019891168):1.331240141):4.713931732):1.092109223):2.92242359,((196:15.90884165,(197:11.51984291,198:11.51984291):4.388998743):4.188665358,((199:6.626892172,200:6.626891172):13.05663377,(((201:15.94358165,((202:4.118761159,(203:1.714433271,204:1.714433271):2.404327889):4.359337343,((205:1.733411759,206:1.733411759):1.718901475,(207:2.006689779,((208:0.4383621022,209:0.4383621022):0.8031739204,(210:0.7019884586,211:0.7019884585):0.5395475641):0.7651537559):1.445623455):5.025784268):7.465483146):1.96750768,(212:16.98198502,(((213:7.77922592,(214:7.332837491,(215:3.358679163,(216:2.906535664,217:2.906535664):0.4521434986):3.974157329):0.446389429):5.310447239,(((218:1.793810048,219:1.793809048):3.461313787,(220:2.743543907,((221:1.045254475,222:1.045254475):0.908573187,(223:0.7669464167,(224:0.4520100448,(225:0.1363076847,226:0.1363076847):0.3157023601):0.3149363719):1.186881246):0.7897172445):2.511577928):7.489405379,((227:2.966142106,(228:2.310418075,(229:0.8498972737,230:0.8498972737):1.460520802):0.6557240309):6.83864301,(231:6.880573884,((232:1.636772887,(233:0.6736384078,234:0.6736384078):0.9631344789):3.640714321,(235:4.824993253,((236:2.229232334,237:2.229232334):1.153284976,(238:2.876862599,((239:1.934291661,(240:1.389103082,241:1.389103082):0.5451885791):0.4579672156,(242:1.730858857,(243:1.194620464,(244:0.4649679005,245:0.4649679005):0.729652564):0.5362383925):0.6614000198):0.484603722):0.5056547115):1.442474942):0.4524939547):1.603086676):2.924212232):2.939743098):0.3451449449):3.615093121,((246:1.981205681,(247:0.6915629007,248:0.6915629007):1.28964278):12.75430598,((249:5.524325684,(250:0.8109564614,251:0.8109564614):4.713369222):7.166794237,(((252:2.750374704,(253:1.975256143,(254:1.324072809,(255:0.3008284768,256:0.3008284768):1.023243332):0.6511833348):0.7751185605):1.805016369,(257:2.613372553,(258:2.048930029,(259:1.242216285,260:1.242216284):0.8067137445):0.5644435244):1.94201852):6.673104958,((261:1.067417578,262:1.067417578):7.31743489,((263:6.064888958,264:6.064888958):2.014140958,(265:7.275244727,(((266:2.273662174,267:2.273662174):2.650515942,268:4.924179116):1.645031332,((269:2.994301671,270:2.994301671):2.265708133,(271:4.576276517,((((272:1.173658121,273:1.173658121):1.266429575,(274:1.238772815,275:1.238772815):1.20131488):1.262131332,(276:2.82173796,(277:1.786469787,(278:1.304692473,279:1.304692473):0.4817773139):1.035268174):0.8804800672):0.4947766781,(((280:1.521100963,281:1.521100963):0.940789529,(282:2.388771285,283:2.388771285):0.07311920624):1.267767494,((284:1.925412258,(285:0.07596075001,286:0.07596075001):1.849451508):1.84866381,((287:1.8686193,(288:1.003806406,289:1.003807406):0.8648128942):0.9093300238,(290:1.874877958,(291:1.248497726,(292:0.8888610033,(293:0.4950399161,294:0.4950399161):0.3938210872):0.3596377224):0.6263802326):0.9030723655):0.996126744):-0.04441808247):0.4673367204):0.3792808112):0.6837342872):1.309200644):0.7060342783):0.8037851894):0.3058225522):2.843644563):1.462622889):2.044391744):1.969254617):0.2772187354):0.9291043123):1.213667297,((((295:1.555497228,296:1.555497228):0.7555776069,(297:1.600930806,(298:1.158111031,299:1.158111031):0.4428197751):0.7101440288):0.9090575391,((300:0.2925962354,301:0.2925962354):2.503410687,((302:1.84000104,303:1.84000104):0.7621336301,(((304:1.303459493,((305:0.4838821011,306:0.4838821011):0.5024332497,(307:0.6237446951,308:0.6237446952):0.3625706556):0.3171441424):0.3559603594,(309:1.356630634,((310:0.8915476328,(311:0.467470005,312:0.467470005):0.4240776278):0.2934956665,(313:0.3726647986,(314:0.1038580501,315:0.1038580501):0.2688067485):0.8123785006):0.1715873343):0.302789219):0.3935731176,(316:1.636629184,(((317:0.2063183119,318:0.2063183119):0.6870033558,((319:0.1014648493,320:0.1014648493):0.5540999389,321:0.6555647881):0.2377568796):0.3146498806,(322:0.7131246665,((323:0.2143631132,324:0.2143631132):0.3388595043,(325:0.5075465387,326:0.5075465387):0.04567607886):0.159902049):0.4948468817):0.4286576354):0.4163637864):0.5491416998):0.1938722528):0.4241254515):13.74382947,(((((327:4.986405382,328:4.986405381):3.928008319,((329:3.232378698,330:3.232378698):5.124257009,((331:3.308315095,(332:0.8505885851,333:0.8505885851):2.45772551):0.9897932002,(334:1.75155815,(335:1.095491288,(336:1.010347849,337:1.010347849):0.08514343953):0.6560668618):2.546550145):4.058528411):0.5577769939):2.655373605,((338:6.168780876,(339:5.08241967,((340:4.355657329,341:4.355657329):0.7689236693,(342:3.542031583,343:3.542031583):1.582549416):-0.04216132817):1.086361205):3.386143535,((344:1.107129727,345:1.107129727):6.411808937,(346:4.404769099,(347:3.793949806,(348:3.384426153,(349:3.172301874,((350:0.8191524211,351:0.819152421):1.807943933,(352:1.652995535,((353:0.5729943754,354:0.5729943754):0.8165443567,355:1.389538732):0.2634568026):0.9741018194):0.5452055197):0.2121232796):0.4095246527):0.6108192931):3.114169564):2.035984747):2.014862895):1.730507134,((356:3.059285928,(357:1.083498125,358:1.083498125):1.975787803):7.334882421,((359:2.155965296,360:2.155965296):7.652026008,((361:6.711581532,362:6.711581532):2.145963136,(((363:1.733848413,364:1.733848413):4.207195624,((365:2.260597908,366:2.260597908):3.331664592,((367:2.00834573,368:2.00834573):1.029230532,((369:0.715611079,370:0.715611079):1.123416401,((371:0.442518414,372:0.442518414):1.355056664,(373:1.079621184,(374:0.547252891,375:0.547252891):0.5323672927):0.7179538949):0.04145240126):1.198548782):2.554685238):0.3487825368):2.024876579,(((376:4.943525631,((377:2.75179146,378:2.75179146):1.563376152,(379:3.841870184,380:3.841871185):0.4732964281):0.6283570185):0.7623582171,((381:3.086016475,382:3.086015475):1.452379715,((383:2.080097392,384:2.080097392):1.614255209,(385:2.955531704,(386:2.112827482,387:2.112827482):0.8427042216):0.7388208975):0.8440435883):1.167487658):1.419947911,((388:3.129784976,((389:0.6304245316,390:0.6304245316):1.544235541,391:2.174660073):0.9551239025):3.757182616,(((392:2.748096455,393:2.748096455):2.261015029,((394:2.361213083,395:2.361213084):2.056147309,((396:3.10509849,(397:2.592447677,398:2.592446677):0.5126508133):0.4328928271,(399:2.300431423,(400:1.998927224,(401:1.721913653,402:1.721913653):0.2770135716):0.3015041986):1.237559895):0.8793690743):0.5917520929):1.370099016,((403:4.249237873,404:4.249238873):1.463289415,(405:5.058831718,(406:4.455109611,((407:3.824212511,408:3.824212511):0.3572276523,(409:3.374977777,(410:3.172181482,(411:2.924933705,((412:1.798883396,413:1.798883396):0.8329645854,(414:1.287098182,(415:0.7532340195,416:0.7532330195):0.5338641627):1.344750799):0.2930857238):0.2472477767):0.2027962947):0.8064623868):0.2736694484):0.6037221058):0.6536955698):0.6666832131):0.5077560911):0.2388641677):0.8400898561):0.8916240531):0.9504476353):0.5861770446):2.906125092):0.9899679194,((((417:1.960281476,(418:0.5256909572,419:0.5256909572):1.434590519):0.6470009362,(420:1.44853884,(421:0.805796039,422:0.805796039):0.642742801):1.158743572):3.371125428,(((423:2.411756265,424:2.411756265):1.859759007,((425:2.551228742,426:2.551228742):1.067855658,((427:1.508145609,428:1.508145609):0.6316411009,(429:1.231898571,430:1.231898571):0.9078881383):1.47929769):0.6524308719):0.6991852198,((431:3.486922417,(432:2.848534841,433:2.848535841):0.6383865756):0.8593763037,((434:2.220194496,(435:1.118323229,(436:0.3173324065,(437:0.09336892783,438:0.09336892783):0.2239634787):0.8009908227):1.101871266):1.301409244,((439:0.9030698286,440:0.9030698286):1.991542712,(441:2.22490825,((442:0.866915927,443:0.866915927):0.8793820503,(444:1.322394474,(445:1.221430228,(446:0.9668781066,447:0.9668781066):0.2545521219):0.1009642453):0.4239035034):0.4786102727):0.6697042912):0.6269911989):0.8246939804):0.6244027711):1.007706348):6.001447747,(((448:4.358278149,((449:2.108736072,(450:0.5300958657,451:0.5300968657):1.578639206):1.223175181,452:3.331911253):1.026366896):6.554271057,(453:7.011019577,((454:2.790215765,455:2.790215765):1.316215792,(456:2.964912372,(457:2.427988733,(458:0.6933681023,459:0.6933681023):1.734620631):0.5369236393):1.141519184):2.90458802):3.90152963):0.7582469513,((460:9.005198417,461:9.005198417):2.363566202,(((462:2.211454713,463:2.211454713):4.738283316,((464:2.515183552,465:2.515182552):1.36379773,466:3.878981282):3.070755747):2.533402434,(((467:4.697656843,(468:4.36372668,(469:3.535737748,((470:1.688555694,(471:0.9810675101,(472:0.5123974717,473:0.5123974717):0.4686700384):0.7074881839):1.082079526,(474:1.624269325,(475:1.10852327,(476:0.7993143842,477:0.7993143842):0.3092078862):0.5157460549):1.146365895):0.7651015276):0.8279889323):0.3339301629):3.253203881,(478:3.8184511,((479:1.816282489,(480:0.8660922293,(481:0.5487782732,(482:0.2267710354,483:0.2267710354):0.3220082378):0.3173139561):0.9501902592):1.120497816,(484:2.462641169,(485:1.688126697,(486:1.561249184,(487:1.292681784,(488:0.8819409589,489:0.8819409589):0.4107408247):0.2685674006):0.1268775125):0.774514472):0.474139136):0.8816707958):4.132408623):1.010659216,((490:7.366341231,(((491:3.819078194,492:3.819078194):1.482336969,(493:1.095292076,494:1.095292076):4.206124087):1.032403543,(495:4.28786928,((496:2.821062311,(497:1.523293719,498:1.523293719):1.297768593):0.6293353368,((499:2.128404659,(500:1.591060137,501:1.591060137):0.5373445218):0.7534501838,(502:2.439923506,(503:1.791131493,(504:1.137840571,505:1.137840571):0.6532909218):0.6487920131):0.4419313371):0.5685418051):0.8374726315):2.045949427):1.032522524):0.9270012585,(((506:1.99041328,507:1.99041328):5.190774646,((508:5.358817926,(509:0.7967013436,510:0.7967013436):4.562115582):1.633955898,((511:2.353372761,512:2.353372761):4.162691127,(513:3.270423055,((514:2.272389118,515:2.272389118):0.5578582658,(516:2.458173031,(517:1.305651938,518:1.305651937):1.152521093):0.3720743527):0.4401756716):3.245641833):0.4767089361):0.1884141024):0.471809379,(519:6.706836267,((520:3.948012844,(521:2.04036518,522:2.04036518):1.907647663):2.172242892,((((523:2.319288103,524:2.319288103):1.504172718,(525:3.293864941,526:3.29386494):0.5295948809):0.7593545521,((527:2.884235472,(528:2.177464044,((529:0.9145488412,530:0.9145488412):0.7778528266,531:1.692400668):0.485063376):0.7067714277):0.4313182568,((532:2.078196465,533:2.078197465):0.6650908362,(534:1.563110359,(535:1.242486798,(536:0.9690534704,537:0.9690534704):0.2734333272):0.3206235611):1.180176942):0.5722654273):1.267260645):0.7805313099,(538:5.227557495,((539:3.66514532,(540:3.05382506,(541:1.354279753,542:1.354279753):1.699546308):0.6113192602):1.445630991,((((543:1.203730621,544:1.203730621):2.099489705,(545:1.170526023,546:1.170526023):2.132695303):1.328615097,((547:0.3231936192,548:0.3231936192):1.915738366,(549:1.646581487,(550:1.309038621,551:1.309037621):0.3375428653):0.592350498):2.392904438):0.2925743852,((552:4.104368634,((553:0.910978399,554:0.910978399):2.390388349,(555:2.784670629,(556:2.259170564,(557:1.606892813,558:1.606892813):0.6522777502):0.525501065):0.5166951195):0.8030028861):0.588019293,((559:4.224160696,((560:0.5910617386,561:0.5910617386):3.554781853,(562:3.62286612,((563:1.250617254,564:1.250617254):1.082275372,(565:1.798679278,566:1.798678278):0.534214347):1.289972494):0.5229764721):0.07831810372):0.2712923258,(((567:0.4339194847,568:0.4339194847):1.436329099,(569:1.666641825,(570:0.6181369122,571:0.6181369122):1.048505913):0.2036067585):1.985587036,(((572:3.225380089,573:3.225379089):0.2638141703,(574:2.816000565,((575:1.170567587,576:1.170567587):1.188908308,(577:1.406919411,(578:0.7636412798,579:0.7636412798):0.6432791313):0.9525554838):0.4565256706):0.673193694):0.1942197918,((580:2.622464503,((581:1.587729354,582:1.587729355):0.5276712182,((583:1.004590137,584:1.004590137):0.4275613305,585:1.432151467):0.683249105):0.5070629306):0.4746366924,(((586:2.178548951,(587:1.618040051,588:1.618040051):0.5605089):0.444513005,(589:2.01679422,590:2.01679422):0.6062677365):0.3508796943,((591:0.38284089,592:0.38284089):1.735931343,(593:0.484975591,(594:0.1149046972,595:0.1149046972):0.3700698938):1.633796643):0.8551694167):0.1231585451):0.5863138558):0.1724215686):0.6396174016):0.1969349058):0.232022881):0.1863655032):0.1167821832):0.1357871889):0.7569110525):0.5865805307):0.9461610384):0.6403461839):0.6681764506):0.5216205226):1.885624157):0.3020315383):0.30905843):2.310408771):2.673698483):2.160794783):0.5587683131):0.4139820707):0.8320508901):2.838156316):4.210147776):1.004288323):1.344582719);
+END;
