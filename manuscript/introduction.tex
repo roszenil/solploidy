@@ -24,19 +24,20 @@ Evidence of paleo-polyploidy within the genomes of diploid extant plants also im
 This could affect the interpretation of different net diversification rates for diploids and polyploids, especially if diploids have a relatively higher net diversification rate if they were ancestrally polyploid than if they had no polyploid ancestry.
 
 Breeding system shifts---changes in the collection of physiological and morphological traits that determine the likelihood that any two gametes unite---are remarkably common and crucially affect the distribution and amount of genetic variation in populations \citep{stebbins1974, barrett2013}.
-In particular, self-incompatibility (SI) causes plants to reject their own pollen, and loss of self-incompatibility, yielding self-compatibility (SC), is one of the most replicated transitions in flowering plant evolution \citep{stebbins1974,igic_2008}.
+In particular, self-incompatibility (SI) causes plants to reject their own pollen, and loss of self-incompatibility, yielding self-compatibility (SC), is one of the most replicated transitions in flowering plant evolution \citep{stebbins1974, igic_2008}.
 Previous analyses reported higher rates of diversification for SI than for SC lineages in Solanaceae \citep{goldberg_2010}. 
 Similarly, heterostylous SI lineages in Primulaceae seem to diversify faster \citep{devos2014}, as do outcrossing lineages in Onagraceae \citep{freyman_2018}.
 Despite consistent inferences of their macroevolutionary role, breeding systems are clearly not the sole trait determining diversification rates, and may exhibit complex interactions with other traits.
 
+% E: re-worked, to explain better for R2
 Ploidy, for instance, is widely thought to affect the propensity for self-fertilization \citep{stebbins1950}. 
 Whole genome duplication may help facilitate the loss of SI and the transition to selfing \citep{barringer2007, barrett2008, husband2008}, or it may directly cause the loss of SI \citep{stout1942, lewis1947}.
-Doubled number of alleles in pollen is thought to effect disruption of the genetic mechanisms in gametophytic SI systems, which prevent self-fertilization \citep{entani1999, tsukamoto2005, kubo2010}. 
-With exceedingly few exceptions \citep{hauck_2002,nunes_2006}, this generally precludes the existence of SI polyploids in the most widespread system of SI, which is regarded as ancestral in eudicots \citep{igic_2001,steinbachs_2002}.
-This system, RNase-based SI, is expressed in all SI species of Solanaceae examined to date.
+In gametophytic SI systems, self pollen fails because a pollen grain with one S-allele is unable to detoxify the RNase produced by the same allele in the style. % ref
+The pollen of polyploids, however, has multiple S-alleles which act complementarily, detoxifying the RNase produced by any maternal genotype \citep{entani1999, tsukamoto2005, kubo2010}.
+Polyploids are consequently capable of self-fertilization, with exceedingly few exceptions \citep{hauck_2002, nunes_2006}.
+This system of RNase-based SI is regarded as ancestral in eudicots \citep{igic_2001,steinbachs_2002}, and it is expressed in all SI species of Solanaceae examined to date.
 There is consequently a strong correlation between polyploidy and SC in this family \citep{robertson_2011}.
 
-%B: removed First, ... Second, ... because we had three consecutive counting paragraphs.
 Given that changes in ploidy and breeding systems are causally related, and may have profound effects on the fate of lineages, it seems particularly profitable to examine possible interactions in their macroevolutionary effects.
 If the effects of ploidy and breeding system on lineage diversification are not additive, studying each trait separately may not reveal the effects of their combinations.
 As a result, it may be of interest to establish their joint influence on speciation and extinction rates.
@@ -46,13 +47,14 @@ Alternatively, the path from SI diploids to SC polyploids may involve a transiti
 \citet{robertson_2011} found that the pathway from SI diploids to SC polyploids is dominated by the two-step pathway over long timescales, but generally proceeds in one step via polyploidization of SI species over short timescales.
 It remains to be seen whether these results hold true when allowing for the influence of these traits on lineage diversification.
 
-%B: removed First, ... Second, ... because we had three consecutive counting paragraphs.
-Two recent methodological developments enable disentangling the complex interactions between two or more traits and diversification.
-\citet{fitzjohn_2012} extended the state-dependent diversification ``*SSE'' modeling framework \citep{maddison_2007} to allow estimating the effect of an arbitrary number of states (enabling multi-state, MuSSE, instead of binary state, BiSSE, speciation and extinction models).
-This allows multiple states to represent trait combinations, particularly useful if one is interested in explicitly testing whether combinations of traits non-additively affect speciation or extinction. 
-Soon thereafter, \citet{beaulieu_2016} proposed an extension of the *SSE framework by introducing a model with unspecified, or `hidden' traits (HiSSE model), which can affect the diversification process.
-Because variation in speciation and extinction rates may not be solely due to the focal trait, HiSSE simultaneously enables hidden states to explain such variation, and it reduces the elevated false-positive error rates.
-A joint application of these advances allows simultaneous consideration of the effects of multiple known traits on the diversification process, along with the presence of other unobserved states that can affect speciation and extinction rates. 
+% E: re-worked, to explain better for R2
+The possible associations of multiple traits with lineage diversification can be tested with the SSE model framework.
+This style of modeling is named after the binary state speciation and extinction model \citep[BiSSE; ][]{maddison_2007}, which simultaneously models transitions between the two states of a binary trait and different rates of speciation and extinction associated with each of those states.
+Although very powerful, this approach is prone to reporting an association between a trait and lineage diversification when the data contain additional, unmodeled diversification rate heterogeneity \citep{rabosky_2015}.
+We use two techniques to address this concern, both employing the model extension to an arbitrary number of states \citep[MuSSE][]{fitzjohn_2012}.
+First, by considering both ploidy and breeding system simultaneously, we reduce the chance that an effect of one trait on diversification would be mistaken for the effect of the other.
+Second, by incorporating a hidden state, we allow that an unknown factor could additionally be influencing diversification \citep[HiSSE][]{beaulieu_2016}.
+Our analyses jointly apply different combinations of these techniques in order to separate the associations of lineage diversification rates with breeding system alone, ploidy alone, the interaction between breeding system and ploidy, and additional unobserved factors.
 
 Here, we examine the roles of ploidy and breeding system, as well as their interaction, on the diversification process in Solanaceae.
 Using extensive trait data, and considering other possible sources of heterogeneity in the diversification process, we assess the influence of these traits on speciation and extinction rates.
