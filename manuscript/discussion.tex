@@ -1,24 +1,34 @@
 \section{Discussion}
 
-% - value of approach
-Disentangling the patterns of diversification linked to  multiple traits allowed us the opportunity to model and test complex hypotheses about the heterogenous diversification process in Solanaceae.
-Species are created and go extinct based on multiple and often highly correlated phenotypes. However, estimating the speciation and extinction rates remains challenging. Estimating rates of trait linked diversification models is not only a problem of difficult parametric inference (as disscussed in  \citet{rabosky_2010, beaulieu_2015}),but also, a problem of inadequate model specification that can result in misleading inferences when the presence of a second trait has a complex interaction with the focus trait first used to model diversification. We presented a roadmap with a series of analyses that can help scientists to identify if an unknown or unobservable trait is worth pursuing. By carefully aggregating and curating ploidy and breeding system data for Solanaceae, we showed how  the complex interaction between ploidy and breeding system  can lead to diversification conclusions that differ from the diversification conclusions of models that focus on one trait at a time.
+%B:  at least two surprising outcomes: (1)  D and P on background of C, and (2) SC not as dead of an end as it was in goldberg2010, if P is partitioned out (can be framed as kind of path-dependence, i.e. qIC path different than rho path, or same as (1), so that I and C are less different on the background of D.
+%
+Although species are composed of vast assemblages of variable traits, many traits are heritable, and they may affect the propensity of species to perish and multiply \citep{lewontin_1970}, examining such macroevolutionary effects of many traits is rare, and remains challenging.
+We investigated the influence of two traits, ploidy and breeding system, in diversification of Solanaceae.
+Most significantly, we found that the effects of ploidy, inferred as significant when it is the only trait under consideration, are overshadowed by hidden traits, or breeding system when added to models.  
+Interestingly, the difference in diversification rates between the diploids and polyploids is negligible on the background of self-compatibility.
+Furthermore, we recovered a smaller difference in diversification rates between self-incompatible and self-compatible lineages against the diploid genomic background. 
+Motivated by the widespread recent findings of polyploidy in the ancestry of angiosperms, we also examined and found modest support for diploidization in the history of the family, but without significant effects on inferences of diversification dynamics. %B: how about "modest"? %R- I think modest is a good way to express it because it is the best we can do with chromosome numbers.  %B: changed "polyploidy events" (polyploidy is a noun, only. polyploid either noun or adjective).
+Disentangling the patterns of diversification linked to multiple traits is difficult, but our strategy allows tests of intricate hypotheses regarding a heterogenous diversification process.
+Below, we discuss key findings and highlight the most interesting and paradoxical implications.
+We provide an outline for broader application of phylogenetic comparative methods in the context of interactions among traits and diversification process.
 
-% - what happens if PD only, Hidden states
-Previous analyses of polyploidy linked to diversification showed how diploids had greater net diversification rates than polyploids when exploring across multiple clades of the angiosperm phylogeny \citet{mayrose_2011, mayrose_2015}. 
-Using the most complete dataset for ploidy in a phylogenetic tree for Solanaceae, we were able to replicate the results found by \citet{mayrose_2011} where polyploids have a slower net diversification compare to diploids.
-However, we expanded this study to accommodate  background heterogeneity in the diversification process.
-When adding heterogeneity we found that it was more likely that an unobserved trait linked to diploid state was the one leading the net diversification patterns, and that there were some ``second-class"  diploids that were not different from  polyploids  in diversification terms (Figure 2A).
-This result made us question whether there was a second trait linked to diploidy that could make a differential in the diversification progress.
+\subsection*{Disentangling trait interactions in the context of diversification} 
 
-%     main finding about our traits
-For Solanaceae, looking into self-incompatibility was a logical step.
-Previous studies have shown that self-incompatible Solanaceae species have also higher rates of diversification compared to their self-compatible counterparts \citep{goldberg_2012}. 
-Again, in our sample when looking only into breeding system linked to the diversification process we were able to replicate the slower net diversification for self-compatible taxa (Figure 2C). When this model was expanded to incorporate hidden states we found again that some self-incompatible taxa have faster net diversification rates than self-compatible taxa. However, there is again a  different class of taxa where those differences are not as striking (Figure 2D).  However, investigating both  both polyploidy and breeding system simultaneously for every species in our sample, allowed us to further investigate why some diploids were quantitatively different than polyploids, or why some self-incompatible taxa would be different in diversification terms from some self-compatible when a second class is not.
-In the three-state diversification model ID/CD/CP, we represented the complex interactions between ploidy and breeding system. We found that self-incompatible diploids have faster and positive rates than self-compatible diploids and polyploids, and that the difference between the  rates of net diversification of self-compatible diploids is not as large (Figure 2E) as first found by binary trait diversification models (Figure 2A).
-This result is key, it not only aligned with the net diversification results from the D/P+A/B model, where a `	`hidden-trait" seem to be dictating the diversification pattern but it also aligned with the hidden state model I/C+A/B where some class of self-compatible net diversification rate might be overlapping with two net diversification rates of self-incompatible.
-% Removed by R. Therefore, we consider that finding a heterogenous result in the hidden trait approaches should be be treated as evidence of a second trait that is necessary to consider.
-% Removed by R. Pursuing knowledge of  such trait can result on a clearer picture of the importance of trait linked diversification patterns, but also on a better reconstruction on past events in phylogenies.
+Previous analyses of the effects of ploidy on diversification showed that diploids had greater net diversification rates than polyploids across multiple clades of the angiosperm phylogeny \citep{mayrose_2011, mayrose_2015}. 
+We obtain a broadly similar outcome when considering only the effects of ploidy, but the results change significantly with joint consideration of hidden states and breeding systems (\cref{figure:netdivall}A and B). 
+The addition of a hidden trait blurs differences in diversification rates between diploids and polyploids.
+Simultaneous consideration of breeding system better explains the variation of the inferred net diversification rates among ploidy states. 
+SI, which is itself associated with a faster diversification rate, is the breeding system context in which many diploids occur.
+Among SC species, diploids and polyploids are associated with similar diversification rates (\cref{figure:netdivall}E).
+These results indicate that some of the effects of a hidden trait can be explained by each of the two traits under consideration. 
+The finding is unique, and implications may be of wide interest, because it evaluates the relative influence of these two exceptionally interesting traits in a comparative phylogenetic framework.
+
+Earlier work has shown that SI species in Solanaceae are associated with higher diversification rates compared to their SC counterparts \citep{goldberg_2010}. 
+When we only considered the role of breeding system in the diversification process, we were able to replicate the slower net diversification for SC  (\cref{figure:netdivall}C).  %B: we only considered <- we inferred only
+Incorporating hidden states again resulted in SI associated with greater net diversification rates than SC in both hidden states  (\cref{figure:netdivall}D). 
+However, the overall picture is a bit more complex.
+Depending on the background hidden state, it is possible that a class of SC species may experience higher diversification rates than SI species.
+Moreover, these SC lineages may not constitute a dead end (with negative diversification rates).
 
 %     more generally, not okay to approximate musse with bisse when states are correlated (cf Pyron)
 
@@ -39,6 +49,7 @@ This result is key, it not only aligned with the net diversification results fro
 %    diversification, I wonder how different the "without diversification" contributions would be
 %    if calculated from transition rates estimated using a diversification-independent model.
 %  R- Good point. Emma will clarify
+%  E: Yes, good point.  Rosana, do you have results for state-independent diversification?  We could compare with using those rates.
 %
 % 2) I think stochastic mapping would be another useful perspective on the pathways question
 %    (and yeah, its a bit late in the game to propose analyses, so maybe next time!). With stochastic 
@@ -48,46 +59,104 @@ This result is key, it not only aligned with the net diversification results fro
 %    hypothetical long branches). 
 %R- It will, it was actually on my code I think for the ID/CD/CP I have the stochastic mapping trees. We can do it for the revision. I think the only model where it could not finish was the ID/CD/CP+A/B (was taking forever and we had the restriction of time from MSI)
 
-% 3) I'll bet allowing cladogenetic transitions would make the one-step ID/CP even more dominant.
+\subsection*{Pathways to polyploidy}
+
+We find that SI diploid lineages are much more likely to take a one-step  ID$\rightarrow$CP pathway to polyploidy rather than a two-step ID$\rightarrow$CD$\rightarrow$CP pathway, in Solanaceae.
+This result is significant because it has a number of implications for the inference of history of breeding and sexual systems in flowering plants.
+First, support for the direct pathway lends credence to the idea that breakdown of SI by WGD---by generation of diploid `heteroalleleic' pollen---may often trigger the evolution of gender dimorphism across angiosperms \citep{miller_2000}.
+A more direct and definitive test of this hypothesis would additionally examine the propensity of polyploids generated through either pathway to become dioecious \citep{robertson_2011}.
+Second, statistical phylogenetic approaches measure lineage transition rates.
+Transitions depend on a combination of availability of individual mutation rates, which generate trait variation, and selection, which may cause disproportionate loss or fixation of these mutants.
+Estimates of mutation rates are highly uncertain, but the total rate of breakdown of SI within diploids ranges is estimated to be on the order of  $\mu_{IC} = 10^{-5}$ per pollen grain, and includes breakdown by tetraploidization \citep{lewis1979}, which is itself estimated to occur on the order of $\mu_{DP} = 10^{-5}$ \citep{ramsey_1998}. 
+Seemingly, then, the simple genic mutation rate that leads to loss of SI is at best equal to tetraploidization mutation rate, and possibly far lower.
+We nevertheless recover transition rates from ID to CD ($q_{IC}$) threefold greater than $\rho_{I}$, indicating that selection restricts the fixation rate of new polyploids compared with new SC mutants \citep{robertson_2011}.
+Overall, our findings suggest that the effect of ploidy is largely explained explained by its correlation with breeding system, and that other unknown factors work with breeding system to determine diversification rates.
+
+% qualifying paragraph for pathways
+We modeled trait changes in both of these pathways as anagenetic, transitions occurring within lineages, without associated speciation events.
+However, losses of SI (I$\rightarrow$C transitions) are often associated with cladogenesis in Solanaceae \citep{goldberg_2012}, and polyploidization (D$\rightarrow$P transition) also seem to co-occur with speciation events in a number of other families \citep{zhan_2016,freyman_2017}.
+Models that fail to consider such cladogenetic changes may make misleading estimates of anagenetic transition rates.
+In the only available data bearing on this problem, \citet{goldberg_2012} found that extending the *SSE framework to allow cladogenetic changes did not substantially affect inference of net diversification rates.
+Nevertheless, a distinct possibility remains that allowing for cladogenetic transitions could tip the scales further in favor of the one-step pathway to SC polyploidy (CP), but this remains to be tested in future work. %B Will's comment alluded to, but not directly. 
+Specifically, the multi/hidden state SSE-based framework we employed here could be extended to incorporate cladogenetic transitions. %B: We could also list %W+%R idea above, for stochastic mapping?
+Another useful line of inquiry would examine the path-dependent diversification rates, asking whether diversification rates of polyploid SC lineages differ depending on whether they were generated via a one- or two-step pathway. %B: could elaborate if you see necessary. TODO
+%
+% examine SC-only families
+% no causal correlation in SSI systems
+% paths to dioecy
+% path-dependent net-diversification
+%
+%B: also missing deeper discussion of with/without SDD/SID estimates and comparison with Robertson et al. 2011.
+%
+%B: And, are diversification rates of polyploid SC lineages different if one or other path was taken? % E: This is a great question.  We don't answer it with this round of analyses.  But discuss?
+% E: To elaborate: In the IC/CD/CP model, the CP state would be subdivided into two hidden values, corresponding to the influx from the two pathways.  Those two states, CP_X and CP_Y, could have different lambda and mu.
+%
+%W: 3) I'll bet allowing cladogenetic transitions would make the one-step ID/CP even more dominant.
 %    I added the paragraph below regarding cladogenetic transitions, but it doesn't really fit with
 %    the rest of the discussion, so modify or discard as needed:
-Our work shows that a diploid Solanaceae lineage is much more likely to take a
-one-step ID/CP pathway to polyploidy rather than a two-step ID/CD/CP pathway. 
-We modeled both of these pathways as anagenetic character changes occurring within a species.
-However \citet{goldberg_2012} showed that I/C transitions are often associated with speciation events, and similarly \citet{freyman_2017} demonstrated that D/P transitions may also be associated with speciation events. 
-Models that fail to consider transitions that occur at speciation (cladogenetic changes) may
-make misleading estimates of anagenetic transition rates.
-The HiSSE-based models introduced in our work here could be extended to incorporate cladogenetic transitions. 
-It is possible that allowing for cladogenetic transitions may enable the one-step pathway
-to even further dominate over the two-step pathway to polyploidy, but this remains to be tested in future work.
+% E: A small defense of excluding clado is that it didn't affect the diversification results in goldberg2010 vs goldberg2012
+
+\subsection*{Diploidization}
+
+%R: and I: polyploid lineage that has re-diploidized may enhance diversification.
+%R: By adding diploidization to models of polyploidy linked to diversification it is possible to recover this complicated scenario and to reconcile genomic evidence with comparative phylogenetic models. 
+%In the cases where ploidy level was assigned by us based chromosome multiplicity at the genus level, estimating diploidization  might be a potential issue due to ploidy misclassification.  
+
+%B: yielding to %R here. I still think there is overwhelming support for this statement, and few of the cited papers show convincingly that, for example, diploidization happens within five orders of magnitude compared with polyploidization, rendering "relatively rare" obsolete or invalid. (P.S. Rare not the same as unimportant!)
+%B: was: Diploidization is widely considered to be relatively rare, compared with polyploidization \citep{husband_2013}, but flowering plant lineages are thought to have experienced at least one round of polyploidization in their evolutionary history \citep{soltis_2015}.
+%Our exploratory analyses recover some support for inclusion of diploidization in the history of the family, but without significant effects on inferences of diversification dynamics.
+%R- The line above is included in the bottom so no more need for that here
+The implications of the results of our diploidization analyses, as well as much of the other recent work on WGDs, are interesting because they conflict with other lines of evidence, especially those concerning the observed simple synteny of genomes in Solanaceae, and patterns of evolution as self-incompatibility loci.
+Flowering plant lineages are thought to have experienced at least one round of polyploidization in their evolutionary history \citep{soltis_2015}. 
+Following polyploidization, it is possible for genome reorganization, downsizing, and loss to occur \citep{dodsworth_2015, zenil_2016, mandakova_2018}. %B: commas, etc.: importantly rm: "has been observed" this is _only_ true on very short time scales
+As a consequence, nearly all extant species classified as ``diploid" in our analyses, based on cytogenetic data, are possibly secondary diploids, having undergone both polyploidization and re-diploidization.
+Unduly ignoring secondary diploidization would necessarily underestimate the rate of transitions from polyploids to diploids.
+It would then likely cause inflated net diversification rates for diploids, because species considered diploid may have been ancestrally polyploid, instead. %B: added before conflict/edits
+%We find strong support for including the diploidization rate parameter ($\delta$) in analyses that include only ploidy . %B <- %Rosana, inspect this please. It's a merge of conflicted lines.
+% R- I put it up so the line above is not necessary anymore
+However, we find only modest support for diploidization in the joint model  (\cref{table:bayesfactors}), and conclusions regarding the relative effects of ploidy and breeding system on diversification are robust to its inclusion.
+Furthermore, estimating the rate of diploidization, based on our ploidy level classifications, is highly uncertain (see parameter $\delta$ in \cref{suppfigure:DP,suppfigure:DPAB,suppfigure:IDCDCP,suppfigure:IDCDCPAB}), and yields dramatic changes in ancestral reconstructions (\cref{suppfigure:DPnodipasr,suppfigure:DPasr,suppfigure:DPnodipABasr,suppfigure:DPABasr,suppfigure:IDCDCPnodipasr,suppfigure:IDCDCPasr,suppfigure:IDCDCPnodipABasr,suppfigure:IDCDCPABasr}).
 
 
-% where WGD is in Solanaceae--motivation and delta rate analyses
-% diploidization: comment
-Diploidization needs to be considered in diversification models because higher rates of net diversification (speciation minus extinction) in diploids can be obtained from models that ignore the possibility of a polyploid lineage that has diploidized being the diversification enhancer. Hence, in a diploidization lacking model, diploids will show higher rates of diversification when in fact it is a polyploidy event and its subsequent diploidization that generated higher speciation and less extinction.  By adding diploidization to models of polyploidy linked to diversification it is possible to recover this complicated scenario and to reconcile genomic evidence with stochastic models. In past studies by \citet{mayrose_2011, mayrose_2015} diploidization could not be formally  considered in models because ploidy classification was done via chromosome change models (i.e. Chromevol \citep{glick2014}) that do not allow for reversion of polyploidy. However, in our dataset ploidy was assigned based on data aggregated from independent studies (see supplementary information and citations in archived dataset) that come from field or cytogenetic studies. In the cases where ploidy level was assigned by us based chromosome multiplicity at the genus level, estimating diploidization  might be a potential issue due to ploidy misclassification.  
+Some lines of evidence indicate that polyploidy may have occurred prior to the origin of Solanaceae, rendering all extant `diploids' secondarily derived. %B: "polyploid event" or "polyploidy" works, but not "polyploidy event"; see above.
+First, \citet{ku2000} and \citet{blanc2004} posited that the lineage leading to tomato, \textit{Solanum lycopersicum}, may have experienced one or more of WGDs.
+A subsequent analysis of synteny between grape and \textit{Solanum} genomes, as well as the distribution between inferred paralogs within genomes of \textit{Solanum} (tomato and potato) each suggested that this lineage experienced a likely round of ancient genome duplication or triplication \citep{tomato2012}. 
+The age of the peak of paralog Ks distances, is approximately 71$\pm$19 My \citep{tomato2012}. 
+If this is the case, then all of the genomes may have been subsequently re-diploidized, yielding the widespread and common chromosome numbers in this and related families, n=11-12, presently considered to be diploid \citep{robertson_2011}. 
 
-% B: This is my pitch for motivation of the \delta paragraph and/or wording for how to reconcile estimates and genomic data (providing summary of data--to date)
-Diploidization is widely considered to be relatively rare, compared with polyploidization, but flowering plant lineages are thought to have experienced at least one round of polyploidization in their evolutionary history.
-As a consequence, it is possible that nearly all extant species classified as ``diploid" in our analyses are possibly secondary diploids, having undergone both polyploidization and re-diploidization.
-Genomic evidence indicates that such an event may have occurred prior to the origin of the family Solanaceae. 
-\citet{ku2000} and \citet{blanc2004} posited that the lineage leading to tomato, \textit{Solanum lycopersicum}, may have experienced one or more paleopolyploid events.
-A subsequent analysis of synteny between grape and \textit{Solanum} genomes, as well as the distribution between inferred paralogs within \textit{Solanum} (tomato and potato) genomes both suggest that this lineage experienced a likely round of ancient genome duplication or triplication \citep{tomato2012}. 
-The age of the peak of paralog Ks distances, is approximately 71 million years \citep{tomato2012}. 
-If this is the case, then all of the genomes may have been subsequently re-diploidized, because common base chromosome numbers this and related families are n=11-12. 
+On the other hand, there is little evidence for the occurrence of re-diploidization within Solanaceae, since the origin of the family---the time frame we considered.
+First, the Ks-inferred duplication likely pre-dates the origin of the family (49 My, HPD 46-53 My \citealt{sarkinen_2013}). 
+The best-supported, most-recent WGD \citep{tomato2012} is older than the lineage under consideration in this study.
+At best then, the species we consider are ancestrally diploid, having re-diploidized after a suspected WGD, but likely before the origin of the family.
+Second, studies comparing map-based genome synteny within the family find no evidence for recent diploidization \citep{wu_2010a}.
+Instead, simple genome re-arrangements appear sufficient to explain chromosomal evolution between a number of species, including all of those in the relatively cytogenetically conserved `x=12' group, which includes tomato, potato, eggplant, pepper, and tobacco.
+Despite the limitations of assignment of ploidy levels, we found some support for models that include parameter $\delta$, meaning that further study may be warranted, especially in other groups.
 
-%Not unlikely, because Arabidopsis n=5.
-On the other hand, studies comparing map-based genome synteny within the family find no evidence for recent polyploidization-diploidization \citep{wu_2010a}. 
-Simple genome re-arrangements appear sufficient to explain chromosomal evolution between a number of species, including all of those in the relatively cytogenetically conserved `x=12' group, which includes tomato, potato, eggplant, pepper, and tobacco.
-%B: Once this is re-arranged, and made to fit with the rest of the discussion, add what this has to do with re-diploidization and how to interpret $\delta$.
-Therefore, it is not surprising that for all models diploidization  had wide credible intervals for parameter $\delta$. Despite the classification and genomic limitations to assign ploidy levels and diploidization, we found support for models that include pararmeter $\delta$, meaning that further studying this process is worth pursuing.
+Regardless of whether genome polypoidization, followed by widespread diploidization, is a dominant mechanism of genome evolution in Solanaceae, it is clear that our present understanding of the evolution of ploidy and breeding systems is incomplete.
+An increasingly forceful weight of evidence seems to support WGDs in the ancestry of many angiosperms. %cite
+It is then easily inferred that many species have undergone diploidization, alongside genome size and chromosome number reductions. %cite
+Inference of such a common genome upheaval in eudicot history seems to clash with the data indicating that a homologous mechanism of SI, which breaks down nearly invariably in natural and induced tetraploids \citep{stone_2002,mcclure_2009}, has been present continually in many families, including Solanaceae \citep{igic_2006}. 
+Most problematically in this context, it is unclear how to explain the maintenance of trans-generic polymorphism at the orthologous S-loci in this and other families.
+As well, chromosome numbers and genome comparisons within the family (esp. `x=12' clade, containing \textit{Solanum} and \textit{Nicotiana}) reveal strong conservation.
+\citet{wu_2010a} review the evidence from map-based genome comparisons and find that tomato and potato differ six inversions, tomato and eggplant by 24 inversions and five translocations, tomato and pepper by 19 inversions and six translocations, and tomato and tobacco by ca.\ 10 inversions and 11 translocations (likely underestimated).
+Recovery of such simple relationships would require outstanding convergent loss of duplicated segments.
+In either case, all of the approaches make ample assumptions, and it seems that at least some of them will necessitate deep revisions.
+Our study, for example, made numerous assumptions in coding trait states (\eg what constitutes a polyploid or diploid, SI or SC species), in models used for analyses (\eg irreversibility of SI loss underlain by trans-specific orthologous S-loci), and many more, which could each mislead inference. %B: -> %R: Rosana, take a look at this.
+% no discussion of magnitude of \delta vs \rho!
+% R- magnitude is not easy to discuss about, what we have are estimates and credible intervals which are completely sample size dependent. With a different sample "magnitude" can change.
+% problems: this system has a big set of advantages - carefully curated (co-)occurrences of two traits, genetic basis, etc. and everything is still contradictory and opaque.
 
-%     effect on inferred diversification
+\bigskip
 
-
-% generality of approach
-%
-% issues
-%     meaning of diploidization parameter
-%     irreversibility SI -> SC assumption
-
-% Missing a good concluding paragraph.
+%B: Rosana, read this carefully, please! I think it may need review:
+%B: I changed nothing here, except: (1) a citealt<-citet to avoid double parentheses. (2) sp. disscussed -> discussed, (3) "If that is the case ON a system" -> "... IN a system"? (4) "hight type I errors" -> high, type I errors [comma], (5) line break in penultimate sentence.
+Estimating rates of trait linked diversification models is not only a problem of difficult parametric inference (as discussed in  \citealt{rabosky_2010, beaulieu_2015}), but also, a problem of inadequate  ``*SSE'' model specification that can result in misleading inferences when the presence of a second trait has a complex interaction with the focal trait first used to model diversification. 
+We presented a roadmap with a series of analyses that can identify whether unknown or unobservable traits are worth pursuing. 
+In this roadmap, we have proposed fitting HiSSE models that have effectively shown that some binary states associated with diversification under BiSSE analyses are actually not different in net diversification terms, and instead a hidden state is linked to differences in the diversification rate \citep{beaulieu_2016}.  
+If that is the case in a study system, raising the question of the identity of the hidden state should be considered as the next step in the modeling process.  % E: I would say not necessarily.  There could be other non-trait weirdnesses.
+When considering a second candidate trait, one can model the complex interactions via a MuSSE model, especially in systems where multiple traits are suspected to influence diversification, and where interactions between those traits are well understood. 
+Since MuSSE might also suffer from high type I errors, considering more heterogeneity using a hidden state model on top of the multi-state diversification model is necessary to adequately infer the effect of the complex interactions in the speciation and extinction process.
+% R- new lines
+Investigating the process of diversification linked to traits can be done via thorough statistical inferences that carefully evaluate multiple evolutionary histories. 
+Background heterogeneity in lineage of diversification is the rule, rather than the exception. 
+Inferences that question whether other complex trait interactions are hidden in this background heterogeneity are necessary because they critically contribute to the reconstruction and understanding of diversification. 
