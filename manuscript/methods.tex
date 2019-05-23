@@ -33,8 +33,9 @@ Although SI populations frequently contain some SC individuals, and diploid popu
 Because of the resulting absence of polyploid SI populations, as well as the functional explanation for polyploidy disabling gametophytic SI systems with non-self recognition (see the Introduction), we consider only three observed character states: self-incompatible diploids $(ID)$, self-compatible diploids $(CD)$, and self-compatible polyploids $(CP)$.
 
 Matching our character state data to the largest time-calibrated phylogeny of Solanaceae \citep{sarkinen_2013} yielded 595 species with ploidy and/or breeding system information on the tree.
+% FIXME: update numbers around here
 Of these, 290 had information for both states.
-The number of species in each combination of states is summarized in \cref{figure:stateclassifications}.
+The number of species in each combination of states is summarized in \cref{figure:stateclassifications}A.
 We retained all 595 species in each of the analyses below because pruning away tips lacking breeding system in the ploidy-only analyses (and vice versa) would discard data that could inform the diversification models.
 A total of 405 taxa without any information about breeding system or ploidy were excluded.
 %Tips without trait data might not improve point estimation of diversification parameters while increasing uncertainty in the estimates of trait linked diversification
@@ -170,28 +171,24 @@ The calculation of each marginal likelihood ran for 24 hours on a high-performan
 Using the marginal likelihood values, we calculated thirteen different Bayes factors.
 Six compared the models of ploidy against one other ($D/P$ and $D/P+A/B$, each with or without diploidization), one compared the breeding system models ($I/C$ and $I/C+A/B$), and six compared the models with both traits ($ID/CD/CP$ and $ID/CD/CP+A/B$, each with or without diploidization) (\cref{table:bayesfactors}).
 %
-Other comparisons between these models are not valid because the input data are different under the different state space codings (\cref{figure:stateclassifications}).
+Other comparisons between these models are not valid because the input data are different under the different state space codings (\cref{figure:stateclassifications}B).
 In mathematical terms, the $D/P$, $I/C$, and $ID/CD/CP$ state spaces are not `lumpable' with respect to one another \citep{tarasov_2019}. % E: I'm honestly still confused about whether this is true.  From ID/CD/CP, we can lump ID/CD to get D/P, and we can lump CD/CP to get I/C.  FIXME
 Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $BF(M_0,\ M_1) = \ln[ P(\mathbf{X} | M_0) - P(\mathbf{X} | M_1)]$.
 There is `positive' support for $M_0$ when this value is more than 2, `strong' support when it is more than 6, and `very strong' support when it is more than 10 \citep{kass1995}.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{states.pdf}
+\includegraphics[width=0.5\textwidth]{states} % FIXME: update numbers
 \caption{
 Character states used for each of the models.
 Each species retained on the tree belonged to one of five possible categories, depending on whether ploidy and/or breeding system were known.
-The number of species in each is shown under the corresponding circles in the top row.
-These categories were then grouped in a manner appropriate to the states of each model.
-For example, there are 34 species that are self-compatible ($C$) with unknown ploidy, and 40 species known to be polyploid($P$), but without breeding system data; the latter can be inferred, because all polyploid species in the dataset are self-compatible (see \citealt{robertson_2011}, and text). %B: I added stuff here
-In the D/P models, these are coded as either $D$ or $P$ (uncertain/consistent with either state); in the I/C  models, they are coded as $C$; and in the ID/CD/CP models, they are coded as either $CD$ or $CP$.
-In the hidden state models, species were coded as either $A$ or $B$.
-The model-specific coding is shown in different rows. 
-%B: I think that these two sentences are more appropriate for the model comparison tables and Methods text. If we are admonished to cut text, they could go.
-They each use state spaces that are not directly comparable with one another.
-For example, we cannot test whether the D/P model fits better than the I/C model because they use states that are not the same, and are therefore not `lumpable' \citep{tarasov_2019}.
-%B: [This] will be very difficult as a source of clarity for someone reading the paper the first time.
-%E: Yes, all I species are D and all P species are C (no SI polyploids).  I don't think there are polymorphic species because species with some SI and some SC pops are called I, and the most common ploidy level was used.
+(A) The five categories and the number of species in each.
+Abbreviations are $I$ for self-incompatible, $C$ for self-compatible, $D$ for diploid, $P$ for polyploid, $?$ for unknown.
+Because polyploidization breaks this form of self-incompatibility, SI species with unobserved ploidy ($I?$) are taken to be diploid ($ID$), and polyploid species with unobserved breeding system ($?P$) are taken to be SC.
+(B) Category groupings into states for each model type.
+For example, there are 34 species that are SC with unknown ploidy. % FIXME: update number if necessary
+In the $D/P$ models these are coded as either $D$ or $P$ (uncertain/consistent with either state), in the $I/C$ models they are coded as $C$, and in the ID/CD/CP models they are coded as either $CD$ or $CP$.
+In the hidden state models, all species were coded as consistent with both $A$ and $B$.
 }
 \label{figure:stateclassifications}
 \end{figure}
@@ -255,7 +252,7 @@ Ploidy Models & Breeding System Models & Ploidy and Breeding System Models \\ \m
 % E: We will probably have to change the layout here because it's not technically a table.  But good enough for now.
 \caption{
     Bayes factors for model comparisons.
-    Each of the three boxes contains models that can be compared with one another, based on the character states they include (see \cref{figure:stateclassifications}).
+    Each of the three boxes contains models that can be compared with one another, based on the character states they include (see \cref{figure:stateclassifications}B).
     Models are numbered in as \cref{table:marginallike}. % FIXME: they aren't, but it's a pain to change; change in prev table instead?
     Bayes factors are reported on the natural log scale, so numbers greater than $+2$ mean that the model in the row label has `positive' support relative to the model in the column label; numbers less than $-2$ mean that model in the column label is the preferred one.
     Conventional thresholds for `strong' and `very strong' support are 6 and 10, respectively.
