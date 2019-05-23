@@ -5,24 +5,25 @@
 When analyzed separately, ploidy and breeding system each showed significant associations with net diversification differences in Solanaceae.
 When analyzed together, however, the effect of breeding system dominated the effect of ploidy, although hidden factors played an important role as well.
 
-When considering ploidy alone (D/P model), we found a greater net diversification rate for diploids than for polyploids, in agreement with \citep{mayrose_2011, mayrose_2015}.
+When considering ploidy alone ($D/P$ model), we found a greater net diversification rate for diploids than for polyploids, in agreement with \citet{mayrose_2011, mayrose_2015}.
 This result holds with (\cref{figure:netdivall}A) or without (\cref{figure:netdivnodip}A) the diploidization parameter, although including diploidization shifts the net diversification rate of polyploids to be non-negative.
-Incorporating a hidden state in this model, however, removes the clear separation in diversification rate estimates between diploids and polyploids (D/P+A/B model; \cref{figure:netdivall}B, \cref{figure:netdivnodip}B).
-Thus, differences in net diversification rates are better explained by an unknown factor than by ploidy.
+Incorporating a hidden state in this model, however, reduces the clear separation in diversification rate estimates between diploids and polyploids ($D/P+A/B$ model; \cref{figure:netdivall}B, \cref{figure:netdivnodip}B).
+Thus, differences in net diversification rates are explained by an unknown factor as well as by ploidy.
+% E: I edited the interpretation of D/P+A/B.  There still is some separation between D/P within each A/B.  The A/B separation isn't any clearer, at least.
 Statistical model comparisons show very strong support for including the hidden state and strong support for including diploidization (\cref{table:bayesfactors}).
 
-When considering breeding system alone (I/C model, \cref{figure:netdivall}C), we found a larger net diversification rate for SI than for SC species, in agreement with \citet{goldberg_2010}.
-When a hidden state is included (I/C+A/B model), the large net diversification rate difference persists for one of the hidden states but is removed for the other (\cref{figure:netdivall}D).
+When considering breeding system alone ($I/C$ model, \cref{figure:netdivall}C), we found a larger net diversification rate for SI than for SC species, in agreement with \citet{goldberg_2010}.
+When a hidden state is included ($I/C+A/B$ model), the large net diversification rate difference persists for one of the hidden states but is mostly removed for the other (\cref{figure:netdivall}D).
 Thus, differences in net diversification rates are best explained by both breeding system and an unknown factor \citep[as in Onagraceae;][]{freyman_2019}.
 % The transition rate from SI to SC is $q_{IC}=0.3$ for both the I/C and the I/C+A/B models.
 The statistical model comparison shows very strong support for including the hidden state (\cref{table:bayesfactors}).
 
-When considering ploidy and breeding system together (ID/CD/CP model), the net diversification rate for SI diploids was greater than for either SC diploids or SC polyploids, with or without diploidization (\cref{figure:netdivall}E, \cref{figure:netdivnodip}C).
-The difference in net diversification with breeding system persists when ploidy is included in the model, but not the reverse.
-That is, the association of ploidy with net diversification in the D/P model (\cref{figure:netdivall}A, \cref{figure:netdivnodip}A) appears to be driven by the subset of diploids that are SI; among SC species, net diversification rates for diploids and polyploids are similar.
+When considering ploidy and breeding system together ($ID/CD/CP$ model), the net diversification rate for SI diploids was greater than for either SC diploids or SC polyploids, with or without diploidization (\cref{figure:netdivall}E, \cref{figure:netdivnodip}C).
+Thus, the difference in net diversification associated with breeding system persists even when ploidy is included in the model.
+The reverse is not true, though: the association of ploidy with net diversification in the $D/P$ model (\cref{figure:netdivall}A, \cref{figure:netdivnodip}A) appears to be driven by the subset of diploids that are SI; among SC species, net diversification rates for diploids and polyploids not as distinct.
 %
-When a hidden state is included (IC/CD/CP+A/B model), the same general pattern remains when diploidization is prevented (\cref{figure:netdivnodip}D), although the higher net diversification rate of ID is less clear within one of the hidden states.
-With diploidization, the net diversification rate of ID is still greater than CD within each hidden state, but diversification estimate for P is highly uncertain and perhaps bimodal.
+When a hidden state is included ($IC/CD/CP+A/B$ model), the same general pattern remains when diploidization is prevented (\cref{figure:netdivnodip}D), although the higher net diversification rate of $ID$ is less clear within one of the hidden states.
+With diploidization, the net diversification rate of $ID$ is still greater than $CD$ within each hidden state, but diversification estimate for $CP$ is highly uncertain and perhaps bimodal.
 Statistical model comparisons show very strong support for including the hidden state and at most positive support for including diploidization (\cref{table:bayesfactors}).
 
 \subsection{Pathways to polyploidy}
@@ -30,21 +31,22 @@ Statistical model comparisons show very strong support for including the hidden 
 There are two pathways by which SI diploid lineages eventually---given enough time---become SC polyploids.
 In the one-step pathway, polyploidization directly disables SI.
 In the two-step pathway, SI is first lost within the diploid state, followed by polyploidization.
-Determining the relative contribution of these pathways based on our estimated transition rates from the ID/CD/CP model, we find that the one-step pathway is more likely on short timescales and the two-step pathway is more likely on long timescales (\cref{figure:pathways}, left panels).
-Beginning with a single SI diploid lineage, when not much time has elapsed, the one-step pathway is more likely because it only necessitates a single event to effect transition to SC polyploid state.
+Determining the relative contribution of these pathways based on our estimated transition rates from the $ID/CD/CP$ model, we find that the one-step pathway is more likely on short timescales and the two-step pathway is more likely on long timescales (\cref{figure:pathways}, left panels).
+Beginning with a single SI diploid lineage, when not much time has elapsed, the one-step pathway is more likely because it only necessitates a single event to effect transition to the SC polyploid state.
 When more time has elapsed, the two-step pathway is more likely because the rate of loss of SI within diploids, $q_{IC}$, is greater than the rate of polyploidization for SI species, $\rho_I$ (\cref{suppfigure:IDCDCPnodip}).
+That is, an $ID$ lineage is more likely to begin its path to polyploidy with a transition to $CD$, but completing this path to $CP$ takes longer.
 
 The preceding conclusions, however, ignore the changes in numbers of lineages in each state due to speciation and extinction.
 By analogy, envisioning the states as stepping stones, the extent to which each stone grows or shrinks over time affects the utility of each possible path.
 Allowing for the different net diversification rates for each state, we find a qualitative difference in the relative pathway contributions.
-In particular, the lower rate of net diversification in the CD state, relative to ID, means that relatively fewer lineages are available to complete the second step of the two-step pathway, ending in CP.
-Consequently, even over long timescales, the two-step pathway contributes less to generation of CP (\cref{figure:pathways}, right panels).
+In particular, the lower rate of net diversification in the $CD$ state, relative to $ID$, means that relatively fewer lineages are available to complete the second step of the two-step pathway, ending in $CP$.
+Consequently, even over long timescales, the two-step pathway contributes less to the formation of polyploids (\cref{figure:pathways}, right panels).
 
 \subsection{Diploidization as an exploratory hypothesis}
 
 We considered models both with and without diploidization in order to explore its effects on the estimates of state-dependent diversification.
-For the two models that only include diploid and polyploid states (D/P and D/P+A/B), the net diversification rate of polyploid lineages is likely negative when diploidization (parameter $\delta$) is excluded but positive when $\delta$ is included (\cref{figure:netdivall}A versus \cref{figure:netdivnodip}A).
-For the two models that also included breeding system (ID/CD/CP and ID/CD/CP+A/B), the main effect of including diploidization is greatly increasing the uncertainty of the estimated polyploid net diversification rate (\cref{figure:netdivall}E,F versus \cref{figure:netdivnodip}C,D).
+For the two models that only include diploid and polyploid states ($D/P$ and $D/P+A/B$), the net diversification rate of polyploid lineages is likely negative when diploidization (parameter $\delta$) is excluded but positive when it is included (\cref{figure:netdivall}A versus \cref{figure:netdivnodip}A).
+For the two models that also included breeding system ($ID/CD/CP$ and $ID/CD/CP+A/B$), the main effect of including diploidization is greatly increasing the uncertainty of the estimated polyploid net diversification rate (\cref{figure:netdivall}EF versus \cref{figure:netdivnodip}CD).
 For all models, there is greater uncertainty in the estimate of diploidization rate than polyploidization rate, as judged by the width of the credibility intervals (see \cref{suppfigure:DP,suppfigure:DPAB,suppfigure:IDCDCP,suppfigure:IDCDCPAB}).
 % R will add a bit about param confidence
 
