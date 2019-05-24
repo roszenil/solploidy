@@ -2,8 +2,7 @@
 ### (Don't worry about uncertain/polymorphic species for now.)
 
 library(ape)
-phy <- read.nexus("sarkinen1.nex")  # just the first of the 100 trees
-
+phy <- read.tree("~/Dropbox/solploidy/basicdata/solcorrecttip.tre")
 #--------------------------------------------------
 # Data files from 2014
 #--------------------------------------------------

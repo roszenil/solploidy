@@ -113,27 +113,31 @@ abline(h=0.5, lty=3)
 # Final plot
 #--------------------------------------------------
 
-pdf(file="../manuscript/pathways.pdf", width=8, height=7)
-par(mfrow=c(2,2), mar=c(4,4,0,2), oma=c(0,0,3,0))
+pdf(file="../manuscript/pathways.pdf", width=8, height=7, family="Times")
+par(mfrow=c(2,2), mar=c(4,4,0,0.5), oma=c(0,0,2,0), cex=1.05, cex.lab=1.1)
 
 # trans only
 plot(times, pp$Wa, type="l", lty=2, lwd=3, xlab="", ylab="contribution of each pathway", ylim=c(0,1))
 lines(times, pp$Wb, lwd=3, lty=3)
-legend("topleft", c("one-step: ID to CP", "two-step: ID to CD to CP"), lty=c(2, 3), lwd=3)
-mtext("without diversification", line=1.5, font=3)
+# legend("topleft", c("one-step: ID to CP", "two-step: ID to CD to CP"), lty=c(2, 3), lwd=3)
+legend("topleft", c("one-step", "two-step"), lty=c(2, 3), lwd=3)
+mtext("without diversification", line=1, font=3, cex=1.3)
 
 # with div
-plot(times, ppd$Wa, type="l", lty=2, lwd=3, xlab="", ylab="contribution of each pathway", log="y")
+plot(times, ppd$Wa, type="l", lty=2, lwd=3, xlab="", ylab="", log="y", yaxt="n")
 lines(times, ppd$Wb, lwd=3, lty=3)
-legend("topleft", c("one-step: ID to CP", "two-step: ID to CD to CP"), lty=c(2, 3), lwd=3)
-mtext("with diversification", line=1.5, font=3)
+ticks <- axTicks(2, log=T)
+axis(2, at = ticks, labels = formatC(ticks, format = "g"))
+# legend("topleft", c("one-step: ID to CP", "two-step: ID to CD to CP"), lty=c(2, 3), lwd=3)
+legend("topleft", c("one-step", "two-step"), lty=c(2, 3), lwd=3)
+mtext("with diversification", line=1, font=3, cex=1.3)
 
 # trans only
 plot(times, pp$Wa / (pp$Wa + pp$Wb), type="l", lwd=3, xlab="elapsed time (My)", ylab="proportion of one-step", ylim=c(0,1))
-abline(h=0.5, lty=3)
+abline(h=0.5, lwd=2, lty=3)
 
 # with div
-plot(times, ppd$Wa / (ppd$Wa + ppd$Wb), type="l", lwd=3, xlab="elapsed time (My)", ylab="proportion of one-step", ylim=c(0,1))
-abline(h=0.5, lty=3)
+plot(times, ppd$Wa / (ppd$Wa + ppd$Wb), type="l", lwd=3, xlab="elapsed time (My)", ylab="", ylim=c(0,1))
+abline(h=0.5, lwd=2, lty=3)
 
 dev.off()

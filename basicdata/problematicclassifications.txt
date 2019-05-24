@@ -1,0 +1,108 @@
+ name bs1  bs2
+2         Anisodus_acutangulus  SC <NA> y classified based on chromosome number as a probable SC but really no ploidy available
+3      Anisodus_carniolicoides  SC <NA> y " 
+5     Anthocercis_angustifolia  SC <NA> y "
+6         Anthocercis_gracilis  SC <NA> y "
+7       Anthocercis_ilicifolia  SC <NA> y "
+8        Anthocercis_intricata  SC <NA> y "
+9         Anthocercis_littorea  SC <NA> y "
+10         Anthocercis_viscosa  SC <NA> y "
+11     Anthotroche_myoporoides  SC <NA> y "
+12         Anthotroche_pannosa  SC <NA> y "
+13       Anthotroche_walcottii  SC <NA> y "
+15            Atropa_komarovii  SC <NA> y "
+16         Atropanthe_sinensis  SC <NA> y- this is truly polyploid based on data does not affect analyses
+17  Brachistus_stramoniifolius  SC <NA> y- this is both diploid/polyploid
+29           Capsicum_ciliatum  SC <NA> y "
+37        Capsicum_schottianum  SC <NA> y -this is truly a diploid
+38            Capsicum_tovarii  SC <NA> y -this is truly a diploid
+44        Crenidium_spinescens  SC <NA> y  "
+48        Cyphanthera_albicans  SC <NA> y "
+49   Cyphanthera_anthocercidea  SC <NA> y "
+50     Cyphanthera_microphylla  SC <NA> y "
+51        Cyphanthera_odgersii  SC <NA> y "
+55               Datura_inoxia  SC <NA> y- this is truly a diploid
+60              Deprea_paneroi  SC <NA> y- this is both diploid/polyploid
+61          Duboisia_hopwoodii  SC <NA> y "
+62       Duboisia_leichhardtii  SC <NA> y "
+63        Duboisia_myoporoides  SC <NA> y "
+65           Dunalia_solanacea  SC <NA> y- this both diploid/polyploid
+68             Espadaea_amoena  SC <NA> y- this is truly a polyploid does not affect analyses
+70         Grammosolen_dixonii  SC <NA> y "
+71       Grammosolen_truncatus  SC <NA> y "
+72           Hunzikeria_texana  SC <NA> y- this has 32 chromosomes and in the dataset statesICDP classified as polyploid? 
+74       Hyoscyamus_desertorum  SC <NA> N- classified as a diploid in the soltraits, and as a polyploid in the ICDP
+77         Hyoscyamus_pusillus  SC <NA> y- has both diploid and polyploid levels in CCDB but mostly observed polyploid so classified as SC
+78     Hyoscyamus_turcomanicus  SC <NA> N- this is classified as diploid in both datasets but not in the ICDP so something is wrong
+100           Jaltomata_leivae  SC <NA> y- this is both diploid/polyploid
+118      Jaltomata_yungayensis  SC <NA> y- this is both diploid/polyploid
+119  Leucophysalis_grandiflora  SC <NA> y- this was missing in ICDP and CCDB
+121         Lycianthes_biflora  SC <NA> y- this is truly a polyploid does not affect analyses
+126           Lycium_arenicola  SC <NA> y- this is truly a polyploid does not affect analyses
+128     Lycium_boerhaviifolium  SI <NA> y- it wasn't in the sol-traits database
+133            Lycium_exsertum  SC <NA> y- has both diploid and polyploid levels in CCDB but mostly observed polyploid so classified as SC
+134        Lycium_ferocissimum  SI <NA> y- this is truly a diploid  but the info of SI is only on statesICDP
+135           Lycium_fremontii  SC <NA> y- truly a polyploid, added SC but it doesn't change previous analyses
+136          Lycium_gariepense  SC <NA> N- both soltraits database and CCDB classify as diploid but in the statesICDP is polyploid 
+138            Lycium_horridum  SC <NA> N- this is the most complicated one 2x and 4x based on csome, also SC SI diploid from  statesICDP?
+139            Lycium_macrodon  SI <NA> y- this is truly a diploid
+144             Lycium_pumilum  SI <NA> y- this is truly a diploid
+145      Lycium_strandveldense  SC <NA> y- this is truly a polyploid does not affect analyses
+146          Lycium_tetrandrum  SC <NA> y- this is truly a polyploid does not affect analyses
+147             Lycium_torreyi  SI <NA> y- this is truly a diploid
+148            Lycium_villosum  SC <NA> y- this is truly a polyploid does not affect analyses
+155         Nicotiana_arentsii  SC <NA> y- has both diploid and polyploid levels in CCDB but mostly observed polyploid so classified as SC
+159      Nicotiana_clevelandii  SC <NA> y- this is truly a polyploid does not affect analyses
+162           Nicotiana_eastii  SC <NA> y- this is a polyploid and SC corrected in the CCDB dataset
+165         Nicotiana_forsteri  SC <NA> y- added, this wasn't in the soltraits-acc database
+166           Nicotiana_glauca  SI <NA> y- listed as mainly SI in soltraits but there were some polyploids, corrected to be SI
+171     Nicotiana_langsdorffii  SI <NA> y- listed as mainly SI in soltraits but there were some polyploids, corrected to be SI
+177        Nicotiana_nesophila  SC <NA> N- no information in soltraits-acc database but in statesICDP classified as SC and P
+189     Nicotiana_rotundifolia  SC <NA> y- it is listed as SC and P in statesICDP but only info about SC found in soltraits and no ploidy
+203      Nierembergia_aristata  SC <NA> N- listed as SC and P in states ICDP but in soltraits-acc and CCDB both diploid and polyploid possible
+205           Nolana_acuminata  SI <NA> y- listed as SI and diploid in statesICDP but nothing on the other two databases
+208             Nolana_elegans  SI <NA> y- listed as SI and diploid in statesICDP but nothing on the other two databases 
+214   Nothocestrum_longifolium  SC <NA> y- this is truly a polyploid does not affect analyses
+221            Petunia_reitzii  SI <NA> y- listed as mainly SI
+229            Physalis_minima  SC <NA> y- has both diploid and polyploid levels in CCDB but mostly observed polyploid so classified as SC
+230         Physalis_peruviana  SC <NA> y- this is truly a polyploid does not affect analyses
+231     Physalis_philadelphica  SI <NA> y- this is truly a diploid but info was just listed in statesICDP
+234            Physalis_pumila  SI <NA> y- this is truly a diploid but info was just listed in statesICDP
+236      Physochlaina_praealta  SC <NA> N- this is listed as diploid in both soltraits-acc and CCDB but in states ICDP is listed as SC polyploid
+237      Przewalskia_tangutica  SC <NA> y- this is truly a polyploid does not affect analyses
+245        Schizanthus_lacteus  SC <NA> y- it is listed as both diploid and polyploid self-compatible in statesICDP
+252        Scopolia_carniolica  SC <NA> y- this is truly a polyploid does not affect analyses
+253          Scopolia_japonica  SC <NA> y- this is truly a polyploid does not affect analyses
+262           Solanum_albicans  SC <NA> y- corrected
+269     Solanum_appendiculatum  SC <NA> y- information was in statesICDP but not in soltraits
+271      Solanum_asperolanatum  SC <NA> y- information was in statesICDP but not in soltraits
+272   Solanum_asymmetriphyllum  SC <NA> y- information was in statesICDP but not in soltraits
+287        Solanum_carduiforme  SC <NA> y- this is diploid or polyploid but self-compatible. SC listed only in statesICDP
+290       Solanum_cataphractum  SC <NA> y- this is diploid or polyploid but self-compatible. SC listed only in statesICDP 
+294       Solanum_chippendalei  SI <NA> y- this is diploid SI. SI listed only in statesICDP
+300           Solanum_clarkiae  SC <NA> y- this is diploid SC. SC listed only in statesICDP
+308        Solanum_crotonoides  SC <NA> y- this is diploid or polyploid but self-compatible. SC listed only in statesICDP
+309       Solanum_cunninghamii  SC <NA> y- this is diploid SC. SC listed only in statesICDP
+310    Solanum_cyaneopurpureum  SC <NA> y- this had a name problem(a dash dividing the name. Corrected
+314            Solanum_dioicum  SC <NA> y- this is diploid or polyploid but SC. SC listed only in states ICDP
+322         Solanum_ensifolium  SI <NA> y- this is a diploid SI. SI listed only in states ICDP
+335       Solanum_habrochaites  SI <NA> y- this was listed as mainly SI in soltraits-acc. Corrected to SI
+348          Solanum_iopetalum  SC <NA> y- this is a polyploid but self-compatible. Listesd as SI and SC in soltraits-acc
+359       Solanum_leopoldensis  SC <NA> y -this is diploid SC. SC listed only in statesICDP
+361      Solanum_linearifolium  SC <NA> y- this is truly a polyploid does not affect analyses
+362         Solanum_linnaeanum  SC <NA> y- this is truly SC and diploid. Corrected
+381       Solanum_multivenosum  SC <NA> y- this is truly a polyploid does not affect analyses
+395        Solanum_paniculatum  SI <NA> y- this is diploid SI. SI listed only in statesICDP
+398          Solanum_pennellii  SI <NA> y- this is listed as both SI and SC on soltraits-acc but SI in the statesICDP
+400           Solanum_petraeum  SC <NA> y- this is diploid SC. SC listed only in statesICDP
+422          Solanum_sejunctum  SC <NA> y- this is diploid or polyploid but self-compatible. SC listed only in statesICDP
+440        Solanum_tetrathecum  SC <NA> y- this is truly a polyploid does not affect analyses
+448        Solanum_tudununggae  SC <NA> y- this is diploid SC. SC listed only in statesICDP
+449        Solanum_turneroides  SC <NA> y- this is both diploid/polyploid but SC. Corrected
+452     Solanum_vansittartense  SC <NA> y- this is both diploid/polyploid but SC. SC listed only in statesICDP
+462          Solanum_violaceum  SC <NA> y- this is diploid SC. SC listed only in statesICDP
+464         Solanum_wendlandii  SC <NA> y- this is diploid SC. SC listed only in statesICDP
+465     Symonanthus_aromaticus  SC <NA> y- this is truly a polyploid does not affect analyses
+466     Symonanthus_bancroftii  SC <NA> y- this is truly a polyploid does not affect analyses
+468         Withania_coagulans  SC <NA> y- this is truly a polyploid does not affect analyses
+
