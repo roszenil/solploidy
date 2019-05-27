@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+Three state matrix
+$$
+\begin{pmatrix} 
+-q_{12}-q_{13} & q_{12} & q_{13} \\
+q_{21} & -q_{21}-q_{23} & q_{23}\\
+q_{31} & q_{32} & -q_{31}-q_{32} 
+\end{pmatrix}
+$$
+
+We want to lump states $2$ and $3$ together. According to Tarasov (2018, Figure 3), symmetries in the rate matrix are necessary for strong lumpability. This is call the row-wise sum rule.\\
+To aggregate our three state model into a two state model we first define the new partition $\{f1=\{1\},f2=\{2,3\}\}$. The new rates for the two state model are going to be $\hat{q}_{ij}$. The aggregation is lumpable if and only if two conditions happen
+$$ \hat{q}_{12}=q_{12}+q_{13} \qquad \textrm{and} \qquad \hat{q}_{21}=q_{21}=q_{31}$$
+
+So the two state matrix for the lumped states will be
+$$
+\begin{pmatrix} 
+-\hat{q}_{12} &\hat{q}_{12} \\
+\hat{q}_{21} & -\hat{q}_{21}
+\end{pmatrix}
+$$
+
+Now, let's assume we want to lump the model  for breeding system, therefore $\{f1=\{1=ID\}, f2=\{2=CD,3=CP\}\}$. We would have that
+
+\begin{eqnarray}
+ \hat{q}_{12} & = &q_{12}+q_{13}\\
+\hat{q}_{IC}& = & q_{IC}+\rho_I \label{firstcondition}
+\end{eqnarray}
+
+and 
+
+\begin{eqnarray}\label{secondcondition}
+\hat{q}_{21}&=q_{21}=q_{31}\\
+0 & =0=0 \label{firstcondition}
+\end{eqnarray}
+
+The second condition (4) is met. This is what follows in the S3a Appendix result in Tarasov (2018). However, the first condition (2) is difficult to meet since the two state model would have to be defined via two parameters that are non-identifiable.\\
+
+One way to overcome this issue could be defining in the three state model $q_{IC}=\hat{q}_{IC}*\gamma$ and $\rho_I=\hat{q}_{IC}(1-\gamma)$ with $\gamma$ is a r.v. between $(0,1)$. This assumption is okay if we are assuming that the evolution from SI to SC is sometimes straight forward in diploids and sometimes it happens due to polyploid. The statistical complication of this assumption is that $\gamma$ and $q_{IC}$ will be non-identifiable (they always appear in a functional relationship).  
+\end{document}
