@@ -10,11 +10,15 @@ solanaceae.tree<-read.tree("~/Dropbox/solploidy/basicdata/solcorrecttip.tre")
 #idnumber, source,fullname, genus, species,cultivarhybrid,csomenumber,lifehistoryclean, ploidy selfincomp, ploidybyZF, namechangedfrom
 solanaceae.allrecords<-read.csv("~/Dropbox/solploidypersonal/rawdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
 
+cultivars<-which(solanaceae.allrecords$cultivarhybrid==1)
 #How many species, how many genera
 species<-unique(solanaceae.allrecords$fullname)
 total.species<-length(species)# 2268 total species
 genera<-unique(solanaceae.allrecords$genus)
 total.genera<-length(genera)#97 genera
+
+
+solanaceae.allrecords<-solanaceae.allrecords[-cultivars,]
 
 #Calculating the mode(s)
 Mode <- function(x) {
@@ -61,7 +65,7 @@ nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.so
 norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]
 
 ###########################################
-### Matching tree with matching dataset if they have either ploidy or self-incomp information that is 550 species
+### Matching tree with matching dataset if they have either ploidy or self-incomp information that is 
 
 
 ##Just checking here that all data has either ploidy or breeding system info
@@ -73,12 +77,12 @@ write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")
 
 diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")# 97
 diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#152
-diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE) #223
-polyploids<-which(matched$dat[,4]>2) #86
-polyploidsc<-which(matched$dat[,4]>2 & matched$dat[,5]=="SC")#43
-polyploidsna<-which(matched$dat[,4]>2 & is.na(matched$dat[,5])==TRUE)#43
-si<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SI")
-sc<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SC")
+diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE) #219
+polyploids<-which(matched$dat[,4]>2) #81
+polyploidsc<-which(matched$dat[,4]>2 & matched$dat[,5]=="SC")#40
+polyploidsna<-which(matched$dat[,4]>2 & is.na(matched$dat[,5])==TRUE)#41
+si<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SI")#12
+sc<-which(is.na(matched$dat[,4])==TRUE & matched$dat[,5]=="SC")#34
 threestate<- rep(0,dim(matched$dat)[1])
 threestate[diploidsc]="0"
 threestate[polyploids]="1"

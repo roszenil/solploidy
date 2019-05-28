@@ -88,7 +88,6 @@ Nicotiana_bonariensis	2
 Nicotiana_forgetiana	2
 Nicotiana_longiflora	0
 Nicotiana_plumbaginifolia	0
-Nicotiana_africana	1
 Nicotiana_acaulis	0
 Nicotiana_glauca	(0 2)
 Nicotiana_noctiflora	2
@@ -129,7 +128,6 @@ Physochlaina_praealta	(0 2)
 Physochlaina_orientalis	(0 2)
 Sclerophylax_arnottii	1
 Nolana_rupicola	2
-Nolana_paradoxa	(0 2)
 Nolana_rostrata	2
 Nolana_adansonii	2
 Nolana_galapagensis	(0 2)
@@ -148,8 +146,6 @@ Lycium_shawii	(0 2)
 Lycium_depressum	(0 2)
 Lycium_europaeum	(0 2)
 Lycium_ruthenicum	(0 2)
-Lycium_barbarum	(0 2)
-Lycium_chinense	(0 2)
 Lycium_decumbens	(0 2)
 Lycium_pumilum	(0 2)
 Lycium_oxycarpum	(0 2)
@@ -338,7 +334,6 @@ Solanum_symonii	1
 Solanum_vescum	1
 Solanum_linearifolium	1
 Solanum_laciniatum	1
-Solanum_aviculare	1
 Solanum_multivenosum	1
 Solanum_aligerum	(0 2)
 Solanum_laxum	2
@@ -353,13 +348,11 @@ Solanum_physalifolium	0
 Solanum_pallidum	(0 2)
 Solanum_fiebrigii	(0 2)
 Solanum_villosum	1
-Solanum_retroflexum	1
 Solanum_scabrum	1
 Solanum_opacum	1
 Solanum_americanum	0
 Solanum_nigrum	1
 Solanum_ptychanthum	0
-Solanum_muricatum	(0 2)
 Solanum_taeniotrichum	2
 Solanum_caripense	2
 Solanum_fraxinifolium	2
@@ -378,15 +371,12 @@ Solanum_peruvianum	2
 Solanum_chmielewskii	0
 Solanum_pennellii	(0 2)
 Solanum_galapagense	0
-Solanum_lycopersicum	0
 Solanum_cheesmaniae	0
 Solanum_pimpinellifolium	0
 Solanum_bulbocastanum	2
-Solanum_jamesii	2
 Solanum_clarum	2
 Solanum_morelliforme	0
 Solanum_polyadenium	0
-Solanum_cardiophyllum	2
 Solanum_ehrenbergii	2
 Solanum_chomatophilum	2
 Solanum_scabrifolium	(0 2)
@@ -402,22 +392,18 @@ Solanum_schenckii	1
 Solanum_iopetalum	1
 Solanum_violaceimarmoratum	2
 Solanum_albicans	1
-Solanum_acaule	1
 Solanum_boliviense	2
 Solanum_raphanifolium	(0 2)
 Solanum_lignicaule	(0 2)
 Solanum_laxissimum	2
-Solanum_maglia	2
 Solanum_longiconicum	1
 Solanum_oxycarpum	1
 Solanum_agrimoniifolium	1
 Solanum_colombianum	1
 Solanum_stipuloideum	(0 2)
 Solanum_vernei	2
-Solanum_tuberosum	1
 Solanum_candolleanum	(0 2)
 Solanum_brevicaule	(0 2)
-Solanum_microdontum	2
 Solanum_demissum	1
 Solanum_kurtzianum	2
 Solanum_chacoense	2
@@ -426,7 +412,6 @@ Solanum_infundibuliforme	2
 Solanum_okadae	(0 2)
 Solanum_stoloniferum	1
 Solanum_hjertingii	1
-Solanum_verrucosum	0
 Solanum_guerreroense	1
 Solanum_hougasii	1
 Solanum_latiflorum	2
@@ -540,8 +525,6 @@ Solanum_coagulans	(0 2)
 Solanum_marginatum	0
 Solanum_giganteum	0
 Solanum_dasyphyllum	0
-Solanum_macrocarpon	0
-Solanum_aethiopicum	0
 Solanum_anguivi	0
 Solanum_lidii	0
 Solanum_vespertilio	0
@@ -549,7 +532,6 @@ Solanum_capense	(0 1)
 Solanum_violaceum	(0 2)
 Solanum_supinum	(0 1)
 Solanum_insanum	(0 2)
-Solanum_melongena	0
 Solanum_linnaeanum	(0 2)
 Solanum_incanum	0
 Solanum_campylacanthum	(0 2)
