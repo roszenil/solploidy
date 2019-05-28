@@ -1,39 +1,40 @@
  name bs1  bs2
-2         Anisodus_acutangulus  SC <NA> y classified based on chromosome number as a probable SC but really no ploidy available
-3      Anisodus_carniolicoides  SC <NA> y " 
-5     Anthocercis_angustifolia  SC <NA> y "
-6         Anthocercis_gracilis  SC <NA> y "
-7       Anthocercis_ilicifolia  SC <NA> y "
-8        Anthocercis_intricata  SC <NA> y "
-9         Anthocercis_littorea  SC <NA> y "
-10         Anthocercis_viscosa  SC <NA> y "
-11     Anthotroche_myoporoides  SC <NA> y "
-12         Anthotroche_pannosa  SC <NA> y "
-13       Anthotroche_walcottii  SC <NA> y "
-15            Atropa_komarovii  SC <NA> y "
+2         Anisodus_acutangulus  SC <NA> y polyploid sc
+3      Anisodus_carniolicoides  SC <NA> y polyploid sc 
+5     Anthocercis_angustifolia  SC <NA> probable polyploid
+6         Anthocercis_gracilis  SC <NA> probable polyploid
+7       Anthocercis_ilicifolia  SC <NA> probable polyploid
+8        Anthocercis_intricata  SC <NA> probable polyploid
+9         Anthocercis_littorea  SC <NA> probable polyploid
+10         Anthocercis_viscosa  SC <NA> probable polyploid
+11     Anthotroche_myoporoides  SC <NA> probable polyploid
+12         Anthotroche_pannosa  SC <NA> probable polyploid
+13       Anthotroche_walcottii  SC <NA> probable polyploid
+15            Atropa_komarovii  SC <NA> y polyploid sc
 16         Atropanthe_sinensis  SC <NA> y- this is truly polyploid based on data does not affect analyses
 17  Brachistus_stramoniifolius  SC <NA> y- this is both diploid/polyploid
-29           Capsicum_ciliatum  SC <NA> y "
+29           Capsicum_ciliatum  SC <NA> y this is turly a diploid
 37        Capsicum_schottianum  SC <NA> y -this is truly a diploid
 38            Capsicum_tovarii  SC <NA> y -this is truly a diploid
-44        Crenidium_spinescens  SC <NA> y  "
-48        Cyphanthera_albicans  SC <NA> y "
-49   Cyphanthera_anthocercidea  SC <NA> y "
-50     Cyphanthera_microphylla  SC <NA> y "
-51        Cyphanthera_odgersii  SC <NA> y "
+44        Crenidium_spinescens  SC <NA> y probable polyploid
+48        Cyphanthera_albicans  SC <NA> y probable polyploid
+49   Cyphanthera_anthocercidea  SC <NA> y probable polyploid
+50     Cyphanthera_microphylla  SC <NA> y probable polyploid
+51        Cyphanthera_odgersii  SC <NA> y probable polyploid
 55               Datura_inoxia  SC <NA> y- this is truly a diploid
 60              Deprea_paneroi  SC <NA> y- this is both diploid/polyploid
-61          Duboisia_hopwoodii  SC <NA> y "
-62       Duboisia_leichhardtii  SC <NA> y "
-63        Duboisia_myoporoides  SC <NA> y "
+61          Duboisia_hopwoodii  SC <NA> probable polyploid
+62       Duboisia_leichhardtii  SC <NA> probable polyploid
+63        Duboisia_myoporoides  SC <NA> listed as SC but not chromosome numbers available
 65           Dunalia_solanacea  SC <NA> y- this both diploid/polyploid
 68             Espadaea_amoena  SC <NA> y- this is truly a polyploid does not affect analyses
-70         Grammosolen_dixonii  SC <NA> y "
-71       Grammosolen_truncatus  SC <NA> y "
+70         Grammosolen_dixonii  SC <NA> probable polyploid
+71       Grammosolen_truncatus  SC <NA> probably polyploid
 72           Hunzikeria_texana  SC <NA> y- this has 32 chromosomes and in the dataset statesICDP classified as polyploid? 
-74       Hyoscyamus_desertorum  SC <NA> N- classified as a diploid in the soltraits, and as a polyploid in the ICDP
+74       Hyoscyamus_desertorum  SC <NA> N- classified as a diploid in the soltraits, and as a polyploid in the ICDP (even Tu reference lists another species with 34 csomes as diploid). 
 77         Hyoscyamus_pusillus  SC <NA> y- has both diploid and polyploid levels in CCDB but mostly observed polyploid so classified as SC
-78     Hyoscyamus_turcomanicus  SC <NA> N- this is classified as diploid in both datasets but not in the ICDP so something is wrong
+78     Hyoscyamus_turcomanicus  SC <NA> N- this is classified as diploid in both datasets but not in the ICDP so something is wrong.(even Tu reference lists another species with 34 csomes as diploid). 
+
 100           Jaltomata_leivae  SC <NA> y- this is both diploid/polyploid
 118      Jaltomata_yungayensis  SC <NA> y- this is both diploid/polyploid
 119  Leucophysalis_grandiflora  SC <NA> y- this was missing in ICDP and CCDB
@@ -57,9 +58,9 @@
 165         Nicotiana_forsteri  SC <NA> y- added, this wasn't in the soltraits-acc database
 166           Nicotiana_glauca  SI <NA> y- listed as mainly SI in soltraits but there were some polyploids, corrected to be SI
 171     Nicotiana_langsdorffii  SI <NA> y- listed as mainly SI in soltraits but there were some polyploids, corrected to be SI
-177        Nicotiana_nesophila  SC <NA> N- no information in soltraits-acc database but in statesICDP classified as SC and P
+177        Nicotiana_nesophila  SC <NA> y- polyploid and SC
 189     Nicotiana_rotundifolia  SC <NA> y- it is listed as SC and P in statesICDP but only info about SC found in soltraits and no ploidy
-203      Nierembergia_aristata  SC <NA> N- listed as SC and P in states ICDP but in soltraits-acc and CCDB both diploid and polyploid possible
+203      Nierembergia_aristata  SC <NA> N- listed as SC and P in states ICDP but in soltraits-acc and CCDB both diploid and polyploid possible. Confirmed mess
 205           Nolana_acuminata  SI <NA> y- listed as SI and diploid in statesICDP but nothing on the other two databases
 208             Nolana_elegans  SI <NA> y- listed as SI and diploid in statesICDP but nothing on the other two databases 
 214   Nothocestrum_longifolium  SC <NA> y- this is truly a polyploid does not affect analyses
@@ -68,7 +69,7 @@
 230         Physalis_peruviana  SC <NA> y- this is truly a polyploid does not affect analyses
 231     Physalis_philadelphica  SI <NA> y- this is truly a diploid but info was just listed in statesICDP
 234            Physalis_pumila  SI <NA> y- this is truly a diploid but info was just listed in statesICDP
-236      Physochlaina_praealta  SC <NA> N- this is listed as diploid in both soltraits-acc and CCDB but in states ICDP is listed as SC polyploid
+236      Physochlaina_praealta  SC <NA> y-polyploid confirmed by TU et al.
 237      Przewalskia_tangutica  SC <NA> y- this is truly a polyploid does not affect analyses
 245        Schizanthus_lacteus  SC <NA> y- it is listed as both diploid and polyploid self-compatible in statesICDP
 252        Scopolia_carniolica  SC <NA> y- this is truly a polyploid does not affect analyses
