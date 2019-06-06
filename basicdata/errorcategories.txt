@@ -1,0 +1,75 @@
+Error Categories
+Honest mistakes have been corrected
+
+1. Species that need to be cut due to uncertainty (could be anything so non-informative)
+
+Nierembergia_rigida
+Anisodus_luridus  
+Lycium_europaeum 
+Lycium_chilense
+Lycium_ciliatum
+Chamaesaracha_coronopus
+Chamaesaracha_sordida
+Physalis_hederifolia
+Solanum_immite
+Solanum_acroscopicum
+Solanum_multiinterruptum
+Solanum_brevicaule
+Solanum_bahamense       
+Solanum_juvenale
+Solanum_hieronymi 
+Solanum_campylacanthum
+Solanum_discolor   
+
+
+2. Species where Rosana some infor about csomes
+Nicotiana_undulata - 24 csomes
+Jaltomata_auriculata 24 csomes
+Solanum_proteanthum - 24csomes
+
+
+
+3. I really don't know what is going on
+Hyoscyamus_muticus # Classified as CP but really don't know because csome 28
+Physochlaina_orientalis # Rosana csome 28, ICDP completely uncertain ?
+Lycium_gariepense # ?Rosana csome 24, Emma polyploid
+Mandragora_officinarum # ? sol-traits has SI but not ICDP
+Solanum_candolleanum   # ? Rosana has only  24 csomes but ICDP has 0.9 ID and 0.1 CP ?
+Solanum_chacoense      # ? Rosana has only 24 csomes but ICDP has 0.8 ID and 0.2 CP ?
+Solanum_elaeagnifolium  # ? Rosana information of SC in soltraits but not on ICDP? both D/P
+Solanum_chenopodinum    # ? Rosana only found 24 csomes but is listed in ICDP as CD and CP?
+
+
+
+4. Species that are informative for the three state but are not for neither of the two-state models (ID and CP simultaneously)
+Lycium_californicum 
+Solanum_bulbocastanum
+
+
+
+5. Species that Rosana needs to correct by hand (automatic processing fails)
+Lycium_exsertum # This I need to correct by hand it is D/P but always SC
+Datura_metel    # This I need to correct by hand it is D/P but always SC
+Withania_somnifera  # This I need to correct by hand it is D/P but always SC
+Physalis_angulata   # This I need to correct by hand it is D/P but always SC
+Solanum_nigrum       # This I need to correct by hand it is D/P but always SC
+Solanum_etuberosum   # This I need to correct by hand it is D/P but always SC
+Solanum_andreanum    # This I need to correct by hand it is D/P but always SC
+Solanum_colombianum  # This I need to correct by hand it is D/P but always SC
+Solanum_torvum       # This I need to correct by hand it is D/P but always SC
+Solanum_capsicoides  # This I need to correct by hand it is D/P but always SC
+Solanum_pectinatum   # This I need to correct by hand it is D/P but always SC
+Solanum_dioicum           0  1  0 # This I need to correct by hand it is D/P but always SC
+Solanum_cinereum          0  1  0 # This I need to correct by hand it is D/P but always SC
+
+5. Processing mistakes (ignore there this is something about my code)
+Petunia_scheideana 
+Petunia_saxicola  
+Lycianthes_rantonnetii  # Weird processing error, need to correct to ID
+Capsicum_cardenasii  # Weird processing error, need to correct to ID
+Witheringia_meiantha # Weird processing error, need to correct to ID
+Solanum_stipuloideum # Weird processing error need to correct to ID
+Solanum_cyaneopurpureum # Weird processing error should be CD
+Solanum_leopoldensis   # Weird processing error should be CD
+
+

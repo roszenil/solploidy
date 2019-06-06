@@ -2,7 +2,7 @@ Species,ID,CD,CP
 Acnistus_arborescens,0,1,0
 Anisodus_acutangulus,0,0,1
 Anisodus_carniolicoides,0,0,1
-Anisodus_luridus,0.333333333333333,0.333333333333333,0.333333333333333
+Anisodus_luridus,0.333333333,0.333333333,0.333333333
 Anisodus_tanguticus,0,0,1
 Anthocercis_angustifolia,0,0,1
 Anthocercis_anisantha,0,0,1
@@ -23,7 +23,7 @@ Atropa_komarovii,0,0,1
 Atropanthe_sinensis,0,0,1
 Aureliana_sellowiana,0.5,0.5,0
 Benthamiella_nordenskjoldii,1,0,0
-Benthamiella_pycnophylloides,0.333333333333333,0.333333333333333,0.333333333333333
+Benthamiella_pycnophylloides,0.333333333,0.333333333,0.333333333
 Bouchetia_anomala,0.5,0.5,0
 Bouchetia_erecta,0.5,0.5,0
 Brachistus_stramoniifolius,0,0.5,0.5
@@ -115,12 +115,12 @@ Cestrum_strigilatum,0.5,0.5,0
 Cestrum_strigillum,0.5,0.5,0
 Cestrum_tomentosum,0.5,0.5,0
 Chamaesaracha_coniodes,0,0,1
-Chamaesaracha_coronopus,0.333333333333333,0.333333333333333,0.333333333333333
+Chamaesaracha_coronopus,0.333333333,0.333333333,0.333333333
 Chamaesaracha_crenata,0.5,0.5,0
 Chamaesaracha_darcyi,0,0,1
 Chamaesaracha_edwardsiana,0,0,1
 Chamaesaracha_pallida,0,0,1
-Chamaesaracha_sordida,0.333333333333333,0.333333333333333,0.333333333333333
+Chamaesaracha_sordida,0.333333333,0.333333333,0.333333333
 Chamaesaracha_villosa,0.5,0.5,0
 Combera_paradoxa,0.5,0.5,0
 Crenidium_spinescens,0,0,1
@@ -170,12 +170,12 @@ Grammosolen_truncatus,0,0,1
 Hunzikeria_texana,0,0,1
 Hyoscyamus_albus,0,0,1
 Hyoscyamus_desertorum,0,0,1
-Hyoscyamus_insanus,0.333333333333333,0.333333333333333,0.333333333333333
+Hyoscyamus_insanus,0.333333333,0.333333333,0.333333333
 Hyoscyamus_malekianus,0.5,0.5,0
 Hyoscyamus_muticus,0,0,1
 Hyoscyamus_niger,0,0,1
 Hyoscyamus_pusillus,0,0,1
-Hyoscyamus_reticulatus,0.333333333333333,0.333333333333333,0.333333333333333
+Hyoscyamus_reticulatus,0.333333333,0.333333333,0.333333333
 Hyoscyamus_senecionis,0,0,1
 Hyoscyamus_turcomanicus,0,0,1
 Iochroma_australe,1,0,0
@@ -212,8 +212,8 @@ Jaltomata_biflora,0,0.5,0.5
 Jaltomata_bohsiana,0,0.5,0.5
 Jaltomata_cajacayensis,0,0.5,0.5
 Jaltomata_cajamarca,0,0.5,0.5
-Jaltomata_"calliantha",0,0.5,0.5
-Jaltomata_"chiapensis",0,0.5,0.5
+"Jaltomata_""calliantha""",0,0.5,0.5
+"Jaltomata_""chiapensis""",0,0.5,0.5
 Jaltomata_chihuahuensis,0,1,0
 Jaltomata_confinis,0,0.5,0.5
 Jaltomata_contumacensis,0,0.5,0.5
@@ -230,7 +230,7 @@ Jaltomata_lezamae,0,0.5,0.5
 Jaltomata_lojae,0,1,0
 Jaltomata_lomana,0,0.5,0.5
 Jaltomata_mionei,0,0.5,0.5
-Jaltomata_"oaxaca",0,0.5,0.5
+"Jaltomata_""oaxaca""",0,0.5,0.5
 Jaltomata_oppositifolia,0,0.5,0.5
 Jaltomata_paneroi,0,0.5,0.5
 Jaltomata_procumbens,0,1,0
@@ -240,7 +240,7 @@ Jaltomata_sagastegui,0,1,0
 Jaltomata_salpoensis,0,0.5,0.5
 Jaltomata_sanchez-vegae,0,0.5,0.5
 Jaltomata_sinuosa,0,0.5,0.5
-Jaltomata_"spooneri",0,0.5,0.5
+"Jaltomata_""spooneri""",0,0.5,0.5
 Jaltomata_umbellata,0,1,0
 Jaltomata_ventricosa,0,1,0
 Jaltomata_viridiflora,0,1,0
@@ -285,8 +285,8 @@ Lycium_californicum,0.5,0,0.5
 Lycium_carolinianum,0.5,0.5,0
 Lycium_cestroides,1,0,0
 Lycium_chanar,0.5,0.5,0
-Lycium_chilense,0.333333333333333,0.333333333333333,0.333333333333333
-Lycium_ciliatum,0.333333333333333,0.333333333333333,0.333333333333333
+Lycium_chilense,0.333333333,0.333333333,0.333333333
+Lycium_ciliatum,0.333333333,0.333333333,0.333333333
 Lycium_cinereum,1,0,0
 Lycium_cooperi,1,0,0
 Lycium_cuneatum,0.5,0.5,0
@@ -294,7 +294,7 @@ Lycium_decumbens,0.5,0.5,0
 Lycium_depressum,0.5,0.5,0
 Lycium_eenii,0.5,0.5,0
 Lycium_elongatum,0.5,0.5,0
-Lycium_europaeum,0.333333333333333,0.333333333333333,0.333333333333333
+Lycium_europaeum,0.333333333,0.333333333,0.333333333
 Lycium_exsertum,0,0.5,0.5
 Lycium_ferocissimum,1,0,0
 Lycium_fremontii,0,0,1
@@ -336,8 +336,8 @@ Lycium_torreyi,1,0,0
 Lycium_villosum,0,0,1
 Lycium_vimineum,0.5,0.5,0
 Mandragora_caulescens,0,0,1
-Mandragora_officinarum,0.3333333333,0.3333333333,0.3333333333
-Metternichia_principis,0.333333333333333,0.333333333333333,0.333333333333333
+Mandragora_officinarum,0.333333333,0.333333333,0.333333333
+Metternichia_principis,0.333333333,0.333333333,0.333333333
 Nicandra_physalodes,0,1,0
 Nicotiana_acaulis,0,1,0
 Nicotiana_acuminata,0.5,0.5,0
@@ -388,7 +388,7 @@ Nicotiana_petunioides,1,0,0
 Nicotiana_plumbaginifolia,1,0,0
 Nicotiana_quadrivalvis,0,0,1
 Nicotiana_raimondii,0.5,0.5,0
-Nicotiana_"rastroensis",1,0,0
+"Nicotiana_""rastroensis""",1,0,0
 Nicotiana_repanda,0,0,1
 Nicotiana_rosulata,0,0,1
 Nicotiana_rotundifolia,0,0,1
@@ -417,7 +417,7 @@ Nierembergia_graveolens,0.5,0.5,0
 Nierembergia_linariifolia,1,0,0
 Nierembergia_pulchella,0.5,0.5,0
 Nierembergia_repens,0.5,0.5,0
-Nierembergia_rigida,0.333333333333333,0.333333333333333,0.333333333333333
+Nierembergia_rigida,0.333333333,0.333333333,0.333333333
 Nierembergia_rivularis,0.5,0.5,0
 Nierembergia_scoparia,0.5,0.5,0
 Nierembergia_tucumanensis,0.5,0.5,0
@@ -463,7 +463,7 @@ Physalis_glabra,0.5,0.5,0
 Physalis_glutinosa,0.5,0.5,0
 Physalis_gracilis,0.5,0.5,0
 Physalis_grisea,0.5,0.5,0
-Physalis_hederifolia,0.333333333333333,0.333333333333333,0.333333333333333
+Physalis_hederifolia,0.333333333,0.333333333,0.333333333
 Physalis_heterophylla,0,1,0
 Physalis_ignota,0.5,0.5,0
 Physalis_ixocarpa,1,0,0
@@ -492,7 +492,7 @@ Physalis_vestita,0.5,0.5,0
 Physalis_virginiana,0.5,0.5,0
 Physalis_viscosa,1,0,0
 Physalis_walteri,0.5,0.5,0
-Physochlaina_orientalis,0.333333333333333,0.333333333333333,0.333333333333333
+Physochlaina_orientalis,0.333333333,0.333333333,0.333333333
 Physochlaina_praealta,0,0,1
 Przewalskia_tangutica,0,0,1
 Quincula_lobata,0.5,0.5,0
@@ -523,7 +523,7 @@ Solanum_abutiloides,0,1,0
 Solanum_acaule,0,0,1
 Solanum_acerifolium,0.5,0.5,0
 Solanum_acroglossum,0.5,0.5,0
-Solanum_acroscopicum,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_acroscopicum,0.333333333,0.333333333,0.333333333
 Solanum_aculeastrum,0,1,0
 Solanum_aculeatissimum,0,1,0
 Solanum_adscendens,0,0.5,0.5
@@ -561,7 +561,7 @@ Solanum_augustii,0.5,0.5,0
 Solanum_aviculare,0,0,1
 Solanum_axillifolium,0.5,0.5,0
 Solanum_ayacuchense,1,0,0
-Solanum_bahamense,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_bahamense,0.333333333,0.333333333,0.333333333
 Solanum_basendopogon,1,0,0
 Solanum_beaugleholei,0.5,0.5,0
 Solanum_berthaultii,1,0,0
@@ -574,7 +574,7 @@ Solanum_brevifolium,1,0,0
 Solanum_brevipedicellatum,0.5,0.5,0
 Solanum_buesii,0.5,0.5,0
 Solanum_bulbocastanum,0.5,0,0.5
-Solanum_bullatum,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_bullatum,0.333333333,0.333333333,0.333333333
 Solanum_burkartii,0.5,0.5,0
 Solanum_caavurana,0.5,0.5,0
 Solanum_cacosmum,1,0,0
@@ -583,7 +583,7 @@ Solanum_cajanumense,0,1,0
 Solanum_calidum,0.5,0.5,0
 Solanum_campanulatum,0,1,0
 Solanum_campechiense,0,0.5,0.5
-Solanum_campylacanthum,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_campylacanthum,0.333333333,0.333333333,0.333333333
 Solanum_candidum,0,1,0
 Solanum_candolleanum,0.9,0,0.1
 Solanum_canense,0,1,0
@@ -656,7 +656,7 @@ Solanum_dimorphispinum,0.5,0.5,0
 Solanum_dioicum,0,0.5,0.5
 Solanum_diphyllum,0,1,0
 Solanum_diploconos,1,0,0
-Solanum_discolor,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_discolor,0.333333333,0.333333333,0.333333333
 Solanum_dissimile,0.5,0.5,0
 Solanum_ditrichum,0,0.5,0.5
 Solanum_diversiflorum,1,0,0
@@ -672,7 +672,7 @@ Solanum_echinatum,0,1,0
 Solanum_edmondstonii,0.5,0.5,0
 Solanum_ehrenbergii,1,0,0
 Solanum_elachophyllum,0.5,0.5,0
-Solanum_elaeagnifolium,0.3333333333,0.3333333333,0.3333333333
+Solanum_elaeagnifolium,0.333333333,0.333333333,0.333333333
 Solanum_endoadenium,0.5,0.5,0
 Solanum_endopogon,0.5,0.5,0
 Solanum_ensifolium,1,0,0
@@ -683,7 +683,7 @@ Solanum_euacanthum,0.5,0.5,0
 Solanum_evolvuloides,0,0.5,0.5
 Solanum_excisirhombeum,0,0,1
 Solanum_exiguum,1,0,0
-Solanum_expedunculatum,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_expedunculatum,0.333333333,0.333333333,0.333333333
 Solanum_fallax,1,0,0
 Solanum_felinum,0,1,0
 Solanum_fernandezianum,0,1,0
@@ -724,7 +724,7 @@ Solanum_heiseri,1,0,0
 Solanum_herculeum,0.5,0.5,0
 Solanum_heterodoxum,0,1,0
 Solanum_hibernum,1,0,0
-Solanum_hieronymi,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_hieronymi,0.333333333,0.333333333,0.333333333
 Solanum_hindsianum,1,0,0
 Solanum_hintonii,0.5,0.5,0
 Solanum_hirtum,0,1,0
@@ -744,7 +744,7 @@ Solanum_hypaleurotrichum,0.5,0.5,0
 Solanum_hypocalycosarcum,0.5,0.5,0
 Solanum_hyporhodium,0,1,0
 Solanum_iltisii,0.5,0.5,0
-Solanum_immite,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_immite,0.333333333,0.333333333,0.333333333
 Solanum_inaequilaterum,0.5,0.5,0
 Solanum_incanoalabastrum,0.5,0.5,0
 Solanum_incanum,0,1,0
@@ -760,7 +760,7 @@ Solanum_jamaicense,0,1,0
 Solanum_jamesii,1,0,0
 Solanum_johnstonii,0,1,0
 Solanum_juglandifolium,1,0,0
-Solanum_juvenale,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_juvenale,0.333333333,0.333333333,0.333333333
 Solanum_karsense,0.5,0.5,0
 Solanum_kurtzianum,1,0,0
 Solanum_lachnophyllum,0.5,0.5,0
@@ -803,7 +803,7 @@ Solanum_marginatum,0,1,0
 Solanum_maternum,1,0,0
 Solanum_maturecalvans,0.5,0.5,0
 Solanum_mauritianum,0,1,0
-Solanum_medians,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_medians,0.333333333,0.333333333,0.333333333
 Solanum_melanospermum,0,1,0
 Solanum_melissarum,1,0,0
 Solanum_melongena,0,1,0
@@ -814,7 +814,7 @@ Solanum_minutifoliolum,0.5,0.5,0
 Solanum_mochiquense,0.5,0.5,0
 Solanum_morelliforme,0,1,0
 Solanum_multiglochidiatum,0,0,1
-Solanum_multiinterruptum,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_multiinterruptum,0.333333333,0.333333333,0.333333333
 Solanum_multivenosum,0,0,1
 Solanum_myriacanthum,0,1,0
 Solanum_nelsonii,0.5,0.5,0
@@ -823,7 +823,7 @@ Solanum_neocardenasii,0.5,0.5,0
 Solanum_neorickii,0,1,0
 Solanum_neorossii,0.5,0.5,0
 Solanum_neovavilovii,1,0,0
-Solanum_neoweberbaueri,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_neoweberbaueri,0.333333333,0.333333333,0.333333333
 Solanum_nigrescens,0,1,0
 Solanum_nigrum,0,0.5,0.5
 Solanum_nitidibaccatum,0.5,0.5,0
@@ -892,7 +892,7 @@ Solanum_pugiunculiferum,0.5,0.5,0
 Solanum_pulverulentifolium,0.5,0.5,0
 Solanum_punctulatum,0,0.5,0.5
 Solanum_pungetium,0.5,0.5,0
-Solanum_pygmaeum,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_pygmaeum,0.333333333,0.333333333,0.333333333
 Solanum_pyracanthos,0,1,0
 Solanum_quadriloculatum,0.5,0.5,0
 Solanum_quineense,0,0,1
@@ -907,7 +907,7 @@ Solanum_repandum,0,1,0
 Solanum_rhomboideilanceolatum,0.5,0.5,0
 Solanum_riparium,0.5,0.5,0
 Solanum_ripense,0.5,0.5,0
-Solanum_rivicola,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_rivicola,0.333333333,0.333333333,0.333333333
 Solanum_robustifrons,0.5,0.5,0
 Solanum_robustum,0,1,0
 Solanum_rojasianum,0.5,0.5,0
@@ -940,7 +940,7 @@ Solanum_sitiens,1,0,0
 Solanum_skutchii,1,0,0
 Solanum_sodiroi,1,0,0
 Solanum_sodomeum,0,1,0
-Solanum_sogarandinum,0.333333333333333,0.333333333333333,0.333333333333333
+Solanum_sogarandinum,0.333333333,0.333333333,0.333333333
 Solanum_spirale,0,0.5,0.5
 Solanum_stagnale,0,1,0
 Solanum_stelligerum,0.5,0.5,0
