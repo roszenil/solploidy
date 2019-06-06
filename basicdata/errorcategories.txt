@@ -42,6 +42,7 @@ Solanum_chenopodinum    # ? Rosana only found 24 csomes but is listed in ICDP as
 
 
 4. Species that are informative for the three state but are not for neither of the two-state models (ID and CP simultaneously)
+
 Lycium_californicum 
 Solanum_bulbocastanum
 
@@ -59,17 +60,17 @@ Solanum_colombianum  # This I need to correct by hand it is D/P but always SC
 Solanum_torvum       # This I need to correct by hand it is D/P but always SC
 Solanum_capsicoides  # This I need to correct by hand it is D/P but always SC
 Solanum_pectinatum   # This I need to correct by hand it is D/P but always SC
-Solanum_dioicum           0  1  0 # This I need to correct by hand it is D/P but always SC
-Solanum_cinereum          0  1  0 # This I need to correct by hand it is D/P but always SC
+Solanum_dioicum      # This I need to correct by hand it is D/P but always SC
+Solanum_cinereum       # This I need to correct by hand it is D/P but always SC
 
 5. Processing mistakes (ignore there this is something about my code)
 Petunia_scheideana 
 Petunia_saxicola  
 Lycianthes_rantonnetii  # Weird processing error, need to correct to ID
-Capsicum_cardenasii  # Weird processing error, need to correct to ID
-Witheringia_meiantha # Weird processing error, need to correct to ID
-Solanum_stipuloideum # Weird processing error need to correct to ID
+Capsicum_cardenasii     # Weird processing error, need to correct to ID
+Witheringia_meiantha    # Weird processing error, need to correct to ID
+Solanum_stipuloideum    # Weird processing error need to correct to ID
 Solanum_cyaneopurpureum # Weird processing error should be CD
-Solanum_leopoldensis   # Weird processing error should be CD
+Solanum_leopoldensis    # Weird processing error should be CD
 
 
