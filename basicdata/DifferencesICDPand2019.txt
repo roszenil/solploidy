@@ -1,4 +1,21 @@
+Differences between statesICDP and classification 2018
+
+1. We reclassified by hand  (removed records where a ploidy was uncertain and decided on a solution) n=8
+
+			  ID CD CP 
+Nicotiana_undulata         0  1  0
+Hyoscyamus_muticus         0  1  0
+Physochlaina_orientalis    1  1  0
+Lycium_gariepense          0  1  1
+Solanum_candolleanum       1  0  0
+Solanum_chacoense          1  0  0
+Solanum_elaeagnifolium     0  1  0
+Solanum_chenopodinum       0  1  0
+
+2. New findings n=27
+
 			  ID CD CP
+Jaltomata_auriculata      0  1  0 # Rosana found it is diploid, previously no csome	
 Browallia_speciosa        0  0  1
 Metternichia_princeps     1  1  0
 Nierembergia_veitchii     1  1  0
