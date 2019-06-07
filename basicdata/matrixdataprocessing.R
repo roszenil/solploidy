@@ -321,4 +321,6 @@ for(i in 1:length(matched$phy$tip.label)){
 threestate.matrix[rzfaddition[-1],]
 threestate.matrix[notmatching[-1],]
 
+write.csv(threestate.matrix,file="~/Dropbox/solploidy/basicdata/newstatesICDP.csv")
+
 

@@ -1,4 +1,4 @@
-Differences between statesICDP and classification 2018
+Differences between statesICDP and classification 2019
 
 1. We reclassified by hand  (removed records where a ploidy was uncertain and decided on a solution) n=8
 
@@ -42,3 +42,24 @@ Solanum_centrale          0  0  1
 Solanum_esuriale          1  1  0
 Solanum_ellipticum        1  1  0
 Jaltomata_auriculata      0  1  0
+
+3. Species cut out of the 2019 due to uncertainty
+Nierembergia_rigida
+Anisodus_luridus
+Lycium_europaeum
+Lycium_chilense
+Lycium_ciliatum
+Chamaesaracha_coronopus
+Chamaesaracha_sordida
+Physalis_hederifolia
+Solanum_immite
+Solanum_acroscopicum
+Solanum_multiinterruptum
+Solanum_brevicaule
+Solanum_bahamense
+Solanum_juvenale
+Solanum_hieronymi
+Solanum_campylacanthum
+Solanum_discolor
+Mandragora_officinarum
+
