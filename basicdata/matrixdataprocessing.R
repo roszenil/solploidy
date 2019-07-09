@@ -4,28 +4,19 @@ library("treeplyr")
 
 ## Solanaceae time-tree with corrected names Sarkinen et al 2013
 solanaceae.tree<-read.tree("~/Dropbox/solploidy/basicdata/solcorrecttip.tre")
-
-cultivars<-which(solanaceae.allrecords$cultivarhybrid==1)
-#How many species, how many genera
-species<-unique(solanaceae.allrecords$fullname)
-total.species<-length(species)# 2270 total species
-genera<-unique(solanaceae.allrecords$genus)
-total.genera<-length(genera)#99 genera
-
-# Dataset created by RZF from CCDB and independent records by EEG
-#idnumber, source,fullname, genus, species,cultivarhybrid,csomenumber,lifehistoryclean, ploidy selfincomp, ploidybyZF, namechangedfrom
 solanaceae.allrecords<-read.csv("~/Dropbox/solploidy/basicdata/solanaceaerecords.csv",header=TRUE,sep=",", stringsAsFactors=FALSE, na.strings="")
-
 cultivars<-which(solanaceae.allrecords$cultivarhybrid==1)
 solanaceae.allrecords<-solanaceae.allrecords[-cultivars,]
 
-uncertain.species<-c("Nierembergia_rigida","Anisodus_luridus","Lycium_europaeum","Lycium_chilense","Lycium_ciliatum","Chamaesaracha_coronopus","Chamaesaracha_sordida","Physalis_hederifolia","Solanum_immite","Solanum_acroscopicum","Solanum_multiinterruptum","Solanum_brevicaule","Solanum_bahamense","Solanum_juvenale","Solanum_hieronymi","Solanum_campylacanthum","Solanum_discolor","Mandragora_officinarum")
+#How many species, how many genera
+species<-unique(solanaceae.allrecords$fullname)
+total.species<-length(species)# 2258 total species
+genera<-unique(solanaceae.allrecords$genus)
+total.genera<-length(genera)#100 genera
 
-long1<-length(uncertain.species)
-for (i in 1:long1){
-	aux1<-which(solanaceae.allrecords$fullname==uncertain.species[i])
-	solanaceae.allrecords<-solanaceae.allrecords[-aux1,]
-}
+# Dataset created by RZF from CCDB and independent records by EEG
+#idnumber, source,fullname, genus, species,cultivarhybrid,csomenumber,lifehistoryclean, ploidy selfincomp, ploidybyZF, namechangedfrom
+
 
 #Calculating the mode(s)
 Mode <- function(x) {
@@ -65,10 +56,19 @@ for (i in 1:total.species){
 simplified.solanaceae<-data.frame(species, min.csome, mode.csome,min.ploidy,mode.ploidy,self.incomp, life.hist)
 
 
+
+uncertain.species<-c("Nierembergia_rigida","Anisodus_luridus","Lycium_europaeum","Lycium_chilense","Lycium_ciliatum","Chamaesaracha_coronopus","Chamaesaracha_sordida","Physalis_hederifolia","Solanum_immite","Solanum_acroscopicum","Solanum_multiinterruptum","Solanum_brevicaule","Solanum_bahamense","Solanum_juvenale","Solanum_hieronymi","Solanum_campylacanthum","Solanum_discolor","Mandragora_officinarum")
+
+long1<-length(uncertain.species)
+for (i in 1:long1){
+	aux1<-which(simplified.solanaceae$species==uncertain.species[i])
+	simplified.solanaceae<-simplified.solanaceae[-aux1,]
+}
+
 nor.ploidysi<-which(is.na(simplified.solanaceae[,5])==TRUE & is.na(simplified.solanaceae[,6])==TRUE)
 
 norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]
-matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #636 species!!!!
+matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #637 species!!!!
 diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")# 120
 diploidsc<-which(matched$dat[,4]==2 & matched$dat[,5]=="SC")#159
 diploidsna<-which(matched$dat[,4]==2 & is.na(matched$dat[,5])==TRUE) #192
@@ -320,7 +320,35 @@ for(i in 1:length(matched$phy$tip.label)){
 
 threestate.matrix[rzfaddition[-1],]
 threestate.matrix[notmatching[-1],]
+names(threestate.matrix)=c("Species","ID","CD","CP")
+
 
 write.csv(threestate.matrix,file="~/Dropbox/solploidy/basicdata/newstatesICDP.csv")
 
+### Emma's checkpoint (the problems we previously identified and the new ones are because of cultivars)
+phy <- read.tree("~/Dropbox/solploidy/basicdata/solcorrecttip.tre")
+dat1 <- read.csv("~/Dropbox/solploidy/basicdata/statesICDP.csv", as.is=T)
+dat1 <- subset(dat1, Species %in% phy$tip.label)
+dat1 <- subset(dat1, !(ID == CD & CD == CP))
+dat1[dat1 == 0.5] <- 1
+
+dat2 <- read.csv("~/Dropbox/solploidy/basicdata/newstatesICDP.csv", as.is=T)
+dat2 <- subset(dat2, Species %in% phy$tip.label)
+
+dat <- merge(dat1, dat2, by="Species", all=T)
+
+# data agree, except as discussed, or are new
+subset(dat, ID.x != ID.y)
+subset(dat, CD.x != CD.y)
+subset(dat, CP.x != CP.y)
+subset(dat, is.na(ID.x))
+
+# I'm wondering about these?  (x = old, y = new)
+subset(dat, is.na(ID.y))
+aux3<-subset(dat, is.na(ID.y))[,1:4]
+which(aux3[,1]=="Solanum_brevicaule")
+aux3<- aux3[-which(aux3[,1]=="Solanum_brevicaule"),] # Removing S. brevicaule because it is uncertain
+names(aux3)<-c("Species","ID","CD","CP")
+threestate.matrix<-rbind(threestate.matrix,aux3)
+write.csv(threestate.matrix,file="~/Dropbox/solploidy/basicdata/newstatesICDP.csv") #Added some of the data bacak from cultivars
 
