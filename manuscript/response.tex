@@ -11,17 +11,19 @@
 
 \hfill \today
 
-Dear editor and reviewers:
+Dear Dr. Schoen and reviewers,
 
 \medskip
-Thank you very much for your close reading of our manuscript and supportive comments.
-We appreciate your constructive suggestions, each of which we address below.
+Thank you very much for your close reading of our manuscript and supportive comments. We appreciate your constructive suggestions, each of which we address below. You will find a big difference on the number of  models  that we have fitted for the revision based on your suggestions (originally 12 now 26). The two main reasons to increase the number of models were to first address one key question by Referees \#2 and \# 3 about the symmetry of the hidden states, and second to address a key question about more complex model. For the symmetry of the hidden states we found that is relevant to have asymmetric hidden state rates and in our case, it strengthened the differences amongst net diversification rates. The second question,  comes from a vague idea that we had while submitting the first version of this article: by increasing from two to three states the models, are we explaining better the history of diversification? This second question could not be addressed directly by model comparison statistics because the two-state and three-state models receive different input (i.e. (0,1) versus (0,1,2)), thus different data. However, the species and the tree are the same and should be delivering the same evidence despite any particular coding. During this revision, we figured a way to recode the three-state models to make them equivalent to the two-state models (the lumped models). Thanks to this equivalency, two-state and three-state models can now be compared to argue for the importance of adding key trait information and states in diversification analyses.
+
+We hope the changes and the new models are satisfactory and exciting to you and the reviewers.
 
 \medskip
 Sincerely,
 
 Rosana Zenil-Ferguson, on behalf of all authors
 % E: Pardon my speaking for you, Rosana. :)  Obviously change whatever wording below---starting to draft responses just helped me think through the requests.
+% R: I'm super excited now as you can see
 
 
 %--------------------------------------------------
@@ -121,8 +123,7 @@ We reworded this whole paragraph, as part of better explaining the SSE family of
 The most commonly reported cytotype could easily not be the most common cytotype in the wild (I assume that most taxa are represented by relatively few counts), and regardless, there is biology here.
 Specifically, this methodology would artificially reduce the number of ploidy changes (if a taxon is polymorphic for ploidy, there's at least one event there), and the omitted changes would be disproportionately those towards the tips of the phylogeny, so not only would rates be depressed, but the bias is of a sort that the estimation of diversification parameters is particularly sensitive to (the authors will understand why this is so).
 \end{quote}
-
-Rosana? % TODO
+We acknowledge this is potentially a problem. It is true that chromosome number multiplicity can bias towards more (or less) transitions because it heavily depends on the most common cytotype. For the majority of species (~85\%)  the ploidy was not directly dictated by us but by the original sources of the data. In the originally sources ploidy has been classified not only most common cytotype but geographical distribution, multivalence, and/or  genome sizes. The remaining 15\% is what we assigned based on genus or family cytotype multiplicity. We cross-validated all of the assignments with the data from \citet{robertson_2011} where ploidy was assigned via a chromosome number change model using ChromEvol \citep{mayrose_2010}. We differ in exactly 35 species from \citet{robertson_2011} were we found a new reference or a new chromosome count. Classifying using a chromosome number change model only could also suffer from inflation of polyploidy events due to the lack of diploidization parameters. 
 
 \begin{quote}
 --130 I don't follow this discussion.
@@ -157,8 +158,7 @@ Did the authors investigate this?
 Or has it been explored in the literature?
 Similarly, it seems to me that fixing the transition rates of the observed characters to be independent of the hidden state could do weird things---the point of these SSE models is that state change rates and state-dependent diversification rates need to be co-estimated
 \end{quote}
-
-Rosana?  Maybe one analysis with all rates different, to say there's so much uncertainty it doesn't add anything? % TODO
+We appreciate this suggestion and we followed. The main result after fitting models with symmetrical vs. asymmetrical rates is that the direction of the results does not change but the amount of difference amongst net diversification rates does. We found using bayes factors that a model including asymmetrical hidden rates is preferred over a model with equal hidden rates. Also,  the asymmetry in the trait rates did not add much to the differences according to the bayes factors. These results can be found on table and figures %TODO put number.
 
 \begin{quote}
 --221  Propagation
@@ -170,14 +170,13 @@ Fixed.
 --I would be more comfortable if each model was run at least twice, independently, to better assess whether the MCMC has indeed converged
 \end{quote}
 
-Ouch.  Rosana? % TODO
+Ouch.  Rosana? % TODO: Still need to calculate some stats here
 
 \begin{quote}
 --the use of run time as a description of the analysis seems odd to me.
 As a reader, I'm not interested in the power of a given computer -- I want to know how many generations the MCMC was run for, what the ESSs are, etc.
 \end{quote}
-
-Seems reasonable.  Rosana? % TODO
+We ran each model for 200,000 generations. For the main models with asymmetrical hidden rates all of the parameters have ESS of 300. For the most difficult models were all rates were different  the minimum is 125. Unfortunately, we don't have access to more of 96 hours of computational time to increase those but we have calculated the convergence as indicated above.
 
 \begin{quote}
 -325  These analyses (by accounting for diversification) may take care of this issue, but is there a problem with these results being driven by a non-stationary process being modeled as a stationary one?
@@ -186,7 +185,7 @@ Seems reasonable.  Rosana? % TODO
 This was a point worth considering, but our model does not assume stationarity.
 In Fig.~4, the contributions of each pathway are functions of time.
 We can see there both the short-term and long-term behavior.
-% Rosana, what do you think?
+% Rosana, what do you think?- I think this is a good answer
 
 \begin{quote}
 --340  Sentence fragment
@@ -205,7 +204,7 @@ consider % TODO
 I'm not sure how to phrase this -- I guess I'm asking if there's any suggestion that that parameterization is indeed capturing the biological phenomenon of diploidization, or is it just soaking up noise?
 \end{quote}
 
-Interesting. Rosana? % TODO
+The soaking noise comes from the hidden state so in the presence of hidden states finding that diploidization matters is key. All the bayes factors indicate strong support for models that include diploidization. However, the diploidzation parameter per se is difficult to estimate from ploidy data because of the quality of the classification. For those two reasons we are conservative about overstating the importance of diploidization.
 
 \begin{quote}
 --I think this is an excellent point -- ``SI, which is itself associated with a faster diversification rate, is the breeding system context in which many diploids occur.''
@@ -232,8 +231,7 @@ consider % TODO
 --400  Didn't Mayrose et al.\ 2011 and Magnuson-Ford \& Otto 2012 look at this (cladogenic change)?
 \end{quote}
 
-Yes.
-We adjusted the text accordingly.
+Yes. We adjusted the text accordingly.
 
 \begin{quote}
 --408  In what way are the present results in conflict with other reports from the literature?
@@ -335,8 +333,7 @@ Second, specifically because the authors are not interested in estimating the ra
 This is especially true in a Bayesian framework where it is sometimes better to have overparameterized models than under-parameterized models (see Lemmon and Moriarty. 2004. Systematic Biology 53:265–277).
 I think it would have been important to at least present the results of an unconstrained model to show that this decision to constrain the rates do not affect the conclusions.
 \end{quote}
-
-Rosana? % TODO
+We have now fitted models with asymmetrical hidden rates and asymmetrical trait rates. We found that the former are important and strengthened the differences. We found no evidence that having all asymmetrical rates is preferable over just asymmetrical hidden for our specific example. (Figs and table)
 
 \begin{quote}
 Finally, I have a suggestion for the authors.
@@ -468,7 +465,8 @@ Of course, admittedly, I am not familiar with revBayes and how the model space i
 But, if so, some clarity in the Methods/Results is warranted in how trait-independent models were evaluated (or even ruled out) in the analyses presented.
 \end{quote}
 
-Interesting. Rosana? % TODO
+We have fitted the trait independent models (character-independent CID). We appreciated this suggestion because  we hadn't considered it and it allowed us to parse out the effect of the traits in the diversification process. By comparing bayes factors, models with traits are strongly preferred over CID (table )
+%TODO: write table number
 
 \begin{quote}
 Along these same lines, how does revBayes deal with the symmetry problem with regards to the hidden states?
@@ -479,7 +477,7 @@ This would, however, cause issues with how the posterior is summarized.
 I should point out that nothing in the plots suggests this might be an issue, but this was something that I wondered about with the particular models used here.
 \end{quote}
 
-Need a clear explanation. % TODO
+We have added the asymmetry on the rates. % TODO
 
 \begin{quote}
 Finally, while I agree that the inclusion of ``hidden'' states provides a means for testing intuitions about a particular character, they can also ``soak'' up the variation in diversification rates due to various errors in the dataset (i.e., error in topology, branch lengths, etc.).
@@ -504,8 +502,7 @@ Line 403-404: Would it be appropriate to cite Freyman and Hoehna (2017; Systemat
 Though I imagine the authors are referring to a hidden cladogenetic model that allows more than just a binary trait.
 But, both of these papers, as far as I can tell, extend the basic SSE model to include both hidden states and cladogenetic events.
 \end{quote}
-
-check % TODO
+We have cited them accordingly. % TODO
 
 
 \begin{quote}
@@ -522,7 +519,7 @@ Also, it is worth noting that there are several implementations that already inc
 \end{quote}
 
 Yes, and indeed this has already been shown.
-We fixed the text and added a reference.
+We fixed the text and added a reference. Nakov paper has not been accepted yet for publication or it has not been announced (July 9th, 2019).
 
 
 \nobibliography{refs}
