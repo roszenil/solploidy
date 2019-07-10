@@ -8,10 +8,10 @@
 Chromosome number data were obtained for all Solanaceae taxa in the Chromosome Counts Database \citep[CCDB;][]{rice_2015}, and the ca.~14,000 records were curated semi-automatically using the CCDBcurator R package \citep{rivero_2019}.
 CCDB contains records from original sources that have multiple complex symbol patterns denoting multivalence, or irregularites of chromosome counts.
 After a first round of automatic cleaning, we examined results by hand and corrected records as necessary.
-Our hand-curated records were also contrasted against the ploidy dataset from \citet{robertson_2011} and against ploidy data in the C-value DNA dataset from \citet{bennett_2005}.
+Our hand-curated records were also contrasted against the ploidy dataset from \citet{robertson_2011}, original references therein, and against ploidy data in the C-value DNA dataset from \citet{bennett_2005}.
 By comparing three different sources of information, we were able to code taxa as diploid, $D$, or polyploid, $P$.
 For the majority of species, ploidy was assigned according to information from the original publications included in the  C-value DNA dataset \citep{bennett_2005}.
-For taxa without ploidy information but with information about chromosome number, we assigned ploidy based on the multiplicity of chromosomes within the genus or based on SI/SC classification.
+For taxa without ploidy information but with information about chromosome number, we assigned ploidy based on the multiplicity of chromosomes within the genus/family, or based on SI/SC classification.
 For example, \textit{Solanum betaceum} did not have information about ploidy level but it has 24 chromosomes, so since $x=12$ is the base chromosome number of the genus \textit{Solanum} \citep{olmstead_2007}, we assigned \textit{S.~betaceum} as diploid. 
 Additionally, because of the absence of SI polyploids (explained above and below), species known to be SI could be scored as diploid.
 Species with more than one ploidy level were assigned the most frequent ploidy level recorded or the smallest ploidy in case of frequency ties.
@@ -32,11 +32,11 @@ Although SI populations frequently contain some SC individuals, and diploid popu
 % Under exceedingly rare circumstances, it is possible for polyploids containing multiple copies of S-loci to remain SI, so long as they express a single allele at the S-locus \citep[discussed in][]{robertson_2011}.
 Because of the resulting absence of polyploid SI populations, as well as the functional explanation for polyploidy disabling gametophytic SI systems with non-self recognition (see the Introduction), we consider only three observed character states: self-incompatible diploids $(ID)$, self-compatible diploids $(CD)$, and self-compatible polyploids $(CP)$.
 
-Matching our character state data to the largest time-calibrated phylogeny of Solanaceae \citep{sarkinen_2013} yielded 595 species with ploidy and/or breeding system information on the tree.
-% FIXME: Rosana will update numbers around here
+Matching our character state data to the largest time-calibrated phylogeny of Solanaceae \citep{sarkinen_2013} yielded 651 species with ploidy and/or breeding system information on the tree.
+% FIXME: Rosana will update numbers around here TODO
 Of these, 290 had information for both states.
 The number of species in each combination of states is summarized in \cref{figure:stateclassifications}A.
-We retained all 595 species in each of the analyses below because pruning away tips lacking breeding system in the ploidy-only analyses (and vice versa) would discard data that could inform the diversification models.
+We retained all 651 species in each of the analyses below because pruning away tips lacking breeding system in the ploidy-only analyses (and vice versa) would discard data that could inform the diversification models.
 A total of 405 taxa without any information about breeding system or ploidy were excluded.
 %Tips without trait data might not improve point estimation of diversification parameters while increasing uncertainty in the estimates of trait linked diversification
 % R-This is very important but I have removed it because I think it is a full on paper by its own
@@ -67,9 +67,9 @@ In these $D/P+A/B$ ploidy and hidden state models, parameters include speciation
 In the simplest case, the polyploidization rate, $\rho$, is the same within each hidden state, and the rates of transition between hidden states are symmetrical with parameter $\alpha$.
 We also considered the more complex cases with different polyploidization rates in each hidden state ($\rho_A$ and $\rho_B$) and asymmetric transitions between hidden states ($\alpha$ and $\beta$).
 
-% E: Rosana, please check this paragraph.  Did I get it correct?
+% E: Rosana, please check this paragraph.  Did I get it correct?- R: Yes that is correct
 To test if diversification rate heterogeneity is due only to a hidden trait and not the ploidy trait, we used character-independent diversification models \citep[CID,][]{beaulieu_2016}.
-Parameters in this case are speciation and extinction rates for the hidden states ($\lambda_A,\ \lambda_B,\ \mu_A,\ \mu_B$), along with polyploidization ($\rho$) and transitions between hidden states ($\alpha$).
+Parameters in this case are speciation and extinction rates for the hidden states ($\lambda_A,\ \lambda_B,\ \mu_A,\ \mu_B$), along with polyploidization ($\rho$) and transitions between hidden states ($(\alpha,\ \beta$).
 
 Diagrams of these ploidy models are shown in \cref{figure:netdivall}AB.  % request from referee 2
 % FIXME: ref to additional D/P models
@@ -82,7 +82,7 @@ This $I/C$ breeding system model has parameters for state-specific speciation ($
 
 To parse out the effect of breeding system on diversification while allowing for the possibility of heterogeneous diversification rates unrelated to breeding system, we subdivided each of the breeding system states into hidden states $A$ and $B$.
 This $I/C+A/B$ breeding system and hidden state model has parameters for state-specific speciation ($\lambda_{I_A},\ \lambda_{I_B},\ \lambda_{C_A},\ \lambda_{C_B}$) and extinction ($\mu_{I_A},\ \mu_{I_B},\ \mu_{C_A},\ \mu_{C_B}$), for loss of SI ($q_{IC}$), and for transitions between hidden states ($\alpha$).
-We also considered more complex models with different transition rates in each hidden state (???) and asymmetric transitions between hidden states ($\alpha$ and $\beta$). % FIXME
+We also considered more complex models with different transition rates in each hidden state and asymmetric transitions between hidden states ($\alpha$ and $\beta$). % FIXME
 Similar models were used by \citet{freyman_2017} used to study diversification in Onagraceae.
 
 % E: Rosana, please check this paragraph.  Did I get it correct?
@@ -104,31 +104,27 @@ Diagrams of these breeding system models are shown in \cref{figure:netdivall}CD.
 
 \subsubsection{Ploidy, breeding system, and diversification}
 
-Ploidy and breeding system might influence lineage diversification individually, but these two traits also have an intricate association (see the Introduction).
+Ploidy and breeding system might influence lineage diversification individually, but these two traits also have an intricate association as discussed in the Introduction.
 Therefore, we considered a multi-state model that investigates the contribution of both traits and the allowable transitions between them.
-This $ID/CD/CP$ ploidy and breeding system model has states for self-incompatible diploids $(ID)$, self-compatible diploids $(CD)$, and self-compatible polyploids $(CP)$; self-incompatible polyploids do not occur, as explained in the Introduction.
+This $ID/CD/CP$ ploidy and breeding system model has states for self-incompatible diploids $(ID)$, self-compatible diploids $(CD)$, and self-compatible polyploids $(CP)$; self-incompatible polyploids do not occur.
 There are six parameters for state-specific diversification rates ($\lambda_{ID},\ \lambda_{CD},\ \lambda_{CP}$ for speciation; $\mu_{ID},\ \mu_{CD},\ \mu_{CP}$ for extinction) and three for transitions between states ($\rho_I,\ \rho_C$ for polyploidization transitions from $ID$ and $CD$ to $CP$, respectively; $q_{IC}$ for loss of self-incompatibility without polyploidization, from $ID$ to $CD$).
 The total rate of loss of self-incompatibility, \ie transitions out of $ID$, is $q_{IC} + \rho_I$.
 % E: Can we call it something other than q_IC?  It's a bit confusing to have the same parameter mean different things in different models.
 
 % E: This paragraph is new.  Rosana, please check.
-We would like to test whether including an additional trait significantly improves the model fit.
-For example, does the model with both breeding system and ploidy provide a significantly better fit than the model with only ploidy?
-To answer this, it is not valid to compare the $IC/CD/CP$ and $D/P$ model fits, as defined above, because they use different data.
+When including a new trait the question on whether 
+the model with both breeding system and ploidy could provide a significantly better fit than the model with only ploidy was key.
+Under all the statistical model comparison approaches, it is not valid to compare the $IC/CD/CP$ and $D/P$ model fits, as defined above, because they use different coding (i.e. (0,1) versus (0,1,2)). 
 Similarly, the $IC/CD/CP$ and $I/C$ models cannot be compared statistically.
-Instead, we define lumped models \citep{tarasov_2019} that use the state space of the $IC/CD/CP$ model but constrain the rate parameters to mimic the behavior of the single-trait models. % should ref a figure
+However, the evidence in the species and the tree are the same for both two-state and three-state models.
+Instead, we define  and extend lumped models, as described first by \citet{tarasov_2019} for ontologies.  The lumped models proposed use the state space of the $IC/CD/CP$ model but constrain the rate parameters to mimic the behavior of the single-trait models. % should ref a figure
 
-% E: We now have so many models to describe, I'm feeling like all this text may not be the best way.  I'm wondering if we can rely on figures/tables instead, and only write out the overall strategy.
+% E: We now have so many models to describe, I'm feeling like all this text may not be the best way.  I'm wondering if we can rely on figures/tables instead, and only write out the overall strategy. R- I feel the same but it might be very difficult to change at this point
 
 Although the $ID/CD/CP$ model allows for two traits to potentially influence diversification, other unknown factors could as well.
 We therefore added a hidden trait layer on top of our three-state model \citep[analogous to][]{caetano_2018, huang_2018}.
-A fully parameterized version of this $ID/CD/CP+A/B$ model would have 26 rate parameters. 
-Because our goal was to look for diversification rate differences associated with ploidy and breeding system rather than the specific effects of the hidden states, we fit a simplified version with 16 parameters.
-% FIXME Rosana, please update about the parameters
-The reduction in parameter space was achieved by fixing the rates for transitions among hidden states to be equal with rate $\alpha$, and fixing the transition rates between observed states to be independent of the hidden state (rates $\rho_I,\rho_C,\ q_{IC}$ as defined for the $ID/CD/CP$ model).
-There are additionally twelve diversification rate parameters ($\lambda_{ID_A},  \lambda_{ID_B},  \lambda_{CD_A}, \lambda_{CD_B}, \lambda_{CP_A}, \lambda_{CP_B}, \mu_{ID_A}, \mu_{ID_B}, \mu_{CD_A}, \mu_{CD_B},  \mu_{CP_A}, \mu_{CP_B}$).
-%B: I can't tell, but it seems to me that this 26->16 parameter reduction makes it possible to underestimate the effect of these hidden states.Perhaps this complication is covered in the Discussion section. 
-%R- It is possible, but adding all the parameters can also result in an underestimation of the hidden states contribution because it is not enough sample to accurately estimate transitions. In my simulations for diversification-free models, accurately estimating 10 parameters can only be achieved with trees with more than 500 tips. Because of that experience I think 16 parameters is already pushing really the inference machine hard. This happens because the phylogeny is not an independent sample so your ESS is much much smaller and you might end up over-parameterizing.
+We fitted then $ID/CD/CP+A/B$ models, one with equal hidden rate $\alpha$ and equal transition rates between observed states to be independent of the hidden state (rates $\rho_I,\rho_C,\ q_{IC}$ as defined for the $ID/CD/CP$ model); second model were the hidden states are asymmetrical, and a third model were all parameters were different. For each of these models, there are additionally twelve diversification rate parameters ($\lambda_{ID_A},  \lambda_{ID_B},  \lambda_{CD_A}, \lambda_{CD_B}, \lambda_{CP_A}, \lambda_{CP_B}, \mu_{ID_A}, \mu_{ID_B}, \mu_{CD_A}, \mu_{CD_B},  \mu_{CP_A}, \mu_{CP_B}$).
+
 
 Diagrams of these ploidy and breeding system models are shown in \cref{figure:netdivall}EF.  % request from referee 2
 % FIXME: ref to additional models?
@@ -175,10 +171,10 @@ In our models, the diploidization parameter (or its absence, $\delta=0$), repres
 
 Parameters for each of the ten models were estimated using RevBayes \citep{hoehna_2016}.
 Code for analyses and key results are available as Supplementary Information. % FIXME more permanent than \url{https://github.com/roszenil/solploidy}.
-We accounted for incomplete sampling in all analyses by setting the probability of sampling a species at the present to $595/3000$ \citep[using the method of][]{fitzjohn_2009} since the Solanaceae family has approximately 3,000 species \citep{solsource}.
+We accounted for incomplete sampling in all analyses by setting the probability of sampling a species at the present to $651/3000$ \citep[using the method of][]{fitzjohn_2009} since the Solanaceae family has approximately 3,000 species \citep{solsource}.
 For all models, we assumed that speciation and extinction parameters had log-normal prior distributions with means equal to the expected net diversification rate $(\text{number of taxa} / [2 \times \text{root age}])$ and standard deviation $0.5$.
 Priors for parameters defining trait changes were assumed to be gamma distributed with parameters $k=0.5$ and $\theta=1$. 
-For each model, a Markov chain Monte Carlo \citep[MCMC;][]{metropolis1953equation,Hastings1970} was run for 96 hours in the high-performance computational cluster at the Minnesota Supercomputing Institute, which allowed for 5,000 generations of burn-in and a minimum of 200,000 generations of MCMC for each of the 10 models. % FIXME see referee comment about reporting convergence, not runtime
+For each model, a Markov chain Monte Carlo \citep[MCMC;][]{metropolis1953equation,Hastings1970} was run in the high-performance computational cluster at the Minnesota Supercomputing Institute, which allowed for 5,000 generations of burn-in and a minimum of 200,000 generations of MCMC for each of the  models. % FIXME see referee comment about reporting convergence, not runtime
 Convergence and mixing of each MCMC chain was determined by ensuring the effective sample size of each parameter was over 200.
 
 We report posterior distributions for the model parameters, and also for the compound parameters of net diversification ($\lambda - \mu$) and extinction fraction ($\mu / \lambda$) for each state.
@@ -187,17 +183,20 @@ Ancestral state reconstructions for all models show the maximum \emph{a posterio
 
 \subsubsection{Model selection}
 
-We calculated the marginal likelihood for each of the ten models using fifty stepping stone steps under the methodology of \citet{xie_2010}, implemented in RevBayes \citep{hoehna_2016}.
-Each stepping stone step was found by calculating 500 generations of burn-in followed by a total of 1,000 MCMC steps (\cref{table:marginallike}).
-The calculation of each marginal likelihood ran for 24 hours on a high-performance computational cluster. % FIXME: remove?
+We calculated the marginal likelihood for each of the models using fifty stepping stone steps under the methodology of \citet{xie_2010}, implemented in RevBayes \citep{hoehna_2016}.
+Each stepping stone step was found by calculating at least 500 generations of burn-in followed by a total of 1,000 MCMC steps (\cref{table:marginallike}).
 
-Using the marginal likelihood values, we calculated thirteen different Bayes factors.
-Six compared the models of ploidy against one other ($D/P$ and $D/P+A/B$, each with or without diploidization), one compared the breeding system models ($I/C$ and $I/C+A/B$), and six compared the models with both traits ($ID/CD/CP$ and $ID/CD/CP+A/B$, each with or without diploidization) (\cref{table:bayesfactors}).
-%
-Other comparisons between these models are not valid because the input data are different under the different state space codings (\cref{figure:stateclassifications}B).
-In mathematical terms, the $D/P$, $I/C$, and $ID/CD/CP$ state spaces are not `lumpable' with respect to one another \citep{tarasov_2019}. % E: I'm honestly still confused about whether this is true.  From ID/CD/CP, we can lump ID/CD to get D/P, and we can lump CD/CP to get I/C.  FIXME
-Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $BF(M_0,\ M_1) = \ln[ P(\mathbf{X} | M_0) - P(\mathbf{X} | M_1)]$.
-There is `positive' support for $M_0$ when this value is more than 2, `strong' support when it is more than 6, and `very strong' support when it is more than 10 \citep{kass1995}.
+Using the marginal likelihood values, we calculated Bayes factors to argue five key biological and methodological questions:
+\begin{enumerate}
+\item Are hidden state necessary to add in this context?- Comparison of simple models against hidden state models
+\item Is a second trait adding information to the diversification process?- Comparison of lumped models against IC/CD/CP models
+\item Are diversification patterns only determined by hidden states and not the traits of interest?- Comparison of character independent models against hidden state 
+\item Is there evidence for diploidization?- Comparison amongst models with and without diploidization
+\item Do asymmetrical rates in the model affect the pattern of diversification? - Comparison amongst hidden states models with equal hidden rates and asymmetrical rates.
+\end{enumerate}
+
+Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $BF(M_1,\ M_0) = \ln[ P(\mathbf{X} | M_1) - P(\mathbf{X} | M_0)]$.
+There is `strong evidence'  for $M_1$ when this value is more than 2, `very strong' support when it is more than 6, and `extreme' support when it is more than 10 \citep{kass1995}.
 
 \begin{figure}
 \centering
@@ -220,56 +219,30 @@ In the hidden state models, all species were coded as consistent with both $A$ a
 \begin{tabular}{lcccccc} \toprule
 % \begin{tabular}{@{}lcccccc@{}} \toprule
 %\multicolumn{4}{r}{Models} \\ \cmidrule(r){3-5}
-Model                     & Ploidy & Diploidization & Breeding  & Hidden & Num        & Marginal       \\
-                          &        &                & System    & State  & Parameters & Log-Likelihood \\ \midrule
-1. D/P                    & Yes    & No             & No        & No     & 5          & -1193.66\\
-2. D/P +$\delta$          & Yes    & Yes            & No        & No     & 6          & -1182.93 \\
-3. D/P+A/B                & Yes    & No             & No        & Yes    & 10         & -1150.99\\
-4. D/P+A/B+$\delta$       & Yes    & Yes            & No        & Yes    & 11         & \textbf{-1145.69}\\
-5. I/C                    & No     & No             & Yes       & No     & 5          & -1194.80 \\
-6. I/C+A/B                & No     & No             & Yes       & Yes    & 10         & \textbf{-1155.37}\\
-7. ID/CD/CP               & Yes    & No             & Yes       & No     & 9          & -1345.87\\
-8. ID/CD/CP+$\delta$      & Yes    & Yes            & Yes       & No     & 10         & -1344.50\\
-9. ID/CD/CP+A/B           & Yes    & No             & Yes       & Yes    & 15         & -1303.55 \\ 
-10. ID/CD/CP+A/B+$\delta$ & Yes    & Yes            & Yes       & Yes    & 16         & \textbf{-1300.35} \\
-\bottomrule
-\end{tabular}
-\caption{
-    The ten models and their marginal likelihoods.
-    Values in bold are for the best models within each class that are comparable (see \cref{table:bayesfactors}).
-    Abbreviations are D: diploid, P: polyploid, I: self-incompatible, C: self-compatible, A: one state of hidden trait, B: other state of hidden trait, $\delta$: diploidization.}
-\label{table:marginallike}
-\end{table}
+%Model                     & Ploidy & Diploidization & Breeding  & Hidden & Num        & Marginal       \\
+%                          &        &                & System    & State  & Parameters & Log-Likelihood \\ \midrule
+%1. D/P                    & Yes    & No             & No        & No     & 5          & -1193.66\\
+%2. D/P +$\delta$          & Yes    & Yes            & No        & No     & 6          & -1182.93 \\
+%3. D/P+A/B                & Yes    & No             & No        & Yes    & 10         & -1150.99\\
+%4. D/P+A/B+$\delta$       & Yes    & Yes            & No        & Yes    & 11         & \textbf{-1145.69}\\
+%5. I/C                    & No     & No             & Yes       & No     & 5          & -1194.80 \\
+%6. I/C+A/B                & No     & No             & Yes       & Yes    & 10         & \textbf{-1155.37}\\
+%7. ID/CD/CP               & Yes    & No             & Yes       & No     & 9          & -1345.87\\
+%8. ID/CD/CP+$\delta$      & Yes    & Yes            & Yes       & No     & 10         & -1344.50\\
+%9. ID/CD/CP+A/B           & Yes    & No             & Yes       & Yes    & 15         & -1303.55 \\ 
+%10. ID/CD/CP+A/B+$\delta$ & Yes    & Yes            & Yes       & Yes    & 16         & \textbf{-1300.35} \\
+%\bottomrule
+%\end{tabular}
+%\caption{
+   % The ten models and their marginal likelihoods.
+    %Values in bold are for the best models within each class that are comparable (see \cref{table:bayesfactors}).
+    %Abbreviations are D: diploid, P: polyploid, I: self-incompatible, C: self-compatible, A: one state of hidden trait, B: other state of hidden trait, $\delta$: diploidization.}
+%\label{table:marginallike}
+%\end{table}
 
 \begin{table}
 \addtolength{\tabcolsep}{-3pt}
 \begin{tabular}{|c|c|c|}
-\toprule
-Ploidy Models & Breeding System Models & Ploidy and Breeding System Models \\ \midrule
-{\begin{tabular}{lcccc}
-            & 1 & 2 & 3 & 4 \\
-1. D/P$+\delta$ & $\cdot$     &10.72 &    -37.24    &-31.94\\
-2. D/P  &$\cdot$&$\cdot$ &    -47.97    &-42.66\\
-\textbf{3. D/P+A/B$+\delta$}  &$\cdot$  & $\cdot$&    $\cdot$    & 5.30 \\
-4. D/P+A/B  &$\cdot$& $\cdot$ & $\cdot$&$\cdot$ \\
-\end{tabular}
-}  & 
-{\begin{tabular}{lcc}
- & 5 & 6\\
-5. I/C &$\cdot$ & -39.43 \\
-\textbf{6. I/C+A/B} &$\cdot$& $\cdot$ \\
-& & \\
-& & \\
-\end{tabular}
-} & 
-{\begin{tabular}{lcccc}
-& 7 & 8 & 9 & 10\\
-7. ID/CD/CP$+\delta$ & $\cdot$    &1.36 & -44.15&-40.95 \\
-8. ID/CD/CP & $\cdot$ & $\cdot$ & -45.51 &-42.31 \\
-\textbf{9. ID/CD/CP+A/B+$\delta$}& $\cdot$ & $\cdot$ &$\cdot$    & 3.2 \\ 
-10. ID/P/CD+A/B & $\cdot$& $\cdot$&$\cdot$ & $\cdot$\\
-\end{tabular}
-}\\
 \bottomrule
 \end{tabular}
 % E: We will probably have to change the layout here because it's not technically a table.  But good enough for now.
