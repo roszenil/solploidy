@@ -360,7 +360,7 @@ b_tmp %in% a_tmp 
 dat2[639:651,]
 #651 species!!!!
 #diploidsi 123+ 4 =127
-# 160 +3=163
+# diploidsc 160 +3=163
 # diploidsna 178
 # polyploidsc<-which(matched$dat[,4]>2 & matched$dat[,5]=="SC")#92
 # polyploidsna 17+5=22
