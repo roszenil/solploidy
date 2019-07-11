@@ -33,7 +33,7 @@ Although SI populations frequently contain some SC individuals, and diploid popu
 Because of the resulting absence of polyploid SI populations, as well as the functional explanation for polyploidy disabling gametophytic SI systems with non-self recognition (see the Introduction), we consider only three observed character states: self-incompatible diploids $(ID)$, self-compatible diploids $(CD)$, and self-compatible polyploids $(CP)$.
 
 Matching our character state data to the largest time-calibrated phylogeny of Solanaceae \citep{sarkinen_2013} yielded 651 species with ploidy and/or breeding system information on the tree.
-% FIXME: Rosana will update numbers around here TODO
+% FIXME: Rosana will update numbers around here TODO:STILL NOT CORRECT!!!
 Of these, 290 had information for both states.
 The number of species in each combination of states is summarized in \cref{figure:stateclassifications}A.
 We retained all 651 species in each of the analyses below because pruning away tips lacking breeding system in the ploidy-only analyses (and vice versa) would discard data that could inform the diversification models.
@@ -48,9 +48,8 @@ The Dryad archive contains the data and tree files used for analyses. % FIXME
 
 \subsection{Models}
 
-To test our hypotheses about lineage diversification and trait macroevolution, we fit a large suite of phylogenetic models.
-All models are from the SSE framework \citep[BiSSE, MuSSE, HiSSE;][]{maddison_2007, fitzjohn_2012, beaulieu_2016}.
-This style of model has parameters that describe per-lineage rates of speciation and extinction, specific to each character state (denoted $\lambda$ and $\mu$, respectively, with subscripts to indicate the state), along with rates of transitions between states (denoted $\rho$ for polyploidization, $\delta$ for diploidization, and $q_{IC}$ for loss of self-incompatibility).
+In order to test our hypotheses about lineage diversification and trait macroevolution, we fitted 29 state-dependent speciation and extinction models (SSE) based on previous work from \citep[BiSSE, MuSSE, HiSSE;][]{maddison_2007, fitzjohn_2012, beaulieu_2016}.
+SSE models parameters that describe per-lineage rates of speciation and extinction, specific to each character state (denoted $\lambda$ and $\mu$, respectively, with subscripts to indicate the state), along with rates of transitions between states (denoted $\rho$ for polyploidization, $\delta$ for diploidization, and $q_{IC}$ for loss of self-incompatibility).
 
 The full set of models and all their rate parameters are detailed in \cref{fig:allmodels}.
 Here we summarize how each type of model allows us to assess whether diversification is best explained by ploidy, breeding system, their combination, or some unknown factor.
@@ -58,13 +57,13 @@ Here we summarize how each type of model allows us to assess whether diversifica
 \subsubsection{Ploidy and diversification}
 
 In order to investigate the association between ploidy level and diversification, we first defined a model in which taxa were classified as diploid $(D)$ or polyploid $(P)$ (M1).
-This is the same model \citet{mayrose_2011} used for this question across an array of plant genera.
+This is the same as one of the models presented in  \citet{mayrose_2011} that was used for the exact same question across an array of plant genera.
 % R- Itay wanted to hightlight that is the same model. Definitely a BiSSE. He did the ClaSSE later in the 2014 response.
 Although this model can be a powerful means to distinguish state-specific speciation and extinction from trait changes, it is prone to incorrectly reporting that a trait is associated with diversification differences \citep{maddison_2015, rabosky_2015}.
 We therefore define several models that incorporate additional forms of diversification rate heterogeneity.
 
 Our second ploidy model includes a binary hidden trait that subdivides each observed state (M2).
-In this CID model \citep{beaulieu_2016}, the hidden trait can affect diversification but the observed trait does not.
+In this character independent model known as CID \citep{beaulieu_2016}, the hidden trait can affect diversification but the observed trait does not.
 Comparing M1 and M2 allows us to test whether diversification rate heterogeneity is better explained by ploidy or by some unknown factor.
 
 We additionally fit three models in which both ploidy and a hidden trait could influence diversification (M3--M5).
@@ -78,7 +77,7 @@ This allows us to assess whether our conclusions about ploidy and diversificatio
 
 Our first five breeding system models follow the same logic as the first ploidy models.
 We begin with each species classified as self-incompatible $(I)$ or self-compatible $(C)$ (M11).
-This is the same as the analysis of \citet{goldberg_2010} but with an updated phylogeny \citep{sarkinen_2013}.
+This is the same as the analysis of \citet{goldberg_2010} but with an updated phylogeny \citep{sarkinen_2013} and larger aggregated dataset.
 
 We then add models to allow diversification to be influenced by only a hidden trait (M12), or by both breeding system and a hidden trait (M13--M15, with varying degrees of complexity in the hidden trait transitions).
 Similar models were used by \citet{freyman_2017} used to study diversification in Onagraceae.
@@ -121,7 +120,8 @@ First we lump together $ID$ and $CD$ to form the diploid state, mimicking the $D
 Then we lump together $CD$ and $CP$ to form the self-compatible state, mimicking the $I/C$ model (M28).
 We further add a hidden trait to each of these models (M27 and M29).
 
-We do not include additional models with diploidization because this reverse transition renders the models non-lumpable \citep{tarasov_2019}.  % E: further explanation needed?
+We do not include additional models with diploidization because this reverse transition renders the models non-lumpable \citep{tarasov_2019}. The lumpability property requires that the rates going from the lumped state to the singular state are equal. Under the diploidization models CP goes back to CD with rate $\delta$ but the rate from CP back to ID is 0, and $\delta \neq 0$. Therefore, two-state models with diplodization cannot be re-coded to be compared to the tree-state models. 
+% E: further explanation needed? R- I added a simple math explanation. Let me know if it is okay
 
 \subsubsection{Pathways to polyploidy}
 
@@ -191,8 +191,8 @@ Using the marginal likelihood values, we calculated Bayes factors to argue five 
 \item Do asymmetrical rates in the model affect the pattern of diversification? - Comparison amongst hidden states models with equal hidden rates and asymmetrical rates.
 \end{enumerate}
 
-Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $BF(M_1,\ M_0) = \ln[ P(\mathbf{X} | M_1) - P(\mathbf{X} | M_0)]$.
-There is `strong evidence'  for $M_1$ when this value is more than 2, `very strong' support when it is more than 6, and `extreme' support when it is more than 10 \citep{kass1995}.
+Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $K=ln(BF(M_1,\ M_0)) = \ln[ P(\mathbf{X} | M_1) - P(\mathbf{X} | M_0)]$.
+There is `strong evidence'  for $M_1$ when this value is more than 10, moderate support if the value is more than 1 and no evidence if the value is between -1 and 1. If the vaue of  $K$ is negative the evidence goes towards $M_0$.  \citep{kass1995}.
 
 \begin{figure}
 \centering
