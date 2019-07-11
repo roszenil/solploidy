@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+
+\begin{table}
+\addtolength{\tabcolsep}{-5pt}
+\begin{tabular}{|l|c|c|c|l|}
+\hline
+Model                                    & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M3. D/P+A/B                                 & -1234.52                     &    M3 vs. M4                 & 11.239                  & M4 (Strong)   \\
+\textbf{M4. D/P+ A/B asym}            & -1223.28                     &   M4 vs. M5              & -1.658                  & M4 (Moderate)   \\
+M5. D/P+A/B all asym                 & -1224.93                     &                     &                         &                         \\ \hline
+M13. I/C+ A/B                                & -1270.47                     &   M13 vs. M14                  & 22.75                   & M14 (Strong)   \\
+\textbf{M14. I/C+ A/B asym}            & \textbf{-1247.72}            & M14 vs. M15         & {0.05}           & No evidence             \\
+M15. I/C+ A/B all asym               & -1247.67                     &                     &                         &                         \\ \hline
+M18. IC/CD/CP+A/B                            & -1414.00                     &     M18 vs. M19                & 20.79                   & M19 (Strong)    \\
+\textbf{M19. IC/CD/CP+ A/B asym}       & \textbf{-1393.21}            & M19 vs. M20          & {-1.919}         & M19 (Moderate)   \\
+M20. IC/CD/CP+ A/B all asym           & -1395.129                    &                     &                         &                         \\ \hline
+M8. D/P +A/B+$\delta$                          & -1225.05                     &  M8 vs. M9                   & 10.58                   & M9 (Strong)    \\
+\textbf{M9. D/P+ A/B+ $\delta$ asym}      & \textbf{-1214.46}                     &    M9 vs. M10                 & -0.52                   & M10 (Moderate) \\
+M10. D/P+A/B+$\delta$ all asym        & -1214.98                     &                    &                         &                         \\ \hline
+M23. IC/CD/DP+A/B+$\delta$                 & -1408.65                     &     M23 vs M24                & 21.91                   & M24(Strong)     \\
+\textbf{M24. IC/CD/DP+A/B+$\delta$ asym} & \textbf{-1386.74}                     &   M24 vs M25              & -2.78                   & M24 (Moderate) \\
+M25. IC/CD/DP+A/B+ $\delta$ all asym     & -1389.52                     &                     &                         &                         \\ \hline
+\end{tabular}
+\caption{Test for symmetry of the hidden and trait rates via Bayes factors. For all models asymmetric hidden transition rates are preferred over models with equal hidden rates. Adding more complexity by assuming asymmetry in the trait rate within hidden states does not improve models.}
+\label{table:testsymmetry}
+\end{table}
+
+\begin{table}
+\addtolength{\tabcolsep}{-5pt}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Model                                    & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M1. D/P                                  & -1238.76                                                          & M1 vs. M4   & 60.47           & M4 (Strong)                                                          \\
+\textbf{M4. D/P+A/B asym}                & \textbf{-1223.28}                                                &             &                 &                                                                      \\ \hline
+M11. I/C                                 & -1309.07                                                          & M11 vs. M14 & 61.35           & M14 (Strong)                                                         \\
+\textbf{M14. I/C+A/B asym}               & \textbf{-1247.72}                                                 &             &                 &                                                                      \\ \hline
+M16. ID/CD/CP                            & -1459.11                                                          & M16 vs. M19 & 65.90           & M19 (Strong)                                                         \\
+\textbf{M19. ID/CD/CP+A/B asym}          & \textbf{-1393.20}                                                &             &                 &                                                                      \\ \hline
+M6. D/P+$\delta$                         & -1283.76                                                          & M6 vs. M9   & 69.3            & M9 (Strong)                                                          \\
+\textbf{M9. D/P+A/B+$\delta$ asym}       & \textbf{-1214.46}                                                 &             &                 &                                                                      \\ \hline
+M21. IC/CD/CP+$\delta$                   & -1454.68                                                          & M21 vs. M24 & 68.48           & M24 (Strong)                                                         \\
+\textbf{M24. IC/CD/CP+A/B+$\delta$ asym} & \textbf{-1386.20}                                                 &             &                 &                                                                      \\ \hline
+\end{tabular}
+\caption{Test for addition of hidden states in models via Bayes factors. Models with hidden states are strongly preferred over simpler models}
+\label{table:testaddhidden}
+\end{table}
+
+\begin{table}
+\addtolength{\tabcolsep}{-5pt}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Model                                    & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M1. D/P                                  & -1238.76                                                          & M1 vs. M6   & 65.92           & M6 (Strong)                                                          \\
+\textbf{M6. D/P+$\delta$}                & \textbf{-1267.84}                                                 &             &                 &                                                                      \\ \hline
+M4. D/P+A/B asym                         & -1223.28                                                          & M4 vs. M9   & 8.81            & M9 (Moderate)                                                        \\
+\textbf{M9. D/P+A/B+$\delta$ asym}       & \textbf{-1214.46}                                                 &             &                 &                                                                      \\ \hline
+M16. ID/CD/CP                            & -1459.11                                                          & M16 vs. M21 & 4.41            & M21 (Moderate)                                                       \\
+\textbf{M21. ID/CD/CP+$\delta$}          & \textbf{-1454.68}                                                 &             &                 &                                                                      \\ \hline
+M19. IC/CD/CP asym                       & -1393.20                                                          & M19 vs. M24 & 6.46            & M24 (Moderate)                                                       \\
+\textbf{M24. IC/CD/CP+A/B+$\delta$ asym} & \textbf{-1386.20}                                                 &             &                 &                                                                      \\ \hline
+\end{tabular}
+\caption{Test for inclusion of a diploidization rate via Bayes factors. Models with diploidzation are moderately preferred over models that do not include a diploidization rate}
+\label{table:testdiploidization}
+\end{table}
+
+\begin{table}[]
+\addtolength{\tabcolsep}{-5pt}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Model                       & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M26. Lumped D/P             & -1463.22                                                          & M26 vs. M16 & 4.10            & M16 (Moderate)                                                       \\
+\textbf{M16. ID/CD/CP}      & \textbf{-1459.11}                                                 &             &                 &                                                                      \\ \hline
+M27. Lumped D/P+A/B         & -1417.67                                                          & M27 vs. M23 & 3.678           & M23 (Moderate)                                                       \\
+\textbf{M23. ID/CD/CP +A/B} & \textbf{-1414.00}                                                 &             &                 &                                                                      \\ \hline
+M28. Lumped I/C             & -1458.41                                                          & M28 vs. M16 & -0.69           & No evidence                                                          \\
+\textbf{M16. ID/CD/CP}      & \textbf{-1459.11}                                                 &             &                 &                                                                      \\ \hline
+M29. Lumped I/C+ A/B        & -1416.60                                                          & M29 vs. M23 & 2.60            & M23 (Moderate)                                                       \\
+\textbf{M23. IC/CD/CP+A/B}  & \textbf{-1414.00}                                                 &             &                 &                                                                      \\ \hline
+\end{tabular}
+\caption{Test for adding a focal trait to a binary state model via Bayes factors. Three-state modes are moderately preferred over two-state models. The evidence is stronger towards the inclusion of breeding system in ploidy models (M26, M27) than the inclusion of ploidy in breeding system models (M29, M29)}
+\label{table:testextrastate}
+\end{table}
+
+\begin{table}[]
+\addtolength{\tabcolsep}{-5pt}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Model                                     & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M2.  CID D/P                              & -1223.86                                                          & M2 vs. M4   & 0.58            & No evidence                                                          \\
+\textbf{M4. D/P +A/B asym}                & \textbf{-1223.28}                                                 &             &                 &                                                                      \\ \hline
+\textbf{M7. CID D/P+$\delta$}             & \textbf{-1212.42}                                                 & M7 vs. M9   & -2.04           & M7(Moderate)                                                         \\
+M9. D/P+A/B+$\delta$ asym                 & -1214.47                                                          &             &                 &                                                                      \\ \hline
+M12. CID I/C                              & -1267.93                                                          & M12 vs. M14 & 20.22           & M14 (Strong)                                                         \\
+\textbf{M14. I/C+ A/B asym}               & \textbf{-1247.72}                                                 &             &                 &                                                                      \\ \hline
+M22. CID ID/CD/CP+$\delta$                & -1399.20                                                          & M22 vs. M24 & 12.45           & M24 (Strong)                                                         \\
+\textbf{M24. ID/CD/CP +A/B+$\delta$ asym} & \textbf{-1386.74}                                                 &             &                 &                                                                      \\ \hline
+\end{tabular}
+\caption{Test for the inclusion of focal traits in diversification models via Bayes factors. Models that include ploidy (M4, M9) are moderately or non-preferred over models where the diversification is independent of the ploidy trait (M2, M4). Models that include breeding system are strongly preferred over models where the diversification process is independent of the breeding system trait. A comparison between model M17 versus M19 is missing because of challenges calculating the log-likelihood marginal for M17.}
+\label{table:cidtests}
+\end{table}
+
+
+\end{document}
