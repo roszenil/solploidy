@@ -55,56 +55,73 @@ For all models, there is greater uncertainty in the estimate of diploidization r
 % R will add a bit about param confidence
 
 \begin{supptable}
-    \begin{center}
-    
-    \begin{tabular}{lcccccc}
-                       & D/P   & D/P+A/B      & I/C    & I/C+A/B      & ID/CD/CP & ID/CD/CP+A/B \\ \midrule
-        %                                                                                      
-        $r_D$          & 0.260 & 0.193, 0.658 & ---    & ---          & ---      & ---          \\
-        $r_P$          &-0.056 & 0.030, 0.187 & ---    & ---          & ---      & ---          \\
-        $r_I$          & ---   & ---          & 0.550  & 0.386, 0.877 & ---      & ---          \\
-        $r_C$          & ---   & ---          &-0.001  &-0.059, 0.606 & ---      & ---          \\
-        $r_{ID}$       & ---   & ---          & ---    & ---          & 0.455    & 0.309, 0.797 \\
-        $r_{CD}$       & ---   & ---          & ---    & ---          & 0.065    &-0.006, 0.587 \\
-        $r_{CP}$       & ---   & ---          & ---    & ---          &-0.088    &-0.074, 0.403 \\
-        %                                                                                      
-        $\rho$         & 0.047 & 0.047        & ---    & ---          & ---      & ---          \\
-        $\rho_I$       & ---   & ---          & ---    & ---          & 0.067    & 0.053        \\
-        $\rho_C$       & ---   & ---          & ---    & ---          & 0.033    & 0.032        \\
-        $q_{IC}$       & ---   & ---          & 0.364  & 0.261        & 0.198    & 0.145        
-    \end{tabular}
-    
-    \vspace{12pt}
-            
-    \begin{tabular}{lcccc}
-                       & D/P   & D/P+A/B      & ID/CD/CP & ID/CD/CP+A/B \\ \midrule
-        %                                                              
-        $r_D$          & 0.382 & 0.698, 0.100 & ---      & ---          \\
-        $r_P$          & 0.109 & 0.587, 0.182 & ---      & ---          \\
-        $r_I$          & ---   & ---          & ---      & ---          \\
-        $r_C$          & ---   & ---          & ---      & ---          \\
-        $r_{ID}$       & ---   & ---          & 0.449    & 0.318, 0.789 \\
-        $r_{CD}$       & ---   & ---          & 0.050    &-0.248, 0.494 \\
-        $r_{CP}$       & ---   & ---          &-0.027    & 0.110, 0.634 \\
-        %                                                              
-        $\rho$         & 0.033 & 0.026        & ---      & ---          \\
-        $\rho_I$       & ---   & ---          & 0.063    & 0.047        \\
-        $\rho_C$       & ---   & ---          & 0.024    & 0.011        \\
-        $\delta$       & 0.050 & 0.162        & 0.022    & 0.107        \\
-        $q_{IC}$       & ---   & ---          & 0.194    & 0.164        
-    \end{tabular}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                           & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M7    & M8     & M9    & M10   & Evidence                                                                                     \\ \hline
+M6. D/P+$\delta$                & -1268.83                                                          & 55.41 & 42.78  & 53.37 & 52.85 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M6\end{tabular}            \\ \hline
+\textbf{M7. CID D/P+$\delta$}   & \textbf{-1212.42}                                                 &       & -12.62 & -2.04 & -2.04 & \begin{tabular}[c]{@{}l@{}}Model M7 moderately\\ preferred over M9 and M10\end{tabular}      \\ \hline
+M8. D/P+A/B $\delta$            & -1214.46                                                          &       &        & 10.58 & 10.07 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular} \\ \hline
+M9. D/P+A/B +$\delta$ asym      & -1214.46                                                          &       &        &       & -0.51 & No evidence                                                                                  \\ \hline
+M10. D/P+A/B +$\delta$ all asym & -1214.97                                                          &       &        &       &       &         \\ \hline                                                                                    
+\end{tabular}
+\caption{Bayes factors of  ploidy only models with diplodization. Results indicate that a character independent model (M6) is strongly preferred over BiSSE (M1)  model. M6 is moderately preferred over any of the HiSSE model swith asymmetric hidden rates (M9, M10).}
+\label{supptable:M6M10}
+\end{supptable}
 
+\begin{supptable}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                            & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M18   & M19   & M20   & Evidence                                                                                                   \\ \hline
+M16. ID/CP/CD                    & -1459.11                                                          & 45.11 & 65.91 & 63.98 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M16\end{tabular}                         \\ \hline
+M17. CID ID/CP/CD                & *                                                                 &       &       &       &                                                                                                            \\
+M18. ID/CP/CD+A/B                & -1414                                                             &       & 20.79 & 18.87 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}               \\ \hline
+\textbf{M19. ID/CP/CD +A/B asym} & \textbf{-1393.20}                                                 &       &       & -1.92 & \begin{tabular}[c]{@{}l@{}}Asymmetric hidden rates moderately\\ preferred over all asymmetric\end{tabular} \\ \hline
+M20. ID/CP/CD +A/B all asym      & -1393.12                                                          &       &       &       &   \\ \hline                                                                                                        
+\end{tabular}
+\caption{Bayes factors of ploidy and breeding system withou diploidization. Results indicate that the MuHiSSE model with asymmetric hidden rates (17) is  strongly preferred over M16 and M18 and moderately preferred over the MuHiSSe with all rates asymetric (M20). *Marginal log-likelihood for M17 could not be calculated in our limited amount of computational time.}
+\label{supptable:M16M20}
+\end{supptable}
 
-    \end{center}
-    \caption{
-        Median rate estimates for all fitted models.
-        Units are per million years.
-        Two comma-separated numbers refer to the $A$ and $B$ hidden states, and --- means the parameter was not present in the model.
-    Net diversification rates ($r$) are subscripted with trait state initials (Diploid, Polyploid, Incompatible, Compatible). Transition rates are $\rho$ (polyploidization), subscripted with background breeding system state; $\delta$ (diploidization); and  $q_{IC}$ (loss of self-incompatibility).
-    The upper section is for models without diploidization, and the lower section is for models with diploidization.
-    The supplemental figures show the corresponding distributions of parameter estimates.
-    }
-    \label{table:estimates}
+\begin{supptable}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                                 & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M22   & M23    & M24   & M25   & Evidence                                                                                         \\ \hline
+M21. ID/CP/CD+$\delta$                & -1454.68                                                          & 55.48 & 46.031 & 67.94 & 65.15 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M21\end{tabular}               \\ \hline
+M22. CID ID/CP/CD+$\delta$            & -1399.201                                                         &       & -9.452 & 12.45 & 9.675 & \begin{tabular}[c]{@{}l@{}}Model M24 strongly preferred \\ over M22\end{tabular}                 \\ \hline
+M23. ID/CP/CD+A/B $\delta$            & -1408.65                                                          &       &        & 21.91 & 19.12 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}     \\ \hline
+\textbf{M24. ID/CP/CD +$\delta$ asym} & \textbf{-1386.74}                                                 &       &        &       & -2.78 & \begin{tabular}[c]{@{}l@{}}Asymmetric hidden rates \\ preferred over all asymmetric\end{tabular} \\ \hline
+M25. ID/CP/CD +$\delta$ all asym      & -1389.52                                                          &       &        &       &       &                      \\ \hline                                                                           
+\end{tabular}
+\caption{Bayes factors of ploidy and breeding system with diploidization. Results indicate that the MuHiSSE model with asymmetric hidden rates (M24) is  strongly preferred over M21-M23 and moderately preferred over the MuHiSSe with all rates asymetric (M25).}
+\label{supptable:M21M25}
+\end{supptable}
+
+\begin{supptable}
+\addtolength{\tabcolsep}{-5pt}
+\begin{tabular}{|l|c|c|c|l|}
+\hline
+Model                                    & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M3. D/P+A/B                                 & -1234.52                     &    M3 vs. M4                 & 11.239                  & M4 (Strong)   \\
+\textbf{M4. D/P+ A/B asym}            & -1223.28                     &   M4 vs. M5              & -1.658                  & M4 (Moderate)   \\
+M5. D/P+A/B all asym                 & -1224.93                     &                     &                         &                         \\ \hline
+M13. I/C+ A/B                                & -1270.47                     &   M13 vs. M14                  & 22.75                   & M14 (Strong)   \\
+\textbf{M14. I/C+ A/B asym}            & \textbf{-1247.72}            & M14 vs. M15         & {0.05}           & No evidence             \\
+M15. I/C+ A/B all asym               & -1247.67                     &                     &                         &                         \\ \hline
+M18. IC/CD/CP+A/B                            & -1414.00                     &     M18 vs. M19                & 20.79                   & M19 (Strong)    \\
+\textbf{M19. IC/CD/CP+ A/B asym}       & \textbf{-1393.21}            & M19 vs. M20          & {-1.919}         & M19 (Moderate)   \\
+M20. IC/CD/CP+ A/B all asym           & -1395.129                    &                     &                         &                         \\ \hline
+M8. D/P +A/B+$\delta$                          & -1225.05                     &  M8 vs. M9                   & 10.58                   & M9 (Strong)    \\
+\textbf{M9. D/P+ A/B+ $\delta$ asym}      & \textbf{-1214.46}                     &    M9 vs. M10                 & -0.52                   & M10 (Moderate) \\
+M10. D/P+A/B+$\delta$ all asym        & -1214.98                     &                    &                         &                         \\ \hline
+M23. IC/CD/DP+A/B+$\delta$                 & -1408.65                     &     M23 vs M24                & 21.91                   & M24(Strong)     \\
+\textbf{M24. IC/CD/DP+A/B+$\delta$ asym} & \textbf{-1386.74}                     &   M24 vs M25              & -2.78                   & M24 (Moderate) \\
+M25. IC/CD/DP+A/B+ $\delta$ all asym     & -1389.52                     &                     &                         &                         \\ \hline
+\end{tabular}
+\caption{Test for symmetry of the hidden and trait rates via Bayes factors. For all models asymmetric hidden transition rates are preferred over models with equal hidden rates. Adding more complexity by assuming asymmetry in the trait rate within hidden states does not improve models.}
+\label{supptable:asymmetry}
 \end{supptable}
 
 % check values of delta and rho D/P+A/B with(out) delta
@@ -112,17 +129,16 @@ For all models, there is greater uncertainty in the estimate of diploidization r
 
 %B: heads up: I added two clarifying descriptive sentences in the two figures below. Maybe something about noting x-axis scale differences would be useful.
 \begin{figure}
-\includegraphics[width=\textwidth]{allnetdivmodelswithoutdelta.pdf} % FIXME: need horizontal axis label
+\includegraphics[width=\textwidth]{alldiversificationasymhidden.pdf} 
 \caption{Net diversification rates for all models without diploidization rate estimate. 
 Each panel contains a graphical summary of estimated model parameters and displays posterior distributions for net diversification estimates.}
 \label{figure:netdivall}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=\textwidth]{allnetdivmodelsdiploidization.pdf}
-\caption{Net diversification rates for all models that include diploidization ($\delta$). 
-Each panel contains a graphical summary of estimated model parameters and displays posterior distributions for net diversification estimates.}  
-\label{figure:netdivnodip}
+\includegraphics[width=\textwidth]{lumped.pdf} %lumped.pdf
+\caption{Comparing two and three state models is possible via lumpable models (M26, M28). These models used the same classifications as the three-state model M16 which allow for comparisons via Bayes Factors as shown in \cref{table:lumped}.}  
+\label{figure:lumped}
 \end{figure}
 
 % E todo: re-run with new rate estimates; add panel letters?
@@ -143,16 +159,42 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \end{figure}
 
 \begin{suppfigure}
+\includegraphics[width=\textwidth]{alldiversificationasymhiddendip.pdf}
+\caption{Posterior distribution for all the best models with diploidization} % XXX
+\label{suppfigure:alldip}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{comparablesDP.pdf}
+\caption{Lumped ploidy models to assess the effect of adding breeding system to create a three-state model. Moderate evidence exists that adding a breeding system is necessary \cref{table:lumped} } % XXX
+\label{suppfigure:lumpedDP}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{comparablesIC.pdf}
+\caption{Lumped breeding system models to assess the effect of adding ploidy to create a three-state model. Moderate to insignificant evidence exists that adding ploidy is necessary \cref{table:lumped} } % XXX
+\label{suppfigure:lumpedIC}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{effectofasymmetry.pdf}
+\caption{Effect of asymmetric rates in hidden models. Models with asymmetric rates are preferred over models with equal rates \cref{supptable:asymmetry}} % XXX
+\label{suppfigure:asymmetric}
+\end{suppfigure}
+
+
+\begin{suppfigure}
 \includegraphics[width=\textwidth]{bisseDPnodipposteriordist.pdf}
 \caption{Posterior distribution for each of the parameters in the D/P ploidy model} % XXX
 \label{suppfigure:DPnodip}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrDP.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node of the D/P ploidy model} % XXX
-\label{suppfigure:DPnodipasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrDP.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node of the D/P ploidy model} % XXX
+%\label{suppfigure:DPnodipasr}
+%\end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{bisseDPposteriordist.pdf}
@@ -160,11 +202,11 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \label{suppfigure:DP}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrDPdelta.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the D/P+ $\delta$, ploidy model} % XXX
-\label{suppfigure:DPasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrDPdelta.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the D/P+ $\delta$, ploidy model} % XXX
+%\label{suppfigure:DPasr}
+%\end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{hisseDPnodipposteriordist.pdf}
@@ -172,11 +214,11 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \label{suppfigure:DPnodipAB}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrDPAB.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the D/P D/P+A/B ploidy model} % XXX
-\label{suppfigure:DPnodipABasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrDPAB.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the D/P D/P+A/B ploidy model} % XXX
+%\label{suppfigure:DPnodipABasr}
+%\end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{hisseDPposteriordist.pdf}
@@ -184,11 +226,11 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \label{suppfigure:DPAB}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrDPABdelta.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the D/P+$\delta$+A/B ploidy model.} % XXX
-\label{suppfigure:DPABasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrDPABdelta.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the D/P+$\delta$+A/B ploidy model.} % XXX
+%\label{suppfigure:DPABasr}
+%\end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{bisseSIposteriordist.pdf}
@@ -196,11 +238,11 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \label{suppfigure:IC}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrIC.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the I/C breeding system model} % XXX
-\label{suppfigure:ICasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrIC.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the I/C breeding system model} % XXX
+%\label{suppfigure:ICasr}
+%\end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{hisseSInoretposteriordist.pdf}
@@ -208,11 +250,11 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \label{suppfigure:ICAB}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrICAB.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the I/C+A/B breeding system model} % XXX
-\label{suppfigure:ICABasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrICAB.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the I/C+A/B breeding system model} % XXX
+%\label{suppfigure:ICABasr}
+%\end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{musseDPSInodipposteriordist.pdf}
@@ -220,11 +262,11 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \label{suppfigure:IDCDCPnodip}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrIDCDCP.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the ID/CD/CP ploidy and breeding system model} % XXX
-\label{suppfigure:IDCDCPnodipasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrIDCDCP.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the ID/CD/CP ploidy and breeding system model} % XXX
+%\label{suppfigure:IDCDCPnodipasr}
+%\end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{musseDPSIposteriordist.pdf}
@@ -232,11 +274,11 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \label{suppfigure:IDCDCP}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrIDCDCPdelta.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the ID/CD/CP+$\delta$ ploidy and breeding system model} % XXX
-\label{suppfigure:IDCDCPasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrIDCDCPdelta.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the ID/CD/CP+$\delta$ ploidy and breeding system model} % XXX
+%\label{suppfigure:IDCDCPasr}
+%\end{suppfigure}
 
 
 \begin{suppfigure}
@@ -245,11 +287,11 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \label{suppfigure:IDCDCPnodipAB}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrIDCDCPAB.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the ID/CD/CP+A/B polyploidy and breeding system model} % XXX
-\label{suppfigure:IDCDCPnodipABasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrIDCDCPAB.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the ID/CD/CP+A/B polyploidy and breeding system model} % XXX
+%\label{suppfigure:IDCDCPnodipABasr}
+%\end{suppfigure}
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{muhisseDPSIposteriordist.pdf}
@@ -257,8 +299,8 @@ Each panel contains a graphical summary of estimated model parameters and displa
 \label{suppfigure:IDCDCPAB}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrIDCDCPdeltaAB.pdf}
-\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the ID/CD/CP+$\delta$+A/B, polyploidy and breeding system model} % XXX
-\label{suppfigure:IDCDCPABasr}
-\end{suppfigure}
+%\begin{suppfigure}
+%\includegraphics[width=\textwidth]{asrIDCDCPdeltaAB.pdf}
+%\caption{Ancestral state reconstruction showing the maximum a posteriori for each node in the ID/CD/CP+$\delta$+A/B, polyploidy and breeding system model} % XXX
+%\label{suppfigure:IDCDCPABasr}
+%\end{suppfigure}

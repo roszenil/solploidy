@@ -8,12 +8,12 @@
 \hline
 Model                & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M2    & M3     & M4    & M5     & Evidence                                                                                     \\ \hline
 M1. D/P              & -1283.76                                                          & 59.90 & 49.23  & 60.48 & 58.82  & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M1\end{tabular}            \\ \hline
-\textbf{M2. CID D/P} & \textbf{-1223.86}                                                 &       & -10.66 & 0.579 & -1.079 & \begin{tabular}[c]{@{}l@{}}Moderate to strong \\ preference for M2\end{tabular}              \\ \hline
+\textbf{M2. CID D/P} & \textbf{-1223.86}                                                 &       & -10.66 & 0.579 & -1.079 & \begin{tabular}[c]{@{}l@{}}Strong preference for \\ M2 over M1\end{tabular}              \\ \hline
 M3. D/P+A/B          & -1234.52                                                          &       &        & 11.24 & 9.58   & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}   \\ \hline
-M4. D/P+A/B asym     & -1223.28                                                          &       &        &       & -1.658 & \begin{tabular}[c]{@{}l@{}}Moderate evidence for\\ only asymmetric hidden rates\end{tabular} \\\hline
+\textbf{M4. D/P+A/B asym}     & \textbf{-1223.28}                                                          &       &        &       & -1.658 & \begin{tabular}[c]{@{}l@{}}Moderate evidence for\\ only asymmetric hidden rates\end{tabular} \\\hline
 M5. D/P+A/B all asym & -1224.93                                                          &       &        &       &        &          \\ \hline                                                                                   
 \end{tabular}
-\caption{Bayes factors of  ploidy only models without diplodization. Results indicate that a character independent model (M2) is strongly preferred over every other model. The following best model is M4 a HiSSE model with asymetric hidden rates.}
+\caption{Bayes factors of  ploidy only models without diplodization. Results indicate that a character independent model (M2) is strongly preferred over BiSSE (M1)  model. There is no evidence that character independent model is different from M4, the HiSSE model with asymmetric hidden rates. M4 is moderately preferred over the more complicated M5, a HiSSE model that has asymmetry for all transition rates.}
 \label{table:M1M5}
 \end{table}
 
@@ -21,16 +21,61 @@ M5. D/P+A/B all asym & -1224.93                                                 
 \addtolength{\tabcolsep}{-3pt}
 \begin{tabular}{|l|r|c|c|c|c|l|}
 \hline
-Model                      & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M12   & M13   & M14   & M15   & Evidence                                                                                       \\ \hline
-M11. I/C                   & -1309.07                                                          & 41.13 & 38.59 & 61.39 & 61.35 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M111\end{tabular}            \\ \hline
-M12. CID I/C               & -1267.93                                                          &       & -2.53 & 20.37 & 20.21 & \begin{tabular}[c]{@{}l@{}}Models with asymmetric rates\\ are preferred over  M12\end{tabular} \\ \hline
-M13. I/C+A/B               & -1270.47                                                          &       &       & 22.80 & 22.75 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}   \\ \hline
-\textbf{M14. I/C+A/B asym} & \textbf{-1247.66}                                                 &       &       &       & -0.05 & No evidence                                                                                    \\ \hline
-M15. I/C+A/B all asym      & -1247.72                                                          &       &       &       &       &       \\ \hline                                                                                        
+Model                           & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M7    & M8     & M9    & M10   & Evidence                                                                                     \\ \hline
+M6. D/P+$\delta$                & -1268.83                                                          & 55.41 & 42.78  & 53.37 & 52.85 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M6\end{tabular}            \\ \hline
+\textbf{M7. CID D/P+$\delta$}   & \textbf{-1212.42}                                                 &       & -12.62 & -2.04 & -2.04 & \begin{tabular}[c]{@{}l@{}}Model M7 moderately\\ preferred over M9 and M10\end{tabular}      \\ \hline
+M8. D/P+A/B $\delta$            & -1214.46                                                          &       &        & 10.58 & 10.07 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular} \\ \hline
+M9. D/P+A/B +$\delta$ asym      & -1214.46                                                          &       &        &       & -0.51 & No evidence                                                                                  \\ \hline
+M10. D/P+A/B +$\delta$ all asym & -1214.97                                                          &       &        &       &       &         \\ \hline                                                                                    
 \end{tabular}
-\caption{Bayes factors of breeding system only models. Results indicate that the HiSSE model with asymmetric hidden rates (M14) is strongly preferred over every other model very closely followed by M15 the model that adds asymmetry to the transition rates within hidden states.}
+\caption{Bayes factors of  ploidy only models with diplodization. Results indicate that a character independent model (M6) is strongly preferred over BiSSE (M1)  model. M6 is moderately preferred over any of the HiSSE model swith asymmetric hidden rates (M9, M10).}
+\label{table:M6M10}
+\end{table}
+
+\begin{table}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                      & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M12   & M13   & M14   & M15   & Evidence                                                                                       \\ \hline
+M11. I/C                   & -1309.07                                                          & 41.13 & 38.59 & 61.34 & 61.40 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M111\end{tabular}            \\ \hline
+M12. CID I/C               & -1267.93                                                          &       & -2.53 & 20.21 & 20.37 & \begin{tabular}[c]{@{}l@{}}Models with asymmetric rates\\ are preferred over  M12\end{tabular} \\ \hline
+M13. I/C+A/B               & -1270.47                                                          &       &       & 22.75 & 22.80 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}   \\ \hline
+\textbf{M14. I/C+A/B asym} & \textbf{-1247.72}                                                 &       &       &       & 0.05 & No evidence                                                                                    \\ \hline
+\textbf{M15. I/C+A/B all asym }     & \textbf{ -1247.66}                                                          &       &       &       &       &       \\ \hline                                                                                        
+\end{tabular}
+\caption{Bayes factors of breeding system only models. Results indicate that the HiSSE models with asymmetric rates (M14, M15) are strongly preferred over every other model.}
 \label{table:M11M15}
 \end{table}
+
+\begin{table}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                            & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M18   & M19   & M20   & Evidence                                                                                                   \\ \hline
+M16. ID/CP/CD                    & -1459.11                                                          & 45.11 & 65.91 & 63.98 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M16\end{tabular}                         \\ \hline
+M17. CID ID/CP/CD                & *                                                                 &       &       &       &                                                                                                            \\
+M18. ID/CP/CD+A/B                & -1414                                                             &       & 20.79 & 18.87 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}               \\ \hline
+\textbf{M19. ID/CP/CD +A/B asym} & \textbf{-1393.20}                                                 &       &       & -1.92 & \begin{tabular}[c]{@{}l@{}}Asymmetric hidden rates moderately\\ preferred over all asymmetric\end{tabular} \\ \hline
+M20. ID/CP/CD +A/B all asym      & -1393.12                                                          &       &       &       &   \\ \hline                                                                                                        
+\end{tabular}
+\caption{Bayes factors of ploidy and breeding system withou diploidization. Results indicate that the MuHiSSE model with asymmetric hidden rates (17) is  strongly preferred over M16 and M18 and moderately preferred over the MuHiSSe with all rates asymetric (M20). *Marginal log-likelihood for M17 could not be calculated in our limited amount of computational time.}
+\end{table}
+
+\begin{table}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                                 & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M22   & M23    & M24   & M25   & Evidence                                                                                         \\ \hline
+M21. ID/CP/CD+$\delta$                & -1454.68                                                          & 55.48 & 46.031 & 67.94 & 65.15 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M21\end{tabular}               \\ \hline
+M22. CID ID/CP/CD+$\delta$            & -1399.201                                                         &       & -9.452 & 12.45 & 9.675 & \begin{tabular}[c]{@{}l@{}}Model M24 strongly preferred \\ over M22\end{tabular}                 \\ \hline
+M23. ID/CP/CD+A/B $\delta$            & -1408.65                                                          &       &        & 21.91 & 19.12 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}     \\ \hline
+\textbf{M24. ID/CP/CD +$\delta$ asym} & \textbf{-1386.74}                                                 &       &        &       & -2.78 & \begin{tabular}[c]{@{}l@{}}Asymmetric hidden rates \\ preferred over all asymmetric\end{tabular} \\ \hline
+M25. ID/CP/CD +$\delta$ all asym      & -1389.52                                                          &       &        &       &       &                      \\ \hline                                                                           
+\end{tabular}
+\caption{Bayes factors of ploidy and breeding system with diploidization. Results indicate that the MuHiSSE model with asymmetric hidden rates (M24) is  strongly preferred over M21-M23 and moderately preferred over the MuHiSSe with all rates asymetric (M25).}
+\label{table:M21M25}
+\end{table}
+
 
 \begin{table}
 \addtolength{\tabcolsep}{-5pt}
@@ -96,10 +141,10 @@ M19. IC/CD/CP asym                       & -1393.20                             
 \end{table}
 
 \begin{table}[]
-\addtolength{\tabcolsep}{-5pt}
+\addtolength{\tabcolsep}{-3pt}
 \begin{tabular}{|l|c|c|c|c|}
 \hline
-Model                       & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+Model                       & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=ln(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
 M26. Lumped D/P             & -1463.22                                                          & M26 vs. M16 & 4.10            & M16 (Moderate)                                                       \\
 \textbf{M16. ID/CD/CP}      & \textbf{-1459.11}                                                 &             &                 &                                                                      \\ \hline
 M27. Lumped D/P+A/B         & -1417.67                                                          & M27 vs. M23 & 3.678           & M23 (Moderate)                                                       \\

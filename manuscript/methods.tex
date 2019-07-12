@@ -48,7 +48,7 @@ The Dryad archive contains the data and tree files used for analyses. % FIXME
 
 \subsection{Models}
 
-In order to test our hypotheses about lineage diversification and trait macroevolution, we fitted 29 state-dependent speciation and extinction models (SSE) based on previous work from \citep[BiSSE, MuSSE, HiSSE;][]{maddison_2007, fitzjohn_2012, beaulieu_2016}.
+In order to test our hypotheses about lineage diversification and trait macroevolution, we fitted 29 state-dependent speciation and extinction models (SSE) to previous work on diversification \citep[BiSSE, MuSSE, HiSSE;][]{maddison_2007, fitzjohn_2012, beaulieu_2016}.
 SSE models parameters that describe per-lineage rates of speciation and extinction, specific to each character state (denoted $\lambda$ and $\mu$, respectively, with subscripts to indicate the state), along with rates of transitions between states (denoted $\rho$ for polyploidization, $\delta$ for diploidization, and $q_{IC}$ for loss of self-incompatibility).
 
 The full set of models and all their rate parameters are detailed in \cref{fig:allmodels}.
@@ -68,9 +68,9 @@ Comparing M1 and M2 allows us to test whether diversification rate heterogeneity
 
 We additionally fit three models in which both ploidy and a hidden trait could influence diversification (M3--M5).
 These models differ in whether transitions between the hidden states are symmetric or asymmetric, and whether the polyploidization rate depends on the hidden state.
-Comparing M1--M5 allows us to test whether ploidy is associated with diversification differences on top of differences explained by an unknown factor.
+Comparing M1--M5 allows us to test whether ploidy is associated with diversification differences on top of the differences potentially explained by an unknown factor\cref{table:bayesfactors}.
 
-We further fit the analogues of these five models but including a rate parameter for transitions from polyploid to diploid (M6--M10).
+We further fit the analogues of these five models but including a rate parameter for transitions from polyploid to diploid (M6--M10) \cref{supptable:M6M10}.
 This allows us to assess whether our conclusions about ploidy and diversification are robust to the possibility of diploidization.
 
 \subsubsection{Breeding system and diversification}
@@ -79,7 +79,7 @@ Our first five breeding system models follow the same logic as the first ploidy 
 We begin with each species classified as self-incompatible $(I)$ or self-compatible $(C)$ (M11).
 This is the same as the analysis of \citet{goldberg_2010} but with an updated phylogeny \citep{sarkinen_2013} and larger aggregated dataset.
 
-We then add models to allow diversification to be influenced by only a hidden trait (M12), or by both breeding system and a hidden trait (M13--M15, with varying degrees of complexity in the hidden trait transitions).
+We then add models to allow diversification to be influenced by only a hidden trait (M12), or by both breeding system and a hidden trait (M13--M15, with varying degrees of complexity in the hidden trait transitions \cref{table:M11M15}).
 Similar models were used by \citet{freyman_2017} used to study diversification in Onagraceae.
 
 Self-incompatibility is homologous in all Solanaceae species in which S-alleles have been cloned and controlled crosses performed.
@@ -102,9 +102,9 @@ Each of these states may again be associated with different rates of speciation 
 % The total rate of loss of self-incompatibility, \ie transitions out of $ID$, is $q_{IC} + \rho_I$.
 % E: Can we call it something other than q_IC?  It's a bit confusing to have the same parameter mean different things in different models.
 
-As for the previous models of only one trait, we then allow diversification to be influenced by only a hidden trait (M17), or by both ploidy and breeding system as well as a hidden trait (M18--M20, with varying degrees of complexity in the hidden trait transitions).
+As for the previous models of only one trait, we then allow diversification to be influenced by only a hidden trait (M17), or by both ploidy and breeding system as well as a hidden trait (M18--M20, with varying degrees of complexity in the hidden trait transitions \cref{supptable:M16M20})
 We add this hidden trait layer on top of our three-state model \citep[similar to][]{caetano_2018, huang_2018}.
-We also fit the analogous models but allowing for diploidization (M21--M25).
+We also fit the analogous models but allowing for diploidization (M21--M25, \cref{supptable:M21M25}).
 
 \subsubsection{Lumped models}
 
@@ -119,6 +119,8 @@ We use the state space of the $IC/CD/CP$ model but constrain the rate parameters
 First we lump together $ID$ and $CD$ to form the diploid state, mimicking the $D/P$ model (M26).
 Then we lump together $CD$ and $CP$ to form the self-compatible state, mimicking the $I/C$ model (M28).
 We further add a hidden trait to each of these models (M27 and M29).
+We compared those models in table \cref{table:lumped}
+
 
 We do not include additional models with diploidization because this reverse transition renders the models non-lumpable \citep{tarasov_2019}. The lumpability property requires that the rates going from the lumped state to the singular state are equal. Under the diploidization models CP goes back to CD with rate $\delta$ but the rate from CP back to ID is 0, and $\delta \neq 0$. Therefore, two-state models with diplodization cannot be re-coded to be compared to the tree-state models. 
 % E: further explanation needed? R- I added a simple math explanation. Let me know if it is okay
@@ -165,7 +167,7 @@ We can still use their ratios to consider the relative contribution of each path
 
 \subsubsection{Model fitting}
 
-Parameters for each of the ten models were estimated using RevBayes \citep{hoehna_2016}.
+Parameters for each of the 29 models were estimated using RevBayes \citep{hoehna_2016}.
 Code for analyses and key results are available as Supplementary Information. % FIXME more permanent than \url{https://github.com/roszenil/solploidy}.
 We accounted for incomplete sampling in all analyses by setting the probability of sampling a species at the present to $651/3000$ \citep[using the method of][]{fitzjohn_2009} since the Solanaceae family has approximately 3,000 species \citep{solsource}.
 For all models, we assumed that speciation and extinction parameters had log-normal prior distributions with means equal to the expected net diversification rate $(\text{number of taxa} / [2 \times \text{root age}])$ and standard deviation $0.5$.
@@ -179,7 +181,7 @@ Ancestral state reconstructions for all models show the maximum \emph{a posterio
 
 \subsubsection{Model selection}
 
-We calculated the marginal likelihood for each of the models using fifty stepping stone steps under the methodology of \citet{xie_2010}, implemented in RevBayes \citep{hoehna_2016}.
+We calculated the marginal log-likelihood for each of the models using fifty stepping stone steps under the methodology of \citet{xie_2010}, implemented in RevBayes \citep{hoehna_2016}.
 Each stepping stone step was found by calculating at least 500 generations of burn-in followed by a total of 1,000 MCMC steps (\cref{table:marginallike}).
 
 Using the marginal likelihood values, we calculated Bayes factors to argue five key biological and methodological questions:
@@ -239,27 +241,57 @@ In the hidden state models, all species were coded as consistent with both $A$ a
 %\end{tabular}
 %\caption{
    % The ten models and their marginal likelihoods.
-    %Values in bold are for the best models within each class that are comparable (see \cref{table:bayesfactors}).
+    %Values in bold are for the best models within each class that are comparable (see \cref{table:}).
     %Abbreviations are D: diploid, P: polyploid, I: self-incompatible, C: self-compatible, A: one state of hidden trait, B: other state of hidden trait, $\delta$: diploidization.}
 %\label{table:marginallike}
 %\end{table}
 
 \begin{table}
 \addtolength{\tabcolsep}{-3pt}
-\begin{tabular}{|c|c|c|}
-\bottomrule
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M2    & M3     & M4    & M5     & Evidence                                                                                     \\ \hline
+M1. D/P              & -1283.76                                                          & 59.90 & 49.23  & 60.48 & 58.82  & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M1\end{tabular}            \\ \hline
+\textbf{M2. CID D/P} & \textbf{-1223.86}                                                 &       & -10.66 & 0.579 & -1.079 & \begin{tabular}[c]{@{}l@{}}Strong preference for \\ M2 over M1\end{tabular}              \\ \hline
+M3. D/P+A/B          & -1234.52                                                          &       &        & 11.24 & 9.58   & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}   \\ \hline
+\textbf{M4. D/P+A/B asym}     & \textbf{-1223.28}                                                          &       &        &       & -1.658 & \begin{tabular}[c]{@{}l@{}}Moderate evidence for\\ only asymmetric hidden rates\end{tabular} \\\hline
+M5. D/P+A/B all asym & -1224.93                                                          &       &        &       &        &          \\ \hline                                                                                   
 \end{tabular}
-% E: We will probably have to change the layout here because it's not technically a table.  But good enough for now.
-\caption{
-    Bayes factors for model comparisons.
-    Each of the three boxes contains models that can be compared with one another, based on the character states they include (see \cref{figure:stateclassifications}B).
-    Models are numbered in as \cref{table:marginallike}. % FIXME: they aren't, but it's a pain to change; change in prev table instead?
-    Bayes factors are reported on the natural log scale, so numbers greater than $+2$ mean that the model in the row label has `positive' support relative to the model in the column label; numbers less than $-2$ mean that model in the column label is the preferred one.
-    Conventional thresholds for `strong' and `very strong' support are 6 and 10, respectively.
-    The best model in each set is written in bold.
-    In each case, it is the most complex model of the set.
-}
-\label{table:bayesfactors}
+\caption{Bayes factors of  ploidy only models without diplodization. Numbers greater that 1 mean moderate support relative to the model in the row label.  Conventional threshold for `strong' support is 10. The best models are written in bold. }
+\label{table: bayesfactors}
+\end{table}
+
+\begin{table}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                      & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M12   & M13   & M14   & M15   & Evidence                                                                                       \\ \hline
+M11. I/C                   & -1309.07                                                          & 41.13 & 38.59 & 61.34 & 61.40 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M111\end{tabular}            \\ \hline
+M12. CID I/C               & -1267.93                                                          &       & -2.53 & 20.21 & 20.37 & \begin{tabular}[c]{@{}l@{}}Models with asymmetric rates\\ are preferred over  M12\end{tabular} \\ \hline
+M13. I/C+A/B               & -1270.47                                                          &       &       & 22.75 & 22.80 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}   \\ \hline
+\textbf{M14. I/C+A/B asym} & \textbf{-1247.72}                                                 &       &       &       & 0.05 & No evidence                                                                                    \\ \hline
+\textbf{M15. I/C+A/B all asym }     & \textbf{ -1247.66}                                                          &       &       &       &       &       \\ \hline                                                                                        
+\end{tabular}
+\caption{Bayes factors of breeding system only models. Results indicate that the HiSSE models with asymmetric rates (M14, M15) are strongly preferred over every other model.}
+\label{table:M11M15}
 \end{table}
 
 % E: Could we include a figure of the traits on the tree?  At least as supp info. FIXME
+\begin{table}[]
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Model                       & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=ln(BF(M1,M2)) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M26. Lumped D/P             & -1463.22                                                          & M26 vs. M16 & 4.10            & M16 (Moderate)                                                       \\
+\textbf{M16. ID/CD/CP}      & \textbf{-1459.11}                                                 &             &                 &                                                                      \\ \hline
+M27. Lumped D/P+A/B         & -1417.67                                                          & M27 vs. M23 & 3.678           & M23 (Moderate)                                                       \\
+\textbf{M23. ID/CD/CP +A/B} & \textbf{-1414.00}                                                 &             &                 &                                                                      \\ \hline
+M28. Lumped I/C             & -1458.41                                                          & M28 vs. M16 & -0.69           & No evidence                                                          \\
+\textbf{M16. ID/CD/CP}      & \textbf{-1459.11}                                                 &             &                 &                                                                      \\ \hline
+M29. Lumped I/C+ A/B        & -1416.60                                                          & M29 vs. M23 & 2.60            & M23 (Moderate)                                                       \\
+\textbf{M23. IC/CD/CP+A/B}  & \textbf{-1414.00}                                                 &             &                 &                                                                      \\ \hline
+\end{tabular}
+\caption{Test for adding a focal trait to a binary state model via Bayes factors. Three-state models are moderately preferred over two-state models. The evidence is stronger towards the inclusion of breeding systems in ploidy models (M26, M27) than the inclusion of ploidy in breeding system models (M29, M29)}
+\label{table:lumped}
+\end{table}
+
