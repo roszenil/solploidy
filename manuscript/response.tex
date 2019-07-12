@@ -73,6 +73,7 @@ These and other changes are detailed below.
 %--------------------------------------------------
 \vspace{-11pt}
 
+
 \begin{quote}
 I think this is an excellent paper, both in its analytical approach, and in its biological insights.
 In particular, I think the general approach---gradually adding complexity to the models, and comparing their inferences with those from simpler models and the literature---is very effective.
@@ -83,12 +84,14 @@ Most of my comments are specific things (grammar, etc.), although I think the pa
 Thank you for the kind words.
 We have substantially revised the Discussion, including providing more perspective on the general versus specific findings. % TODO
 
+
 \begin{quote}
 Could the last two sentences of the abstract be made more concrete?
 The phrases ``generates interesting outcomes'' and ``affects conclusions about \ldots different evolutionary pathways'' are both pretty vague (the authors do an impressive job of summarizing complex ideas in this abstract, and maybe it's as specific as possible given word number constraints etc).
 \end{quote}
 
 We improved this wording.
+
 
 \begin{quote}
 The introduction is broad, and generally well supported, but a little disjointed, and additional literature on the macroevolutionary consequences of each of polyploidy and breeding system could be included.
@@ -97,20 +100,23 @@ Ln65 says this nicely, but this point could be introduced (with the appropriate 
 Also, the introduction is explicitly limited to angiosperms, which doesn't seem necessary---other landplant lineages (and non-plants, for that matter) also have ploidy and breeding system variation.
 \end{quote}
 
-okay % TODO
+[Considered.] % TODO
+
 
 \begin{quote}
 --35 Is the Soltis et al.\ 2014 citation appropriate here?
 That paper doesn't present much by way of new data
 \end{quote}
 
-check % TODO
+[Considered.] % TODO
+
 
 \begin{quote}
 --55 change ``effect disruption'' to ``disrupt''
 \end{quote}
 
-Fixed.
+Done.
+
 
 \begin{quote}
 --57 vague pronoun -- ``this'' (as a general rule, don't use ``this'', ``that'' etc by themselves -- follow them with the noun that they're referring to)
@@ -118,7 +124,8 @@ Fixed.
 --use commas before ``which''; if no comma, use ``that''
 \end{quote}
 
-We reworded this whole paragraph, as part of better explaining how polyploidization disables gametophytic SI.
+We reworded this whole paragraph, with the aim of providing a better explanation for how polyploidization disables gametophytic SI.
+
 
 \begin{quote}
 --83 Nitpicky, but is it accurate to refer to this as a false-positive problem?
@@ -127,25 +134,45 @@ The null---no rate variation---is correctly rejected.
 This section probably should include a reference to Rabosky and Goldberg.
 \end{quote}
 
-We reworded this whole paragraph, as part of better explaining the SSE family of models.
+We reworded this whole paragraph and aimed to provide a better explanation of the SSE family of models.
+
 
 \begin{quote}
 --115 I'm uncomfortable with this way of handling multiple cytotypes.
 The most commonly reported cytotype could easily not be the most common cytotype in the wild (I assume that most taxa are represented by relatively few counts), and regardless, there is biology here.
 Specifically, this methodology would artificially reduce the number of ploidy changes (if a taxon is polymorphic for ploidy, there's at least one event there), and the omitted changes would be disproportionately those towards the tips of the phylogeny, so not only would rates be depressed, but the bias is of a sort that the estimation of diversification parameters is particularly sensitive to (the authors will understand why this is so).
 \end{quote}
-We acknowledge this is a potential problem. It is true that chromosome number multiplicity can bias coding towards more (or less) transitions when it heavily depends on the most common cytotype. For the majority of species (~85\%)  the ploidy was not directly dictated by us but by the original sources of the data. In the originally sources ploidy has been classified not only most common cytotype but geographical distribution, multivalence, and/or  genome sizes. The remaining 15\% of the sample is what we assigned based on genus or family cytotype multiplicity. We cross-validated all of the assignments with the data from \citet{robertson_2011} where ploidy was assigned via a chromosome number change model using ChromEvol \citep{mayrose_2010}. We differ in exactly 35 species from \citet{robertson_2011} were we found a new reference or a new chromosome count. Classifying using a chromosome number change models only could also suffer from inflation of polyploidy events due to the lack of diploidization parameters, we found some specific species in the  \citet{robertson_2011} sample that were clearly aneuploids (one chromosome difference) that were classified as polyploids using chromosome number models, we manually corrected for those hoping to minimize obvious mistakes.
+
+This is a part of an important broader point that we hope to clarify. 
+First, it is true that chromosome number multiplicity can bias coding towards more (or less) transitions when it heavily depends on the most common cytotype. 
+For the majority of species (~85\%), we did not make the ploidy call, which we instead got from the original sources of the data. In the originally sources ploidy has been classified not only most common cytotype but geographical distribution, multivalence, and/or  genome sizes. 
+The remaining 15\% of the sample is what we assigned based on genus or family cytotype multiplicity. 
+We cross-validated all of the assignments with the data from \citet{robertson_2011} where ploidy was assigned via a chromosome number change model using ChromEvol \citep{mayrose_2010}. 
+We differ in exactly 35 species from \citet{robertson_2011} were we found a new reference or a new chromosome count. 
+%
+%
+%B: I don't think this is quite right. It's not the "lack of diploidization parameter" but the level of organization that we are measuring that is the key objection to coding each individual mutation as a transition. The key point is that *SSE models+tip states are definitely a poor estimator of mutation rate. (Irony about its lack of accuracy at the "species" level noted.)
+%rm: Classifying using a chromosome number change models only could also suffer from inflation of polyploidy events due to the lack of diploidization parameters, we found some specific species in the  \citet{robertson_2011} sample that were clearly aneuploids (one chromosome difference) that were classified as polyploids using chromosome number models, we manually corrected for those hoping to minimize obvious mistakes.
+
+% EMMA see below:
+%B: I think this should be added to clarify; as well, it is something someone should write up as a paper, because it's been a topic of review conversations for at least a decade.
+Second, we are interested estimating lineage transition rates and not `events', the individual mutations to polyploid state.
+Following a mutation, the outcome of an interplay between multiple evolutionary forces may or may not cause a transition. 
+Coding each polyploid tissue separately (indeed, it is possible that a polyploid tissue and not individual is being scored in a study) would then confound  lineage transition and mutation on multiple levels (somatic tissue, individual, and species transition). 
+Our macroevolutionary parameters would then include estimate of mutation rate as well as the lineage transition rate, with the result representing a drastic and perhaps ill-advised overestimate of the lineage transition rate.
+
 
 \begin{quote}
 --130 I don't follow this discussion.
 There's a self-incompatible pentaploid?
 How is it even sexual?
-Regardless, the discussion of this pentaploid should be more clearly integrated back into the central argument here, about the absense of SI polyploids (I think that's the central argument?).
+Regardless, the discussion of this pentaploid should be more clearly integrated back into the central argument here, about the absence of SI polyploids (I think that's the central argument?).
 \end{quote}
 
 %B: I edited the manuscript (methods.tex) as explained below:
-We removed the discussion and simply reference a more detailed treatment of this single individual.
-We agree that this observation by \citet{camadro_1981} may be distracting, and now instead  point the reader to our previously published paper \citep{robertson_2011}, where the possible existence of pentaploid that fails to set seed following self-pollination is discussed at some length.
+We removed the discussion and simply reference a more detailed treatment of this single individual potato plant.
+This observation \citet{camadro_1981} and the manifold convoluted cases by which pentaploids may be sterile are distracting, and were previously covered in \citep{robertson_2011}.
+Instead, we point the reader to \citet{robertson_2011}, where the possible existence of a sterile or incompatible pentaploid, which fails to set seed following self-pollination, is discussed at some length.
 
 %Although SI populations frequently contain some SC individuals, and diploid populations frequently contain some polyploid individuals, in no case did we find convincing data for a naturally occurring SI polyploid population  \citep[discussed in][]{robertson_2011}.
 %B rm: The single instance of an SI polyploid individual appears to be an allopentaploid hybrid of \textit{Solanum oplocense} Hawkes x \textit{Solanum gourlayii} Hawkes, reported by \citet{camadro_1981}.
@@ -155,13 +182,15 @@ We agree that this observation by \citet{camadro_1981} may be distracting, and n
 --133 change ``SI and polyploidy populations'' to ``polyploid SI populations'' (there are lots of polyploid populations, and lots of SI ones, too)
 \end{quote}
 
-Fixed.
+Done.
+
 
 \begin{quote}
 --140 I lost track a little of how the data were coded -- maybe add an explicit statement as to how many tips had both forms of data, how many had only breeding system info, how many had only ploidy info (I see now, after the fact, that those data are included in the figure), and how missing data were handled
 \end{quote}
 
-Fixed.
+Added.
+
 
 \begin{quote}
 --It's not intuitive to me what the effects of forcing the hidden state change rates to be symmetrical are.
@@ -170,7 +199,10 @@ Or has it been explored in the literature?
 Similarly, it seems to me that fixing the transition rates of the observed characters to be independent of the hidden state could do weird things---the point of these SSE models is that state change rates and state-dependent diversification rates need to be co-estimated
 \end{quote}
 
-We appreciate this suggestion and we followed it. The main result after fitting models with symmetric vs. asymmetric rates is that the direction  of the results does not change but the amount of difference amongst net diversification posterior distributions does. We found using Bayes factors that a model including asymmetric hidden rates is preferred over a model with equal hidden rates. Also,  the asymmetry in the trait rates have moderate to not support of being better than a model with equal trait transition rates.  %TODO put number.
+We appreciate this suggestion and we followed it. The main result after fitting models with symmetric vs. asymmetric rates is that the direction of the results does not change but the amount of difference amongst net diversification posterior distributions does. 
+We found using Bayes factors that a model including asymmetric hidden rates is preferred over a model with equal hidden rates. 
+Also,  the asymmetry in the trait rates have moderate to not support of being better than a model with equal trait transition rates.  %TODO put number.
+
 
 \begin{quote}
 --221  Propagation
@@ -178,10 +210,16 @@ We appreciate this suggestion and we followed it. The main result after fitting 
 
 Fixed.
 
+
 \begin{quote}
 --I would be more comfortable if each model was run at least twice, independently, to better assess whether the MCMC has indeed converged
 \end{quote}
-Unfortunately, we weren't able to run multiple chains for all models due to some limitations to our computer resources. However, we were able to test for the convergence of  three key models using Gelman's $\hat{R}$ test statistic. We tested convergence with two runs of 130,000 generations (after 5,000 generations of burn-in) for models D/P (BiSSE), D/P+A/B asym (HiSSE) and ID/CD/CP+A/B asym (MuHiSSE). The statistics as well as the Gelman plots in  \ref{figure:convergencestats} show that with that number of generations the models were converging. We increased the number of generations to be safe for all the models that we did not test and visually assessed the mixing of  models on top of demanding ESS larger than 200 for parameters. 
+
+Unfortunately, we were not able to run multiple chains for all models due to limited computer resources. 
+We were, however, able to test for the convergence of  three key models using Gelman's $\hat{R}$ test statistic. 
+We tested convergence with two runs of 130,000 generations (after 5,000 generations of burn-in) for models D/P (BiSSE), D/P+A/B asym (HiSSE) and ID/CD/CP+A/B asym (MuHiSSE). 
+The statistics and the Gelman plots in  \ref{figure:convergencestats} show that with that number of generations the models were converging. 
+We increased the number of generations for all the models that we did not test, and visually assessed the mixing of models on top of demanding ESS larger than 200 for parameters. 
 
 \begin{figure}
     \centering 
@@ -194,7 +232,7 @@ Unfortunately, we weren't able to run multiple chains for all models due to some
     \begin{minipage}[b]{0.33\textwidth}
              \includegraphics[width=\textwidth]{Gelmanmuhissenodipasym.pdf}
                  \end{minipage}
-    \caption{ Convergence statistics and Gelman plots for D/P (BiSSE), D/P+A/B asym (HiSSE) at the top and ID/CD/CP+A/B asym (MuHiSSE,bottom). Upper limits of Gelman's test statistics should be close to 1 for an MCMC to be considered convergent.}
+    \caption{ Convergence statistics and Gelman plots for D/P (BiSSE, left), D/P+A/B asym (HiSSE, right) at the top and ID/CD/CP+A/B asym (MuHiSSE, bottom). Upper limits of Gelman's test statistics should be close to 1.0 for MCMC to be considered convergent.}
     \label{figure:convergencestats}
 \end{figure}
 
@@ -203,16 +241,18 @@ Unfortunately, we weren't able to run multiple chains for all models due to some
 --the use of run time as a description of the analysis seems odd to me.
 As a reader, I'm not interested in the power of a given computer -- I want to know how many generations the MCMC was run for, what the ESSs are, etc.
 \end{quote}
-We ran each model for 200,000 generations. Unfortunately, we don't have access to more of 96 hours of computational time to increase those but we have calculated the convergence as indicated above.
+
+We ran each model for 200,000 generations. Unfortunately, we don't have access to more than 96 hours of computational time to increase those, but we have calculated the convergence as indicated above.
+
 
 \begin{quote}
 -325  These analyses (by accounting for diversification) may take care of this issue, but is there a problem with these results being driven by a non-stationary process being modeled as a stationary one?
 \end{quote}
 
-This was a point worth considering, but our model does not assume stationarity.
+This was a point worth considering, but our model does not assume stationarity. 
 In Fig.~4, the contributions of each pathway are functions of time.
-We can see there both the short-term and long-term behavior.
-% Rosana, what do you think?- I think this is a good answer- I think it is good
+There, we can see both the short-term and long-term behavior.
+
 
 \begin{quote}
 --340  Sentence fragment
@@ -220,25 +260,33 @@ We can see there both the short-term and long-term behavior.
 
 Fixed. % TODO
 
+
 \begin{quote}
 --beginning of the Discussion is perhaps unnecessary -- it's more like Introduction material
 \end{quote}
 
-consider % TODO
+[Considered.] % TODO %We can defend this on account of repeating some of the points because of numerous and complex  questions; aimed to prevent flipping pages back
+
 
 \begin{quote}
 --are the results from the analyses that include diploidization coherent?
 I'm not sure how to phrase this -- I guess I'm asking if there's any suggestion that that parameterization is indeed capturing the biological phenomenon of diploidization, or is it just soaking up noise?
 \end{quote}
 
-The soaking noise comes from the hidden state so in the presence of hidden states finding that diploidization matters is key. All the Bayes factors indicated strong support for models that include diploidization. However, the diploidzation parameter per se is difficult to estimate (wide credible intervals) mainly because diploidization is a genome size process that can be partially or minimally recover from ploidy data. This is the reason why we do not overstate this finding,  the importance of diploidization needs to be studied using genomes.
+%B: Rosana, you know this best, but it seems to me that the current phrasing (below) is unclear.
+The soaking noise comes from the hidden state so in the presence of hidden states finding that diploidization matters is key. 
+All the Bayes factors indicated strong support for models that include diploidization. 
+However, the diploidization parameter is difficult to estimate (wide credible intervals) mainly because diploidization is a genome size process that can be partially or minimally recover from ploidy data. 
+This is the reason why we do not overstate this finding, the importance of diploidization needs to be studied using genomes.
+
 
 \begin{quote}
 --I think this is an excellent point -- ``SI, which is itself associated with a faster diversification rate, is the breeding system context in which many diploids occur.''
 Perhaps an discussion of the extent to which these results are extendable to other plant groups would be appropriate, versus what is likely to be specific to this system
 \end{quote}
 
-Seems reasonable. % TODO
+[Seems reasonable.] % TODO
+
 
 \begin{quote}
 --366  I would use a more compelling descriptor than ``interesting'' to describe these traits
@@ -246,13 +294,15 @@ Seems reasonable. % TODO
 
 Fixed.
 
+
 \begin{quote}
 --390  I don't fully follow.
 Could this comparison be expanded upon?
 And maybe avoid the parameter notation, and just describe the rates being compared.
 \end{quote}
 
-consider % TODO
+[Considered.] % TODO
+
 
 \begin{quote}
 --400  Didn't Mayrose et al.\ 2011 and Magnuson-Ford \& Otto 2012 look at this (cladogenic change)?
@@ -260,12 +310,14 @@ consider % TODO
 
 Yes. We adjusted the text accordingly.
 
+
 \begin{quote}
 --408  In what way are the present results in conflict with other reports from the literature?
 (It's not clear, at least at first, where this conflict lies)
 \end{quote}
 
-consider % TODO
+[Considered.] % TODO
+
 
 \begin{quote}
 --410  ``as self-incompatibility loci''?
@@ -278,7 +330,8 @@ Fixed.
 So the diploids were ancestrally polyploidy -- why would that alter the rate inferences?
 \end{quote}
 
-consider % TODO
+[Considered.] % TODO
+
 
 \begin{quote}
 --430  remove the comma
@@ -290,20 +343,22 @@ Fixed.
 --436  use ndashes to indicate ranges (rather than hyphens)
 \end{quote}
 
-Fixed.
+Done.
+
 
 \begin{quote}
 --437-8 I don't understand this sentence
 \end{quote}
 
-Fixed.
+Clarified.
 
 \begin{quote}
 --455  I don't quite follow where this section is leading -- I think these loose ends should be explicitly tied together.
 There are reports of paleopolyploidy in Solanaceae and relatives, but there are reasons to be skeptical of them?
 \end{quote}
 
-consider % TODO
+[Considered.] % TODO
+
 
 \begin{quote}
 --457  differ by six..
@@ -311,11 +366,13 @@ consider % TODO
 
 Fixed.
 
+
 \begin{quote}
 --467  focal trait
 \end{quote}
 
 Fixed.
+
 
 %--------------------------------------------------
 \section{Referee 2}
@@ -330,7 +387,8 @@ The results presented show exactly this, but in addition show that some unknown 
 These are very interesting results.
 \end{quote}
 
-We're pleased you found the results interesting!
+We're pleased R2 found the results interesting!
+
 
 \begin{quote}
 I have two ``major'' comments.
@@ -346,6 +404,7 @@ I mention some examples below in the detailed notes where I think explanations c
 We have rewritten parts of the manuscript, especially in the Introduction, to try to explain better the relationship between polyploidy and self-incompatibility, and the interpretations of hidden state models.
 % E: I labeled the two paragraphs that I modified heavily.
 
+
 \begin{quote}
 My second comment has to do with the parameterization of the models.
 Overall, I think that the authors have done a great job in justifying their models and explaining them.
@@ -360,7 +419,9 @@ Second, specifically because the authors are not interested in estimating the ra
 This is especially true in a Bayesian framework where it is sometimes better to have overparameterized models than under-parameterized models (see Lemmon and Moriarty. 2004. Systematic Biology 53:265–277).
 I think it would have been important to at least present the results of an unconstrained model to show that this decision to constrain the rates do not affect the conclusions.
 \end{quote}
+
 We have now fitted models with asymmetric hidden rates and asymmetric trait rates. We found that the former are important and strengthened the differences. We found no evidence that having all asymmetric rates is preferable over just asymmetric hidden for our specific example. %TODO (Figs and table)
+
 
 \begin{quote}
 Finally, I have a suggestion for the authors.
@@ -370,7 +431,8 @@ After inspecting the supplementary material, I see that it is not the case; hidd
 I think this is interesting and that it could make an interesting discussion.
 \end{quote}
 
-Thanks for this suggestion, which we have incorporated in the Discussion. % TODO
+Thank you for this suggestion, which we have incorporated in the Discussion. % TODO
+
 
 % Minor points:
 
@@ -380,11 +442,13 @@ Line 60: Did the author mean in all polyploid examined to date?
 
 We reworded this whole paragraph, as part of better explaining how polyploidization disables gametophytic SI.
 
+
 \begin{quote}
 Line 70: Sentence not clear. Should explain better the results of Robertson.
 \end{quote}
 
-Fixed.
+Clarified.
+
 
 \begin{quote}
 Line 87: Specify other sources. Cryptic
@@ -392,17 +456,20 @@ Line 87: Specify other sources. Cryptic
 
 Reworded.
 
+
 \begin{quote}
 Line 88: To which traits the ``these traits'' refer to?
 \end{quote}
 
-Fixed.
+Clarified.
+
 
 \begin{quote}
 Line 133: Replace ``and polyploid populations'' by ``in polyploid populations''?
 \end{quote}
 
-Fixed.
+Done.
+
 
 \begin{quote}
 Line 133-135: Should probably move this information in the intro.
@@ -410,12 +477,14 @@ Line 133-135: Should probably move this information in the intro.
 
 We now explain the effect of polyploidization on self-incompatibility more thoroughly in the Introduction.
 
+
 \begin{quote}
 Line 152: It would be useful to refer to the figures that illustrate the models in the methods.
 It would help to understand them.
 \end{quote}
 
-Fixed. % Done: Emma did the new figure
+Done. % Done: Emma did the new figure
+
 
 \begin{quote}
 Line 360: ``Simultaneous consideration of breeding system'' and what?
@@ -423,7 +492,8 @@ Polyploidy, hidden state?
 The sentence is not clear
 \end{quote}
 
-Fixed.
+Modified.
+
 
 \begin{quote}
 Line 363: ``These results indicate that some of the effects of a hidden trait can be explained by each of the two traits under consideration''.
@@ -432,17 +502,20 @@ Not sure I understand this sentence. Is it possible to clarify?
 
 Reworded.
 
+
 \begin{quote}
 Line 380: The authors should explain in more details the link between the breakdown of SI and the evolution of gender dimorphism.
 \end{quote}
 
 We added a brief explanation.
 
+
 \begin{quote}
 Line 392: Remove one ``explained''.
 \end{quote}
 
 Fixed.
+
 
 \begin{quote}
 Line 392: ``our findings suggest that the effect of ploidy''.
@@ -451,13 +524,15 @@ Add ``on diversification rates'' after these words?
 
 Fixed.
 
+
 \begin{quote}
 Line 416: ``Unduly ignoring secondary diploidization would necessarily underestimate the rate of transitions from polyploids to diploids.''
 Actually, if I understand well, models without diploidization simply fix this rate of transition from polyploidy to diploids at 0.
 Am I right?
 \end{quote}
 
-consider % TODO
+[Considered.] % TODO
+
 
 %--------------------------------------------------
 \section{Referee 3}
@@ -476,7 +551,8 @@ There is no question that this work will be of great interest to the readership 
 I have a few comments that I hope the authors will find useful.
 \end{quote}
 
-Thank you for this positive summary.
+We appreciate this positive summary.
+
 
 \begin{quote}
 The first relates to the use of the hidden states in the models.
@@ -492,8 +568,12 @@ Of course, admittedly, I am not familiar with revBayes and how the model space i
 But, if so, some clarity in the Methods/Results is warranted in how trait-independent models were evaluated (or even ruled out) in the analyses presented.
 \end{quote}
 
-We have fitted the trait independent models (character-independent CID). We appreciated this suggestion because it allowed us to parse out the effect of the traits in the diversification process. By comparing Bayes factors, models with traits are strongly preferred over CID when the breeding system is the focal trait, and there is little to no evidence that models that include ploidy are better than CID. These results strongly suggest that breeding system is much more informative than ploidy in the diversification dynamics of Solanaceae.
+We have fitted the trait independent models (character-independent CID). 
+We appreciated this suggestion because it allowed us to parse out the effect of the traits in the diversification process. 
+By comparing Bayes factors, models with traits are strongly preferred over CID when the breeding system is the focal trait, and there is little to no evidence that models that include ploidy are better than CID. 
+These results strongly suggest that breeding system is much more informative than ploidy in the diversification dynamics of Solanaceae.
 %TODO: write table number
+
 
 \begin{quote}
 Along these same lines, how does revBayes deal with the symmetry problem with regards to the hidden states?
@@ -506,6 +586,7 @@ I should point out that nothing in the plots suggests this might be an issue, bu
 
 When we presented the first submission we were pushing the limits on implementations of diversification models in RevBayes. During the revision we found a work-around to be able to implement all the extra models we are presenting. New models with asymmetric traits are preferred and strengthen the results.
 
+
 \begin{quote}
 Finally, while I agree that the inclusion of ``hidden'' states provides a means for testing intuitions about a particular character, they can also ``soak'' up the variation in diversification rates due to various errors in the dataset (i.e., error in topology, branch lengths, etc.).
 We just don't know.
@@ -513,7 +594,7 @@ In any case, it might be good to provide readers with this perspective when disc
 I think the point about determining whether it is worth the effort to understand the meaning of the hidden states is a good one, but I also it worth keeping in mind the caveats that go with it.
 \end{quote}
 
-consider % TODO
+[Considered.] % TODO
 
 % Other minor comments:
 
@@ -523,12 +604,14 @@ Line 392: Repeat of ``explained''
 
 Fixed.
 
+
 \begin{quote}
 Line 403-404: Would it be appropriate to cite Freyman and Hoehna (2017; Systematic Biology), and possibly Caetano et al (2018; Evolution)?
 [Note, I am aware that Freyman is an author and would know if it is appropriate to cite his own paper here, but still\ldots]. 
 Though I imagine the authors are referring to a hidden cladogenetic model that allows more than just a binary trait.
 But, both of these papers, as far as I can tell, extend the basic SSE model to include both hidden states and cladogenetic events.
 \end{quote}
+
 We have cited them accordingly. % TODO
 
 
@@ -539,14 +622,16 @@ I get the point, but I think the authors might consider revising it for clarity.
 
 Rephrased. % TODO
 
+
 \begin{quote}
 Line 476-480: The type I error issues reported by Rabosky and Goldberg (2015) are, in my view, fairly universal.
 So, I think it is safe to say that MuSSE ``does suffer'' issues of model misspecification/type I error.
 Also, it is worth noting that there are several implementations that already include hidden states in a MuSSE model, most notably the HORRIBLY named SecSSE model, as well as the models used in a recent empirical paper on diatoms by Nakov et al (which I've seen on bioRxiv, though might be published by now).
 \end{quote}
 
-Yes, and indeed this has already been shown.
-We fixed the text and added a reference. Nakov paper has not been accepted yet for publication or it has not been announced as such (as of July 9th, 2019).
+Yes, this has already been shown.
+We fixed the text and added a reference. 
+Nakov paper has not been accepted yet for publication or it has not been announced as such (as of July 9th, 2019).
 
 
 \nobibliography{refs}
