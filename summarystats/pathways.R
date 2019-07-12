@@ -58,6 +58,10 @@ q34 <- 0.0188         # CD -> CP, rho_C
 q41 <- q31 <- q43 <- 0 # irreversible
 
 # also use CID estimates?
+q14 <- 0.0228         # ID -> CP, rho_I
+q13 <- 0.0703         # ID -> CD, q_IC
+q34 <- 0.0334         # CD -> CP, rho_C
+q41 <- q31 <- q43 <- 0 # irreversible
 
 # Q is only needed for method 1
 Q <- matrix(c(
