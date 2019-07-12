@@ -51,11 +51,13 @@ path.probs2 <- function(t, q13, q14, q34)
 # Wa = 1 -> 4
 # Wb = 1 -> 3 -> 4
 
-# MAP values from EstimatesIDCDPnodelta.csv
-q14 <- 0.0681          # ID -> CP, rho_I
-q13 <- 0.2066          # ID -> CD, q_IC
-q34 <- 0.0370          # CD -> CP, rho_C
+# median values from MuSSE_ploidysinodip250K.log (via tracer)
+q14 <- 0.0779         # ID -> CP, rho_I
+q13 <- 0.1895         # ID -> CD, q_IC
+q34 <- 0.0188         # CD -> CP, rho_C
 q41 <- q31 <- q43 <- 0 # irreversible
+
+# also use CID estimates?
 
 # Q is only needed for method 1
 Q <- matrix(c(
@@ -86,9 +88,9 @@ abline(h=0.5, lty=3)
 
 ### Try with diversification ###
 
-r1 <-  0.4607
-r3 <-  0.0684
-r4 <- -0.0877
+r1 <-  0.4618
+r3 <-  0.0605
+r4 <- -0.0121
 
 Qd <- matrix(c(
        -q13 - q14 + r1,  q13,             q14,       0,
