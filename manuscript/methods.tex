@@ -56,8 +56,8 @@ Here we summarize how each type of model allows us to assess whether diversifica
 
 \subsubsection{Ploidy and diversification}
 
-In order to investigate the association between ploidy level and diversification, we first defined a model in which taxa were classified as diploid $(D)$ or polyploid $(P)$ (M1).
-This is the same as one of the models presented in  \citet{mayrose_2011} that was used for the exact same question across an array of plant genera.
+In order to investigate the association between ploidy level and diversification, we first defined a model in which taxa were classified as diploid $(D)$ or polyploid $(P)$ (model M1).
+This is the same as one of the models presented in  \citet{mayrose_2011}, which was used for the exact same question across an array of plant genera.
 % R- Itay wanted to hightlight that is the same model. Definitely a BiSSE. He did the ClaSSE later in the 2014 response.
 Although this model can be a powerful means to distinguish state-specific speciation and extinction from trait changes, it is prone to incorrectly reporting that a trait is associated with diversification differences \citep{maddison_2015, rabosky_2015}.
 We therefore define several models that incorporate additional forms of diversification rate heterogeneity.
@@ -68,16 +68,16 @@ Comparing M1 and M2 allows us to test whether diversification rate heterogeneity
 
 We additionally fit three models in which both ploidy and a hidden trait could influence diversification (M3--M5).
 These models differ in whether transitions between the hidden states are symmetric or asymmetric, and whether the polyploidization rate depends on the hidden state.
-Comparing M1--M5 allows us to test whether ploidy is associated with diversification differences on top of the differences potentially explained by an unknown factor\cref{table:bayesfactors}.
+Comparing M1--M5 allows us to test whether ploidy is associated with diversification differences on top of the differences potentially explained by an unknown factor (\cref{table:bayesfactors}).
 
-We further fit the analogues of these five models but including a rate parameter for transitions from polyploid to diploid (M6--M10) \cref{supptable:M6M10}.
-This allows us to assess whether our conclusions about ploidy and diversification are robust to the possibility of diploidization.
+We further fit the analogues of these five models but including a rate parameter $\delta$ for transitions from polyploid to diploid (M6--M10,  \cref{supptable:M6M10}).
+These comparisons allow us to assess whether our conclusions about ploidy and diversification are robust to the possibility of diploidization.
 
 \subsubsection{Breeding system and diversification}
 
-Our first five breeding system models follow the same logic as the first ploidy models.
-We begin with each species classified as self-incompatible $(I)$ or self-compatible $(C)$ (M11).
-This is the same as the analysis of \citet{goldberg_2010} but with an updated phylogeny \citep{sarkinen_2013} and larger aggregated dataset.
+We propose five breeding system models following the same logic as the first ploidy models.
+Under the simplest breeding system and diversification model,  species are classified as self-incompatible $(I)$ or self-compatible $(C)$ (M11).
+This is the same model as the analysis presented in \citet{goldberg_2010} but with an updated phylogeny \citep{sarkinen_2013} and larger aggregated dataset.
 
 We then add models to allow diversification to be influenced by only a hidden trait (M12), or by both breeding system and a hidden trait (M13--M15, with varying degrees of complexity in the hidden trait transitions \cref{table:M11M15}).
 Similar models were used by \citet{freyman_2017} used to study diversification in Onagraceae.
@@ -85,7 +85,7 @@ Similar models were used by \citet{freyman_2017} used to study diversification i
 Self-incompatibility is homologous in all Solanaceae species in which S-alleles have been cloned and controlled crosses performed.
 All species sampled to date possess a non-self recognition, RNase-based gametophytic self-incompatibility \citep[shared even with other euasterid families;][]{ramanauskas_2017}.
 Furthermore, species that are distantly related within this family carry closely-related alleles, with deep trans-specific polymorphism at the locus that controls the SI response \citep{ioerger_1990, igic_2006}.
-This represents very strong evidence that the $I$ state is ancestral in Solanaceae, and that the SI mechanism was not regained within this family.
+The breeding system in Solanaceae has strong evidence that the $I$ state is ancestral in the family, and that the SI mechanism was not regained.
 Therefore, for all breeding system models, we estimated a transition rate from $I$ to $C$  but not the reverse ($q_{CI}=0$).
 % This is an important assumption because ancestral state reconstruction in the models might differ when polyploidy and breeding system are analyzed as independent in the Solanaceae tree.
 %
@@ -97,7 +97,7 @@ Therefore, for all breeding system models, we estimated a transition rate from $
 Ploidy and breeding system might influence lineage diversification individually, but these two traits also have an intricate association (discussed in the Introduction).
 Therefore, we considered several multi-state models that investigate the contribution of both traits and the allowable transitions between them.
 
-The simplest classifies each species as either self-incompatible diploid $(ID)$, self-compatible diploid $(CD)$, or self-compatible polyploid $(CP)$; recall that self-incompatible polyploids do not occur (M16).
+The simplest model classifies each species as either self-incompatible diploid $(ID)$, self-compatible diploid $(CD)$, or self-compatible polyploid $(CP)$; recall that self-incompatible polyploids do not occur (M16).
 Each of these states may again be associated with different rates of speciation and extinction, and the allowable transitions are loss of SI within the diploid state (from $ID$ to $CD$), loss of SI via polyploidization (from $ID$ to $CP$), and polyploidization while SC (from $CD$ to $CP$).
 % The total rate of loss of self-incompatibility, \ie transitions out of $ID$, is $q_{IC} + \rho_I$.
 % E: Can we call it something other than q_IC?  It's a bit confusing to have the same parameter mean different things in different models.
@@ -108,13 +108,12 @@ We also fit the analogous models but allowing for diploidization (M21--M25, \cre
 
 \subsubsection{Lumped models}
 
-The models above allow us to assess the contributions of our two focal traits---ploidy and breeding system---to lineage diversification.
-They do not, however, reveal whether it was `worth it' to include both traits in the analysis.
-That is, they do not allow us to perform statistical model comparisons to test whether diversification heterogeneity is better explain by both traits than by either one of them.
-This is because the models in the three sections above use different state spaces: $D/P$ versus $I/C$ versus $IC/CD/CP$.
-Model comparisons work with the likelihood of the data given the model, but they are not valid when the data used differ from model to model.
+The models described so far allow us to assess the contributions of our two focal traits---ploidy and breeding system---to lineage diversification.
+They do not, however, reveal whether it is `worth it' to include both traits in the analysis.
+Model comparisons to test whether diversification heterogeneity is better explain by both traits than by either one require the calculation of the likelihood function of the data given an specific model.
+However, the likelihood of the data given a model differs in the two-state versus the three-state models because the proposed models use different state spaces: $D/P$ versus $I/C$ versus $IC/CD/CP$. Therefore, different data results in incomparable models.
 
-In order to compare model fits for ploidy-only versus breeding system-only versus both traits, we use the technique of \citet{tarasov_2019} for lumping states together.
+In order to compare model fits for ploidy-only versus breeding system-only versus both traits, we extend a new technique proposed in ontological work by \citet{tarasov_2019} that allows for state `lumping' .
 We use the state space of the $IC/CD/CP$ model but constrain the rate parameters to mimic the behavior of the single-trait models.
 First we lump together $ID$ and $CD$ to form the diploid state, mimicking the $D/P$ model (M26).
 Then we lump together $CD$ and $CP$ to form the self-compatible state, mimicking the $I/C$ model (M28).
@@ -122,9 +121,13 @@ We further add a hidden trait to each of these models (M27 and M29).
 We compared those models in table \cref{table:lumped}
 
 We do not include additional models with diploidization because this reverse transition renders the models non-lumpable \citep{tarasov_2019}.
-The lumpability property requires that the rates going from the lumped state to the singular state are equal.
-Under the diploidization models CP goes back to CD with rate $\delta$ but the rate from CP back to ID is 0, and $\delta \neq 0$.
-Therefore, two-state models with diplodization cannot be re-coded to be compared to the tree-state models.
+This means, that to lump two states a necessary and sufficient condition is that the rates going from the lumped state to the singular state are equal. 
+When lumping compatible state $CD$ and $CP$ the the rate at which they back to state $ID$ is zero for both, thus, compatible states are lumpable. 
+Then, we define a single $q_0$ parameter as the new rate from incompatible to compatible going into the lumped state $(CD,CP)$.
+By doing so, we can define the lumped model M28 (\cref{figure:lumped}E) that is equivalent to M1 but comparable to M16.
+We repeat this process to create the lumped model M26for $D/P$ by restricting the polyploidy rate to be $rho_0$ out of the lumped state $(ID,CD)$
+For the diploidization models, $CP$ goes back to $CD$ with rate $\delta$ but the rate from $CP$ back to $ID$ is 0.
+Since $\delta \neq 0$, the models with diplodization cannot be lumped to be compared to the tree-state models.
 % E: further explanation needed? R- I added a simple math explanation. Let me know if it is okay
 
 \subsubsection{Pathways to polyploidy}
@@ -177,22 +180,22 @@ Priors for parameters defining trait changes were assumed to be gamma distribute
 For each model, a Markov chain Monte Carlo \citep[MCMC;][]{metropolis1953equation,Hastings1970} was run in the high-performance computational cluster at the Minnesota Supercomputing Institute, which allowed for 5,000 generations of burn-in and a minimum of 200,000 generations of MCMC for each of the  models. % FIXME see referee comment about reporting convergence, not runtime
 Convergence and mixing of each MCMC chain was determined by ensuring the effective sample size of each parameter was over 200.
 
-We report posterior distributions for the model parameters, and also for the compound parameters of net diversification ($\lambda - \mu$) and extinction fraction ($\mu / \lambda$) for each state.
-Additionally, ancestral states at each node in the phylogeny were sampled jointly during the MCMC analyses.
-Ancestral state reconstructions for all models show the maximum \emph{a posteriori} estimates of the marginal probability distributions for each of the 594 internal nodes for each of the 10 models (\cref{suppfigure:DPnodipasr,suppfigure:DPasr,suppfigure:DPnodipABasr,suppfigure:DPABasr,suppfigure:ICasr,suppfigure:ICABasr,suppfigure:IDCDCPnodipasr,suppfigure:IDCDCPasr,suppfigure:IDCDCPnodipABasr,suppfigure:IDCDCPABasr}). % FIXME: I'm confused about if these are joint or marginal?  A bit more explanation would help.
+We report posterior distributions for the model parameters in \cref{figure:netdivall}, and also for the compound parameters of net diversification ($\lambda - \mu$) and extinction fraction ($\mu / \lambda$) for each state.
+Additionally, ancestral states at each node in the phylogeny were sampled jointly during the MCMC analyses every 100 generations.
+Ancestral state estimations for all models show the maximum \emph{a posteriori} estimates of the marginal probability distributions for each of the 650 internal nodes for each of the models in \cref{figure:netdivall}. (\cref{suppfigure:DPnodipasr,suppfigure:DPnodipABasr,suppfigure:ICasr,suppfigure:ICABasr,suppfigure:IDCDCPnodipasr,suppfigure:IDCDCPnodipABasr}). % FIXME: I'm confused about if these are joint or marginal?  A bit more explanation would help. R: Marginal explanation added
 
-\subsubsection{Model selection}
+\subsubsection{Model selection key questions}
 
 We calculated the marginal log-likelihood for each of the models using fifty stepping stone steps under the methodology of \citet{xie_2010}, implemented in RevBayes \citep{hoehna_2016}.
 Each stepping stone step was found by calculating at least 500 generations of burn-in followed by a total of 1,000 MCMC steps (\cref{table:marginallike}).
 
 Using the marginal likelihood values, we calculated Bayes factors to argue five key biological and methodological questions:
 \begin{enumerate}
-\item Are hidden state necessary to add in this context?- Comparison of simple models against hidden state models
-\item Is a second trait adding information to the diversification process?- Comparison of lumped models against IC/CD/CP models
-\item Are diversification patterns only determined by hidden states and not the traits of interest?- Comparison of character independent models against hidden state 
-\item Is there evidence for diploidization?- Comparison amongst models with and without diploidization
-\item Do asymmetrical rates in the model affect the pattern of diversification? - Comparison amongst hidden states models with equal hidden rates and asymmetrical rates.
+\item Are diversification patterns only determined by hidden states and not the traits of interest?- Comparison of character independent models against hidden state (\cref{table:bayesfactors,table:M11M15,supptable:M6M10,supptable:M16M20,supptable:M21M25}).
+\item Are hidden state necessary to add in this context?- Comparison of simple models against hidden state models (\cref{supptable:testaddhidden}).
+\item Is a second trait adding information to the diversification process?- Comparison of lumped models against IC/CD/CP models (\cref{figure:lumped,table:lumped}).
+\item Is there evidence for diploidization?- Comparison amongst models with and without diploidization (\cref{suppfigure:alldip,supptable:testdiploidization}).
+\item Do asymmetrical rates in the model affect the pattern of diversification? - Comparison amongst hidden states models with equal hidden rates and asymmetrical rates (\cref{suppfigure:asymmetric,supptable:asymmetry}).
 \end{enumerate}
 
 Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $K=ln(BF(M_1,\ M_0)) = \ln[ P(\mathbf{X} | M_1) - P(\mathbf{X} | M_0)]$.
@@ -299,3 +302,249 @@ M29. Lumped I/C+ A/B        & -1416.60                                          
 \label{table:lumped}
 \end{table}
 
+\begin{figure}
+\includegraphics[width=\textwidth]{alldiversificationasymhidden.pdf} 
+\caption{Net diversification rates for all models without diploidization rate estimate. 
+Each panel contains a graphical summary of estimated model parameters and displays posterior distributions for net diversification estimates.}
+\label{figure:netdivall}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{lumped.pdf} %lumped.pdf
+\caption{Comparing two and three state models is possible via lumpable models (M26, M28). These models used the same classifications as the three-state model M16 which allow for comparisons via Bayes Factors as shown in \cref{table:lumped}.}  
+\label{figure:lumped}
+\end{figure}
+
+% E todo: re-run with new rate estimates; add panel letters?
+\begin{figure}
+    \centering 
+    \includegraphics[width=0.5\textwidth]{pathstates2} \\ [40pt] 
+        \includegraphics[width=0.9\textwidth]{pathways}
+    \caption{
+        Contributions of the two pathways to polyploidy.
+        The one-step pathway is direct ID$\rightarrow$CP transitions.
+        The two-step pathway consists of ID$\rightarrow$CD$\rightarrow$CP transitions.
+        When considering only rates of transitions among the states (ignoring the diversification rate parameters), the one-step pathway dominates on short timescales and the two-step on long timescales (left panels).
+        When also considering diversification within each state, the one-step pathway, in which polyploidization breaks down SI, dominates over any timescale (right panels).
+        The top panels show the separate contributions of each pathway.
+        The bottom panels show the proportional contribution of the one-step pathway (\ie one-step / [one-step + two-step]).
+    }
+    \label{figure:pathways}
+\end{figure}
+
+
+\begin{supptable}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                           & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M7    & M8     & M9    & M10   & Evidence                                                                                     \\ \hline
+M6. D/P+$\delta$                & -1268.83                                                          & 55.41 & 42.78  & 53.37 & 52.85 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M6\end{tabular}            \\ \hline
+\textbf{M7. CID D/P+$\delta$}   & \textbf{-1212.42}                                                 &       & -12.62 & -2.04 & -2.04 & \begin{tabular}[c]{@{}l@{}}Model M7 moderately\\ preferred over M9 and M10\end{tabular}      \\ \hline
+M8. D/P+A/B $\delta$            & -1214.46                                                          &       &        & 10.58 & 10.07 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular} \\ \hline
+M9. D/P+A/B +$\delta$ asym      & -1214.46                                                          &       &        &       & -0.51 & No evidence                                                                                  \\ \hline
+M10. D/P+A/B +$\delta$ all asym & -1214.97                                                          &       &        &       &       &         \\ \hline                                                                                    
+\end{tabular}
+\caption{Bayes factors of  ploidy-only models with diplodization. Results indicate that a character independent model (M6) is strongly preferred over BiSSE (M1)  model. M6 is moderately preferred over any of the HiSSE models with asymmetric hidden rates (M9, M10).}
+\label{supptable:M6M10}
+\end{supptable}
+
+\begin{supptable}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                            & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M18   & M19   & M20   & Evidence                                                                                                   \\ \hline
+M16. ID/CP/CD                    & -1459.11                                                          & 45.11 & 65.91 & 63.98 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M16\end{tabular}                         \\ \hline
+M17. CID ID/CP/CD                & *                                                                 &       &       &       &                                                                                                            \\
+M18. ID/CP/CD+A/B                & -1414                                                             &       & 20.79 & 18.87 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}               \\ \hline
+\textbf{M19. ID/CP/CD +A/B asym} & \textbf{-1393.20}                                                 &       &       & -1.92 & \begin{tabular}[c]{@{}l@{}}Asymmetric hidden rates moderately\\ preferred over all asymmetric\end{tabular} \\ \hline
+M20. ID/CP/CD +A/B all asym      & -1393.12                                                          &       &       &       &   \\ \hline                                                                                                        
+\end{tabular}
+\caption{Bayes factors of ploidy and breeding system withou diploidization. Results indicate that the MuHiSSE model with asymmetric hidden rates (17) is  strongly preferred over M16 and M18 and moderately preferred over the MuHiSSe with all rates asymetric (M20). *Marginal log-likelihood for M17 could not be calculated in our limited amount of computational time.}
+\label{supptable:M16M20}
+\end{supptable}
+
+\begin{supptable}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|r|c|c|c|c|l|}
+\hline
+Model                                 & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & M22   & M23    & M24   & M25   & Evidence                                                                                         \\ \hline
+M21. ID/CP/CD+$\delta$                & -1454.68                                                          & 55.48 & 46.031 & 67.94 & 65.15 & \begin{tabular}[c]{@{}l@{}}Every model strongly \\ preferred over M21\end{tabular}               \\ \hline
+M22. CID ID/CP/CD+$\delta$            & -1399.201                                                         &       & -9.452 & 12.45 & 9.675 & \begin{tabular}[c]{@{}l@{}}Model M24 strongly preferred \\ over M22\end{tabular}                 \\ \hline
+M23. ID/CP/CD+A/B $\delta$            & -1408.65                                                          &       &        & 21.91 & 19.12 & \begin{tabular}[c]{@{}l@{}}Asymmetric rates strongly\\ preferred over symmetric\end{tabular}     \\ \hline
+\textbf{M24. ID/CP/CD +$\delta$ asym} & \textbf{-1386.74}                                                 &       &        &       & -2.78 & \begin{tabular}[c]{@{}l@{}}Asymmetric hidden rates \\ preferred over all asymmetric\end{tabular} \\ \hline
+M25. ID/CP/CD +$\delta$ all asym      & -1389.52                                                          &       &        &       &       &                      \\ \hline                                                                           
+\end{tabular}
+\caption{Bayes factors of ploidy and breeding system with diploidization. Results indicate that the MuHiSSE model with asymmetric hidden rates (M24) is  strongly preferred over M21-M23 and moderately preferred over the MuHiSSe with all rates asymetric (M25).}
+\label{supptable:M21M25}
+\end{supptable}
+
+\begin{supptable}
+\addtolength{\tabcolsep}{-5pt}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Model                                    & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M1. D/P                                  & -1238.76                                                          & M1 vs. M4   & 60.47           & M4 (Strong)                                                          \\
+\textbf{M4. D/P+A/B asym}                & \textbf{-1223.28}                                                &             &                 &                                                                      \\ \hline
+M11. I/C                                 & -1309.07                                                          & M11 vs. M14 & 61.35           & M14 (Strong)                                                         \\
+\textbf{M14. I/C+A/B asym}               & \textbf{-1247.72}                                                 &             &                 &                                                                      \\ \hline
+M16. ID/CD/CP                            & -1459.11                                                          & M16 vs. M19 & 65.90           & M19 (Strong)                                                         \\
+\textbf{M19. ID/CD/CP+A/B asym}          & \textbf{-1393.20}                                                &             &                 &                                                                      \\ \hline
+M6. D/P+$\delta$                         & -1283.76                                                          & M6 vs. M9   & 69.3            & M9 (Strong)                                                          \\
+\textbf{M9. D/P+A/B+$\delta$ asym}       & \textbf{-1214.46}                                                 &             &                 &                                                                      \\ \hline
+M21. IC/CD/CP+$\delta$                   & -1454.68                                                          & M21 vs. M24 & 68.48           & M24 (Strong)                                                         \\
+\textbf{M24. IC/CD/CP+A/B+$\delta$ asym} & \textbf{-1386.20}                                                 &             &                 &                                                                      \\ \hline
+\end{tabular}
+\caption{Test for addition of hidden states in models via Bayes factors. Models with hidden states are strongly preferred over simpler models}
+\label{supptable:testaddhidden}
+\end{supptable}
+
+\begin{supptable}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Model                                    & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M1. D/P                                  & -1238.76                                                          & M1 vs. M6   & 65.92           & M6 (Strong)                                                          \\
+\textbf{M6. D/P+$\delta$}                & \textbf{-1267.84}                                                 &             &                 &                                                                      \\ \hline
+M4. D/P+A/B asym                         & -1223.28                                                          & M4 vs. M9   & 8.81            & M9 (Moderate)                                                        \\
+\textbf{M9. D/P+A/B+$\delta$ asym}       & \textbf{-1214.46}                                                 &             &                 &                                                                      \\ \hline
+M16. ID/CD/CP                            & -1459.11                                                          & M16 vs. M21 & 4.41            & M21 (Moderate)                                                       \\
+\textbf{M21. ID/CD/CP+$\delta$}          & \textbf{-1454.68}                                                 &             &                 &                                                                      \\ \hline
+M19. IC/CD/CP asym                       & -1393.20                                                          & M19 vs. M24 & 6.46            & M24 (Moderate)                                                       \\
+\textbf{M24. IC/CD/CP+A/B+$\delta$ asym} & \textbf{-1386.20}                                                 &             &                 &                                                                      \\ \hline
+\end{tabular}
+\caption{Test for inclusion of a diploidization rate via Bayes factors. Models with diploidzation are moderately preferred over models that do not include a diploidization rate}
+\label{supptable:testdiploidization}
+\end{supptable}
+
+
+\begin{supptable}
+\addtolength{\tabcolsep}{-5pt}
+\begin{tabular}{|l|c|c|c|l|}
+\hline
+Model                                    & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M3. D/P+A/B                                 & -1234.52                     &    M3 vs. M4                 & 11.239                  & M4 (Strong)   \\
+\textbf{M4. D/P+ A/B asym}            & -1223.28                     &   M4 vs. M5              & -1.658                  & M4 (Moderate)   \\
+M5. D/P+A/B all asym                 & -1224.93                     &                     &                         &                         \\ \hline
+M13. I/C+ A/B                                & -1270.47                     &   M13 vs. M14                  & 22.75                   & M14 (Strong)   \\
+\textbf{M14. I/C+ A/B asym}            & \textbf{-1247.72}            & M14 vs. M15         & {0.05}           & No evidence             \\
+M15. I/C+ A/B all asym               & -1247.67                     &                     &                         &                         \\ \hline
+M18. IC/CD/CP+A/B                            & -1414.00                     &     M18 vs. M19                & 20.79                   & M19 (Strong)    \\
+\textbf{M19. IC/CD/CP+ A/B asym}       & \textbf{-1393.21}            & M19 vs. M20          & {-1.919}         & M19 (Moderate)   \\
+M20. IC/CD/CP+ A/B all asym           & -1395.129                    &                     &                         &                         \\ \hline
+M8. D/P +A/B+$\delta$                          & -1225.05                     &  M8 vs. M9                   & 10.58                   & M9 (Strong)    \\
+\textbf{M9. D/P+ A/B+ $\delta$ asym}      & \textbf{-1214.46}                     &    M9 vs. M10                 & -0.52                   & M10 (Moderate) \\
+M10. D/P+A/B+$\delta$ all asym        & -1214.98                     &                    &                         &                         \\ \hline
+M23. IC/CD/DP+A/B+$\delta$                 & -1408.65                     &     M23 vs M24                & 21.91                   & M24(Strong)     \\
+\textbf{M24. IC/CD/DP+A/B+$\delta$ asym} & \textbf{-1386.74}                     &   M24 vs M25              & -2.78                   & M24 (Moderate) \\
+M25. IC/CD/DP+A/B+ $\delta$ all asym     & -1389.52                     &                     &                         &                         \\ \hline
+\end{tabular}
+\caption{Test for symmetry of the hidden and trait rates via Bayes factors. For all models asymmetric hidden transition rates are preferred over models with equal hidden rates. Adding more complexity by assuming asymmetry in the trait rate within hidden states does not improve models.}
+\label{supptable:asymmetry}
+\end{supptable}
+
+% check values of delta and rho D/P+A/B with(out) delta
+% i.e. parameter values in figure S1 & S4 vs Table S2
+
+%B: heads up: I added two clarifying descriptive sentences in the two figures below. Maybe something about noting x-axis scale differences would be useful.
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{alldiversificationasymhiddendip.pdf}
+\caption{Posterior distribution for all the best models with diploidization} % XXX
+\label{suppfigure:alldip}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{comparablesDP.pdf}
+\caption{Lumped ploidy models to assess the effect of adding breeding system to create a three-state model. Moderate evidence exists that adding a breeding system is necessary \cref{table:lumped} } % XXX
+\label{suppfigure:lumpedDP}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{comparablesIC.pdf}
+\caption{Lumped breeding system models to assess the effect of adding ploidy to create a three-state model. Moderate to insignificant evidence exists that adding ploidy is necessary \cref{table:lumped} } % XXX
+\label{suppfigure:lumpedIC}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{effectofasymmetry.pdf}
+\caption{Effect of asymmetric rates in hidden models. Models with asymmetric rates are preferred over models with equal rates \cref{supptable:asymmetry}} % XXX
+\label{suppfigure:asymmetric}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrDP.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of theM1. D/P ploidy model} % XXX
+\label{suppfigure:DPnodipasr}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{bisseDPnodipposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M1. D/P model} % XXX
+\label{suppfigure:DPnodip}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrDPAB.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the M4. D/P+A/B asym model} % XXX
+\label{suppfigure:DPnodipABasr}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{hisseDPnodipasymposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M4. D/P+A/B asym model} % XXX
+\label{suppfigure:DPnodipAB}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrIC.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the M11.I/C model} % XXX
+\label{suppfigure:ICasr}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{bisseSIposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M11. I/C model} % XXX
+\label{suppfigure:IC}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrICAB.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the M14. I/C+A/B asym model} % XXX
+\label{suppfigure:ICABasr}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{hisseSIasymposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M14. I/C+A/B asym model} % XXX
+\label{suppfigure:ICAB}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrIDCDCP.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the  M16. ID/CD/CP model} % XXX
+\label{suppfigure:IDCDCPnodipasr}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{musseDPSInodipposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the  M16. ID/CD/CP model} % XXX
+\label{suppfigure:IDCDCPnodip}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrIDCDCPAB.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the  M19. ID/CD/CP+A/B asym model} % XXX
+\label{suppfigure:IDCDCPnodipABasr}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{muhissenodipasymposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M19. ID/CD/CP+A/B asym model} % XXX
+\label{suppfigure:IDCDCPnodipAB}
+\end{suppfigure}
