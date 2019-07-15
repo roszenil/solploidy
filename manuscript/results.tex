@@ -1,35 +1,45 @@
 \section{Results}
 
-\subsection{Models}
-\subsubsection{Ploidy and diversification}
-When considering ploidy alone (M1. $D/P$ model), we found a larger net diversification rate for diploids than for polyploids, in agreement with \citet{mayrose_2011, mayrose_2015}.
-This result holds with (\cref{figure:netdivall}A) or with the diploidization parameter (model M6 \cref{suppfigure:alldip}A) .
-Incorporating a hidden state in this model, however, reduces the clear separation in diversification rate estimates between diploids and polyploids (M4. $D/P+A/B$ asym model; \cref{figure:netdivall}B, and M9 \cref{suppfigure:alldip}B).
-Thus, differences in net diversification rates are explained by an unknown factor.
-The lack of differences between diploid and polyploid net diversification rates is also supported by the Bayes factors shown in table \cref{table:bayesfactors} where both model M4 and the character independent model M2 have equal evidence of  being preferred over every other model of ploidy. See table \cref{supptable:M6M10} showing analogous results when diploidzation is accounted for.
+% E: I removed the model names (like, "I/C+A/B") because we don't use them in the Methods anymore.  I think it works find just to say in real words what each model includes, as it comes up, and the model numbers are good for shorthand.
 
-\subsubsection{Breeding system and diversification}
-When considering breeding system alone (M11. $I/C$ model, \cref{figure:netdivall}C), we found a larger net diversification rate for SI than for SC species, in agreement with \citet{goldberg_2010}.
-When a hidden state is included (M14. $I/C+A/B$ model), the large net diversification rate difference persists for hidden state $A$ but and it slightly overlaps in the  hidden state $B$ (\cref{figure:netdivall}D).
-When calculating Bayes factors for all breeding system models (M11-M15) we found that the best two supported models are the models with at least asymmetric hidden states (M14 and M15 \cref{table:M11M15})
-Thus, differences in net diversification rates are best explained by both breeding system and an unknown factor \citep[as in Onagraceae;][]{freyman_2019} and not only by the focal trait nor an unknown factor.
-% The transition rate from SI to SC is $q_{IC}=0.3$ for both the I/C and the I/C+A/B models.
+\subsection{Trait-dependent diversification}
 
-\subsubsection{Ploidy, breeding system, and diversification}
-When considering ploidy and breeding system together (M16. $ID/CD/CP$ model), the net diversification rate for SI diploids was greater than for either SC diploids or SC polyploids, with or without diploidization (M16 \cref{figure:netdivall}E, M21\cref{suppfigure:alldip}E).
+\subsubsection{Ploidy only}
+
+When considering ploidy alone, we found a larger net diversification rate for diploids than for polyploids, in agreement with \citet{mayrose_2011, mayrose_2015}.
+This result holds with (model M1, \cref{figure:netdivall}A) or without the diploidization parameter (M6, \cref{suppfigure:alldip}A).
+Incorporating a hidden state in this model, however, reduces the clear separation in diversification rate estimates between diploids and polyploids (M4, \cref{figure:netdivall}B; M9, \cref{suppfigure:alldip}B).
+Statistical model comparisons show a clear preference for models in which only a hidden state affects diversification or a hidden state as well as ploidy (M2 and M4; \cref{table:bayesfactors}).
+Results are similar when diploidization is included (\cref{supptable:M6M10}).
+Thus, the role of ploidy in net diversification is unclear, with rate differences perhaps better explained by another factor.
+
+\subsubsection{Breeding system only}
+
+When considering breeding system alone (M11, \cref{figure:netdivall}C), we found a larger net diversification rate for SI than for SC species, in agreement with \citet{goldberg_2010}.
+When a hidden state is included, the large net diversification rate difference persists for one hidden state but is diminished for the other (M14, \cref{figure:netdivall}D).
+In the statistical model comparisons, the best two supported models include diversification differences due both to breeding system and to a hidden trait (M14 and M15, \cref{table:M11M15}).
+Thus, breeding system seems to play a role in diversification differences, though a hidden factor does as well.
+
+\subsubsection{Ploidy and breeding system together}
+
+When considering ploidy and breeding system together, the net diversification rate for SI diploids was greater than for either SC diploids or SC polyploids, with or without diploidization (M16, \cref{figure:netdivall}E; M21, \cref{suppfigure:alldip}E).
 Thus, the difference in net diversification associated with breeding system persists even when ploidy is included in the model.
-The reverse is not true, the association of ploidy with net diversification in the M1. $D/P$ model (\cref{figure:netdivall}A, \cref{suppfigure:alldip}A) appears to be driven by the subset of diploids that are SI; among SC species, net diversification rates for diploids and polyploids is not distinct.
+The reverse is not true: the association of ploidy with net diversification in the simplest ploidy-only model (M1, \cref{figure:netdivall}A, \cref{suppfigure:alldip}A) appears to be driven by the subset of diploids that are SI, while among SC species, net diversification rates for diploids and polyploids are similar.
 
-When a hidden state is included (M19. $IC/CD/CP+A/B$ model) the net diversification rate separation amongst states ID and (CD, CP)  is clear under hidden state A, but under hidden state B the separation exist between states ID and CP, while CD overlaps with the other two states (\cref{figure:netdivall}F).
-The same general pattern remains when diploidization is included (\cref{suppfigure:alldip}F), but the hidden states are reversed in the x-axis.
-Bayes factors for the three state models that include the character independent model show very strong support preferring asymmetric hidden state with the focal traits models shown in  \cref{supptable:M16M20} (with diploidization \cref{supptable:M21M25}).
+When a hidden state is included, the separation in net diversification rate of ID \vs CD and CP persists within one hidden state but is reduced in the other (M19, \cref{figure:netdivall}F).
+The same general pattern remains when diploidization is included (\cref{suppfigure:alldip}F).
+Model comparisons clearly favor models that include ploidy, breeding system, and the hidden trait, against the character-independent model in which the focal traits do not influence diversification (\cref{supptable:M16M20}; \cref{supptable:M21M25} with diploidization). % add model numbers
 
-\subsubsection{Lumped models}
-When comparing model M26. Lumped $D/P$ against M16. $ID/CD/CP$ (\cref{figure:lumped}B and C) Bayes factors reveal moderate support ($K=4.1$) preferring the three state model instead of the two state model (\cref{table:lumped}).
-A similar result was obtained when comparing the lumped model for ploidy but in the presence of hidden states (model M27 \textit{vs.} M23 \cref{table:lumped}, \cref{suppfigure:lumpedDP}E and F).
+Using the lumped models, we find moderate support for obtaining a significantly better fit by adding breeding system to the ploidy-only model (M26 \vs M16, \cref{table:lumped}, \cref{figure:lumped}BC).
+This is also true when a hidden trait is included (M27 \vs M23, \cref{table:lumped}, \cref{suppfigure:lumpedDP}EF).
+% When comparing model M26. Lumped $D/P$ against M16. $ID/CD/CP$ (\cref{figure:lumped}B and C) Bayes factors reveal moderate support ($K=4.1$) preferring the three state model instead of the two state model (\cref{table:lumped}).
+% A similar result was obtained when comparing the lumped model for ploidy but in the presence of hidden states (model M27 \textit{vs.} M23 \cref{table:lumped}, \cref{suppfigure:lumpedDP}E and F).
+A similar comparison in which ploidy is added to the breeding system-only model shows no preference for the model that also includes ploidy (M28 \vs M16, \cref{table:lumped}, \cref{figure:lumped}CE).
+When including a hidden state, however, the model with both focal traits is moderately preferred over the model with only breeding system (M29 \vs M18, \cref{table:lumped}, \cref{suppfigure:lumpedIC}EF).
+% We also compared lumped models for breeding system to test for the inclusion of ploidy state (M28 \cref{figure:lumped}E \textit{vs.} M16 \cref{figure:lumped}C) and we found no evidence preferring the three-state over the two state-model ($K=-0.6$, \cref{table:lumped}).
+% However, when accounting for hidden state,  the three-state model M18. $I/C/CD/CP+A/B$ (\cref{suppfigure:lumpedIC}F) was moderately preferred ($K=2.6$) over the lumped model M29.(\cref{suppfigure:lumpedIC}E).
 
-We also compared lumped models for breeding system to test for the inclusion of ploidy state (M28 \cref{figure:lumped}E \textit{vs.} M16 \cref{figure:lumped}C) and we found no evidence preferring the three-state over the two state-model ($K=-0.6$, \cref{table:lumped}).
-However, when accounting for hidden state,  the three-state model M18. $I/C/CD/CP+A/B$ (\cref{suppfigure:lumpedIC}F) was moderately preferred ($K=2.6$) over the lumped model M29.(\cref{suppfigure:lumpedIC}E).
+From all of these types of statistical evidence, we conclude that breeding system (and a hidden factor) are strongly associated with diversification differences, and that ploidy plays a smaller role.
 
 \subsection{Pathways to polyploidy}
 There are two pathways by which SI diploid lineages eventually---given enough time---become SC polyploids.
