@@ -33,11 +33,11 @@ Although SI populations frequently contain some SC individuals, and diploid popu
 Because of the resulting absence of polyploid SI populations, as well as the functional explanation for polyploidy disabling gametophytic SI systems with non-self recognition (see the Introduction), we consider only three observed character states: self-incompatible diploids $(ID)$, self-compatible diploids $(CD)$, and self-compatible polyploids $(CP)$.
 
 Matching our character state data to the largest time-calibrated phylogeny of Solanaceae \citep{sarkinen_2013} yielded 651 species with ploidy and/or breeding system information on the tree.
-% FIXME: Rosana will update numbers around here TODO:STILL NOT CORRECT!!!
-Of these, 290 had information for both states.
+% Fixed!
+Of these, 368 had information for both states.
 The number of species in each combination of states is summarized in \cref{figure:stateclassifications}A.
 We retained all 651 species in each of the analyses below because pruning away tips lacking breeding system in the ploidy-only analyses (and vice versa) would discard data that could inform the diversification models.
-A total of 405 taxa without any information about breeding system or ploidy were excluded.
+A total of 372 taxa without any information about breeding system or ploidy were excluded.
 %Tips without trait data might not improve point estimation of diversification parameters while increasing uncertainty in the estimates of trait linked diversification
 % R-This is very important but I have removed it because I think it is a full on paper by its own
 %Including this many more species would have prohibitively slowed our analyses, especially those implementing the most complex models.
@@ -203,7 +203,7 @@ There is `strong evidence'  for $M_1$ when this value is more than 10, moderate 
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{states} % FIXME: update numbers
+\includegraphics[width=0.5\textwidth]{states.pdf} % FIXME: update numbers
 \caption{
 Character states used for each of the models.
 Each species retained on the tree belonged to one of five possible categories, depending on whether ploidy and/or breeding system were known.
@@ -211,9 +211,9 @@ Each species retained on the tree belonged to one of five possible categories, d
 Abbreviations are $I$ for self-incompatible, $C$ for self-compatible, $D$ for diploid, $P$ for polyploid, $?$ for unknown.
 Because polyploidization breaks this form of self-incompatibility, SI species with unobserved ploidy ($I?$) are taken to be diploid ($ID$), and polyploid species with unobserved breeding system ($?P$) are taken to be SC.
 (B) Category groupings into states for each model type.
-For example, there are 34 species that are SC with unknown ploidy. % FIXME: update number if necessary
+For example, there are 70 species that are SC with unknown ploidy. % Fixed
 In the $D/P$ models these are coded as either $D$ or $P$ (uncertain/consistent with either state), in the $I/C$ models they are coded as $C$, and in the $ID/CD/CP$ models they are coded as either $CD$ or $CP$.
-In the hidden state models, all species were coded as consistent with both $A$ and $B$.
+In the hidden state models, all species were coded as consistent with both $A$ and $B$. Two species \textit{Lycium californicum} and \textit{Solanum bulbocastanum} are simultaneously ID and CP and by adding them the sample adds to the total of 651 taxa used for analyses.
 }
 \label{figure:stateclassifications}
 \end{figure}
