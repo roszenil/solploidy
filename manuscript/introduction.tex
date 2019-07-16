@@ -8,7 +8,7 @@
 \section{Introduction}
 
 Species accumulate across the tree of life at different rates. 
-One possible explanation for this phenomenon is that the various traits differentially affect rates of diversification. %B: note: traits and character states are synonymous. I've edited the rest of the manuscript so that "trait" is retained where ambiguity does not matter, but where directly contrasted (vs.: as here), I changed the wording.
+One possible explanation for this phenomenon is that various traits differentially affect rates of diversification. %B: note: traits and character states are synonymous. I've edited the rest of the manuscript so that "trait" is retained where ambiguity does not matter, but where directly contrasted (vs.: as here), I changed the wording.
 Dramatic increases in phylogenetic and phenotypic data along with methodological advances have greatly accelerated the search for traits that influence diversification. 
 %B: was: "phenotypic data and methodological advances"
 Nevertheless, identifying focal traits associated with rates of speciation and extinction remains a challenge \citep[\eg][]{maddison_2015, rabosky_2015, beaulieu_2016, rabosky_2017}. 
@@ -24,10 +24,10 @@ The widespread prevalence of variation in ploidy has long been considered a sali
 Increase in ploidy can alter many traits and affect a variety of evolutionary and ecological processes \citep{ramsey_2002, sessa_2019}.
 %B: The contrast below was between: "Polyploids have been documented..." vs. "Other studies find...". I modified it to: "Polyploids were generally found..." vs. "more recent studies ..."; If you feel that "Many studies" or "Recent studies" is better, please alter as appropriate.
 %B: Separately, "common" and "numerous" are synonymous as used here (I removed "common" because that term also has the "unrefined" meaning).
-Polyploids were  found to have an overall lower net diversification rate than diploids \citep{mayrose_2011, mayrose_2015}. 
-However, many recent genomic studies,  have found numerous paleo-polyploidizations, including some preceding the emergence of highly diverse plant clades \citep{soltis_2014, landis_2018}, suggesting that whole genome duplications may have played an important macroevolutionary role driving innovation and diversification in plants. 
+Polyploids were found to have an overall lower net diversification rate than diploids across many vascular plant clades \citep{mayrose_2011, mayrose_2015}. 
+However, recent genomic studies have found numerous paleo-polyploidizations, including some preceding the emergence of highly diverse plant clades \citep{soltis_2014, landis_2018}, suggesting that whole genome duplications may have played an important macroevolutionary role driving innovation and diversification in plants. 
 Evidence of paleo-polyploidy within the genomes of diploid extant plants also implies pervasive diploidization, the return of polyploids to the diploid state, throughout the angiosperm phylogeny \citep{soltis_2015, dodsworth_2015}.
-Our analyses re-examine the association between ploidy and lineage diversification by extending the approach of \citet{mayrose_2011, mayrose_2015} by including transitions from polyploid to diploid states and potential unobserved factors affecting diversification patterns.
+Our analyses re-examine the association between ploidy and lineage diversification by extending the approach of \citet{mayrose_2011, mayrose_2015} to include transitions from polyploid to diploid states and potential unobserved factors affecting diversification patterns.
 %R- No we don't do the below thing and it was confusing that's what Jacob Landis did in 2018
 %We also allow for heterogeneous diversification rates within each ploidy level, which could examine whether, for example, diploids with ancestral polyploidy diversify more rapidly than diploids without it. 
 
@@ -52,29 +52,26 @@ We address two macroevolutionary questions about the correlated evolution of plo
 First, we investigate their joint influence on rates of speciation and extinction.
 Each character alone has been shown to associate with differential lineage diversification, but if their effects are not additive, studying them separately may not reveal the effects of their combinations.
 Second, we examine the order of transitions in the two characters.
-Even though evolution may commonly proceed from diploid to polyploid, and from SI to SC states, there are two paths by which diploid SI lineages can eventually become SC polyploids.
+Evolution commonly proceeds from diploid to polyploid, and from SI to SC states, but there are two paths by which diploid SI lineages can eventually become SC polyploids.
 Loss of SI in diploids could be directly caused by polyploidization (as explained above, for RNase-based SI systems), resulting in a one-step pathway to SC polyploids. 
 Alternatively, SI diploids could first transition to SC without an increase in ploidy, and subsequently undergo polyploidization, resulting in a two-step pathway to SC polyploids.
-\citet{robertson_2011} compared the contributions of these two paths, finding that evolution from SI diploids to SC polyploids is more likely to proceed via the one-step pathway, over short timescales, but via the two-step pathway over long timescales.
+\citet{robertson_2011} compared the contributions of these two paths, finding that evolution from SI diploids to SC polyploids is more likely to proceed via the one-step pathway over short timescales, but via the two-step pathway over long timescales.
 They considered only transitions among the states, however, so we investigate whether these results hold true when allowing for differences in lineage diversification.
 
 %B: redundant with "very powerful" below rm: Examining these questions requires powerful phylogenetic comparative methods.
-In the present study, we employ an extended framework of state speciation and extincion models (SSE), which simultaneously models transitions between the discrete states of a trait and different rates of speciation and extinction associated with each of those states \citep{maddison_2007, fitzjohn_2012}.
-All the models proposed for this study are coded as graphical models and Bayesian inference was performed over the proposed models using RevBayes software \citep{hoehna_2016}.
+In the present study, we employ an extended framework of state speciation and extinction models, which simultaneously model transitions between the discrete states of a trait and different rates of speciation and extinction associated with each of those states \citep[`SSE' models;][]{maddison_2007, fitzjohn_2012}.
+% All the models proposed for this study are coded as graphical models and Bayesian inference was performed over the proposed models using RevBayes software \citep{hoehna_2016}.  % E: The models aren't drawn graphically in any of the figures (not in the revbayes sense, at least).  And we don't need methods in the intro.
 %Although potentially very powerful, this approach can be prone to reporting a false association between a trait and lineage diversification when the data contain additional, unmodeled diversification rate heterogeneity \citep{maddison_2015, rabosky_2015}.
-We start by fitting binary state speciation and extinction models to each ploidy and breeding system independently \citep{maddison_2007}. We follow by 
-fitting models that incorporate hidden states, which reduce the chance that an effect of one trait on diversification would be mistaken for the effect of an unobserved factor \citep{beaulieu_2016}.
+We start by fitting binary state speciation and extinction models to each ploidy and breeding system independently \citep{maddison_2007}.
+We follow by fitting models that incorporate hidden states, which reduce the chance that an effect of one trait on diversification would be mistaken for the effect of an unobserved factor \citep{beaulieu_2016}.
 We compare the proposed models against their character independent counterparts \citep{beaulieu_2016} to investigate whether ploidy or breeding system are actually informative of the diversification process.
-Next, we model ploidy and breeding system jointly to assess their combined influence on diversification, with or without an additional hidden character. Using thw ploidy and breeding system model  without hidden state, we quantify the relative contributions of the two pathways from SI diploids to SC polyploids.
-Later, we propose new models that aggregate states in the ploidy and breeding system models to make them equivalent to the binary state models.
-The new `lumped' models allow us to compare whether increasing model complexity from one trait to two traits significantly improves our understanding of the diversification process.
+Next, we model ploidy and breeding system jointly to assess their combined influence on diversification, with or without an additional hidden character.
+Using the ploidy and breeding system model without hidden states, we quantify the relative contributions of the two pathways from SI diploids to SC polyploids.
+We also lump together states within these joint models of ploidy and breeding system in order to test whether increasing complexity from one trait to two traits significantly improves our understanding of the diversification process.
 %B: I altered this line, but it is still a bit redundant given previous sentence.
 %Our analyses evaluate combinations of macroevolutionary models to parse out the associations of ploidy and breeding system on speciation and extinction rates in Solanaceae, while simultaneously accounting for other processes that influence diversification.
 %First, we present models in which the effects of ploidy and breeding system are considered separately and compare the inferences to previously published results. 
 %Second, we add a hidden character to each model and investigate if state-dependent diversification in focal character retains its explanatory power, or whether the added hidden character obscures it.
-%
-% E: say something here about testing whether it's worth adding in another real trait?
-Furthermore, we extend all the models involving ploidy, to investigate the potential effects of including diploidization.
-And finally, we explore models of diversification using asymmetric rates between and within hidden states to investigate the sensitivity of the statistical inference to model assumptions.
-
+Furthermore, we extend all the models involving ploidy to investigate the potential effects of including diploidization.
+% And finally, we explore models of diversification using asymmetric rates between and within hidden states to investigate the sensitivity of the statistical inference to model assumptions.
 Our results highlight the importance of considering non-additive effects of traits on net diversification rates  under the presence of unobserved factors, in order to detect strong biologically-driven processes dictating the diversification patterns.
