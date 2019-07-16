@@ -42,22 +42,25 @@ When including a hidden state, however, the model with both focal traits is mode
 From all of these types of statistical evidence, we conclude that breeding system (and a hidden factor) are strongly associated with diversification differences, and that ploidy plays a smaller role.
 
 \subsection{Pathways to polyploidy}
+
 There are two pathways by which SI diploid lineages eventually---given enough time---become SC polyploids.
 In the one-step pathway, polyploidization directly disables SI.
 In the two-step pathway, SI is first lost within the diploid state, followed by polyploidization.
-Determining the relative contribution of these pathways based on our estimated transition rates from the $ID/CD/CP$ model (median rate values from M16), we find that the one-step pathway is more likely on short timescales and the two-step pathway is more likely on long timescales (\cref{figure:pathways}, left panels).
-Beginning with a single SI diploid lineage, when not much time has elapsed, the one-step pathway is more likely because it only necessitates a single event to effect transition to the SC polyploid state.
+Determining the relative contribution of these pathways based on our transition rate estimates (median transition rate values from M16), we find that the one-step pathway is more likely on short timescales and the two-step pathway is more likely on long timescales (\cref{figure:pathways}, left panels).
+Beginning with a single SI diploid lineage, when not much time has elapsed, the one-step pathway is more likely because it only necessitates a single event to reach the SC polyploid state.
 When more time has elapsed, the two-step pathway is more likely because the rate of loss of SI within diploids, $q_{IC}$, is greater than the rate of polyploidization for SI species, $\rho_I$ (\cref{suppfigure:IDCDCPnodip}).
 That is, an $ID$ lineage is more likely to begin its path to polyploidy with a transition to $CD$, but completing this path to $CP$ takes longer.
-(The results are qualitatively the same when using transition rate estimates from the model that does not allow diversification differences related to the observed states, M17).
+\Citet{robertson_2011} reached the same conclusion.
+Our result is qualitatively unchanged when using transition rate estimates from the model that does not allow diversification differences related to the observed states (M17).
 
 The preceding conclusions, however, ignore the changes in numbers of lineages in each state due to speciation and extinction.
 By analogy, envisioning the states as stepping stones, the extent to which each stone grows or shrinks over time affects the utility of each possible path.
 Allowing for the different net diversification rates for each state (again using median rate estimates from M16), we find a qualitative difference in the relative pathway contributions.
-In particular, the lower rate of net diversification in the $CD$ state, relative to $ID$, means that relatively fewer lineages are available to complete the second step of the two-step pathway, ending in $CP$.
-Consequently, even over long timescales, the two-step pathway contributes less to the formation of polyploids (\cref{figure:pathways}, right panels).
+The lower rate of net diversification in the $CD$ state, relative to $ID$, means that relatively fewer lineages are available to complete the second step of the two-step pathway, ending in $CP$.
+Consequently, even over long timescales, we find that the two-step pathway contributes less to the formation of polyploids (\cref{figure:pathways}, right panels) when considering diversification as well as transitions.
 
 \subsection{Model selection key questions}
+
 \subsubsection{Are diversification patterns only determined by hidden states?}
 Whether the determination of the diversification is dependent on the focal traits and not only on the hidden state was done via the comparisons of character independent models against the focal traits w/o hidden states models (results shown in  \cref{table:bayesfactors,table:M11M15,supptable:M6M10,supptable:M16M20,supptable:M21M25}).
 The general pattern is to moderate- to strongly prefer models with focal traits and asymmetric hidden states over the rest of the models with the exception of the ploidy only model where the character independent model (M2) seems to be equally preferred($K=0.5$) as the model with ploidy and asymmetric hidden rates (M4, \cref{table:bayesfactors}).
@@ -77,4 +80,3 @@ When comparing models with diploidization against models without diploidization 
 
 \subsubsection{Do asymmetric rates in hidden states models affect the pattern of diversification?}
 When comparing different types of asymmetry across hidden states models we found that the asymmetry did not change the direction of effects in net diversification results . However, models with asymmetric hidden rates reduced the overlap amongst net diversification posterior distributions as shown in \cref{suppfigure:asymmetric}. Furthermore, hidden state models with asymmetric traits are strongly preferred over models with equal rates between hidden states (summarized in \cref{supptable:asymmetry}).
-
