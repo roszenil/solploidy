@@ -7,35 +7,38 @@ Examining the effects of complex trait combinations on lineage diversification, 
 %
 Focusing first on ploidy and then on breeding system, we found that considering each trait in isolation provides an incomplete story.
 Considering them together, and in conjunction with another hidden factor, provides a fuller picture of macroevolutionary dynamics within Solanaceae.
-We hope our work serves as an example of how phylogenetic comparative methods can be used to disentangle the contributions of interacting traits to heterogeneous lineage diversification.
+We hope our work serves as an example of how phylogenetic comparative methods can be used to disentangle the contributions of interacting traits to heterogeneous lineage diversification, and how to statistically argue for increasing complexity in diversification modeling.
 
 \subsection{Interacting traits and lineage diversification} 
 
 % E: should this results summary be much shorter?
 Previous analyses of the effects of ploidy on diversification showed that diploids had greater net diversification rates than polyploids across many angiosperm clades \citep{mayrose_2011, mayrose_2015}. 
-We obtain a similar outcome when examining ploidy alone in Solanaceae (\cref{figure:netdivall}A), but a consistent effect of ploidy on diversification is not clear when we also allow that a hidden factor could affect diversification as well (\cref{figure:netdivall}B).
+We obtained a similar outcome when examining ploidy alone in Solanaceae (\cref{figure:netdivall}A), but a consistent effect of ploidy on diversification was not clear when we added a  hidden factor linked to diversification(\cref{figure:netdivall}B).
 %
-Previous analyses of breeding system in this family showed that SI species are associated with higher diversification rates than their SC counterparts (\citealt{goldberg_2010}; \cref{figure:netdivall}C).
-Our new analyses with a hidden trait show that this pattern persists on different backgrounds.
-One on background, however, SC species experience positive net diversification (\ie not a dead end; cf.\ \citealt{igic_2013}) that exceeds the diversification rate of SI species on the other background (\cref{figure:netdivall}D).
+Previous analyses of breeding system in this family showed that SI species were associated with higher diversification rates than their SC counterparts (\citealt{goldberg_2010}; \cref{figure:netdivall}C).
+Our new analyses with a hidden trait showed that this pattern persists even under the presences of an unobserved trait linked to diversification.
+Under one of the hidden states, however, SC species experienced positive net diversification (\ie not a dead end; cf.\ \citealt{igic_2013}) that exceeded the diversification rate of SI species under the second hidden state (\cref{figure:netdivall}D).
 %
-Furthermore, our models of the joint macroevolution of ploidy and breeding system provided better statistical fits and revealed how the trait combinations associate with diversification.
-We find that the higher overall high net diversification rate of diploids is dominated by SI diploids, while SC diploids have a lower diversification rate that is comparable to polyploids, which are also SC (\cref{figure:netdivall}E).
+Furthermore, our models of the joint macroevolution of ploidy and breeding system that were statistically preferred revealed how the trait combinations associate with diversification.
+We found that the highest overall net diversification rate of diploids was dominated by SI diploids, while SC diploids had a lower diversification rate that overlapped with the net diversification of polyploids, which are also SC (\cref{figure:netdivall}E).
 Thus, breeding system seems to provide the dominant explanation of diversification differences, with ploidy providing a secondary effect within SC species.
 
 % These results indicate that the hidden trait in the analysis of one focal trait can in part be explained by the other focal trait.
 % more generally, not okay to approximate musse with bisse when states are correlated (cf Pyron)
 
-Throughout our numerous model comparisons, models that included a hidden trait emerged as significantly better than those that did not. % supptable ref
+Throughout our numerous model comparisons, models that included a hidden trait emerged as significantly better than those that did not (\cref{supptable:testaddhidden}). 
 This is entirely consistent with the expectation that many processes can affect speciation and extinction, far beyond the one or two traits of particular interest to us.
 A natural follow-up question is, what is this hidden trait?
-Our results show that to some extent, breeding system functions as a hidden trait in the ploidy-centered analysis, and vice versa.
-But there is also strong statistical support for a hidden trait beyond ploidy and breeding system.
+Our results show that to some extent, breeding system functions as a hidden trait in the ploidy-centered analysis, and vice versa (\cref{suppfigure:lumpedDP,suppfigure:lumpedIC}).
+But there is also strong statistical support for a hidden trait beyond ploidy and breeding system (\cref{supptable:testaddhidden}).
 One temptation is to propose specific possible traits to add into the analysis.
 For example, the rapidly-diversifying clade of mostly SC species within \emph{Solanum} suggests that geography may play a role. % Boris, please check!  Australian?  fixme
 %     but don't be circular, test in different clade
 % alpha is always low: new supp fig showing how A & B are inferred on the tree?  at least for ID/CD/CP+A/B model
-Alternatively, we could view the hidden trait as merely a statistical trick, providing an easy way to model extra heterogeneity without directly representing a real trait.
+%Here Rosana adds the value of adding traits with the lumped models
+When analyzing the value of adding more traits to a complex model, our suggestion is to opt for the use of lumped models (\cref{figure:lumped,table:lumped}), and verify that adding a trait is statistically preferred.
+In the absence of additional information, the hidden states can be view as merely a statistical trick, providing an easy way to model extra heterogeneity without directly representing a specific trait.
+In our analyses, the transition rates between and within hidden traits did not affect the direction of the net diversification difference. However, we found that it is important to allow for the hidden state transition rates to be asymmetrical since those models have a better fit over models that fix the hidden state transition rates to be equal (\cref{suppfigure:asymmetric,supptable:asymmetry}).
 
 Although we fit an extensive set of models in order to relax a variety of their assumptions, we did not explore the process of trait change in conjunction with speciation.
 That is, our models all assume anagenetic but not cladogenetic trait evolution.
@@ -79,11 +82,11 @@ The correlation between breeding system and ploidy may therefore be different, a
 
 \subsection*{Diploidization}
 
-Polyploidization is known to be common in plants, but the commonness of the reverse process---diploidization---is under active investigation.
+Polyploidization is known to be common in plants, but the commonness of the reverse process---diploidization---is under active investigation \citep{dodsworth_2015,mandakova_2018}.
 %
-In our analyses, ignoring diploidization if it is common could cause us to underestimate the polyploidization rate, overestimate of the diploid diversification rate, or otherwise confound our conclusions.
-We therefore included a slate of models with a diploidization parameter, and they showed that our main conclusions are robust to this process.
-These models also suggested modest statistical support for diploidization occuring within Solanaceae \cref{supptableFIXME}, although our estimates of the diploidization rate were highly uncertain.
+Ignoring diploidization if it is common, could cause us  for models that ignore it to underestimate the polyploidization rate and overestimate of the diploid diversification rate leading to incorrect conclusions.
+Therefore, we included a slate of models with a diploidization parameter, and they showed that our main conclusions are robust to this process (\cref{suppfigure:alldip}).
+These models also suggested modest statistical support for diploidization occuring within Solanaceae (\cref{supptable:testdiploidization}), although our estimates of the diploidization rate were highly uncertain.
 Furthermore, additional lines of evidence for classifying species as diploid or polyploid (beyond the genus chromosome multiplicity that we primarily relied on) would be needed for more reliable conclusions from an analysis such as ours.
 %In the cases where ploidy level was assigned by us based chromosome multiplicity at the genus level, estimating diploidization might be a potential issue due to ploidy misclassification.  
 %R: By adding diploidization to models of polyploidy linked to diversification it is possible to recover this complicated scenario and to reconcile genomic evidence with comparative phylogenetic models. 
