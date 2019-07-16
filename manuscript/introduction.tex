@@ -58,18 +58,22 @@ Alternatively, SI diploids could first transition to SC without an increase in p
 They considered only transitions among the states, however, so we investigate whether these results hold true when allowing for differences in lineage diversification.
 
 %B: redundant with "very powerful" below rm: Examining these questions requires powerful phylogenetic comparative methods.
-To address these questions, we employ an extended SSE model framework, which simultaneously models transitions between the discrete states of a trait and different rates of speciation and extinction associated with each of those states \citep{maddison_2007, fitzjohn_2012}.
-Although potentially very powerful, this approach can be prone to reporting a false association between a trait and lineage diversification when the data contain additional, unmodeled diversification rate heterogeneity \citep{maddison_2015, rabosky_2015}.
-We address this concern in two ways.
-First, we consider both ploidy and breeding system simultaneously, which reduces the chance that an effect of one trait on diversification would be mistaken for the effect of the other.
-Second, we employ a hidden state model, which allows for an unknown factor to additionally influence diversification \citep{beaulieu_2016}.
-
+In the present study, we employ an extended framework of state speciation and extincion models (SSE), which simultaneously models transitions between the discrete states of a trait and different rates of speciation and extinction associated with each of those states \citep{maddison_2007, fitzjohn_2012}.
+All the models proposed for this study are coded as graphical models and Bayesian inference was performed over the proposed models using RevBayes software \citep{hoehna_2016}.
+%Although potentially very powerful, this approach can be prone to reporting a false association between a trait and lineage diversification when the data contain additional, unmodeled diversification rate heterogeneity \citep{maddison_2015, rabosky_2015}.
+We start by fitting binary state speciation and extinction models to each ploidy and breeding system independently \citep{maddison_2007}. We follow by 
+fitting models that incorporate hidden states, which reduce the chance that an effect of one trait on diversification would be mistaken for the effect of an unobserved factor that is changing the diversification pattern \citep{beaulieu_2016}.
+We compare the proposed models against their character independent counterparts \citep{beaulieu_2016} to investigate whether ploidy or breeding system are actually linked to the diversification process.
+Next, we model ploidy and breeding system jointly to assess their combined influence on diversification, with or without an additional hidden character. With the joint trait model without hidden state, we also quantify the relative contributions of the two pathways from SI diploids to SC polyploids.
+Later, we propose new models that aggregate states in the ploidy and breeding system models to make them equivalent to the single trait models.
+The new `lumped' models allow us to compare whether increasing model complexity from one trait to two traits significantly improves our understanding of the diversification process.
 %B: I altered this line, but it is still a bit redundant given previous sentence.
-Our analyses evaluate combinations of macroevolutionary models to parse out the associations of ploidy and breeding system on speciation and extinction rates in Solanaceae, while simultaneously accounting for other processes that influence diversification.
-First, we present models in which the effects of ploidy and breeding system are considered separately and compare the inferences to previously published results. 
-Second, we add a hidden character to each model and investigate if state-dependent diversification in focal character retains its explanatory power, or whether the added hidden character obscures it.
-Next, we model ploidy and breeding system jointly to assess their combined influence on diversification, with or without an additional hidden character.
+%Our analyses evaluate combinations of macroevolutionary models to parse out the associations of ploidy and breeding system on speciation and extinction rates in Solanaceae, while simultaneously accounting for other processes that influence diversification.
+%First, we present models in which the effects of ploidy and breeding system are considered separately and compare the inferences to previously published results. 
+%Second, we add a hidden character to each model and investigate if state-dependent diversification in focal character retains its explanatory power, or whether the added hidden character obscures it.
+%
 % E: say something here about testing whether it's worth adding in another real trait?
-With this joint trait model, we also quantify the relative contributions of the two pathways from SI diploids to SC polyploids.
-Finally, for all models involving ploidy, we investigate the potential effects of including diploidization.
+Then, we extend all the models involving ploidy, to investigate the potential effects of including diploidization.
+Finally, we explore models of diversification using asymmetric rates between and within hidden states to investigate the sensitivity of the statistical inference to model assumptions.
+
 Our results highlight the importance of considering non-additive effects of traits on net diversification rates, especially when there are strong biologically-driven correlations among them.
