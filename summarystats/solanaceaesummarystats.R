@@ -73,6 +73,7 @@ norploidysi.solanaceae<-simplified.solanaceae[-c(nor.ploidysi),]
 
 matched<-make.treedata(solanaceae.tree,norploidysi.solanaceae) #635 species!!!!
 write.nexus(matched$phy,file="~/Dropbox/solploidy/basicdata/fullmatchtree.nex")
+#matched$dat=as.data.frame(matched$dat,row.names=matched$phy$tip.label)
 #write.csv(matched$dat, file="~/Dropbox/solploidy/simplifiedtable.csv")
 
 diploidsi<-which(matched$dat[,4]==2 & matched$dat[,5]=="SI")# 120
