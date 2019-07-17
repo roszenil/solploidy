@@ -15,7 +15,6 @@ We hope our work serves as an example of how phylogenetic comparative methods ca
 \subsection{Interacting traits and lineage diversification} 
 
 % E: should this results summary be much shorter?
-% B: I think it's fine, but I switched it to present tense (not strictly, but almost) for both reasons of style (aesthetic preference, perhaps), to separate previous work from current work, and to avoid awkward implications about the process not being ongoing. Moreover, the use of "show" or "demonstrate" is very loose in the context of our weak inference resulting from--what we all hopefully agree--are potentially flawed models.
 Previous analyses of the effects of ploidy on diversification found that diploids are associated with greater net diversification rates than polyploids across many angiosperm clades \citep{mayrose_2011, mayrose_2015}. 
 We obtain a similar outcome when examining ploidy alone in Solanaceae (\cref{figure:netdivall}A), but a consistent effect of ploidy on diversification is not clear when we incorporate a hidden factor linked to diversification (\cref{figure:netdivall}B).
 %
@@ -106,57 +105,27 @@ Ignoring diploidization, if it is common, could cause underestimation and increa
 Therefore, we included a slate of models with a diploidization parameter, and show that our main conclusions are robust to this process (\cref{suppfigure:alldip}).
 These models also suggest modest statistical support for diploidization (\cref{supptable:testdiploidization}), although our estimates of its rate were highly uncertain. 
 Furthermore, additional lines of evidence for classifying species as diploid or polyploid (beyond the genus-level chromosome multiplicity that we primarily relied on) are needed for more reliable conclusions.
-%In the cases where ploidy level was assigned by us based chromosome multiplicity at the genus level, estimating diploidization might be a potential issue due to ploidy misclassification.  
-%R: By adding diploidization to models of polyploidy linked to diversification it is possible to recover this complicated scenario and to reconcile genomic evidence with comparative phylogenetic models. 
-%B: yielding to %R here. I still think there is overwhelming support for this statement, and few of the cited papers show convincingly that, for example, diploidization happens within five orders of magnitude compared with polyploidization, rendering "relatively rare" obsolete or invalid. (P.S. Rare not the same as unimportant!)
-%B: was: Diploidization is widely considered to be relatively rare, compared with polyploidization \citep{husband_2013}, but flowering plant lineages are thought to have experienced at least one round of polyploidization in their evolutionary history \citep{soltis_2015}.
-
-% E: Boris, could you please revisit the following two paragraphs?  TODO
-% Two questions:
-%    Did my reorganization of this section mess anything up?
-%    Can this text be shorter?  It's seems disproportionately long, and I'm hesitant to revise it heavily myself because the logical connections aren't entirely clear to me.
 
 Other lines of evidence about the prevalence of diploidization within Solanaceae or its ancestors are mixed or even conflicting.
 % Part I: evidence for WGD in/near family
 On the one hand, polyploidy may have occurred prior to the origin of Solanaceae, rendering all extant `diploids' secondarily derived.
 \Citet{ku2000} and \citet{blanc2004} posited that the lineage leading to tomato, \emph{Solanum lycopersicum}, may have experienced one or more whole genome duplications.
 A subsequent analysis of synteny between grape and \emph{Solanum} genomes, as well as the distribution between inferred paralogs within genomes of \emph{Solanum} (tomato and potato) each suggested that this lineage experienced a likely round of ancient genome duplication or triplication ( $71 \pm 19$ My, \citet{tomato2012})  likely pre-dating the origin of the family ($49 \pm 3$ My; \citealt{sarkinen_2013}). 
-
-%The age of the peak of paralog Ks distances is approximately $71 \pm 19$ My \citep{tomato2012}. 
-% R- not entering into the weeds of Ks plots
-%f this is the case, then all of the genomes may have been subsequently diploidized, yielding the widespread and frequent chromosome numbers in this and closely related families, n=11--12, all presently considered to be diploid \citep{robertson_2011}. 
+The age of the peak of paralog Ks distances is approximately $71 \pm 19$ My \citep{tomato2012}. 
+%B: We cannot selectively delete the weak evidentiary basis for ku2000, blanc2004, and tomato2012. It's the only mention of their inference date and method, and it is a single sentence. %R- not entering into the weeds of Ks plots
 
 % Part II: evidence against WGD in/near family
 On the other hand, there is little evidence for the occurrence of diploidization after the origin of Solanaceae itself.
-% R- This is redundant now we said it above
-%First, the Ks-inferred duplication \citep{tomato2012} likely pre-dates the origin of the family (49 My, HPD 46--53 My; \citealt{sarkinen_2013}). 
-%Thus, the species in our analyses could be ancestrally polyploid, but would have diploidized before the root of the family.
-Studies comparing map-based genome synteny within the family find no evidence for recent diploidization (extensively discussed in \citet{wu_2010a}).
-Instead, simple genome re-arrangements appear sufficient to explain chromosomal evolution between a number of species. % including all of those in the relatively cytogenetically conserved x=12 group, which includes tomato, potato, eggplant, pepper, and tobacco.
-Specifically, chromosome numbers and genome comparisons within the family (esp.\ the x=12 clade containing \textit{Solanum} and \textit{Nicotiana}) reveal strong conservation.
-
-% R- removed the  inversion discussion I think the point was made above about the map base genome is sufficient. We don't need to describe more specifics
-
-%\citet{wu_2010a} review the evidence from map-based genome comparisons and find that tomato and potato differ by as few as six inversions, tomato and eggplant by 24 inversions and five translocations, tomato and pepper by 19 inversions and six translocations, and tomato and tobacco by ca.\ 10 inversions and 11 translocations.
-%Recovery of such simple relationships would require outstanding convergent loss of duplicated segments.
-%
-% Part IIb: evidence from SI [might need more explaining?]
+First, the Ks-inferred duplication \citep{tomato2012} pre-dates the origin of the family (49 My, HPD 46--53 My; \citealt{sarkinen_2013}). 
+Studies comparing map-based genome synteny within the family find no evidence for recent diploidization \citep{wu_2010a}.
+Instead, simple genome re-arrangements appear sufficient to explain chromosomal evolution within species in the cytogenetically conserved `x=12' group, which includes tomato, potato, eggplant, pepper, and tobacco.
+Recovery of comparatively few rearrangements would require outstanding convergent loss of duplicated segments.
 Furthermore, whole genome duplication in a eudicot lineage ancestral to Solanaceae would clash with the evidence that the homologous mechanism of SI, which has been present continually in many families \citep{igic_2006}, breaks down nearly invariably in natural and induced tetraploids \citep{stone_2002, mcclure_2009}.
 Most problematically in this context, it is unclear how to explain the maintenance of trans-generic polymorphism at the orthologous S-loci in Solanaceae and other families if SI was previously broken down by polyploidization.
 %
 Regardless of whether genome polyploidization, followed by widespread diploidization, is a dominant mechanism of genome evolution in Solanaceae, it is clear that more work is needed for a complete understanding of the joint evolution of ploidy and breeding systems.
 
-% Flowering plant lineages are thought to have experienced at least one round of polyploidization in their evolutionary history \citep{soltis_2015}. 
-% Following polyploidization, it is possible for genome reorganization, downsizing, and loss to occur \citep{dodsworth_2015, zenil_2016, mandakova_2018}.
-% As a consequence, nearly all extant species classified as ``diploid" in our analyses are possibly secondary diploids, having undergone both polyploidization and subsequent diploidization.
-
-% no discussion of magnitude of \delta vs \rho!
-
-% problems: this system has a big set of advantages - carefully curated (co-)occurrences of two traits, genetic basis, etc. and everything is still contradictory and opaque.
-
 \section{Conclusion}
-
-% E: The text previously here was great, but it read to me more like an abstract or methods/results.  I tried to make it more like a big-picture summary.  What other general points do we want to hit here?
 
 Heterogeneity in lineage diversification across time and clades is the rule, rather than the exception.
 This background heterogeneity makes it difficult to test for the association of any one, isolated trait with different rates of speciation or extinction.

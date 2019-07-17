@@ -9,15 +9,12 @@
 
 Species accumulate across the tree of life at different rates. 
 One possible explanation for this phenomenon is that various traits differentially affect rates of diversification. 
-Dramatic increases in phylogenetic and phenotypic data along with methodological advances have greatly accelerated the search for traits that influence diversification. 
+Dramatic increases in phylogenetic and phenotypic data, along with methodological advances, have greatly accelerated the search for traits that influence diversification.
 Nevertheless, identifying focal traits associated with rates of speciation and extinction remains a challenge \citep[\eg][]{maddison_2015, rabosky_2015, beaulieu_2016, rabosky_2017}. 
 One difficulty is that speciation and extinction likely do not depend on a single character, so the biological and environmental contexts in which traits occur can lead to complex interactions that affect lineage diversification \citep{beaulieu_2016, caetano_2018, herrera_2018}.
 Consequently, examining the association of only one character with diversification patterns can be misleading. 
-Here, we embrace this challenge by jointly investigating two characters thought to influence speciation and extinction rates---ploidy level and breeding system---while allowing for their interactions and other confounding factors to change diversification. We also test whether adding one more trait and increasing model complexity is worthwhile.
-% E: We need a "Here, we..." here.  Otherwise, we've just told the reader "not one trait!" and then launch into one trait.
-% Could also state that we newly test whether adding one more trait is worthwhile.
-%B: I think you are correct, but it introduces a new concern: we now say N=1 is too few, so not why try N>2 characters? Why is N=2 the Goldilocks number? I didn't change anything but it's clear fodder for Discussion.
-% R. added Emma's suggetion
+Here, we embrace this challenge by jointly investigating two characters thought to influence speciation and extinction rates---ploidy level and breeding system---while allowing for their interactions, and other confounding factors, to change diversification. 
+We also test whether adding one more trait and increasing model complexity is worthwhile.
 
 Polyploidization is a remarkably common mutation in plants \citep{husband_2013, zenilferguson_2017}.
 The widespread prevalence of variation in ploidy has long been considered a salient feature of flowering plant lineages \citep{stebbins1938}. 
@@ -27,7 +24,7 @@ However, recent genomic studies have inferred numerous paleo-polyploidizations, 
 Evidence of paleo-polyploidy within the genomes of diploid extant plants also implies pervasive diploidization, the return of polyploids to the diploid state, throughout the angiosperm phylogeny \citep{soltis_2015, dodsworth_2015}.
 Our analyses re-examine the association between ploidy and lineage diversification by extending the approach of \citet{mayrose_2011, mayrose_2015} to include transitions from polyploid to diploid states and potential unobserved factors affecting diversification patterns.
 
-Breeding system shifts---changes in the collection of physiological and morphological traits that determine the likelihood that any two gametes unite---are also remarkably common and crucially affect the distribution and amount of genetic variation in populations \citep{barrett2013}. %B: note: we use "remarkably" to describe the frequency of both characters; hence "also."
+Breeding system shifts---changes in the collection of physiological and morphological traits that determine the likelihood that any two gametes unite---are also remarkably common and crucially affect the distribution and amount of genetic variation in populations \citep{barrett2013}. 
 In particular, a variety of genetic self-incompatibility (SI) systems cause plants to reject their own pollen, and loss of such mechanisms, yielding self-compatibility (SC), is one of the most replicated transitions in flowering plant evolution \citep{stebbins1974, igic_2008}.
 Previous analyses reported higher rates of diversification for SI than for SC lineages in Solanaceae \citep{goldberg_2010}. 
 Similarly, heterostylous SI lineages in Primulaceae seem to diversify faster \citep{devos2014}, as do outcrossing lineages in Onagraceae \citep{freyman_2019}.
@@ -55,19 +52,12 @@ Alternatively, SI diploids could first transition to SC without an increase in p
 They considered only transitions among the states, however, and we investigate whether these results hold true when allowing for differences in lineage diversification.
 
 In the present study, we employ an extended framework of state speciation and extinction models, which simultaneously model transitions between the discrete states of a trait and different rates of speciation and extinction associated with each of those states \citep[`SSE' models;][]{maddison_2007, fitzjohn_2012}.
-% All the models proposed for this study are coded as graphical models and Bayesian inference was performed over the proposed models using RevBayes software \citep{hoehna_2016}.  % E: The models aren't drawn graphically in any of the figures (not in the revbayes sense, at least).  And we don't need methods in the intro.
-% R- The graphical model coding is not about the figures but about how you code the nodes in the code. But I agree that it might be confusing especiallly for most botanists.
-%Although potentially very powerful, this approach can be prone to reporting a false association between a trait and lineage diversification when the data contain additional, unmodeled diversification rate heterogeneity \citep{maddison_2015, rabosky_2015}.
 We start by fitting binary state speciation and extinction models to each ploidy and breeding system independently \citep{maddison_2007}.
 We follow by fitting models that incorporate hidden states, which reduce the chance that an effect of one trait on diversification would be mistaken for the effect of an unobserved factor \citep{beaulieu_2016}.
 We compare the proposed models against their character independent counterparts \citep{beaulieu_2016} to investigate whether ploidy or breeding system are actually informative of the diversification process.
 Next, we model ploidy and breeding system jointly to assess their combined influence on diversification, with or without an additional hidden character.
 Using the ploidy and breeding system model without hidden states, we quantify the relative contributions of the two pathways from SI diploids to SC polyploids.
-We also aggregate  states within these joint models of ploidy and breeding system in order to test whether increasing complexity from one trait to two traits significantly improves our understanding of the diversification process.
-%B: I altered this line, but it is still a bit redundant given previous sentence.R-fixed
-%Our analyses evaluate combinations of macroevolutionary models to parse out the associations of ploidy and breeding system on speciation and extinction rates in Solanaceae, while simultaneously accounting for other processes that influence diversification.
-%First, we present models in which the effects of ploidy and breeding system are considered separately and compare the inferences to previously published results. 
-%Second, we add a hidden character to each model and investigate if state-dependent diversification in focal character retains its explanatory power, or whether the added hidden character obscures it.
+We also aggregate states within these joint models of ploidy and breeding system in order to test whether increasing complexity from one trait to two traits significantly improves our understanding of the diversification process.
 Furthermore, we extend all the models involving ploidy to investigate the potential effects of including diploidization.
 % And finally, we explore models of diversification using asymmetric rates between and within hidden states to investigate the sensitivity of the statistical inference to model assumptions.
 Our results highlight the importance of considering non-additive effects of traits on net diversification rates  under the presence of unobserved factors, in order to detect strong biologically-driven processes dictating the diversification patterns.
