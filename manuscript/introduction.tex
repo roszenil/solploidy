@@ -13,10 +13,11 @@ Dramatic increases in phylogenetic and phenotypic data along with methodological
 Nevertheless, identifying focal traits associated with rates of speciation and extinction remains a challenge \citep[\eg][]{maddison_2015, rabosky_2015, beaulieu_2016, rabosky_2017}. 
 One difficulty is that speciation and extinction likely do not depend on a single character, so the biological and environmental contexts in which traits occur can lead to complex interactions that affect lineage diversification \citep{beaulieu_2016, caetano_2018, herrera_2018}.
 Consequently, examining the association of only one character with diversification patterns can be misleading. 
-We embrace this challenge by jointly investigating two characters thought to influence speciation and extinction rates---ploidy level and breeding system---while allowing for their interactions and other confounding factors to change diversification.
+Here, we embrace this challenge by jointly investigating two characters thought to influence speciation and extinction rates---ploidy level and breeding system---while allowing for their interactions and other confounding factors to change diversification. We also test whether adding one more trait and increasing model complexity is worthwhile.
 % E: We need a "Here, we..." here.  Otherwise, we've just told the reader "not one trait!" and then launch into one trait.
 % Could also state that we newly test whether adding one more trait is worthwhile.
 %B: I think you are correct, but it introduces a new concern: we now say N=1 is too few, so not why try N>2 characters? Why is N=2 the Goldilocks number? I didn't change anything but it's clear fodder for Discussion.
+% R. added Emma's suggetion
 
 Polyploidization is a remarkably common mutation in plants \citep{husband_2013, zenilferguson_2017}.
 The widespread prevalence of variation in ploidy has long been considered a salient feature of flowering plant lineages \citep{stebbins1938}. 
@@ -55,14 +56,15 @@ They considered only transitions among the states, however, and we investigate w
 
 In the present study, we employ an extended framework of state speciation and extinction models, which simultaneously model transitions between the discrete states of a trait and different rates of speciation and extinction associated with each of those states \citep[`SSE' models;][]{maddison_2007, fitzjohn_2012}.
 % All the models proposed for this study are coded as graphical models and Bayesian inference was performed over the proposed models using RevBayes software \citep{hoehna_2016}.  % E: The models aren't drawn graphically in any of the figures (not in the revbayes sense, at least).  And we don't need methods in the intro.
+% R- The graphical model coding is not about the figures but about how you code the nodes in the code. But I agree that it might be confusing especiallly for most botanists.
 %Although potentially very powerful, this approach can be prone to reporting a false association between a trait and lineage diversification when the data contain additional, unmodeled diversification rate heterogeneity \citep{maddison_2015, rabosky_2015}.
 We start by fitting binary state speciation and extinction models to each ploidy and breeding system independently \citep{maddison_2007}.
 We follow by fitting models that incorporate hidden states, which reduce the chance that an effect of one trait on diversification would be mistaken for the effect of an unobserved factor \citep{beaulieu_2016}.
 We compare the proposed models against their character independent counterparts \citep{beaulieu_2016} to investigate whether ploidy or breeding system are actually informative of the diversification process.
 Next, we model ploidy and breeding system jointly to assess their combined influence on diversification, with or without an additional hidden character.
 Using the ploidy and breeding system model without hidden states, we quantify the relative contributions of the two pathways from SI diploids to SC polyploids.
-We also lump together states within these joint models of ploidy and breeding system in order to test whether increasing complexity from one trait to two traits significantly improves our understanding of the diversification process.
-%B: I altered this line, but it is still a bit redundant given previous sentence.
+We also aggregate  states within these joint models of ploidy and breeding system in order to test whether increasing complexity from one trait to two traits significantly improves our understanding of the diversification process.
+%B: I altered this line, but it is still a bit redundant given previous sentence.R-fixed
 %Our analyses evaluate combinations of macroevolutionary models to parse out the associations of ploidy and breeding system on speciation and extinction rates in Solanaceae, while simultaneously accounting for other processes that influence diversification.
 %First, we present models in which the effects of ploidy and breeding system are considered separately and compare the inferences to previously published results. 
 %Second, we add a hidden character to each model and investigate if state-dependent diversification in focal character retains its explanatory power, or whether the added hidden character obscures it.

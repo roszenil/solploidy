@@ -42,8 +42,10 @@ A total of 372 taxa without any information about breeding system or ploidy were
 %Including this many more species would have prohibitively slowed our analyses, especially those implementing the most complex models.
 
 The Supplementary Information contains citations for the numerous original data sources. % FIXME (and say here how many refs?) %B: no need for an additional counting and updating headache?
+% R- There is few data that I added so I can find those references and send them to you, so it would be simply the same references that you previously had plus another 20-25 I think
 The Dryad archive contains the data and tree files used for analyses. % FIXME
 % \url{https://github.com/roszenil/solploidy}  E: we should use dryad instead, because github repos are not guaranteed to last
+%This fixme happens after publications
 
 \subsection{Models}
 
@@ -97,6 +99,7 @@ The simplest model (M16) classifies each species as either SI diploid $(ID)$, SC
 Each of these states may again be associated with different rates of speciation and extinction, and the allowable transitions are loss of SI within the diploid state (from $ID$ to $CD$), loss of SI via polyploidization (from $ID$ to $CP$), and polyploidization while SC (from $CD$ to $CP$).
 % The total rate of loss of self-incompatibility, \ie transitions out of $ID$, is $q_{IC} + \rho_I$.
 % E: Can we call it something other than q_IC?  It's a bit confusing to have the same parameter mean different things in different models.
+% R: In the lumped models I call them something different q_0 and rho_0 because they are different parameters but I don't think we should explain.
 
 As for the previous models of only one trait, we then allow diversification to be influenced by only a hidden trait (M17), or by ploidy, breeding system, and a hidden trait (M18--M20) with varying degrees of complexity in the hidden trait transitions (\cref{supptable:M16M20}).
 We add this hidden trait layer on top of our three-state model \citep[similar to][]{caetano_2018, huang_2018}.
@@ -149,10 +152,13 @@ State-dependent diversification can change the relative contributions of the two
 For example, if the net diversification rate is small for $CD$, the two-step pathway will contribute relatively less.
 We therefore include the difference between speciation and extinction along the diagonal elements of the propagation matrix.
 As before, matrix exponentiation provides the relative chance of changing from one state to any other state after time $t$.
-In this case, however, these are not probabilities because diversification changes the number of lineages as time passes. %B: FIXME, we'll hear complaints again about "this," "these," and ... "their." (below)
+The calculations of the propagation matrix are not probabilities because diversification changes the number of lineages as time passes. 
+%B: FIXME, we'll hear complaints again about "this," "these," and ... "their." (below)
+% R- fixed
 We can still use ratios, however, to consider the relative contribution of each pathway, analogous to the normalized age structure in a growing population. % R- here a reference would be nice  E: Does Jake have a favorite ref? Otherwise, I guess a basic ecology textbook.
 %
 % E & R todo ?: for the case with net div, write out the propagation matrix and equations for pathway contributions
+% R- couldn't solve to get the exact solutions turns out it is really hard.
 %
 % E: I don't think we need this section now that diploidization is in each of the sections above.  But I'm saving this text in case we want to put some of it in Results.
 %--------------------------------------------------
@@ -170,8 +176,8 @@ We can still use ratios, however, to consider the relative contribution of each 
 
 \subsubsection{Model fitting}
 
-Parameters for each of the 29 models were estimated using RevBayes \citep{hoehna_2016}.
-Scripts for analyses and key results are available as Supplementary Information. % FIXME more permanent than \url{https://github.com/roszenil/solploidy}.
+Parameters for each of the 29 models were coded as graphical models and Bayesian statistical inference was performed RevBayes \citep{hoehna_2016}.
+Scripts for analyses and key results are available as Supplementary Information. % FIXME more permanent than \url{https://github.com/roszenil/solploidy}.- Happens after publication
 We accounted for incomplete sampling in all analyses by setting the probability of sampling a species at the present to $651/3000$ \citep[using the method of][]{fitzjohn_2009} since the Solanaceae family has approximately 3,000 species \citep{solsource}.
 For all models, we assumed that speciation and extinction parameters had log-normal prior distributions with means equal to the expected net diversification rate $(\text{number of taxa} / [2 \times \text{root age}])$ and standard deviation $0.5$.
 Priors for parameters defining trait changes were assumed to be gamma distributed with parameters $k=0.5$ and $\theta=1$. 
@@ -185,7 +191,7 @@ Ancestral state estimations for all models show the maximum \emph{a posteriori} 
 \subsubsection{Model selection key questions}
 
 We calculated the marginal log-likelihood for each of the models using fifty stepping stone steps under the methodology of \citet{xie_2010}, implemented in RevBayes \citep{hoehna_2016}.
-Each stepping stone step was found by calculating at least 500 generations of burn-in followed by a total of 1,000 MCMC steps. % (\cref{table:marginallike}) updated ref?
+Each stepping stone step was found by calculating at least 500 generations of burn-in followed by a total of 1,000 MCMC steps (\cref{table:bayesfactors}).
 
 Using the marginal likelihood values, we calculated Bayes factors to answer five key biological and methodological questions:
 \begin{enumerate}
@@ -210,7 +216,7 @@ Each species retained on the tree belonged to one of five possible categories, d
 Because polyploidization breaks this form of self-incompatibility, self-incompatible species with unobserved ploidy ($I?$) are taken to be diploid ($ID$), and polyploid species with unobserved breeding system ($?P$) are taken to be SC ($CP$).
 (B) Category groupings into states for each model type.
 For example, there are 70 species that are SC with unknown ploidy.
-In the $D/P$ models these are coded as $D$ and $P$ (uncertain/consistent with either state), in the $I/C$ models they are coded as $C$, and in the $ID/CD/CP$ models they are coded as $CD$ and $CP$.
+In the ploidy only models (M1- M10) these are coded as $D$ and $P$ (uncertain/consistent with either state), in the breeding system only models (M11-M15) they are coded as $C$, and in the ploidy and breeding system models (M16-M29) they are coded as $CD$ and $CP$.
 In the hidden state models, all species were coded as consistent with both $A$ and $B$.
 Two species, \emph{Lycium californicum} and \emph{Solanum bulbocastanum}, are simultaneously $ID$ and $CP$, and by adding them the sample adds to the total of 651 taxa used for analyses.
 }
@@ -303,7 +309,7 @@ M29. Lumped I/C+ A/B        & -1416.60                                          
 
 \begin{figure}
 \includegraphics[width=\textwidth]{alldiversificationasymhidden.pdf} 
-\caption{Net diversification rates for all models without diploidization rate estimate. 
+\caption{Net diversification rates for SSE models of focal traits with or without hidden state. 
 Each panel contains a graphical summary of estimated model parameters and displays posterior distributions for net diversification estimates.}
 \label{figure:netdivall}
 \end{figure}
@@ -358,7 +364,7 @@ M18. ID/CP/CD+A/B                & -1414                                        
 \textbf{M19. ID/CP/CD +A/B asym} & \textbf{-1393.20}                                                 &       &       & -1.92 & \begin{tabular}[c]{@{}l@{}}Asymmetric hidden rates moderately\\ preferred over all asymmetric\end{tabular} \\ \hline
 M20. ID/CP/CD +A/B all asym      & -1393.12                                                          &       &       &       &   \\ \hline                                                                                                        
 \end{tabular}
-\caption{Bayes factors of ploidy and breeding system withou diploidization. Results indicate that the MuHiSSE model with asymmetric hidden rates (17) is  strongly preferred over M16 and M18 and moderately preferred over the MuHiSSe with all rates asymetric (M20). *Marginal log-likelihood for M17 could not be calculated within allotted computer time.}
+\caption{Bayes factors of ploidy and breeding system without diploidization. Results indicate that the MuHiSSE model with asymmetric hidden rates (17) is  strongly preferred over M16 and M18 and moderately preferred over the MuHiSSe with all rates asymetric (M20). *Marginal log-likelihood for M17 could not be calculated within allotted computer time.}
 \label{supptable:M16M20}
 \end{supptable}
 
@@ -408,7 +414,7 @@ M4. D/P+A/B asym                         & -1223.28                             
 \textbf{M9. D/P+A/B+$\delta$ asym}       & \textbf{-1214.46}                                                 &             &                 &                                                                      \\ \hline
 M16. ID/CD/CP                            & -1459.11                                                          & M16 vs. M21 & 4.41            & M21 (Moderate)                                                       \\
 \textbf{M21. ID/CD/CP+$\delta$}          & \textbf{-1454.68}                                                 &             &                 &                                                                      \\ \hline
-M19. IC/CD/CP asym                       & -1393.20                                                          & M19 vs. M24 & 6.46            & M24 (Moderate)                                                       \\
+M19. IC/CD/CP +A/B asym                       & -1393.20                                                          & M19 vs. M24 & 6.46            & M24 (Moderate)                                                       \\
 \textbf{M24. IC/CD/CP+A/B+$\delta$ asym} & \textbf{-1386.20}                                                 &             &                 &                                                                      \\ \hline
 \end{tabular}
 \caption{Test for inclusion of a diploidization rate via Bayes factors. Models with diploidization are moderately preferred over models that do not include a diploidization rate}

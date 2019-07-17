@@ -32,23 +32,30 @@ Thus, breeding system appears to provide a relatively better explanation of dive
 % These results indicate that the hidden trait in the analysis of one focal trait can in part be explained by the other focal trait.
 % more generally, not okay to approximate musse with bisse when states are correlated (cf Pyron)
 
-Throughout our numerous model comparisons, we find that inclusion of hidden traits provides a considerably better fit (\cref{supptable:testaddhidden}). 
+Throughout our numerous model comparisons, we find that inclusion of hidden states provides a considerably better fit (\cref{supptable:testaddhidden}). 
 This is consistent with the expectation that many processes, beyond those associated with the focal traits, can affect inference of speciation and extinction. %removed "one or two" because it's true for N traits.
 %A natural follow-up question is, what is this hidden trait?
-It is, however, unclear exactly which processes are captured by the hidden traits.
-For example, our results show that, to a varying extent, breeding system functions as a hidden trait in the ploidy-centered analysis, and vice versa (\cref{suppfigure:lumpedDP,suppfigure:lumpedIC}).
+It is, however, unclear exactly which processes are captured by the hidden states.
+For example, our results show that, to a varying extent, breeding system functions as a hidden state in the ploidy-centered analysis, and vice versa (\cref{suppfigure:lumpedDP,suppfigure:lumpedIC}).
 But the strong statistical support for processes not well explained by ploidy and breeding system (\cref{supptable:testaddhidden}) tempts one to interpret the remaining variation as the effect of other measurable traits.
 For example, our data appear to show a rapidly-diversifying Australasian clade of mostly SC species within \emph{Solanum}, which suggests that geography may play a role. % Boris, please check!  Australian?  fixme
-Nevertheless, it is also possible that the addition of hidden traits instead explains variation stemming from any of a number of unrelated processes or methodological artifacts, such as variation in rates of molecular evolution or misspecified models of sequence evolution. %Rosana and Emma check me.
-%     but don't be circular, test in different clade
-% alpha is always low: new supp fig showing how A & B are inferred on the tree?  at least for ID/CD/CP+A/B model
-%B: this transition from the meaning of hidden states to best practices of lumping is a bit hard.
-%Here Rosana adds the value of adding traits with the lumped models
-More generally, when analyzing the value of additional traits to a complex model, it may be best to opt for the use of lumped models (\cref{figure:lumped,table:lumped}), and verify that adding a trait is statistically preferred.
-In the absence of additional information, the hidden states can be viewed as a statistical trick, providing an easy way to model extra heterogeneity without directly representing a specific trait.
-In our analyses, the transition rates between and within hidden traits did not affect the direction of the net diversification difference. 
-We find that it is important to allow for the hidden state transition rates to be asymmetrical, because those models tend to provide a better fit than models that fix the hidden state transition rates to be equal (\cref{suppfigure:asymmetric,supptable:asymmetry}).
+Nevertheless, it is also possible that the addition of hidden states instead explains variation stemming from any of a number of unrelated processes or methodological artifacts, as previously discussed by \citet{beaulieu_2016}.
+In the absence of additional information, the hidden states can be viewed as a statistical trick, providing an easy way to model extra heterogeneity without directly representing a specific trait. 
 
+%such as variation in rates of molecular evolution or misspecified models of sequence evolution. %Rosana and Emma check me.
+%R- let's not get into the weeds of what is a hidden state (I remove the use of trait  for state because a state is what the model receives) . Jeremy does a good job discussing this in his paper so no need.
+
+%     but don't be circular, test in different clade
+% alpha is always low: new supp fig showing how A & B are inferred on the tree?  at least for ID/CD/CP+A/B model - it is low because not enough transitions and mostly a different process towards the tips-who knows what is happening there?
+%B: this transition from the meaning of hidden states to best practices of lumping is a bit hard.- Fixed below
+%Here Rosana adds the value of adding traits with the lumped models
+As more trait information becomes available for macroevolutionary studies, it is important not only recognizing the role of hidden states as a part of a general modeling approach, but also questioning whether adding more traits to diversification studies is relevant.
+More generally, when analyzing the value of adding additional traits to an already complex model with or without hidden states, we find that using lumped models  is a key tool to verify that adding a trait improves our understanding of the diversification patterns (\cref{figure:lumped,table:lumped}).
+
+%R-removed this, it is really not important to discuss
+%In our analyses, we find that the transition rates between and within hidden traits did not affect the direction of the net diversification differences. 
+%We find that it is important to allow for the hidden state transition rates to be asymmetrical, because those models tend to provide a better fit than models that fix the hidden state transition rates to be equal (\cref{suppfigure:asymmetric,supptable:asymmetry}).
+ 
 Although we fit an extensive set of models in order to relax a variety of assumptions, we did not explore the process of trait change in conjunction with speciation.
 That is, our models all assume anagenetic trait evolution and ignore cladogenetic shifts.
 Anagenetic and cladogenetic changes can be separated with phylogenetic models \citep{mayrose_2011, goldberg_2012, magnuson-ford_2012}. 
@@ -67,7 +74,9 @@ Macroevolutionary transition rates represent a combination of time spent waiting
 For our traits, this consists of mutations that break SI or generate polyploid individuals, and selective pressures that cause fixation (or loss) of these mutants.
 Estimates of mutation rates are highly uncertain, but the chance of breakdown of SI within diploids is perhaps $10^{-5}$ per pollen grain; this includes breakdown by autopolyploidization \citep{lewis1979}, which is by itself estimated to occur approximately within the same order of magnitude \citep{ramsey_1998}. 
 % Seemingly, then, the simple genic mutation rate that leads to loss of SI is at best equal to tetraploidization mutation rate, and possibly far lower.
-In contrast, we infer a macroevolutionary transition rate from $ID$ to $CD$ that is three-fold greater than the rate from $ID$ to $CP$, indicating that selection restricts the fixation of new polyploids more than of new SC mutants  (\cref{figure:pathways}, \citealt{robertson_2011}). % todo: check if new rates are still 3x %FIXME
+In contrast, we infer a macroevolutionary transition rate from $ID$ to $CP$ that is 2. 5 times greater than the rate from $ID$ to $CD$, indicating that selection restricts the fixation of new polyploids more than of new SC mutants  (\cref{figure:pathways}, \citealt{robertson_2011}). 
+% todo: check if new rates are still 3x 
+%R- fixed, it is two and a half more and it was written upside down ID to CP 0.194 ID to CD 0.073 which means more evolution to CP than to CD.
 
 Our findings prompt several further questions about the macroevolutionary pathways of ploidy and breeding system.
 %
@@ -111,19 +120,25 @@ Other lines of evidence about the prevalence of diploidization within Solanaceae
 % Part I: evidence for WGD in/near family
 On the one hand, polyploidy may have occurred prior to the origin of Solanaceae, rendering all extant `diploids' secondarily derived.
 \Citet{ku2000} and \citet{blanc2004} posited that the lineage leading to tomato, \emph{Solanum lycopersicum}, may have experienced one or more whole genome duplications.
-A subsequent analysis of synteny between grape and \emph{Solanum} genomes, as well as the distribution between inferred paralogs within genomes of \emph{Solanum} (tomato and potato) each suggested that this lineage experienced a likely round of ancient genome duplication or triplication \citep{tomato2012}. 
-The age of the peak of paralog Ks distances is approximately $71 \pm 19$ My \citep{tomato2012}. 
-If this is the case, then all of the genomes may have been subsequently diploidized, yielding the widespread and frequent chromosome numbers in this and closely related families, n=11--12, all presently considered to be diploid \citep{robertson_2011}. 
+A subsequent analysis of synteny between grape and \emph{Solanum} genomes, as well as the distribution between inferred paralogs within genomes of \emph{Solanum} (tomato and potato) each suggested that this lineage experienced a likely round of ancient genome duplication or triplication ( $71 \pm 19$ My, \citet{tomato2012})  likely pre-dating the origin of the family ($49 \pm 3$ My; \citealt{sarkinen_2013}). 
+
+%The age of the peak of paralog Ks distances is approximately $71 \pm 19$ My \citep{tomato2012}. 
+% R- not entering into the weeds of Ks plots
+%f this is the case, then all of the genomes may have been subsequently diploidized, yielding the widespread and frequent chromosome numbers in this and closely related families, n=11--12, all presently considered to be diploid \citep{robertson_2011}. 
 
 % Part II: evidence against WGD in/near family
-On the other hand, there is little evidence for the occurrence of diploidization within Solanaceae itself.
-First, the Ks-inferred duplication \citep{tomato2012} likely pre-dates the origin of the family (49 My, HPD 46--53 My; \citealt{sarkinen_2013}). 
-Thus, the species in our analyses could be ancestrally polyploid, but would have diploidized before the root of the family.
-Second, studies comparing map-based genome synteny within the family find no evidence for recent diploidization \citep{wu_2010a}.
+On the other hand, there is little evidence for the occurrence of diploidization after the origin of Solanaceae itself.
+% R- This is redundant now we said it above
+%First, the Ks-inferred duplication \citep{tomato2012} likely pre-dates the origin of the family (49 My, HPD 46--53 My; \citealt{sarkinen_2013}). 
+%Thus, the species in our analyses could be ancestrally polyploid, but would have diploidized before the root of the family.
+Studies comparing map-based genome synteny within the family find no evidence for recent diploidization (extensively discussed in \citet{wu_2010a}).
 Instead, simple genome re-arrangements appear sufficient to explain chromosomal evolution between a number of species. % including all of those in the relatively cytogenetically conserved x=12 group, which includes tomato, potato, eggplant, pepper, and tobacco.
 Specifically, chromosome numbers and genome comparisons within the family (esp.\ the x=12 clade containing \textit{Solanum} and \textit{Nicotiana}) reveal strong conservation.
-\citet{wu_2010a} review the evidence from map-based genome comparisons and find that tomato and potato differ by as few as six inversions, tomato and eggplant by 24 inversions and five translocations, tomato and pepper by 19 inversions and six translocations, and tomato and tobacco by ca.\ 10 inversions and 11 translocations.
-Recovery of such simple relationships would require outstanding convergent loss of duplicated segments.
+
+% R- removed the  inversion discussion I think the point was made above about the map base genome is sufficient. We don't need to describe more specifics
+
+%\citet{wu_2010a} review the evidence from map-based genome comparisons and find that tomato and potato differ by as few as six inversions, tomato and eggplant by 24 inversions and five translocations, tomato and pepper by 19 inversions and six translocations, and tomato and tobacco by ca.\ 10 inversions and 11 translocations.
+%Recovery of such simple relationships would require outstanding convergent loss of duplicated segments.
 %
 % Part IIb: evidence from SI [might need more explaining?]
 Furthermore, whole genome duplication in a eudicot lineage ancestral to Solanaceae would clash with the evidence that the homologous mechanism of SI, which has been present continually in many families \citep{igic_2006}, breaks down nearly invariably in natural and induced tetraploids \citep{stone_2002, mcclure_2009}.
