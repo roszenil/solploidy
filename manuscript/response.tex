@@ -100,7 +100,7 @@ Ln65 says this nicely, but this point could be introduced (with the appropriate 
 Also, the introduction is explicitly limited to angiosperms, which doesn't seem necessary---other landplant lineages (and non-plants, for that matter) also have ploidy and breeding system variation.
 \end{quote}
 
-[Considered.] % TODO
+Introduction was edited.
 
 
 \begin{quote}
@@ -108,7 +108,7 @@ Also, the introduction is explicitly limited to angiosperms, which doesn't seem 
 That paper doesn't present much by way of new data
 \end{quote}
 
-[Considered.] % TODO
+It is appropriate based on suggestions for re-analyses.
 
 
 \begin{quote}
@@ -200,8 +200,8 @@ Similarly, it seems to me that fixing the transition rates of the observed chara
 \end{quote}
 
 We appreciate this suggestion and we followed it. The main result after fitting models with symmetric vs. asymmetric rates is that the direction of the results does not change but the amount of difference amongst net diversification posterior distributions does. 
-We found using Bayes factors that a model including asymmetric hidden rates is preferred over a model with equal hidden rates. 
-Also,  the asymmetry in the trait rates have moderate to not support of being better than a model with equal trait transition rates.  %TODO put number.
+We found using Bayes factors that a model including asymmetric hidden rates is preferred over a model with equal hidden rates (Table S6, Figure S5). 
+Also,  the asymmetry in the trait rates have moderate to not support of being better than a model with equal trait transition rates.  
 
 
 \begin{quote}
@@ -258,15 +258,16 @@ There, we can see both the short-term and long-term behavior.
 --340  Sentence fragment
 \end{quote}
 
-Fixed. % TODO
+Fixed. 
 
 
 \begin{quote}
 --beginning of the Discussion is perhaps unnecessary -- it's more like Introduction material
 \end{quote}
 
-[Considered.] % TODO %We can defend this on account of repeating some of the points because of numerous and complex  questions; aimed to prevent flipping pages back
-
+The discussion was heavily edited. However, we consider that it is important to refresh some of the introductory key points due to the numerous and complex questions that are being addressed with SSE models. 
+ % TODO %We can defend this on account of repeating some of the points because of numerous and complex  questions; aimed to prevent flipping pages back
+% Fixed
 
 \begin{quote}
 --are the results from the analyses that include diploidization coherent?
@@ -274,18 +275,18 @@ I'm not sure how to phrase this -- I guess I'm asking if there's any suggestion 
 \end{quote}
 
 %B: Rosana, you know this best, but it seems to me that the current phrasing (below) is unclear.
-The soaking noise comes from the hidden state so in the presence of hidden states finding that diploidization matters is key. 
-All the Bayes factors indicated strong support for models that include diploidization. 
-However, the diploidization parameter is difficult to estimate (wide credible intervals) mainly because diploidization is a genome size process that can be partially or minimally recover from ploidy data. 
-This is the reason why we do not overstate this finding, the importance of diploidization needs to be studied using genomes.
-
+%R- rewritten
+The soaking noise comes from adding  hidden states to models. Therefore in the presence of hidden states finding that diploidization  parameter is different from zero truly represents potential evidence of the reversibility of polyploidy. 
+Furthermore, all the Bayes factors indicated strong preference for models that include diploidization. 
+However, diploidization is a genomic process that can be partially or minimally recover from ploidy data. 
+And as discussed at the end of the article, genomic evidence for diploidization in Solanaceae  is still debatable. 
 
 \begin{quote}
 --I think this is an excellent point -- ``SI, which is itself associated with a faster diversification rate, is the breeding system context in which many diploids occur.''
 Perhaps an discussion of the extent to which these results are extendable to other plant groups would be appropriate, versus what is likely to be specific to this system
 \end{quote}
 
-[Seems reasonable.] % TODO
+Considered.
 
 
 \begin{quote}
@@ -301,7 +302,7 @@ Could this comparison be expanded upon?
 And maybe avoid the parameter notation, and just describe the rates being compared.
 \end{quote}
 
-[Considered.] % TODO
+Clarified.
 
 
 \begin{quote}
@@ -316,7 +317,7 @@ Yes. We adjusted the text accordingly.
 (It's not clear, at least at first, where this conflict lies)
 \end{quote}
 
-[Considered.] % TODO
+Fixed.
 
 
 \begin{quote}
@@ -330,10 +331,24 @@ Fixed.
 So the diploids were ancestrally polyploidy -- why would that alter the rate inferences?
 \end{quote}
 
-[Considered.] % TODO
+We edited the discussion. We found not evidence of conclusions about diversification changing in the presence of diploidization. The  the estimates for rate of polyploidization in the absence of diploidization also remained the same (\cref{figure:hissedip}. However, ignoring diploidization, if it is common, could cause to underestimate the polyploidization rate or create larger credible intervals.
 
+We have corrected the phrase accordingly.
+Thank you for the suggestion
+\begin{figure}
+    \centering 
+      \begin{minipage}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{hisseDPnodipasymposteriordist.pdf} 
+    \end{minipage}\\
+    \vspace{1cm}
+    \begin{minipage}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{hisseDPasymposteriordist.pdf}
+        \end{minipage}
+    \caption{ Top 6 panels: Ploidy model with hidden states without diploidization. Bottom 6 panels: Ploidy model with hidden states with diploidization. Rate of polyploidy has a wider credible interval in the absence of diploidization}
+    \label{figure:hissedip}
+\end{figure}
 
-\begin{quote}
+\begin{quote}1
 --430  remove the comma
 \end{quote}
 
@@ -356,8 +371,7 @@ Clarified.
 --455  I don't quite follow where this section is leading -- I think these loose ends should be explicitly tied together.
 There are reports of paleopolyploidy in Solanaceae and relatives, but there are reasons to be skeptical of them?
 \end{quote}
-
-[Considered.] % TODO
+Fixed
 
 
 \begin{quote}
@@ -420,7 +434,7 @@ This is especially true in a Bayesian framework where it is sometimes better to 
 I think it would have been important to at least present the results of an unconstrained model to show that this decision to constrain the rates do not affect the conclusions.
 \end{quote}
 
-We have now fitted models with asymmetric hidden rates and asymmetric trait rates. We found that the former are important and strengthened the differences. We found no evidence that having all asymmetric rates is preferable over just asymmetric hidden for our specific example. %TODO (Figs and table)
+We have now fitted models with asymmetric hidden rates and asymmetric trait rates. We found that the former are important and strengthened the differences. We found no evidence that having all asymmetric rates is preferable over just asymmetric hidden for our specific example (Figure S5, Table S6). 
 
 
 \begin{quote}
@@ -431,7 +445,7 @@ After inspecting the supplementary material, I see that it is not the case; hidd
 I think this is interesting and that it could make an interesting discussion.
 \end{quote}
 
-Thank you for this suggestion, which we have incorporated in the Discussion. % TODO
+Thank you for this suggestion. Fitting the new models the only trend we can notice is that for ploidy only models hidden states seem to transition mostly towards recent lineages but still spread throughout lineages (Figure S8). For breeding system models there are a two or three clades where transitions between hidden states happen sooner (Figure S12 and S16). However, we don't have a clear interpretation for this phenomenon.
 
 
 % Minor points:
@@ -531,7 +545,8 @@ Actually, if I understand well, models without diploidization simply fix this ra
 Am I right?
 \end{quote}
 
-[Considered.] % TODO
+Correct, and inference remains the same. \cref{figure:hissedip}. However, ignoring diploidization, if it is common, could cause to underestimate the polyploidization rate or create larger credible intervals.
+We have corrected the phrase accordingly.
 
 
 %--------------------------------------------------
@@ -570,9 +585,9 @@ But, if so, some clarity in the Methods/Results is warranted in how trait-indepe
 
 We have fitted the trait independent models (character-independent CID). 
 We appreciated this suggestion because it allowed us to parse out the effect of the traits in the diversification process. 
-By comparing Bayes factors, models with traits are strongly preferred over CID when the breeding system is the focal trait, and there is little to no evidence that models that include ploidy are better than CID. 
-These results strongly suggest that breeding system is much more informative than ploidy in the diversification dynamics of Solanaceae.
-%TODO: write table number
+By comparing Bayes factors, models with traits are strongly preferred over CID when the breeding system is the focal trait, and there is little to no evidence that models that include ploidy are better than CID (Tables 1-2 and S1-S3). 
+These results strongly suggest that breeding system is much more informative than ploidy in the diversification dynamics of Solanaceae (Tables 1-2).
+%TODO: write table number- Fixed
 
 
 \begin{quote}
@@ -584,7 +599,7 @@ This would, however, cause issues with how the posterior is summarized.
 I should point out that nothing in the plots suggests this might be an issue, but this was something that I wondered about with the particular models used here.
 \end{quote}
 
-When we presented the first submission we were pushing the limits on implementations of diversification models in RevBayes. During the revision we found a work-around to be able to implement all the extra models we are presenting. New models with asymmetric traits are preferred and strengthen the results.
+When we presented the first submission we were pushing the limits on implementations of diversification models in RevBayes. During the revision we found a work-around to be able to implement all the extra models we are presenting. New models with asymmetric traits are preferred and strengthen the results (Figure S5, Table S6).
 
 
 \begin{quote}
@@ -594,7 +609,7 @@ In any case, it might be good to provide readers with this perspective when disc
 I think the point about determining whether it is worth the effort to understand the meaning of the hidden states is a good one, but I also it worth keeping in mind the caveats that go with it.
 \end{quote}
 
-[Considered.] % TODO
+Discussion edited. 
 
 % Other minor comments:
 
@@ -612,7 +627,7 @@ Though I imagine the authors are referring to a hidden cladogenetic model that a
 But, both of these papers, as far as I can tell, extend the basic SSE model to include both hidden states and cladogenetic events.
 \end{quote}
 
-We have cited them accordingly. % TODO
+We have cited them accordingly. 
 
 
 \begin{quote}
@@ -620,7 +635,7 @@ Line 465-469: This sentence was a bit difficult to grasp during my first reading
 I get the point, but I think the authors might consider revising it for clarity.
 \end{quote}
 
-Rephrased. % TODO
+Rephrased.
 
 
 \begin{quote}
