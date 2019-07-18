@@ -20,9 +20,9 @@ We obtain a similar outcome when examining ploidy alone in Solanaceae (\cref{fig
 %
 Previous analyses of breeding system in this family found that SI may cause higher diversification rates, compared with SC (\citealt{goldberg_2010}; \cref{figure:netdivall}C).
 Our analyses that include a hidden trait recover the same pattern, with one important difference.
-On the background of one hidden state, we recover a net diversification rate for SC species that is positive and greater than the diversification rate of SI species on the background of the other hidden state (\cref{figure:netdivall}D).%B: I rewrote this to separate the point of the side clause. 
-Therefore, SC may not be a `dead end' (cf.\ \citealt{igic_2013}) when coupled with some unknown trait combinations (or processes not modeled by these two traits). 
-%Separately, I should note here that nothing about this analysis seems to me to strongly imply that SC is not a dead end in combination with a trait (as we discuss immediately below!). Much of the explanatory power derived for the A/B model may come from (for instance) accommodating tree scaling problems or rate heterogeneity in molecular evolution. It just fills up all of the mystery space without pointing to a cause. Side notes: (1) The I/C + A/B model ancestral states basically have the root of the tree as being in one hidden state and then tips in another. (2) Is there any place where we can see how much of the tree is in hidden state A or state B under some model?
+On the background of one hidden state, we recover a net diversification rate for SC species that is positive and greater than the diversification rate of SI species on the background of the other hidden state (\cref{figure:netdivall}D). 
+Therefore, SC may not be a `dead end' when coupled with some unknown trait combinations or processes not modeled by these two traits. 
+%B: nothing about this analysis seems to me to strongly imply that SC is not a dead end in combination with a trait (as we discuss immediately below!). Much of the explanatory power derived for the A/B model may come from (for instance) accommodating tree scaling problems or rate heterogeneity in molecular evolution. It just fills up all of the mystery space without pointing to a cause. Side notes: (1) The I/C + A/B model ancestral states basically have the root of the tree as being in one hidden state and then tips in another. (2) Is there any place where we can see how much of the tree is in hidden state A or state B under some model?
 %
 Our analyses also reveal that models of joint evolution of ploidy and breeding system are statistically preferred, and hint at how various trait combinations may be linked with diversification.
 We find that the highest net diversification rate is associated with SI diploids, while SC diploids have a lower diversification rate that overlaps with the net diversification of SC polyploids (\cref{figure:netdivall}E).
@@ -32,35 +32,29 @@ Thus, breeding system appears to provide a relatively better explanation of dive
 % more generally, not okay to approximate musse with bisse when states are correlated (cf Pyron)
 
 Throughout our numerous model comparisons, we find that inclusion of hidden states provides a considerably better fit (\cref{supptable:testaddhidden}). 
-This is consistent with the expectation that many processes, beyond those associated with the focal traits, can affect inference of speciation and extinction. %removed "one or two" because it's true for N traits.
-%A natural follow-up question is, what is this hidden trait?
-It is, however, unclear exactly which processes are captured by the hidden states.
-For example, our results show that, to a varying extent, breeding system functions as a hidden state in the ploidy-centered analysis, and vice versa (\cref{suppfigure:lumpedDP,suppfigure:lumpedIC}).
-But the strong statistical support for processes not well explained by ploidy and breeding system (\cref{supptable:testaddhidden}) tempts one to interpret the remaining variation as the effect of other measurable traits.
-For example, our data appear to show a rapidly-diversifying Australasian clade of mostly SC species within \emph{Solanum}, which suggests that geography may play a role. % Boris, please check!  Australian?  fixme
+This is consistent with the expectation that many processes, beyond those associated with the focal traits, can affect inference of speciation and extinction. 
+It is, however, unclear exactly which processes are captured by the hidden states. 
+For example, our results show that, to a varying extent, breeding system functions as a hidden state in the ploidy-centered analysis, and vice versa (\cref{suppfigure:lumpedDP,suppfigure:lumpedIC}). 
+But the strong statistical support for processes not well explained by ploidy and breeding system (\cref{supptable:testaddhidden}) tempts one to interpret the remaining variation as the effect of other measurable traits. 
+For example, our data appear to show a rapidly-diversifying Australasian clade of mostly SC species within \emph{Solanum}, which suggests that geography may play a role. 
 Nevertheless, it is also possible that the addition of hidden states instead explains variation stemming from any of a number of unrelated processes or methodological artifacts, as previously discussed by \citet{beaulieu_2016}.
 In the absence of additional information, the hidden states can be viewed as a statistical trick, providing an easy way to model extra heterogeneity without directly representing a specific trait. 
 
-%such as variation in rates of molecular evolution or misspecified models of sequence evolution. %Rosana and Emma check me.
-%R- let's not get into the weeds of what is a hidden state (I remove the use of trait  for state because a state is what the model receives) . Jeremy does a good job discussing this in his paper so no need.
-
+%R- let's not get into the weeds of what is a hidden state (I remove the use of trait  for state because a state is what the model receives). Jeremy does a good job discussing this in his paper so no need.
 %     but don't be circular, test in different clade
 % alpha is always low: new supp fig showing how A & B are inferred on the tree?  at least for ID/CD/CP+A/B model - it is low because not enough transitions and mostly a different process towards the tips-who knows what is happening there?
-%B: this transition from the meaning of hidden states to best practices of lumping is a bit hard.- Fixed below
 %Here Rosana adds the value of adding traits with the lumped models
 As more trait information becomes available for macroevolutionary studies, it is important not only recognizing the role of hidden states as a part of a general modeling approach, but also questioning whether adding more traits to diversification studies is relevant.
 More generally, when analyzing the value of adding additional traits to an already complex model with or without hidden states, we find that using lumped models  is a key tool to verify that adding a trait improves our understanding of the diversification patterns (\cref{figure:lumped,table:lumped}).
-
-%R-removed this, it is really not important to discuss
-%In our analyses, we find that the transition rates between and within hidden traits did not affect the direction of the net diversification differences. 
+%R-removed this: %In our analyses, we find that the transition rates between and within hidden traits did not affect the direction of the net diversification differences. 
 %We find that it is important to allow for the hidden state transition rates to be asymmetrical, because those models tend to provide a better fit than models that fix the hidden state transition rates to be equal (\cref{suppfigure:asymmetric,supptable:asymmetry}).
  
 Although we fit an extensive set of models in order to relax a variety of assumptions, we did not explore the process of trait change in conjunction with speciation.
 That is, our models all assume anagenetic trait evolution and ignore cladogenetic shifts.
 Anagenetic and cladogenetic changes can be separated with phylogenetic models \citep{mayrose_2011, goldberg_2012, magnuson-ford_2012}. 
 These have been previously applied to estimate the relative contribution of anagenetic and cladogenetic shifts in breeding system \citep{goldberg_2012} and polyploidization \citep{zhan_2016, freyman_2017}.
-We did not explore cladogenetic trait change because of the vast increase in state space and model number, outside the scope of our already complex and extensive modeling framework. 
-Although \citet{goldberg_2012} found that allowing cladogenetic changes did not substantially affect inference of net diversification rates associated with breeding system, future work could test whether this process affects diversification rate estimates with the more complex state spaces of our other models.
+We did not explore cladogenetic trait change because of the vast increase in parameter space and model number, outside the scope of our already complex and extensive modeling framework. %IM: #29
+Although \citet{goldberg_2012} found that allowing cladogenetic changes did not substantially affect inference of net diversification rates associated with breeding system, future work could test whether this process affects diversification rate estimates with the more complex state and parameter spaces of our other models.
 
 \subsection{Pathways to polyploidy}
 
@@ -81,26 +75,21 @@ Our findings prompt several further questions about the macroevolutionary pathwa
 %
 First, our support for the direct pathway is consistent with the idea that breakdown of SI by whole genome duplication---via diploid `heteroallelic' pollen---may often trigger the evolution of gender dimorphism as a different mechanism of inbreeding avoidance \citep{miller_2000}.
 A further test of this hypothesis would additionally examine the propensity of polyploids generated through either pathway to become dioecious \citep{robertson_2011}.
-%
 Second, we might wonder whether the propensity for a polyploid species to diversify depends on whether it arose via the one-step or two-step pathway.
-This could be tested with a different form of a hidden state model, in which the polyploid state is subdivided, based on the path taken into that state.
-This would be similar our analysis, but it would also include the possibility of different diversification rates in those $CP$ substates.
-%
+This could be tested with a different form of a hidden state model, in which the polyploid state is subdivided into parts, reflecting the arriving path taken to that state. %IM: #30
+Such an estimate of path-dependence could also include the possibility of different diversification rates for the subdivided $CP$ substates.
 Third, the generality of our findings in other families remains to be assessed.
 An identical procedure could be used in other families with gametophytic SI.
 In clades with sporophytic SI systems, however, SI is not disabled by whole genome duplication, so there is no one-step pathway \citep{miller_2000,mable_2004}.
 The correlation between breeding system and ploidy may therefore be different in sporophytic systems, and it is unclear whether one of the two-step pathways might predominate.
-
 % pathways: compare/contrast with robertson2011
 %     \rho_I > \rho_C in all!
 %     likely way to lose SI
 %     likely way to become P
-%     (compare those relative rates with robertson2011)
 
 \subsection*{Diploidization}
 
-Polyploidization is known to be common in plants, but the relative frequency of the reverse process---diploidization---remains unclear, and it is under active investigation \citep{dodsworth_2015,mandakova_2018}.
-%
+Polyploidization is known to be common in plants, but the pace and relative frequency of the reverse process---diploidization---remains unclear, and it is under active investigation \citep{dodsworth_2015,mandakova_2018}. %IM: #31
 Ignoring diploidization, if it is common, could cause underestimation and increase of uncertainty in  the polyploidization rate. 
 Therefore, we included a slate of models with a diploidization parameter, and show that our main conclusions are robust to this process (\cref{suppfigure:alldip}).
 These models also suggest modest statistical support for diploidization (\cref{supptable:testdiploidization}), although our estimates of its rate were highly uncertain. 
