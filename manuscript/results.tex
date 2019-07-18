@@ -11,14 +11,14 @@ This result holds with (model M1, \cref{figure:netdivall}A) or without the diplo
 Incorporating a hidden state in this model, however, reduces the clear separation in diversification rate estimates between diploids and polyploids (M4, \cref{figure:netdivall}B; M9, \cref{suppfigure:alldip}B).
 Statistical model comparisons show a clear preference for models in which only a hidden state affects diversification or a hidden state as well as ploidy (M2 and M4; \cref{table:bayesfactors}).
 Results are similar when diploidization is included (\cref{supptable:M6M10}).
-Thus, the role of ploidy in net diversification is unclear, with rate differences perhaps better explained by another factor.
+Thus, when other traits are ignored, the role of ploidy in net diversification is unclear, with marginal support for diploids having higher diversification rates, but rate differences perhaps better explained by another factor. %IM: #21
 
 \subsubsection{Breeding system only}
 
 When considering breeding system alone (M11, \cref{figure:netdivall}C), we found a larger net diversification rate for SI than for SC species, in agreement with \citet{goldberg_2010}.
 When a hidden state is included, the large net diversification rate difference persists for one hidden state but is diminished for the other (M14, \cref{figure:netdivall}D).
-In the statistical model comparisons, the best two supported models include diversification differences due both to breeding system and to a hidden trait (M14 and M15, \cref{table:M11M15}).
-Thus, breeding system seems to play a role in diversification differences, though a hidden factor does as well.
+In the statistical model comparisons, the best two supported models include diversification differences due to both breeding system and to a hidden trait (M14 and M15, \cref{table:M11M15}). %IM: #22
+Breeding system seems to play a role in diversification differences, though a hidden factor does as well.
 
 \subsubsection{Ploidy and breeding system together}
 
@@ -50,23 +50,23 @@ Here we return to the five specific questions we targeted with our model compari
 
     \item Are diversification patterns only determined by hidden states and not the traits of interest?
     No, our focal traits are supported as having associations with diversification differences.
-    In most cases, we find moderate to strong preference for models with the focal traits as well as hidden states, over models with only hidden states \cref{table:bayesfactors,table:M11M15,supptable:M6M10,supptable:M16M20,supptable:M21M25}).
+    In most cases, we find moderate to strong preference for models with the focal traits as well as hidden states, over models with only hidden states (\cref{table:bayesfactors,table:M11M15,supptable:M6M10,supptable:M16M20,supptable:M21M25}). %IM: #23
 
     \item Are hidden states necessary to explain diversification rate heterogeneity?
     Yes, models with hidden states that influence diversification are strongly preferred over models containing only the focal traits (\cref{supptable:testaddhidden}).
-    This means that there are potentially many sources of diversification shifts within the family.
+    This means that there are potentially many factors underlying diversification shifts within the family. %IM: #24
 
     \item Does a second focal trait add information about the diversification process?
     Yes, in most cases models with both ploidy and breeding system are preferred over models with only one of the focal traits (\cref{table:lumped,suppfigure:lumpedDP,suppfigure:lumpedIC}).
 
     \item Are conclusions robust to assumptions about hidden state transitions?
     Yes, we found that allowing different types of asymmetry in transitions within and between hidden states did not change our conclusions about net diversification differences.
-    Hidden state models with asymmetric rates are, however, strongly preferred over models with equal rates between hidden states (\cref{supptable:asymmetry}), and they show stronger differences between some net diversification rates \cref{suppfigure:asymmetric}.
+    Hidden state models with asymmetric rates are, however, strongly preferred over models with equal rates between hidden states (\cref{supptable:asymmetry}), and they show stronger differences between some net diversification rates (\cref{suppfigure:asymmetric}).
 
     \item Is there evidence for diploidization?
     Perhaps: when comparing models with diploidization against models without it, we found moderate evidence that models containing diploidization are preferred (\cref{supptable:testdiploidization}).
     We discuss later some further challenges in identifying diploidization.
-    We further found that our main conclusions about net diversification differences are not dependent on whether diploidization in included (\cref{suppfigure:alldip}).
+    We further found that our main conclusions about net diversification differences are not dependent on whether diploidization is included (\cref{suppfigure:alldip}). %IM: #26
 
 \end{enumerate}
 
@@ -84,30 +84,6 @@ Our result is qualitatively unchanged when using transition rate estimates from 
 
 The preceding conclusions, however, ignore the changes in numbers of lineages in each state due to speciation and extinction.
 By analogy, envisioning the states as stepping stones, the extent to which each stone grows or shrinks over time affects the utility of each possible path.
-Allowing for the different net diversification rates for each state (again using median rate estimates from M16), we find a qualitative difference in the relative pathway contributions.
+Allowing different net diversification rates for each state (again using median rate estimates from M16), we find a qualitative difference in the relative pathway contributions. %IM: #27
 The lower rate of net diversification in the $CD$ state, relative to $ID$, means that relatively fewer lineages are available to complete the second step of the two-step pathway, ending in $CP$.
 Consequently, even over long timescales, we find that the two-step pathway contributes less to the formation of polyploids (\cref{figure:pathways}, right panels) when considering diversification as well as transitions.
-
-%--------------------------------------------------
-% \subsection{Model selection key questions}
-% 
-% \subsubsection{Are diversification patterns only determined by hidden states?}
-% Whether the determination of the diversification is dependent on the focal traits and not only on the hidden state was done via the comparisons of character independent models against the focal traits w/o hidden states models (results shown in  \cref{table:bayesfactors,table:M11M15,supptable:M6M10,supptable:M16M20,supptable:M21M25}).
-% The general pattern is to moderate- to strongly prefer models with focal traits and asymmetric hidden states over the rest of the models with the exception of the ploidy only model where the character independent model (M2) seems to be equally preferred($K=0.5$) as the model with ploidy and asymmetric hidden rates (M4, \cref{table:bayesfactors}).
-% 
-% \subsubsection{Are hidden states necessary?}
-% In the comparisons of simple diversification models of focal traits against models with hidden states we found that models with asymmetric hidden traits are strongly preferred over simpler models (summarized in table \cref{supptable:testaddhidden}).
-% 
-% \subsubsection{Is a second trait adding information to the diversification process?}
-% As summarized in  \cref{table:lumped}, it is moderately preferred to add breeding system to ploidy only models (\cref{suppfigure:lumpedDP}).
-% When adding ploidy information to breeding system models to create a three-state model, we found that there is no evidence that it is preferred (M28 vs. M16 \cref{suppfigure:lumpedIC}B and C). 
-% However, it becomes moderately preferable in the presence of hidden states (M29 vs. M23  \cref{suppfigure:lumpedIC}E and C).
-% 
-% \subsubsection{Is there evidence for diploidization?}
-% We considered models both with and without diploidization in order to explore its effects on the estimates of state-dependent diversification.
-% For the models that only include diploid and polyploid states (M6-M10) the results are similar in terms of the effect of diversification (\cref{suppfigure:alldip}).
-% When comparing models with diploidization against models without diploidization we found moderate evidence that models containing the parameter $\delta$ are preferred over models without diploidization (summarized in \cref{supptable:testdiploidization}).
-% 
-% \subsubsection{Do asymmetric rates in hidden states models affect the pattern of diversification?}
-% When comparing different types of asymmetry across hidden states models we found that the asymmetry did not change the direction of effects in net diversification results . However, models with asymmetric hidden rates reduced the overlap amongst net diversification posterior distributions as shown in \cref{suppfigure:asymmetric}. Furthermore, hidden state models with asymmetric traits are strongly preferred over models with equal rates between hidden states (summarized in \cref{supptable:asymmetry}).
-%--------------------------------------------------
