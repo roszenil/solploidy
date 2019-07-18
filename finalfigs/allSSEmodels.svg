@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1305.37mm"
-   height="585.21021mm"
-   viewBox="0 0 1305.37 585.21021"
+   width="838.81885mm"
+   height="472.74274mm"
+   viewBox="0 0 838.81885 472.74274"
    version="1.1"
    id="svg2989"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="allSSEmodels.svg">
   <defs
      id="defs2983">
@@ -3731,23 +3731,30 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24472656"
-     inkscape:cx="2775.4365"
-     inkscape:cy="856.19661"
+     inkscape:zoom="0.12236328"
+     inkscape:cx="867.6664"
+     inkscape:cy="2727.5453"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1554"
-     inkscape:window-height="875"
+     inkscape:window-width="1280"
+     inkscape:window-height="751"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="1"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="-0.4"
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:snap-global="false"
-     showborder="false" />
+     showborder="false"
+     showguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid6176"
+       originx="1.8969425e-05"
+       originy="1.6240473e-05" />
+  </sodipodi:namedview>
   <metadata
      id="metadata2986">
     <rdf:RDF>
@@ -3764,7 +3771,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(1419.6618,279.90177)">
+     transform="translate(1108.4214,165.494)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22.57777786px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
@@ -7872,7 +7879,7 @@
        id="text8753"><tspan
          sodipodi:role="line"
          id="tspan8751"
-         x="-981.82025"
+         x="-982.13446"
          y="-99.142029"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444399px;font-family:'Cambria Math';-inkscape-font-specification:'Cambria Math';text-align:center;text-anchor:middle;stroke-width:0.26458332">M1. D/P </tspan></text>
     <g
@@ -9229,7 +9236,7 @@
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444399px;font-family:'Cambria Math';-inkscape-font-specification:'Cambria Math';text-align:center;text-anchor:middle;stroke-width:0.26458332"
          y="238.66954"
-         x="-981.82025"
+         x="-982.13446"
          id="tspan8775"
          sodipodi:role="line">M5. D/P + A/B all asym </tspan></text>
     <g
@@ -11309,7 +11316,7 @@
        id="text8765"><tspan
          sodipodi:role="line"
          id="tspan8763"
-         x="-898.52832"
+         x="-898.84247"
          y="238.66954"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444399px;font-family:'Cambria Math';-inkscape-font-specification:'Cambria Math';text-align:center;text-anchor:middle;stroke-width:0.26458332">M10. D/P + A/B + δ all asym </tspan></text>
     <text

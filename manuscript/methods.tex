@@ -12,11 +12,11 @@ Our hand-curated records were also contrasted against the ploidy dataset from \c
 By comparing three different sources of information, we were able to code taxa as diploid, $D$, or polyploid, $P$.
 For the majority of species, ploidy was assigned according to information from the original publications included in the  C-value DNA dataset \citep{bennett_2005}.
 For taxa without ploidy information but with information about chromosome number, we assigned ploidy based on the multiplicity of chromosomes within the genus/family, or based on SI/SC classification.
-For example, \textit{Solanum betaceum} did not have information about ploidy level but it has 24 chromosomes, so since $x=12$ is the base chromosome number of the genus \textit{Solanum} \citep{olmstead_2007}, we assigned \textit{S.~betaceum} as diploid. 
+For example, \textit{Solanum betaceum} did not have information about ploidy level but it has 2n=24 chromosomes, so since $x=12$ is the base chromosome number of the genus \textit{Solanum} \citep{olmstead_2007}, we assigned \textit{S.~betaceum} as diploid. 
 Additionally, because of the absence of SI polyploids (explained above and below), species known to be SI could be scored as diploid.
 Species with more than one ploidy level were assigned the most frequent ploidy level recorded or the smallest ploidy in case of frequency ties.
 
-Breeding system states were scored as self-incompatible, $I$, or self-compatible, $C$, based on results curated from the literature and original experimental crosses \citep[as compiled in][]{igic_2006, goldberg_2010, robertson_2011, goldberg_2012}.
+Breeding system states were scored as self-incompatible, $I$, or self-compatible, $C$, based on results curated from the literature \citep[as compiled in][]{igic_2006, goldberg_2010, robertson_2011, goldberg_2012}. %IM suggestion
 Most species could unambiguously be coded as either $I$ or $C$ \citep{raduski_2012}.
 Following previous work, we coded any species with a functional SI system as $I$, even if SC or dioecy was also reported.
 Dioecious species without functional SI were coded as $C$.
@@ -65,10 +65,10 @@ In this trait-independent model known as CID \citep{beaulieu_2016}, hidden trait
 Comparing M1 and M2 allows us to test whether diversification rate heterogeneity is better explained by ploidy or by some unknown factor.
 
 We additionally fit three models in which both ploidy and a hidden trait could influence diversification (M3--M5).
-These models differ in whether transitions between the hidden states are symmetric or asymmetric, and whether the polyploidization rate depends on the hidden state.
-Comparing M1--M5 allows us to test whether ploidy is associated with diversification differences on top of the differences potentially explained by an unknown factor (\cref{table:bayesfactors}).
+These models differ in whether transitions between the hidden states are symmetric (M3) or asymmetric(M4), and whether the polyploidization rate depends on the hidden state(M5). %WF suggestion
+Comparing M1--M5 allows us to test whether ploidy is associated with diversification differences on top of the differences potentially explained by an unknown factor.
 
-We further fit the analogues of these five models but including a rate parameter $\delta$ for transitions from polyploid to diploid (M6--M10,  \cref{supptable:M6M10}).
+We further fit the analogues of these five models but including a rate parameter $\delta$ for transitions from polyploid to diploid (M6--M10).
 These comparisons allow us to assess whether our conclusions about ploidy and diversification are robust to the possibility of diploidization.
 
 \subsubsection{Breeding system and diversification}
@@ -78,13 +78,13 @@ Under the simplest breeding system and diversification model (M11), species are 
 This is the same model as in the analysis presented in \citet{goldberg_2010} but with an updated phylogeny \citep{sarkinen_2013} and a larger aggregated dataset.
 
 We then add models to allow diversification to be influenced by only a hidden trait (M12), or by both breeding system and a hidden trait (M13--M15, with varying degrees of complexity in the hidden trait transitions \cref{table:M11M15}).
-Similar models were used by \citet{freyman_2017} used to study diversification in Onagraceae.
+Similar models were used by \citet{freyman_2019} to study diversification in Onagraceae.
 
 Self-incompatibility is homologous in all Solanaceae species in which S-alleles have been cloned and controlled crosses performed.
 All species sampled to date possess a non-self recognition, RNase-based gametophytic self-incompatibility \citep[shared even with other euasterid families;][]{ramanauskas_2017}.
 Furthermore, species that are distantly related within this family carry closely-related alleles, with deep trans-specific polymorphism at the locus that controls the SI response \citep{ioerger_1990, igic_2006}.
 Thus, there is strong evidence in Solanaceae that the $I$ state is ancestral in the family, and that the SI mechanism was not regained.
-Therefore, for all breeding system models, we estimated a transition rate from $I$ to $C$  but not the reverse ($q_{CI}=0$).
+For all breeding system models, we estimated a transition rate from $I$ to $C$  but not the reverse ($q_{CI}=0$).
 % This is an important assumption because ancestral state reconstruction in the models might differ when polyploidy and breeding system are analyzed as independent in the Solanaceae tree.
 %
 %B: What happens if SC->SI is not fixed? Asking for a friend.  E: Surprisingly, Rosana reports, results are not turned on their head. 
@@ -101,28 +101,33 @@ Each of these states may again be associated with different rates of speciation 
 % E: Can we call it something other than q_IC?  It's a bit confusing to have the same parameter mean different things in different models.
 % R: In the lumped models I call them something different q_0 and rho_0 because they are different parameters but I don't think we should explain.
 
-As for the previous models of only one trait, we then allow diversification to be influenced by only a hidden trait (M17), or by ploidy, breeding system, and a hidden trait (M18--M20) with varying degrees of complexity in the hidden trait transitions (\cref{supptable:M16M20}).
-We add this hidden trait layer on top of our three-state model \citep[similar to][]{caetano_2018, huang_2018}.
-We also fit the analogous models but allowing for diploidization (M21--M25, \cref{supptable:M21M25}).
+As for the previous models of only one trait, we then allow diversification to be influenced by only a hidden trait (M17), or by ploidy, breeding system, and a hidden trait (M18--M20) with varying degrees of complexity in the hidden trait transitions
+\citep[similar to][]{caetano_2018, huang_2018}. %IM suggestion
+We also fit the analogous models but allowing for diploidization (M21--M25).
 
 \subsubsection{Lumped models}
 
 The models described so far allow us to assess the contributions of our two focal characters---ploidy and breeding system---to lineage diversification, but they do not reveal whether it is valuable to include both characters in the analysis.
 To answer this question with statistical model comparisons requires comparing the likelihood of the data given each model.
-This is impossible for the ploidy and breeding system models presented so far, however, because the data are different for the different models: they use either the $D/P$ or the $I/C$ or the $IC/CD/CP$ state spaces.
+This is impossible for the ploidy and breeding system models presented so far, however, because the data are different for the different models: they use either the $D/P$ or the $I/C$ or the $ID/CD/CP$ state spaces.
 Therefore, the use of different data results in incomparable models.
 
 In order to compare fits of ploidy-only \vs breeding system-only \vs combined trait models, we use the technique of `lumping' states together \citep{tarasov_2019}.
-We use the state space of the $IC/CD/CP$ model but constrain the rate parameters to mimic the behavior of the single-trait models.
-First we lump together $ID$ and $CD$ to form the diploid state, mimicking the $D/P$ model (M26).
-Then we lump together $CD$ and $CP$ to form the self-compatible state, mimicking the $I/C$ model (M28).
+We use the state space of the $ID/CD/CP$ model but constrain the rate parameters to mimic the behavior of the single-trait models.
+To lump states requires that the transition rates from the lumped state to the singular state be equal \citep{tarasov_2019}.
+First we lump together $ID$ and $CD$ to form the diploid state, mimicking the $D/P$ model (M26). 
+Proposing a lumped ploidy model by aggregating $ID$ and $CD$ requires forcing the rate of polyploidization from $ID$ and $CD$ to $CP$ to be equal (i.e. $\rho_0=\rho_I=\rho_c$), but also requires
+assuming that the rates of speciation and extinciton for $ID$ and $CD$ to be equal.
+Therefore, we define the new parameters $\lambda_D$ and $\mu_D$  that are the same for each of the two diploid states $ID$ and $CD$.%IM suggestion, describe more the lumping
+We used the same procedure to lump together $CD$ and $CP$ to form the self-compatible state, mimicking the $I/C$ model (M28).
+In this particular case, the rate from $CD$ to $CP$ back to $ID$ is zero and equal for both, so the model is lumpable. 
+However, to fully mimic the breeding system model, we assume that the rate of selfing is equal (i.e. $q_0=q_{IC}=rho_I$) and the rates
+of speciation and extinction for both $CD$ and $CP$ are the same (new parameters $\lambda_C$ and $\mu_C$).
 We further add a hidden character to each of these models (M27 and M29), and then compare this group of models (\cref{table:lumped}).
 
 We do not include additional models with diploidization because this reverse ploidy transition renders the models non-lumpable.
-To lump states requires that the transition rates from the lumped state to the singular state be equal \citep{tarasov_2019}.
 When including diploidization, transitions from $CP$ to $CD$ are at rate $\delta$ but transitions from $CP$ to $ID$ do not occur.
 Because $ID$ and $CD$ would be lumped to mimic the $D/P$ model, this model is non-lumpable when $\delta \ne 0$.
-When lumping $CD$ and $CP$, however, the transition rate to $ID$ is zero for both, so the SC states are lumpable. 
 Thus, we can compare models to test whether it is advantageous to include both traits, but only when ignoring diploidization.
 % E: Below was all good, but it seemed like more detail than necessary.
 % Then we define a single parameter $q_0$ going into the lumped state $(CD,CP)$ as the new rate from SI to SC.
@@ -136,7 +141,7 @@ Thus, we can compare models to test whether it is advantageous to include both t
 Considering ploidy and breeding system together, there are two evolutionary pathways from SI diploid to SC polyploid \citep{brunet2001, robertson_2011}.
 In the one-step pathway, the $CP$ state is produced directly from the $ID$ state when whole genome duplication disables SI.
 In the two-step pathway, the $CD$ state is an intermediate: SI is first lost, and later the SC diploid undergoes polyploidization.
-We quantify the relative contribution of these pathways to polyploidy in two ways, each using the median estimates of rates from the simplest model that includes both traits (M16).
+We quantify the relative contribution of these pathways to polyploidy in two ways, each using the median estimates of rates from the simplest model that includes both traits (M16). Our results will differ from those of \citet{robertson_2011} because our transition rate estimates come from a dated phylogeny and a model that allows for state-dependent diversification. %IM suggestion
 
 Both of our methods are based on a propagation matrix that describes flow from $ID$ to $CP$, as in \citet{robertson_2011}.
 We insert an artificial division in the $CP$ state, so that one sub-state contains the $CP$ species that arrived via the one-step pathway and the other substate contains the $CP$ species that arrived via the two-step pathway.
@@ -145,7 +150,7 @@ We consider unidirectional change along each step of the pathway in order to sep
 First, we consider only the rates of transitions between these states, placing them in the propagation matrix \myvec{Q}.
 The matrix $\myvec{P} = \exp(\myvec{Q} t)$ then provides the probabilities of changing from one state to any other state after time $t$.
 Closed-form solutions for the two pathway probabilities are provided in \citet{robertson_2011}.
-Our results will differ from those of \citet{robertson_2011} because our transition rate estimates come from a dated phylogeny and a model that allows for state-dependent diversification.
+
 
 Second, we consider not only transitions between states but also diversification within each state.
 State-dependent diversification can change the relative contributions of the two pathways.
@@ -155,7 +160,8 @@ As before, matrix exponentiation provides the relative chance of changing from o
 The calculations of the propagation matrix are not probabilities because diversification changes the number of lineages as time passes. 
 %B: FIXME, we'll hear complaints again about "this," "these," and ... "their." (below)
 % R- fixed
-We can still use ratios, however, to consider the relative contribution of each pathway, analogous to the normalized age structure in a growing population. % R- here a reference would be nice  E: Does Jake have a favorite ref? Otherwise, I guess a basic ecology textbook.
+We can still use ratios, however, to consider the relative contribution of each pathway, analogous to the normalized age structure in a growing population \citep{leslie_1945}.
+ % R- here a reference would be nice  E: Does Jake have a favorite ref? Otherwise, I guess a basic ecology textbook.-DONE
 %
 % E & R todo ?: for the case with net div, write out the propagation matrix and equations for pathway contributions
 % R- couldn't solve to get the exact solutions turns out it is really hard.
@@ -176,7 +182,7 @@ We can still use ratios, however, to consider the relative contribution of each 
 
 \subsubsection{Model fitting}
 
-Parameters for each of the 29 models were coded as graphical models and Bayesian statistical inference was performed RevBayes \citep{hoehna_2016}.
+Parameters for each of the 29 models were coded as graphical models and Bayesian statistical inference was performed with RevBayes \citep{hoehna_2016}.
 Scripts for analyses and key results are available as Supplementary Information. % FIXME more permanent than \url{https://github.com/roszenil/solploidy}.- Happens after publication
 We accounted for incomplete sampling in all analyses by setting the probability of sampling a species at the present to $651/3000$ \citep[using the method of][]{fitzjohn_2009} since the Solanaceae family has approximately 3,000 species \citep{solsource}.
 For all models, we assumed that speciation and extinction parameters had log-normal prior distributions with means equal to the expected net diversification rate $(\text{number of taxa} / [2 \times \text{root age}])$ and standard deviation $0.5$.
@@ -186,6 +192,7 @@ Convergence and mixing of each MCMC chain was determined by ensuring the effecti
 
 We report posterior distributions for the model parameters in \cref{figure:netdivall}, and also for the compound parameters of net diversification ($\lambda - \mu$) and extinction fraction ($\mu / \lambda$) for each state.
 Additionally, ancestral states at each node in the phylogeny were sampled jointly during the MCMC analyses every 100 generations.
+% Itay says remove but some reviewers were interested in the distribution of the states. I say leave we don't need to discuss. I'll mention briefly.
 Ancestral state estimations for all models show the maximum \emph{a posteriori} estimates of the marginal probability distributions for each of the 650 internal nodes for each of the models in \cref{figure:netdivall}. (\cref{suppfigure:DPnodipasr,suppfigure:DPnodipABasr,suppfigure:ICasr,suppfigure:ICABasr,suppfigure:IDCDCPnodipasr,suppfigure:IDCDCPnodipABasr}).
 
 \subsubsection{Model selection key questions}

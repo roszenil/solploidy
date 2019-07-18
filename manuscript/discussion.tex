@@ -9,7 +9,7 @@ Many traits are both heritable and possibly affect the propensity of species to 
 Examining the effects of complex trait combinations on lineage diversification, however, remains challenging.
 %
 Focusing first on ploidy and then on breeding system, we found that considering each trait in isolation provides an incomplete story.
-Considering them together, and in conjunction with another hidden factor, provides a fuller picture of macroevolutionary dynamics within Solanaceae.
+Considering them together, and in conjunction with another hidden factor, provides a more complete picture of macroevolutionary dynamics within Solanaceae.
 We hope our work serves as an example of how phylogenetic comparative methods can be used to disentangle the contributions of interacting traits to heterogeneous lineage diversification, and how to statistically argue for increasing complexity in diversification modeling.
 
 \subsection{Interacting traits and lineage diversification} 
@@ -44,16 +44,15 @@ In the absence of additional information, the hidden states can be viewed as a s
 %     but don't be circular, test in different clade
 % alpha is always low: new supp fig showing how A & B are inferred on the tree?  at least for ID/CD/CP+A/B model - it is low because not enough transitions and mostly a different process towards the tips-who knows what is happening there?
 %Here Rosana adds the value of adding traits with the lumped models
-As more trait information becomes available for macroevolutionary studies, it is important not only recognizing the role of hidden states as a part of a general modeling approach, but also questioning whether adding more traits to diversification studies is relevant.
-More generally, when analyzing the value of adding additional traits to an already complex model with or without hidden states, we find that using lumped models  is a key tool to verify that adding a trait improves our understanding of the diversification patterns (\cref{figure:lumped,table:lumped}).
+As more trait information becomes available for macroevolutionary studies, it is not only important to recognize the role of hidden states as a part of a general modeling approach, but also to question whether adding more traits to diversification studies is justified.  More generally, we find that lumped models are useful for assessing the value of adding additional traits to already complex diversification models(\cref{figure:lumped,table:lumped}).
 %R-removed this: %In our analyses, we find that the transition rates between and within hidden traits did not affect the direction of the net diversification differences. 
 %We find that it is important to allow for the hidden state transition rates to be asymmetrical, because those models tend to provide a better fit than models that fix the hidden state transition rates to be equal (\cref{suppfigure:asymmetric,supptable:asymmetry}).
  
 Although we fit an extensive set of models in order to relax a variety of assumptions, we did not explore the process of trait change in conjunction with speciation.
 That is, our models all assume anagenetic trait evolution and ignore cladogenetic shifts.
 Anagenetic and cladogenetic changes can be separated with phylogenetic models \citep{mayrose_2011, goldberg_2012, magnuson-ford_2012}. 
-These have been previously applied to estimate the relative contribution of anagenetic and cladogenetic shifts in breeding system \citep{goldberg_2012} and polyploidization \citep{zhan_2016, freyman_2017}.
-We did not explore cladogenetic trait change because of the vast increase in parameter space and model number, outside the scope of our already complex and extensive modeling framework. %IM: #29
+These have been applied to estimate the relative contribution of anagenetic and cladogenetic shifts in breeding system \citep{goldberg_2012} and polyploidization \citep{zhan_2016, freyman_2019}.
+We did not explore cladogenetic trait change because they would greatly increase in state space and model number of our already complex and extensive modeling framework. %IM: #29 and GB suggested that chance
 Although \citet{goldberg_2012} found that allowing cladogenetic changes did not substantially affect inference of net diversification rates associated with breeding system, future work could test whether this process affects diversification rate estimates with the more complex state and parameter spaces of our other models.
 
 \subsection{Pathways to polyploidy}
@@ -61,7 +60,7 @@ Although \citet{goldberg_2012} found that allowing cladogenetic changes did not 
 With evolution predominantly in the direction from diploid to polyploid, and from SI to SC, surviving lineages will tend to become SC polyploids.
 We find that in Solanaceae, the pathway to this state is more likely to consist of a single step ($ID \rightarrow CP$) than two steps ($ID \rightarrow CD \rightarrow CP$; \cref{figure:pathways}).
 Although this question focuses on the process of state transitions, we also show that its answer is affected by the process of lineage diversification.
-We used a simple mathematical approach to investigate the contributions of the two pathways, but future work could instead rely on stochastic character mapping to more directly estimate the numbers of each type of transition.
+We used a simple mathematical approach to investigate the contributions of the two pathways, but future work could instead rely on stochastic character mapping to estimate the numbers of each type of transition more directly.
 
 Macroevolutionary transition rates represent a combination of time spent waiting for individuals with a new character state, and for that new state to become widespread within the species.
 For our traits, this consists of mutations that break SI or generate polyploid individuals, and selective pressures that cause fixation (or loss) of these mutants.
@@ -73,10 +72,10 @@ In contrast, we infer a macroevolutionary transition rate from $ID$ to $CP$ that
 
 Our findings prompt several further questions about the macroevolutionary pathways of ploidy and breeding system.
 %
-First, our support for the direct pathway is consistent with the idea that breakdown of SI by whole genome duplication---via diploid `heteroallelic' pollen---may often trigger the evolution of gender dimorphism as a different mechanism of inbreeding avoidance \citep{miller_2000}.
+First, our support for the direct pathway is consistent with the idea that breakdown of SI by whole genome duplication---via diploid `heteroallelic' pollen---may trigger the evolution of gender dimorphism as a different mechanism of inbreeding avoidance \citep{miller_2000}.
 A further test of this hypothesis would additionally examine the propensity of polyploids generated through either pathway to become dioecious \citep{robertson_2011}.
 Second, we might wonder whether the propensity for a polyploid species to diversify depends on whether it arose via the one-step or two-step pathway.
-This could be tested with a different form of a hidden state model, in which the polyploid state is subdivided into parts, reflecting the arriving path taken to that state. %IM: #30
+This could be tested with a different form of a hidden state model, in which the polyploid state is subdivided into parts, reflecting the arriving path taken to that state. %IM: #30 and GB 
 Such an estimate of path-dependence could also include the possibility of different diversification rates for the subdivided $CP$ substates.
 Third, the generality of our findings in other families remains to be assessed.
 An identical procedure could be used in other families with gametophytic SI.
