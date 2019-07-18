@@ -14,9 +14,7 @@
 Dear Dr. Schoen and Reviewers,
 
 \medskip
-
- 
-Thank you very much for your close reading of our manuscript and supportive comments. We appreciate your constructive suggestions, each of which we address below. You will find a great difference in the number of models that we have fitted for the revision based on reviewer suggestions (originally 12 now 29). There are two main reasons for this sizable increase. 
+Thank you very much for your close reading of our manuscript and supportive comments. We appreciate your constructive suggestions, each of which we address below. You will find a great difference in the number of models that we have fitted for the revision based on reviewer suggestions (originally 12, now 29, with a special supplementary figure to enable easy visualization). There are two main reasons for this sizable increase. 
 
 The first reason is additional work to address a key concern from all referees, about the transition symmetry among the hidden states. 
 Briefly, we found that is relevant to have asymmetric hidden state rates and, in our case, it increased the differences among net diversification rates. 
@@ -31,10 +29,12 @@ This equivalency enables comparison of two-state and three-state models, and ass
 We also revised the original dataset (thanks to the suggestion of Reviewer 1) and we were able to correct discrepancies with a previous dataset, as well as add more data (now 651 taxa).
 
 We hope the changes and the new models are satisfactory to the editorial staff and the reviewers.
+
 \medskip
 Sincerely,
 
-Rosana Zenil-Ferguson, on behalf of all authors
+The Authors \\
+(Rosana Zenil-Ferguson et al.)
 
 
 %--------------------------------------------------
@@ -276,17 +276,18 @@ I'm not sure how to phrase this -- I guess I'm asking if there's any suggestion 
 
 %B: Rosana, you know this best, but it seems to me that the current phrasing (below) is unclear.
 %R- rewritten
-The soaking noise comes from adding  hidden states to models. Therefore in the presence of hidden states finding that diploidization  parameter is different from zero truly represents potential evidence of the reversibility of polyploidy. 
-Furthermore, all the Bayes factors indicated strong preference for models that include diploidization. 
-However, diploidization is a genomic process that can be partially or minimally recover from ploidy data. 
-And as discussed at the end of the article, genomic evidence for diploidization in Solanaceae  is still debatable. 
+Adding hidden states to models more likely `soaks up' noise.
+Therefore, in the presence of hidden states, finding that the diploidization parameter is different from zero truly represents potential evidence of the reversibility of polyploidy. 
+Furthermore, all the Bayes factors indicated a moderate preference for models that include diploidization. %CHECK: I changed this because the rest of the manuscript states "moderate" and our tables show that the hidden state model shows "moderate" preference.
+However, diploidization is a genomic process that may not be fully recovered from ploidy data. 
+As discussed at the end of the article, genomic evidence in favor or against diploidization in Solanaceae is far from final.
 
 \begin{quote}
 --I think this is an excellent point -- ``SI, which is itself associated with a faster diversification rate, is the breeding system context in which many diploids occur.''
 Perhaps an discussion of the extent to which these results are extendable to other plant groups would be appropriate, versus what is likely to be specific to this system
 \end{quote}
 
-Considered.
+We include a necessarily limited discussion of other systems.
 
 
 \begin{quote}
@@ -331,10 +332,13 @@ Fixed.
 So the diploids were ancestrally polyploidy -- why would that alter the rate inferences?
 \end{quote}
 
-We edited the discussion. We found not evidence of conclusions about diversification changing in the presence of diploidization. The  the estimates for rate of polyploidization in the absence of diploidization also remained the same (\cref{figure:hissedip}. However, ignoring diploidization, if it is common, could cause to underestimate the polyploidization rate or create larger credible intervals.
+We edited the discussion. 
+We found no conclusive evidence about diversification changing in the presence of diploidization. 
+The estimates for rate of polyploidization in the absence of diploidization also remained the similar (\cref{figure:hissedip}. 
+However, ignoring diploidization, if it is common, could cause an underestimate of the polyploidization rate or create larger credible intervals.
 
 We have corrected the phrase accordingly.
-Thank you for the suggestion
+Thank you for the suggestion.
 \begin{figure}
     \centering 
       \begin{minipage}[b]{0.5\textwidth}
@@ -344,7 +348,7 @@ Thank you for the suggestion
     \begin{minipage}[b]{0.5\textwidth}
         \includegraphics[width=\textwidth]{hisseDPasymposteriordist.pdf}
         \end{minipage}
-    \caption{ Top 6 panels: Ploidy model with hidden states without diploidization. Bottom 6 panels: Ploidy model with hidden states with diploidization. Rate of polyploidy has a wider credible interval in the absence of diploidization}
+    \caption{Top six panels: ploidy model with hidden states without diploidization. Bottom six panels: ploidy model with hidden states with diploidization. Rate of polyploidy has a wider credible interval in the absence of diploidization.}
     \label{figure:hissedip}
 \end{figure}
 
@@ -430,7 +434,7 @@ The authors justify this by ``Because our goal was to look for diversification r
 I am not completely convinced by this argument.
 First, constraining transition rates can have an impact on the estimation of diversification rates.
 Second, specifically because the authors are not interested in estimating the rates themselves, they should not be too worried about increasing the number of parameters.
-This is especially true in a Bayesian framework where it is sometimes better to have overparameterized models than under-parameterized models (see Lemmon and Moriarty. 2004. Systematic Biology 53:265–277).
+This is especially true in a Bayesian framework where it is sometimes better to have overparameterized models than under-parameterized models (see Lemmon and Moriarty. 2004. Systematic Biology 53:265--277).
 I think it would have been important to at least present the results of an unconstrained model to show that this decision to constrain the rates do not affect the conclusions.
 \end{quote}
 
@@ -445,7 +449,10 @@ After inspecting the supplementary material, I see that it is not the case; hidd
 I think this is interesting and that it could make an interesting discussion.
 \end{quote}
 
-Thank you for this suggestion. Fitting the new models the only trend we can notice is that for ploidy only models hidden states seem to transition mostly towards recent lineages but still spread throughout lineages (Figure S8). For breeding system models there are a two or three clades where transitions between hidden states happen sooner (Figure S12 and S16). However, we don't have a clear interpretation for this phenomenon.
+Thank you for this suggestion. 
+After fitting the new models, the only trend we can notice is that for ploidy-only models, hidden states seem to transition mostly towards recent lineages but are still spread across the tree (Figure S8). 
+For breeding system-only models, there are a two or three clades in which transitions between hidden states happen sooner (Figure S12 and S16). 
+However, we do not have a clear interpretation for these phenomena.
 
 
 % Minor points:
@@ -497,7 +504,7 @@ Line 152: It would be useful to refer to the figures that illustrate the models 
 It would help to understand them.
 \end{quote}
 
-Done. % Done: Emma did the new figure
+Done. 
 
 
 \begin{quote}
@@ -545,7 +552,8 @@ Actually, if I understand well, models without diploidization simply fix this ra
 Am I right?
 \end{quote}
 
-Correct, and inference remains the same. \cref{figure:hissedip}. However, ignoring diploidization, if it is common, could cause to underestimate the polyploidization rate or create larger credible intervals.
+Correct, and inference remains the same. \cref{figure:hissedip}. 
+However, ignoring diploidization, if it is common, could cause to underestimate the polyploidization rate or create larger credible intervals.
 We have corrected the phrase accordingly.
 
 
