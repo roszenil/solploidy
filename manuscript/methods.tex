@@ -50,7 +50,7 @@ The Dryad archive contains the data and tree files used for analyses. % FIXME
 
 \subsection{Models}
 
-In order to test our hypotheses about lineage diversification and trait macroevolution, we fit 29 state-dependent speciation and extinction models \citep[BiSSE, MuSSE, HiSSE;][]{maddison_2007, fitzjohn_2012, beaulieu_2016}.
+In order to test our hypotheses about lineage diversification and trait macroevolution, we fit twenty-nine state-dependent speciation and extinction models \citep[BiSSE, MuSSE, HiSSE;][]{maddison_2007, fitzjohn_2012, beaulieu_2016}.
 SSE models contain parameters that describe per-lineage rates of speciation and extinction, specific to each character state (denoted $\lambda$ and $\mu$, respectively, with subscripts to indicate the state), along with rates of transitions between states (denoted $\rho$ for polyploidization, $\delta$ for diploidization, and $q_{IC}$ for loss of self-incompatibility).
 The full set of models and all their rate parameters are detailed in \cref{fig:allmodels}.
 Here, we summarize how each model allows us to assess whether diversification is best explained by variation in ploidy, breeding system, their combination, or some unknown factor.
@@ -66,7 +66,7 @@ Comparing M1 and M2 allows us to test whether diversification rate heterogeneity
 
 We fit three models in which both ploidy and a hidden trait could influence diversification (M3--M5).
 These models differ in whether transitions between the hidden states are symmetric (M3) or asymmetric(M4), and whether the polyploidization rate depends on the hidden state(M5). %WF suggestion
-Comparing M1--M5 allows us to test whether ploidy is associated with diversification differences on top of the differences potentially explained by an unknown factor.
+Comparing M1--M5 (as shown in \cref{table:bayesfactors}) allows us to test whether ploidy is associated with diversification differences on top of the differences potentially explained by an unknown factor.
 We further fit the analogues of these five models but including a rate parameter $\delta$ for transitions from polyploid to diploid (M6--M10).
 These comparisons allow us to assess whether our conclusions about ploidy and diversification are robust to the possibility of diploidization.
 
@@ -106,7 +106,7 @@ We also fit the analogous models but allowing for diploidization (M21--M25).
 
 The models described so far allow us to assess the contributions of our two focal characters---ploidy and breeding system---to lineage diversification, but they do not reveal whether it is valuable to include both characters in the analysis.
 To answer this question with statistical model comparisons requires comparing the likelihood of the data given each model.
-This is impossible for the ploidy and breeding system models presented so far, however, because the data are different for the different models: they use either the $D/P$ or the $I/C$ or the $ID/CD/CP$ state spaces.
+This is impossible for the ploidy and breeding system models presented so far, however, because the data are different for the different models: they use either the $D/P$ or the $I/C$ or the $ID/CD/CP$ state spaces (see figure \cref{figure:stateclassifications} for state classifications).
 Therefore, the use of different data results in incomparable models.
 
 In order to compare fits of ploidy-only \vs breeding system-only \vs combined trait models, we use the technique of `lumping' states together \citep{tarasov_2019}.
@@ -118,7 +118,7 @@ assuming that the rates of speciation and extinciton for $ID$ and $CD$ to be equ
 Therefore, we define the new parameters $\lambda_D$ and $\mu_D$  that are the same for each of the two diploid states $ID$ and $CD$. %IM suggestion, describe more the lumping
 We used the same procedure to lump together $CD$ and $CP$ to form the self-compatible state, mimicking the $I/C$ model (M28).
 In this particular case, the rate from $CD$ to $CP$ back to $ID$ is zero and equal for both, so the model is lumpable. 
-However, to fully mimic the breeding system model, we assume that the rate of selfing is equal (i.e. $q_0=q_{IC}=rho_I$) and the rates of speciation and extinction for both $CD$ and $CP$ are the same (new parameters $\lambda_C$ and $\mu_C$).
+However, to fully mimic the breeding system model, we assume that the rate of selfing is equal (i.e. $q_0=q_{IC}=\rho_I$) and the rates of speciation and extinction for both $CD$ and $CP$ are the same (new parameters $\lambda_C$ and $\mu_C$).
 We further add a hidden character to each of these models (M27 and M29), and then compare this group of models (\cref{table:lumped}).
 
 We do not include additional models with diploidization because this reverse ploidy transition renders the models non-lumpable.
@@ -161,14 +161,14 @@ We can still use ratios, however, to consider the relative contribution of each 
 \subsubsection{Model fitting}
 
 Parameters for each of the 29 models were coded as graphical models and Bayesian statistical inference was performed with RevBayes \citep{hoehna_2016}.
-Scripts for analyses and key results are available as Supplementary Information. 
+Scripts for analyses and key results are available in Dryad. %TODO
 We accounted for incomplete sampling in all analyses by setting the probability of sampling a species at the present to $651/3000$ \citep[using the method of][]{fitzjohn_2009} since the Solanaceae family has approximately 3,000 species \citep{solsource}.
 For all models, we assumed that speciation and extinction parameters had log-normal prior distributions with means equal to the expected net diversification rate $(\text{number of taxa} / [2 \times \text{root age}])$ and standard deviation $0.5$.
 Priors for parameters defining trait changes were assumed to be gamma distributed with parameters $k=0.5$ and $\theta=1$. 
 For each model, a Markov chain Monte Carlo \citep[MCMC;][]{metropolis1953equation,Hastings1970} was run in the high-performance computational cluster at the Minnesota Supercomputing Institute, which allowed for 5,000 generations of burn-in and a minimum of 200,000 generations of MCMC for each of the models.
 Convergence and mixing of each MCMC chain was determined by ensuring the effective sample size of each parameter was over 200.
 
-We report posterior distributions for the model parameters in \cref{figure:netdivall}, and also for the compound parameters of net diversification ($\lambda - \mu$) and extinction fraction ($\mu / \lambda$) for each state.
+We report posterior distributions for the net diversification parameters ($\lambda - \mu$)  in \cref{figure:netdivall} and full results of all parameters of the diversification models in \cref{suppfigure:DPnodip,suppfigure:DPnodipAB,suppfigure:IC,suppfigure:ICAB,suppfigure:IDCDCPnodip,suppfigure:IDCDCPnodipAB}.
 Additionally, ancestral states at each node in the phylogeny were sampled jointly during the MCMC analyses every 100 generations. 
 %R: Itay says remove but some reviewers were interested in the distribution of the states. I say leave we don't need to discuss. I'll mention briefly. %B: I am not sure what this comment refers to (up or down?), but I'm not touching.
 Ancestral state estimations for all models show the maximum \emph{a posteriori} estimates of the marginal probability distributions for each of the 650 internal nodes for each of the models in \cref{figure:netdivall}. (\cref{suppfigure:DPnodipasr,suppfigure:DPnodipABasr,suppfigure:ICasr,suppfigure:ICABasr,suppfigure:IDCDCPnodipasr,suppfigure:IDCDCPnodipABasr}).
@@ -182,9 +182,9 @@ Using the marginal likelihood values, we calculated Bayes factors to answer five
 \begin{enumerate}
 \item Are diversification patterns only determined by hidden states and not the traits of interest?---Comparison of character independent models against hidden state (\cref{table:bayesfactors,table:M11M15,supptable:M6M10,supptable:M16M20,supptable:M21M25}).
 \item Are hidden states necessary to explain diversification rate heterogeneity?---Comparison of simple models against hidden state models (\cref{supptable:testaddhidden}).
-\item Does a second focal trait add information about the diversification process?---Comparison of lumped models against IC/CD/CP models (\cref{figure:lumped,table:lumped}).
-\item Are conclusions robust to assumptions about hidden state transitions?---Comparison amongst hidden states models with equal hidden rates and asymmetrical rates (\cref{suppfigure:asymmetric,supptable:asymmetry}).
-\item Is there evidence for diploidization?---Comparison amongst models with and without diploidization (\cref{suppfigure:alldip,supptable:testdiploidization}).
+\item Does a second focal trait add information about the diversification process?---Comparison of lumped models against IC/CD/CP models (\cref{figure:lumped,table:lumped,suppfigure:lumpedDP,suppfigure:lumpedIC}).
+\item Are conclusions robust to assumptions about hidden state transitions?---Comparison amongst hidden states models with equal hidden rates and asymmetrical rates (\cref{supptable:asymmetry,suppfigure:asymmetric}).
+\item Is there evidence for diploidization?---Comparison amongst models with and without diploidization (\cref{supptable:testdiploidization,suppfigure:alldip}).
 \end{enumerate}
 
 Each model comparison is reported with a Bayes factor on the natural log scale: the comparison between models $M_0$ and $M_1$ is $K=ln(BF(M_1,\ M_0)) = \ln[ P(\mathbf{X} | M_1) - P(\mathbf{X} | M_0)]$.
@@ -388,24 +388,6 @@ M21. IC/CD/CP+$\delta$                   & -1454.68                             
 \label{supptable:testaddhidden}
 \end{supptable}
 
-\begin{supptable}
-\addtolength{\tabcolsep}{-3pt}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-Model                                    & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
-M1. D/P                                  & -1238.76                                                          & M1 vs. M6   & 65.92           & M6 (Strong)                                                          \\
-\textbf{M6. D/P+$\delta$}                & \textbf{-1267.84}                                                 &             &                 &                                                                      \\ \hline
-M4. D/P+A/B asym                         & -1223.28                                                          & M4 vs. M9   & 8.81            & M9 (Moderate)                                                        \\
-\textbf{M9. D/P+A/B+$\delta$ asym}       & \textbf{-1214.46}                                                 &             &                 &                                                                      \\ \hline
-M16. ID/CD/CP                            & -1459.11                                                          & M16 vs. M21 & 4.41            & M21 (Moderate)                                                       \\
-\textbf{M21. ID/CD/CP+$\delta$}          & \textbf{-1454.68}                                                 &             &                 &                                                                      \\ \hline
-M19. IC/CD/CP +A/B asym                       & -1393.20                                                          & M19 vs. M24 & 6.46            & M24 (Moderate)                                                       \\
-\textbf{M24. IC/CD/CP+A/B+$\delta$ asym} & \textbf{-1386.20}                                                 &             &                 &                                                                      \\ \hline
-\end{tabular}
-\caption{Test for inclusion of a diploidization rate via Bayes factors. Models with diploidization are moderately preferred over models that do not include a diploidization rate}
-\label{supptable:testdiploidization}
-\end{supptable}
-
 
 \begin{supptable}
 \addtolength{\tabcolsep}{-5pt}
@@ -432,15 +414,113 @@ M25. IC/CD/DP+A/B+ $\delta$ all asym     & -1389.52                     &       
 \label{supptable:asymmetry}
 \end{supptable}
 
+
+\begin{supptable}
+\addtolength{\tabcolsep}{-3pt}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Model                                    & \begin{tabular}[c]{@{}l@{}}Marginal\\ log-likelihood\end{tabular} & Comparison  & K=log(BF(M1,M2) & \begin{tabular}[c]{@{}l@{}}Preferred\\ Model (Evidence)\end{tabular} \\ \hline
+M1. D/P                                  & -1238.76                                                          & M1 vs. M6   & 65.92           & M6 (Strong)                                                          \\
+\textbf{M6. D/P+$\delta$}                & \textbf{-1267.84}                                                 &             &                 &                                                                      \\ \hline
+M4. D/P+A/B asym                         & -1223.28                                                          & M4 vs. M9   & 8.81            & M9 (Moderate)                                                        \\
+\textbf{M9. D/P+A/B+$\delta$ asym}       & \textbf{-1214.46}                                                 &             &                 &                                                                      \\ \hline
+M16. ID/CD/CP                            & -1459.11                                                          & M16 vs. M21 & 4.41            & M21 (Moderate)                                                       \\
+\textbf{M21. ID/CD/CP+$\delta$}          & \textbf{-1454.68}                                                 &             &                 &                                                                      \\ \hline
+M19. IC/CD/CP +A/B asym                       & -1393.20                                                          & M19 vs. M24 & 6.46            & M24 (Moderate)                                                       \\
+\textbf{M24. IC/CD/CP+A/B+$\delta$ asym} & \textbf{-1386.20}                                                 &             &                 &                                                                      \\ \hline
+\end{tabular}
+\caption{Test for inclusion of a diploidization rate via Bayes factors. Models with diploidization are moderately preferred over models that do not include a diploidization rate}
+\label{supptable:testdiploidization}
+\end{supptable}
+
+
 % check values of delta and rho D/P+A/B with(out) delta
 % i.e. parameter values in figure S1 & S4 vs Table S2
 
 
 \begin{suppfigure}
-\includegraphics[width=\textwidth]{alldiversificationasymhiddendip.pdf}
-\caption{Posterior distribution for all the best models with diploidization.} % XXX
-\label{suppfigure:alldip}
+\includegraphics[width=\textwidth]{bisseDPnodipposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M1, D/P ploidy model.} % XXX
+\label{suppfigure:DPnodip}
 \end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{hisseDPnodipasymposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M4, D/P+A/B asym model.} % XXX
+\label{suppfigure:DPnodipAB}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{bisseSIposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M11, I/C breeding system model.} % XXX
+\label{suppfigure:IC}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{hisseSIasymposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M14, I/C+A/B asym model.} % XXX
+\label{suppfigure:ICAB}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{musseDPSInodipposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the  M16, ID/CD/CP model.} % XXX
+\label{suppfigure:IDCDCPnodip}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{muhissenodipasymposteriordist.pdf}
+\caption{Posterior distribution for each of the parameters in the M19, ID/CD/CP+A/B asym model.} % XXX
+\label{suppfigure:IDCDCPnodipAB}
+\end{suppfigure}
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrDP.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the M1, D/P ploidy model. } % XXX
+\label{suppfigure:DPnodipasr}
+\end{suppfigure}
+
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrDPAB.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the M4, D/P+A/B asym model.} % XXX
+\label{suppfigure:DPnodipABasr}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrIC.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the M1, I/C breeding system model.} % XXX
+\label{suppfigure:ICasr}
+\end{suppfigure}
+
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrICAB.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the M14, I/C+A/B asym model.} % XXX
+\label{suppfigure:ICABasr}
+\end{suppfigure}
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrIDCDCP.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the  M16, ID/CD/CP model.} % XXX
+\label{suppfigure:IDCDCPnodipasr}
+\end{suppfigure}
+
+
+
+\begin{suppfigure}
+\includegraphics[width=\textwidth]{asrIDCDCPAB.pdf}
+\caption{Ancestral state estimation using the maximum a posteriori for each node of the  M19, ID/CD/CP+A/B asym model.} % XXX
+\label{suppfigure:IDCDCPnodipABasr}
+\end{suppfigure}
+
+
 
 \begin{suppfigure}
 \includegraphics[width=\textwidth]{comparablesDP.pdf}
@@ -461,78 +541,9 @@ M25. IC/CD/DP+A/B+ $\delta$ all asym     & -1389.52                     &       
 \label{suppfigure:asymmetric}
 \end{suppfigure}
 
-
 \begin{suppfigure}
-\includegraphics[width=\textwidth]{asrDP.pdf}
-\caption{Ancestral state estimation using the maximum a posteriori for each node of the M1, D/P ploidy model. } % XXX
-\label{suppfigure:DPnodipasr}
+\includegraphics[width=\textwidth]{alldiversificationasymhiddendip.pdf}
+\caption{Posterior distribution for all the best models with diploidization.} % XXX
+\label{suppfigure:alldip}
 \end{suppfigure}
 
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{bisseDPnodipposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the M1, D/P ploidy model.} % XXX
-\label{suppfigure:DPnodip}
-\end{suppfigure}
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrDPAB.pdf}
-\caption{Ancestral state estimation using the maximum a posteriori for each node of the M4, D/P+A/B asym model.} % XXX
-\label{suppfigure:DPnodipABasr}
-\end{suppfigure}
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{hisseDPnodipasymposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the M4, D/P+A/B asym model.} % XXX
-\label{suppfigure:DPnodipAB}
-\end{suppfigure}
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrIC.pdf}
-\caption{Ancestral state estimation using the maximum a posteriori for each node of the M1, I/C breeding system model.} % XXX
-\label{suppfigure:ICasr}
-\end{suppfigure}
-
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{bisseSIposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the M11, I/C breeding system model.} % XXX
-\label{suppfigure:IC}
-\end{suppfigure}
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrICAB.pdf}
-\caption{Ancestral state estimation using the maximum a posteriori for each node of the M14, I/C+A/B asym model.} % XXX
-\label{suppfigure:ICABasr}
-\end{suppfigure}
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{hisseSIasymposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the M14, I/C+A/B asym model.} % XXX
-\label{suppfigure:ICAB}
-\end{suppfigure}
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrIDCDCP.pdf}
-\caption{Ancestral state estimation using the maximum a posteriori for each node of the  M16, ID/CD/CP model.} % XXX
-\label{suppfigure:IDCDCPnodipasr}
-\end{suppfigure}
-
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{musseDPSInodipposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the  M16, ID/CD/CP model.} % XXX
-\label{suppfigure:IDCDCPnodip}
-\end{suppfigure}
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{asrIDCDCPAB.pdf}
-\caption{Ancestral state estimation using the maximum a posteriori for each node of the  M19, ID/CD/CP+A/B asym model.} % XXX
-\label{suppfigure:IDCDCPnodipABasr}
-\end{suppfigure}
-
-
-\begin{suppfigure}
-\includegraphics[width=\textwidth]{muhissenodipasymposteriordist.pdf}
-\caption{Posterior distribution for each of the parameters in the M19, ID/CD/CP+A/B asym model.} % XXX
-\label{suppfigure:IDCDCPnodipAB}
-\end{suppfigure}
