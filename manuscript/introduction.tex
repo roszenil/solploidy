@@ -1,8 +1,8 @@
 \begin{quote}
-\em{``Among life history traits, reproductive characters that determine mating patterns are perhaps the most influential in governing macroevolution." 
+\em{``Among life history traits, reproductive characters that determine mating patterns are perhaps the most influential in governing macroevolution.'' 
 }
 \\
-\hspace*{\fill}\rm{ Barrett et al. (1996)}
+\hspace*{\fill}\rm{Barrett et al.~(1996)}
 \end{quote}
 
 \section{Introduction}
@@ -19,7 +19,7 @@ We also test whether adding one more trait and increasing model complexity is wo
 Polyploidization is a remarkably common mutation in plants \citep{husband_2013, zenilferguson_2017}.
 The widespread variation in ploidy has long been considered a salient feature of flowering plant lineages \citep{stebbins1938}. 
 An increase in ploidy can alter many traits and affect a variety of evolutionary and ecological processes \citep{ramsey_2002, sessa_2019}.
-At shallow evolutionary time scale, polyploids were found to have an overall lower net diversification rate than diploids across many vascular plant clades \citep{mayrose_2011, mayrose_2015}. %IM suggestion
+At shallow evolutionary time scales, polyploids were found to have an overall lower net diversification rate than diploids across many vascular plant clades \citep{mayrose_2011, mayrose_2015}.
 However, recent genomic studies have inferred numerous paleo-polyploidizations, including some preceding the emergence of highly diverse plant clades \citep{soltis_2014, landis_2018}, suggesting that whole genome duplications may have played an important  role driving innovation and diversification in plants. 
 Evidence of paleo-polyploidy within the genomes of diploid extant plants also implies pervasive diploidization, the return of polyploids to the diploid state, throughout the angiosperm phylogeny \citep{soltis_2015, dodsworth_2015}.
 Our analyses re-examine the association between ploidy and lineage diversification by extending the approach of \citet{mayrose_2011, mayrose_2015} to include transitions from polyploid to diploid states and potential unobserved factors affecting diversification patterns.
@@ -32,11 +32,11 @@ Although these findings suggest a consistent macroevolutionary role of breeding 
 We investigate the relationship of breeding system to speciation and extinction rates in the context of ploidy and other unobserved factors.
 
 Polyploidy and self-fertilization are widely thought to be associated \citep{stebbins1950}.
-Whole genome duplication may facilitate the transition to selfing by masking inbreeding depression, or self-fertilization may facilitate establishment of early-forming polyploids by avoiding the lower fitness \citep{levin_1975,ramsey_1998, barringer2007, barrett2008, husband2008}.%IM suggestion and Gordon suggestion %B: reworded because polyploidy is a process, so its establishment is not the issue.
+Whole genome duplication may facilitate the transition to selfing by masking inbreeding depression, or self-fertilization may facilitate establishment of polyploids by avoiding the lower fitness of triploids \citep{levin_1975,ramsey_1998, barringer2007, barrett2008, husband2008}.  % or both selfing and polyploidy may tend to be found in weedy or peripheral populations \citep{ramsey_1998, barringer2007, barrett2008, husband2008}.
 Additionally, in RNase-based gametophytic SI systems, polyploidization directly causes the loss of SI \citep{stout1942, lewis1947}.
 %B: disclaimer: ceteris paribus statement omitted; polyploidization ordinarily causes SC because of the formation of heterodiploid pollen. On the background of deletion of S-locus, or with heterologous chromosome homozygosity at the S-locus may not do so. These, however, appear to be sufficiently rare that they are recovered perhaps twice in dicots: once (or twice) naturally, in sour cherry and its close relative (Prunus), and once in a experimentally induced and selected synthetic pentaploid Solanum (which has not been replicated). Strictly speaking, this is a feature of non-self recognition systems of the kind found in RNase-based GSI.
-In these systems, SI occurs because haploid self-pollen grains, with one S-allele at the locus controlling the SI response, are unable to detoxify the S-RNase produced by the same S-allele in the style \citep{kubo2010}.
-The unreduced pollen of diploids, however, can contain two S-alleles expressed in pollen, which jointly gain the ability to detoxify the S-RNases produced by any maternal genotype \citep{entani1999, tsukamoto2005, kubo2010}.
+In these systems, SI occurs because haploid self pollen grains, with one S-allele at the locus controlling the SI response, are unable to detoxify the S-RNase produced by the same S-allele in the style \citep{kubo2010}.
+The unreduced pollen of diploids, however, can contain two S-alleles expressed in pollen, which jointly provide the ability to detoxify the S-RNases produced by any maternal genotype \citep{entani1999, tsukamoto2005, kubo2010}.
 Initial mutant individuals with pollen containing doubled haploid genomes are consequently capable of self-fertilization, with exceedingly few exceptions \citep{hauck_2002, nunes_2006}.
 RNase-based SI is regarded as ancestral in eudicots \citep{igic_2001,steinbachs_2002}, and it is expressed in all SI species of Solanaceae examined to date.
 The absence of SI polyploids in this family yields a strong correlation between ploidy and breeding system \citep{robertson_2011}.
@@ -53,11 +53,11 @@ They considered only transitions among the states, however, and we investigate w
 
 In the present study, we employ an extended framework of state speciation and extinction models, which simultaneously model transitions between the discrete states of a trait and different rates of speciation and extinction associated with each of those states \citep[`SSE' models;][]{maddison_2007, fitzjohn_2012}.
 We start by fitting binary state speciation and extinction models to ploidy and breeding system independently \citep{maddison_2007}.
-We follow by fitting models that incorporate hidden states, which reduce the chance that the effect of the focal trait (ploidy or breeding system) on diversification is found to be significant when in reality, it may simply represent background heterogeneity in the diversification process that produces the phylogenetic patterns \citep{beaulieu_2016}. %IM: added a little more explanation
-We compare the proposed models against their character-independent counterparts \citep{beaulieu_2016} to investigate whether ploidy or breeding system affect the diversification process.
-Next, we model ploidy and breeding system jointly to assess their combined influence on diversification, with or without an additional hidden character. %B: additional state implies that we would introduce another state, say 'C' to 'A' and 'B'.
+We follow by fitting models that incorporate hidden states, which reduce the chance that the effect of the focal trait (ploidy or breeding system) on diversification is found to be significant when in reality, it may simply represent background heterogeneity in the diversification process that produces the phylogenetic patterns \citep{beaulieu_2016}.
+We compare the proposed models against their character-independent counterparts \citep{beaulieu_2016} to investigate whether something other than ploidy or breeding system better explains the diversification process.
+Next, we model ploidy and breeding system jointly to assess their combined influence on diversification, with or without an additional hidden character.
 Using the ploidy and breeding system model without hidden states, we quantify the relative contributions of the two pathways from SI diploids to SC polyploids.
-We also aggregate states within these joint models of ploidy and breeding system in order to test whether increasing complexity from one trait to two traits significantly improves our understanding of the diversification process.
+We also aggregate states within these joint models of ploidy and breeding system in order to test whether increasing model complexity from one trait to two traits significantly improves our understanding of the diversification process.
 Furthermore, we extend all the models involving ploidy to investigate the potential effects of including diploidization.
 % And finally, we explore models of diversification using asymmetric rates between and within hidden states to investigate the sensitivity of the statistical inference to model assumptions.
-Our results highlight the importance of considering non-additive effects of traits on net diversification rates  under the presence of unobserved factors, in order to detect strong biologically-driven processes dictating the diversification patterns.
+Our results highlight the importance of considering non-additive effects of traits on net diversification rates  under the presence of unobserved factors, in order to detect strong biologically-driven processes dictating diversification patterns.
