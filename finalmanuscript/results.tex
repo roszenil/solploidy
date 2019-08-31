@@ -1,0 +1,91 @@
+\section{Results}
+
+% E: I removed the model names (like, "I/C+A/B") because we don't use them in the Methods anymore.  I think it works find just to say in real words what each model includes, as it comes up, and the model numbers are good for shorthand.
+
+\subsection{Trait-dependent diversification}
+
+\subsubsection{Ploidy only}
+
+When considering ploidy alone, we found a larger net diversification rate for diploids than for polyploids, in agreement with \citet{mayrose_2011, mayrose_2015}.
+This result holds with (model M1, \cref{figure:netdivall}A) or without the diploidization parameter (M6, \cref{suppfigure:alldip}A).
+Incorporating a hidden state in this model, however, reduces the clear separation in diversification rate estimates between diploids and polyploids (M4, \cref{figure:netdivall}B; M9, \cref{suppfigure:alldip}B).
+Statistical model comparisons show a clear preference for models in which only a hidden state affects diversification or a hidden state as well as ploidy (M2 and M4; \cref{table:bayesfactors}).
+Results are similar when diploidization is included (\cref{supptable:M6M10}).
+Thus, when other traits are ignored, the role of ploidy in net diversification is unclear, with marginal support for diploids having higher diversification rates, but rate differences perhaps better explained by another factor. %IM: #21
+
+\subsubsection{Breeding system only}
+
+When considering breeding system alone (M11, \cref{figure:netdivall}C), we found a larger net diversification rate for SI than for SC species, in agreement with \citet{goldberg_2010}.
+When a hidden state is included, the large net diversification rate difference persists for one hidden state but is diminished for the other (M14, \cref{figure:netdivall}D).
+In the statistical model comparisons, the best two supported models include diversification differences due to both breeding system and to a hidden trait (M14 and M15, \cref{table:M11M15}). %IM: #22
+Breeding system seems to play a role in diversification differences, though a hidden factor does as well.
+
+\subsubsection{Ploidy and breeding system together}
+
+When considering ploidy and breeding system together, the net diversification rate for SI diploids was greater than for either SC diploids or SC polyploids, with or without diploidization (M16, \cref{figure:netdivall}E; M21, \cref{suppfigure:alldip}E).
+Thus, the difference in net diversification associated with breeding system persists even when ploidy is included in the model.
+The reverse is not true: the association of ploidy with net diversification in the simplest ploidy-only model (M1, \cref{figure:netdivall}A, \cref{suppfigure:alldip}A) appears to be driven by the subset of diploids that are SI, while among SC species, net diversification rates for diploids and polyploids are similar.
+
+When a hidden state is included, the separation in net diversification rate of ID \vs CD and CP persists within one hidden state but is reduced in the other (M19, \cref{figure:netdivall}F).
+The same general pattern remains when diploidization is included (\cref{suppfigure:alldip}F).
+Model comparisons clearly favor models that include ploidy, breeding system, and the hidden trait, against the character-independent model in which the focal traits do not influence diversification (\cref{supptable:M16M20}; \cref{supptable:M21M25} with diploidization).
+
+Using the lumped models, we find moderate support for obtaining a significantly better fit by adding breeding system to the ploidy-only model (M26 \vs M16, \cref{table:lumped}, \cref{figure:lumped}BC).
+This is also true when a hidden trait is included (M27 \vs M23, \cref{table:lumped}, \cref{suppfigure:lumpedDP}EF).
+% When comparing model M26. Lumped $D/P$ against M16. $ID/CD/CP$ (\cref{figure:lumped}B and C) Bayes factors reveal moderate support ($K=4.1$) preferring the three state model instead of the two state model (\cref{table:lumped}).
+% A similar result was obtained when comparing the lumped model for ploidy but in the presence of hidden states (model M27 \textit{vs.} M23 \cref{table:lumped}, \cref{suppfigure:lumpedDP}E and F).
+A similar comparison in which ploidy is added to the breeding system-only model shows no preference for the model that also includes ploidy (M28 \vs M16, \cref{table:lumped}, \cref{figure:lumped}CE).
+When including a hidden state, however, the model with both focal traits is moderately preferred over the model with only breeding system (M29 \vs M18, \cref{table:lumped}, \cref{suppfigure:lumpedIC}EF).
+% We also compared lumped models for breeding system to test for the inclusion of ploidy state (M28 \cref{figure:lumped}E \textit{vs.} M16 \cref{figure:lumped}C) and we found no evidence preferring the three-state over the two state-model ($K=-0.6$, \cref{table:lumped}).
+% However, when accounting for hidden state,  the three-state model M18. $I/C/CD/CP+A/B$ (\cref{suppfigure:lumpedIC}F) was moderately preferred ($K=2.6$) over the lumped model M29.(\cref{suppfigure:lumpedIC}E).
+
+From all of these types of statistical evidence, we conclude that breeding system (and a hidden factor) are strongly associated with diversification differences, and that ploidy plays a smaller role.
+
+
+\subsection{Key questions about diversification and transitions}
+
+The above results include several of our statistical model comparison findings.
+Here we return to the five specific questions we targeted with our model comparisons.
+
+\begin{enumerate}
+
+    \item Are diversification patterns only determined by hidden states and not the traits of interest?
+    No, our focal traits are supported as having associations with diversification differences.
+    In most cases, we find moderate to strong preference for models with the focal traits as well as hidden states, over models with only hidden states (\cref{table:bayesfactors,table:M11M15,supptable:M6M10,supptable:M16M20,supptable:M21M25}). %IM: #23
+
+    \item Are hidden states necessary to explain diversification rate heterogeneity?
+    Yes, models with hidden states that influence diversification are strongly preferred over models containing only the focal traits (\cref{supptable:testaddhidden}).
+    This means that there are potentially many factors underlying diversification shifts within the family. %IM: #24
+
+    \item Does a second focal trait add information about the diversification process?
+    Yes, in most cases models with both ploidy and breeding system are preferred over models with only one of the focal traits (\cref{table:lumped,suppfigure:lumpedDP,suppfigure:lumpedIC}).
+
+    \item Are conclusions robust to assumptions about hidden state transitions?
+    Yes, we found that allowing different types of asymmetry in transitions within and between hidden states did not change our conclusions about net diversification differences.
+    Hidden state models with asymmetric rates are, however, strongly preferred over models with equal rates between hidden states (\cref{supptable:asymmetry}), and they show stronger differences between some net diversification rates (\cref{suppfigure:asymmetric}).
+   The effect of the asymmetry of the hidden state transitions is better observed in the ancestral state estimations (\cref{suppfigure:DPnodipABasr,suppfigure:ICABasr,suppfigure:IDCDCPnodipABasr}), which show that moving out of state A (dark colors) happens quickly, with rate $\alpha$,  whereas evolving out of hidden state B (light colors) is slow, with rate $\beta$. 
+        
+    \item Is there evidence for diploidization?
+    Perhaps: when comparing models with diploidization against models without it, we found moderate evidence that models containing diploidization are preferred (\cref{supptable:testdiploidization}).
+    We discuss later some further challenges in identifying diploidization.
+    We further found that our main conclusions about net diversification differences are not dependent on whether diploidization is included (\cref{suppfigure:alldip}). %IM: #26
+
+\end{enumerate}
+
+\subsection{Pathways to polyploidy}
+
+There are two pathways by which SI diploid lineages eventually---given enough time---become SC polyploids.
+In the one-step pathway, polyploidization directly disables SI.
+In the two-step pathway, SI is first lost within the diploid state, followed by polyploidization.
+Determining the relative contribution of these pathways based on our transition rate estimates (median transition rate values from M16), we find that the one-step pathway is more likely on short timescales and the two-step pathway is more likely on long timescales (\cref{figure:pathways}, left panels).
+Beginning with a single SI diploid lineage, when not much time has elapsed, the one-step pathway is more likely because it only necessitates a single event to reach the SC polyploid state.
+When more time has elapsed, the two-step pathway is more likely because the rate of loss of SI within diploids, $q_{IC}$, is greater than the rate of polyploidization for SI species, $\rho_I$ (\cref{suppfigure:IDCDCPnodip}).
+That is, an $ID$ lineage is more likely to begin its path to polyploidy with a transition to $CD$, but completing this path to $CP$ takes longer.
+\Citet{robertson_2011} reached the same conclusion.
+Our result is qualitatively unchanged when using transition rate estimates from the model that does not allow diversification differences related to the observed states (M17).
+
+The preceding conclusions, however, ignore the changes in numbers of lineages in each state due to speciation and extinction.
+By analogy, envisioning the states as stepping stones, the extent to which each stone grows or shrinks over time affects the utility of each possible path.
+Allowing different net diversification rates for each state (again using median rate estimates from M16), we find a qualitative difference in the relative pathway contributions. %IM: #27
+The lower rate of net diversification in the $CD$ state, relative to $ID$, means that relatively fewer lineages are available to complete the second step of the two-step pathway, ending in $CP$.
+Consequently, even over long timescales, we find that the two-step pathway contributes less to the formation of polyploids (\cref{figure:pathways}, right panels) when considering diversification as well as transitions.

@@ -1,0 +1,59 @@
+\begin{figure}
+\centering
+%\includegraphics[width=0.5\textwidth]{fig1.pdf}
+\caption{
+Character states used in the models.
+(A) Each species retained on the phylogeny belonged to one of five possible categories, depending on whether ploidy and/or breeding system were known.
+Number of species in each category is indicated; for example, 70 species are self-compatible with unknown ploidy.
+Character state abbreviations are: $I$ for self-incompatible, $C$ for self-compatible, $D$ for diploid, $P$ for polyploid, $?$ for unknown.
+Because polyploidization breaks this form of self-incompatibility, self-incompatible species with unobserved ploidy ($I?$) are taken to be diploid ($ID$), and polyploid species with unobserved breeding system ($?P$) are taken to be SC ($CP$).
+(B) Category groupings into states for each model class.
+In the ploidy-only models (M1- M10), states are coded as $D$ \& $P$ when uncertain/consistent with either state; in the breeding system-only models (M11-M15) such states are coded as $C$; in the ploidy and breeding system models (M16-M29), they are coded as $CD$ \& $CP$.
+In the hidden-trait models, all species could take on either of two `hidden' character states. %IM: #33
+Two species, \emph{Lycium californicum} and \emph{Solanum bulbocastanum}, are simultaneously $ID$ and $CP$, and by adding them the sample adds to the total of 651 taxa used for analyses.
+}\label{figure:stateclassifications}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+%\includegraphics[width=\textwidth]{fig2.pdf}
+\caption{Net diversification rates for SSE models of focal traits with or without hidden state.
+(A) Ploidy only model (M1) showing higher net diversification linked to diploid state $D$ compared to polyploid state $P$.
+(B) Ploidy with hidden states model (M4) showing that the net diversification is higher for hidden state $B$ (lighter colors) compared to hidden state $A$ (darker colors) and both diploid and polyploid states within each hidden traits have overlapping net diversification rates.
+(C) Breeding system only model (M9) showing higher net diversification linked to self-incompatible $I$ state compared to self-compatible state $C$.
+(D) Breeding system with hidden states model (M11) showing diversification differences in both hidden states (light \vs. dark colors) and little to no overlapping in between self-compatible \vs self-compatible states.
+(E) Ploidy and breeding system model (M13) showing higher net diversification linked to self-incompatible diploid state $ID$ compared to both self-compatible states despite ploidy level ($CD, CP$).
+(F) Ploidy, breeding system, and hidden states model (M16) showing a similar pattern that panel (E) within each hidden state $A$ and $B$. For hidden state $B$ there is a larger overlap of net diversification between states $CD_B$ and $ID_B$.}
+\label{figure:netdivall}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+%\includegraphics[width=\textwidth]{fig3.pdf} %lumped.pdf
+\caption{Comparing two and three-state models using lumped models. (A) Ploidy model only (M1) where data enter as binary $D$ and $P$.
+(B) Lumped model for ploidy (M26) where data are the three-state values ($ID,CP,CD$) but results are equivalent to model M1.
+(C) Ploidy and breeding system model (M16) where  data enter as the three-state values. Models M26 and M16 are comparable whereas M1 and M16 are not.
+(D) Breeding system only model (M11) where data are entered as binary $I$ and $C$.
+(E) Lumped model for breeding system (M28) where data are the three-state values ($ID,CP,CD$) but results are equivalent to model M11. Model M26 can be compared with model M16 from panel (C).
+Model comparisons are done via Bayes factors and results are shown in \cref{table:lumped}}
+\label{figure:lumped}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}
+   % \centering
+    %\includegraphics[width=0.5\textwidth]{fig4a} \\ [40pt]
+       % \includegraphics[width=0.9\textwidth]{fig4b}
+    \caption{
+        Contributions of the two pathways to polyploidy.
+        The one-step pathway is direct ID$\rightarrow$CP transitions.
+        The two-step pathway consists of ID$\rightarrow$CD$\rightarrow$CP transitions.
+        When considering only rates of transitions among the states (ignoring the diversification rate parameters), the one-step pathway dominates on short timescales and the two-step on long timescales (left panels).
+        When also considering diversification within each state, the one-step pathway, in which polyploidization breaks down SI, dominates over any timescale (right panels).
+        The top panels show the separate contributions of each pathway.
+        The bottom panels show the proportional contribution of the one-step pathway (\ie one-step / [one-step + two-step]).
+    }
+    \label{figure:pathways}
+\end{figure}
+\efloatseparator
+ 
