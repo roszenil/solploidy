@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: newphytologist.bst
+Database file #1: refs.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 76 entries,
+            3074 wiz_defined-function locations,
+            1076 strings with 18695 characters,
+and the built_in function-call counts, 127642 in all, are:
+= -- 14840
+> -- 2491
+< -- 42
++ -- 1699
+- -- 686
+* -- 9383
+:= -- 13281
+add.period$ -- 304
+call.type$ -- 76
+change.case$ -- 607
+chr.to.int$ -- 77
+cite$ -- 76
+duplicate$ -- 14180
+empty$ -- 9708
+format.name$ -- 1373
+if$ -- 26752
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 679
+newline$ -- 461
+num.names$ -- 304
+pop$ -- 6582
+preamble$ -- 1
+purify$ -- 532
+quote$ -- 0
+skip$ -- 1599
+stack$ -- 0
+substring$ -- 17375
+swap$ -- 1911
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 675
+warning$ -- 0
+while$ -- 884
+width$ -- 0
+write$ -- 1061

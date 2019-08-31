@@ -1,0 +1,581 @@
+\begin{thebibliography}{76}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem[{Barrett(2008)}]{barrett2008}
+\textbf{Barrett~SCH}.
+\newblock \textbf{2008}.
+\newblock Major evolutionary transitions in flowering plant reproduction: an
+  overview.
+\newblock \emph{International Journal of Plant Sciences} \textbf{169}: 1--5.
+
+\bibitem[{Barrett(2013)}]{barrett2013}
+\textbf{Barrett~SCH}.
+\newblock \textbf{2013}.
+\newblock The evolution of plant reproductive systems: how often are
+  transitions irreversible?
+\newblock \emph{Proceedings of the Royal Society B: Biological Sciences}
+  \textbf{280}: 20130913.
+
+\bibitem[{Barrett \emph{et~al.}(1996)Barrett, Harder, and Worley}]{barrett1996}
+\textbf{Barrett~SCH}, \textbf{Harder~LD}, \textbf{Worley~AC}.
+\newblock \textbf{1996}.
+\newblock The comparative biology of pollination and mating in flowering
+  plants.
+\newblock \emph{Philosophical Transactions of the Royal Society of London
+  Series B: Biological Sciences} \textbf{351}: 1271--1280.
+
+\bibitem[{Barringer(2007)}]{barringer2007}
+\textbf{Barringer~BC}.
+\newblock \textbf{2007}.
+\newblock Polyploidy and self-fertilization in flowering plants.
+\newblock \emph{American Journal of Botany} \textbf{94}: 1527--1533.
+
+\bibitem[{Beaulieu and O'Meara(2016)}]{beaulieu_2016}
+\textbf{Beaulieu~JM}, \textbf{O'Meara~BC}.
+\newblock \textbf{2016}.
+\newblock Detecting hidden diversification shifts in models of trait-dependent
+  speciation and extinction.
+\newblock \emph{Syst Biol} \textbf{65}: 583--601.
+
+\bibitem[{Bennett and Leitch(2012)}]{bennett_2005}
+\textbf{Bennett~M}, \textbf{Leitch~I}.
+\newblock \textbf{2012}.
+\newblock Angiosperm dna c-values database (release 8.0, dec. 2012).
+\newblock \emph{Website http://data kew org/cvalues} .
+
+\bibitem[{Blanc and Wolfe(2004)}]{blanc2004}
+\textbf{Blanc~G}, \textbf{Wolfe~KH}.
+\newblock \textbf{2004}.
+\newblock Widespread paleopolyploidy in model plant species inferred from age
+  distributions of duplicate genes.
+\newblock \emph{The Plant Cell} \textbf{16}: 1667--1678.
+
+\bibitem[{Brunet and Liston(2001)}]{brunet2001}
+\textbf{Brunet~J}, \textbf{Liston~A}.
+\newblock \textbf{2001}.
+\newblock Technical comment on polyploidy and gender dimorphism.
+\newblock \emph{Science} \textbf{291}: 1441--1442.
+
+\bibitem[{Caetano \emph{et~al.}(2018)Caetano, O'Meara, and
+  Beaulieu}]{caetano_2018}
+\textbf{Caetano~DS}, \textbf{O'Meara~BC}, \textbf{Beaulieu~JM}.
+\newblock \textbf{2018}.
+\newblock Hidden state models improve state-dependent diversification
+  approaches, including biogeographical models.
+\newblock \emph{Evolution} \textbf{72}: 2308--2324.
+
+\bibitem[{de~Vos \emph{et~al.}(2014)de~Vos, Hughes, Schneeweiss, Moore, and
+  Conti}]{devos2014}
+\textbf{de~Vos~JM}, \textbf{Hughes~CE}, \textbf{Schneeweiss~GM},
+  \textbf{Moore~BR}, \textbf{Conti~E}.
+\newblock \textbf{2014}.
+\newblock Heterostyly accelerates diversification via reduced extinction in
+  primroses.
+\newblock \emph{Proceedings of the Royal Society B: Biological Sciences}
+  \textbf{281}: 20140075.
+
+\bibitem[{Dodsworth \emph{et~al.}(2015)Dodsworth, Chase, and
+  Leitch}]{dodsworth_2015}
+\textbf{Dodsworth~S}, \textbf{Chase~MW}, \textbf{Leitch~AR}.
+\newblock \textbf{2015}.
+\newblock Is post-polyploidization diploidization the key to the evolutionary
+  success of angiosperms?
+\newblock \emph{Botanical Journal of the Linnean Society} \textbf{180}: 1--5.
+
+\bibitem[{Entani \emph{et~al.}(1999)Entani, Takayama, Iwano, Shiba, Che, and
+  Isogai}]{entani1999}
+\textbf{Entani~T}, \textbf{Takayama~S}, \textbf{Iwano~M}, \textbf{Shiba~H},
+  \textbf{Che~F-S}, \textbf{Isogai~A}.
+\newblock \textbf{1999}.
+\newblock Relationship between polyploidy and pollen self-incompatibility
+  phenotype in \emph{Petunia hybrida} {V}ilm.
+\newblock \emph{Bioscience, Biotechnology, and Agrochemistry} \textbf{63}:
+  1882--1888.
+
+\bibitem[{{FitzJohn}(2012)}]{fitzjohn_2012}
+\textbf{{FitzJohn}~RG}.
+\newblock \textbf{2012}.
+\newblock Diversitree: comparative phylogenetic analyses of diversification in
+  {R}.
+\newblock \emph{Methods in Ecology and Evolution} \textbf{3}: 1084--1092.
+
+\bibitem[{FitzJohn \emph{et~al.}(2009)FitzJohn, Maddison, and
+  Otto}]{fitzjohn_2009}
+\textbf{FitzJohn~RG}, \textbf{Maddison~WP}, \textbf{Otto~SP}.
+\newblock \textbf{2009}.
+\newblock Estimating trait-dependent speciation and extinction rates from
+  incompletely resolved phylogenies.
+\newblock \emph{Systematic Biology} \textbf{58}: 595--611.
+
+\bibitem[{Freyman and H{\"o}hna(2019)}]{freyman_2019}
+\textbf{Freyman~WA}, \textbf{H{\"o}hna~S}.
+\newblock \textbf{2019}.
+\newblock Stochastic character mapping of state-dependent diversification
+  reveals the tempo of evolutionary decline in self-compatible {O}nagraceae
+  lineages.
+\newblock \emph{Systematic Biology} \textbf{68}: 505--519.
+
+\bibitem[{Goldberg and Igi\'c(2012)}]{goldberg_2012}
+\textbf{Goldberg~EE}, \textbf{Igi\'c~B}.
+\newblock \textbf{2012}.
+\newblock Tempo and mode in plant breeding system evolution.
+\newblock \emph{Evolution} \textbf{66}: 3701--3709.
+
+\bibitem[{Goldberg \emph{et~al.}(2010)Goldberg, Kohn, Lande, Robertson, Smith,
+  and Igi{\'c}}]{goldberg_2010}
+\textbf{Goldberg~EE}, \textbf{Kohn~JR}, \textbf{Lande~R},
+  \textbf{Robertson~KA}, \textbf{Smith~SA}, \textbf{Igi{\'c}~B}.
+\newblock \textbf{2010}.
+\newblock Species selection maintains self-incompatibility.
+\newblock \emph{Science} \textbf{330}: 493--495.
+
+\bibitem[{Hastings(1970)}]{Hastings1970}
+\textbf{Hastings~WK}.
+\newblock \textbf{1970}.
+\newblock {M}onte {C}arlo sampling methods using {M}arkov chains and their
+  applications.
+\newblock \emph{Biometrika} \textbf{57}: 97--109.
+
+\bibitem[{Hauck \emph{et~al.}(2002)Hauck, Yamane, Tao, and
+  Iezzoni}]{hauck_2002}
+\textbf{Hauck~NR}, \textbf{Yamane~H}, \textbf{Tao~R}, \textbf{Iezzoni~AF}.
+\newblock \textbf{2002}.
+\newblock Self-compatibility and incompatibility in tetraploid sour cherry
+  (\emph{Prunus cerasus} {L}.).
+\newblock \emph{Sexual Plant Reproduction} \textbf{15}: 39--46.
+
+\bibitem[{Herrera-Alsina \emph{et~al.}(2018)Herrera-Alsina, van Els, and
+  Etienne}]{herrera_2018}
+\textbf{Herrera-Alsina~L}, \textbf{van Els~P}, \textbf{Etienne~RS}.
+\newblock \textbf{2018}.
+\newblock Detecting the dependence of diversification on multiple traits from
+  phylogenetic trees and trait data.
+\newblock \emph{Systematic Biology} \textbf{68}: 317--328.
+
+\bibitem[{H{\"o}hna \emph{et~al.}(2016)H{\"o}hna, Landis, Heath, Boussau,
+  Lartillot, Moore, Huelsenbeck, and Ronquist}]{hoehna_2016}
+\textbf{H{\"o}hna~S}, \textbf{Landis~MJ}, \textbf{Heath~TA},
+  \textbf{Boussau~B}, \textbf{Lartillot~N}, \textbf{Moore~BR},
+  \textbf{Huelsenbeck~JP}, \textbf{Ronquist~F}.
+\newblock \textbf{2016}.
+\newblock {RevBayes}: {B}ayesian phylogenetic inference using graphical models
+  and an interactive model-specification language.
+\newblock \emph{Systematic Biology} \textbf{65}: 726--736.
+
+\bibitem[{Huang \emph{et~al.}(2018)Huang, Goldberg, Chou, and Roy}]{huang_2018}
+\textbf{Huang~D}, \textbf{Goldberg~EE}, \textbf{Chou~L}, \textbf{Roy~K}.
+\newblock \textbf{2018}.
+\newblock The origin and evolution of coral species richness in a marine
+  biodiversity hotspot.
+\newblock \emph{Evolution} \textbf{72}: 288--302.
+
+\bibitem[{Husband \emph{et~al.}(2013)Husband, Baldwin, and Suda}]{husband_2013}
+\textbf{Husband~BC}, \textbf{Baldwin~SJ}, \textbf{Suda~J}.
+\newblock \textbf{2013}.
+\newblock The incidence of polyploidy in natural plant populations: major
+  patterns and evolutionary processes.
+\newblock In: \emph{Plant Genome Diversity Volume 2}, Viena: Springer-Verlag.
+  255--276.
+
+\bibitem[{Husband \emph{et~al.}(2008)Husband, Ozimec, Martin, and
+  Pollock}]{husband2008}
+\textbf{Husband~BC}, \textbf{Ozimec~B}, \textbf{Martin~SL}, \textbf{Pollock~L}.
+\newblock \textbf{2008}.
+\newblock Mating consequences of polyploid evolution in flowering plants:
+  {C}urrent trends and insights from synthetic polyploids.
+\newblock \emph{International Journal of Plant Sciences} \textbf{169}:
+  195--206.
+
+\bibitem[{Igi\'{c} \emph{et~al.}(2006)Igi\'{c}, Bohs, and Kohn}]{igic_2006}
+\textbf{Igi\'{c}~B}, \textbf{Bohs~L}, \textbf{Kohn~JR}.
+\newblock \textbf{2006}.
+\newblock Ancient polymorphism reveals unidirectional breeding system shifts.
+\newblock \emph{Proceedings of the National Academy of Sciences USA}
+  \textbf{103}: 1359--1363.
+
+\bibitem[{Igi\'{c} and Kohn(2001)}]{igic_2001}
+\textbf{Igi\'{c}~B}, \textbf{Kohn~JR}.
+\newblock \textbf{2001}.
+\newblock Evolutionary relationships among self-incompatibility {RN}ases.
+\newblock \emph{Proceedings of the National Academy of Sciences USA}
+  \textbf{98}: 13167--13171.
+
+\bibitem[{Igi\'{c} \emph{et~al.}(2008)Igi\'{c}, Lande, and Kohn}]{igic_2008}
+\textbf{Igi\'{c}~B}, \textbf{Lande~R}, \textbf{Kohn~JR}.
+\newblock \textbf{2008}.
+\newblock Loss of self-incompatibility and its evolutionary consequences.
+\newblock \emph{International Journal of Plant Sciences} \textbf{169}: 93--104.
+
+\bibitem[{Ioerger \emph{et~al.}(1990)Ioerger, Clark, and Kao}]{ioerger_1990}
+\textbf{Ioerger~TR}, \textbf{Clark~AG}, \textbf{Kao~TH}.
+\newblock \textbf{1990}.
+\newblock Polymorphism at the self-incompatibility locus in {S}olanaceae
+  predates speciation.
+\newblock \emph{Proceedings of the National Academy of Sciences USA}
+  \textbf{87}: 9732--9735.
+
+\bibitem[{Kass and Raftery(1995)}]{kass1995}
+\textbf{Kass~RE}, \textbf{Raftery~AE}.
+\newblock \textbf{1995}.
+\newblock {B}ayes factors.
+\newblock \emph{Journal of the American Statistical Association} \textbf{90}:
+  773--795.
+
+\bibitem[{Ku \emph{et~al.}(2000)Ku, Vision, Liu, and Tanksley}]{ku2000}
+\textbf{Ku~HM}, \textbf{Vision~T}, \textbf{Liu~J}, \textbf{Tanksley~SD}.
+\newblock \textbf{2000}.
+\newblock Comparing sequenced segments of the tomato and \emph{{A}rabidopsis}
+  genomes: large-scale duplication followed by selective gene loss creates a
+  network of synteny.
+\newblock \emph{Proceedings of the National Academy of Science USA}
+  \textbf{97}: 9121--9126.
+
+\bibitem[{Kubo \emph{et~al.}(2010)Kubo, Entani, Takara, Wang, Fields, Hua,
+  Toyoda, Kawashima, Ando \emph{et~al.}}]{kubo2010}
+\textbf{Kubo~K-i}, \textbf{Entani~T}, \textbf{Takara~A}, \textbf{Wang~N},
+  \textbf{Fields~AM}, \textbf{Hua~Z}, \textbf{Toyoda~M},
+  \textbf{Kawashima~S-i}, \textbf{Ando~T}, \textbf{Isogai~A}, \emph{et~al.}
+\newblock \textbf{2010}.
+\newblock Collaborative non-self recognition system in {{S-RN}ase-based}
+  self-incompatibility.
+\newblock \emph{Science} \textbf{330}: 796--799.
+
+\bibitem[{Landis \emph{et~al.}(2018)Landis, Soltis, Li, Marx, Barker, Tank, and
+  Soltis}]{landis_2018}
+\textbf{Landis~JB}, \textbf{Soltis~DE}, \textbf{Li~Z}, \textbf{Marx~HE},
+  \textbf{Barker~MS}, \textbf{Tank~DC}, \textbf{Soltis~PS}.
+\newblock \textbf{2018}.
+\newblock Impact of whole-genome duplication events on diversification rates in
+  angiosperms.
+\newblock \emph{American Journal of Botany} \textbf{105}: 348--363.
+
+\bibitem[{Leslie(1945)}]{leslie_1945}
+\textbf{Leslie~PH}.
+\newblock \textbf{1945}.
+\newblock On the use of matrices in certain population mathematics.
+\newblock \emph{Biometrika} \textbf{33}: 183--212.
+
+\bibitem[{Levin(1975)}]{levin_1975}
+\textbf{Levin~DA}.
+\newblock \textbf{1975}.
+\newblock Minority cytotype exclusion in local plant populations.
+\newblock \emph{Taxon} \textbf{24}: 35--43.
+
+\bibitem[{Lewis(1947)}]{lewis1947}
+\textbf{Lewis~D}.
+\newblock \textbf{1947}.
+\newblock Competition and dominance of incompatibility alleles in diploid
+  pollen.
+\newblock \emph{Heredity} \textbf{1}: 85--108.
+
+\bibitem[{Lewis(1979)}]{lewis1979}
+\textbf{Lewis~D}.
+\newblock \textbf{1979}.
+\newblock \emph{Sexual Incompatibility in Plants}, \emph{The Institute of
+  Biology's Studies in Biology}, vol. 110.
+\newblock London, UK: Edward Arnold Limited.
+
+\bibitem[{Lewontin(1970)}]{lewontin_1970}
+\textbf{Lewontin~RC}.
+\newblock \textbf{1970}.
+\newblock The units of selection.
+\newblock \emph{Annual Review of Ecology and Systematics} \textbf{1}: 1--18.
+
+\bibitem[{Mable(2004)}]{mable_2004}
+\textbf{Mable~BK}.
+\newblock \textbf{2004}.
+\newblock Polyploidy and self-compatibility: is there an association?
+\newblock \emph{New Phytologist} \textbf{162}: 803--811.
+
+\bibitem[{Maddison and FitzJohn(2015)}]{maddison_2015}
+\textbf{Maddison~WP}, \textbf{FitzJohn~RG}.
+\newblock \textbf{2015}.
+\newblock The unsolved challenge to phylogenetic correlation tests for
+  categorical characters.
+\newblock \emph{Systematic Biology} \textbf{64}: 127--136.
+
+\bibitem[{Maddison \emph{et~al.}(2007)Maddison, Midford, and
+  Otto}]{maddison_2007}
+\textbf{Maddison~WP}, \textbf{Midford~PE}, \textbf{Otto~SP}.
+\newblock \textbf{2007}.
+\newblock Estimating a binary character's effect on speciation and extinction.
+\newblock \emph{Systematic Biology} \textbf{56}: 701--710.
+
+\bibitem[{Magnuson-Ford and Otto(2012)}]{magnuson-ford_2012}
+\textbf{Magnuson-Ford~K}, \textbf{Otto~SP}.
+\newblock \textbf{2012}.
+\newblock Linking the investigations of character evolution and species
+  diversification.
+\newblock \emph{The American Naturalist} \textbf{180}: 225--245.
+
+\bibitem[{Mandakova and Lysak(2018)}]{mandakova_2018}
+\textbf{Mandakova~T}, \textbf{Lysak~MA}.
+\newblock \textbf{2018}.
+\newblock Post-polyploid diploidization and diversification through dysploid
+  changes.
+\newblock \emph{Current Opinion in Plant Biology} \textbf{42}: 55--65.
+
+\bibitem[{Mayrose \emph{et~al.}(2015)Mayrose, Zhan, Rothfels, Arrigo, Barker,
+  Rieseberg, and Otto}]{mayrose_2015}
+\textbf{Mayrose~I}, \textbf{Zhan~SH}, \textbf{Rothfels~CJ}, \textbf{Arrigo~N},
+  \textbf{Barker~MS}, \textbf{Rieseberg~LH}, \textbf{Otto~SP}.
+\newblock \textbf{2015}.
+\newblock Methods for studying polyploid diversification and the dead end
+  hypothesis: a reply to {S}oltis et al. (2014).
+\newblock \emph{New Phytologist} \textbf{206}: 27--35.
+
+\bibitem[{Mayrose \emph{et~al.}(2011)Mayrose, Zhan, Rothfels, Magnuson-Ford,
+  Barker, Rieseberg, and Otto}]{mayrose_2011}
+\textbf{Mayrose~I}, \textbf{Zhan~SH}, \textbf{Rothfels~CJ},
+  \textbf{Magnuson-Ford~K}, \textbf{Barker~MS}, \textbf{Rieseberg~LH},
+  \textbf{Otto~SP}.
+\newblock \textbf{2011}.
+\newblock Recently formed polyploid plants diversify at lower rates.
+\newblock \emph{Science} \textbf{333}: 1257.
+
+\bibitem[{McClure(2009)}]{mcclure_2009}
+\textbf{McClure~B}.
+\newblock \textbf{2009}.
+\newblock Darwin's foundation for investigating self-incompatibility and the
+  progress toward a physiological model for {S}-{RN}ase-based {SI}.
+\newblock \emph{Journal of Experimental Botany} \textbf{60}: 1069--1081.
+
+\bibitem[{Metropolis \emph{et~al.}(1953)Metropolis, Rosenbluth, Rosenbluth,
+  Teller, and Teller}]{metropolis1953equation}
+\textbf{Metropolis~N}, \textbf{Rosenbluth~AW}, \textbf{Rosenbluth~MN},
+  \textbf{Teller~AH}, \textbf{Teller~E}.
+\newblock \textbf{1953}.
+\newblock Equation of state calculations by fast computing machines.
+\newblock \emph{{The Journal of Chemical Physics}} \textbf{21}: 1087--1092.
+
+\bibitem[{Miller and Venable(2000)}]{miller_2000}
+\textbf{Miller~JS}, \textbf{Venable~DL}.
+\newblock \textbf{2000}.
+\newblock Polyploidy and the evolution of gender dimorphism in plants.
+\newblock \emph{Science} \textbf{289}: 2335--2338.
+
+\bibitem[{Nunes \emph{et~al.}(2006)Nunes, Santos, Ferreira, Vieira, and
+  Vieira}]{nunes_2006}
+\textbf{Nunes~MD}, \textbf{Santos~RA}, \textbf{Ferreira~SM}, \textbf{Vieira~J},
+  \textbf{Vieira~CP}.
+\newblock \textbf{2006}.
+\newblock Variability patterns and positively selected sites at the
+  gametophytic self-incompatibility pollen {SFB} gene in a wild
+  self-incompatible \emph{{P}runus spinosa} ({R}osaceae) population.
+\newblock \emph{New phytologist} \textbf{172}: 577--587.
+
+\bibitem[{Olmstead and Bohs(2007)}]{olmstead_2007}
+\textbf{Olmstead~RG}, \textbf{Bohs~L}.
+\newblock \textbf{2007}.
+\newblock A summary of molecular systematic research in {S}olanaceae:
+  1982--2006.
+\newblock \emph{Acta Horticulturae} : 255--268.
+
+\bibitem[{{PBI \emph{Solanum} Project}(2012)}]{solsource}
+\textbf{{PBI \emph{Solanum} Project}~}.
+\newblock \textbf{2012}.
+\newblock {S}olanaceae {S}ource: a global taxonomic resource for the nightshade
+  family.
+
+\bibitem[{Rabosky and Goldberg(2015)}]{rabosky_2015}
+\textbf{Rabosky~DL}, \textbf{Goldberg~EE}.
+\newblock \textbf{2015}.
+\newblock Model inadequacy and mistaken inferences of trait-dependent
+  speciation.
+\newblock \emph{Systematic Biology} \textbf{64}: 340--355.
+
+\bibitem[{Rabosky and Goldberg(2017)}]{rabosky_2017}
+\textbf{Rabosky~DL}, \textbf{Goldberg~EE}.
+\newblock \textbf{2017}.
+\newblock {FiSSE}: {A} simple nonparametric test for the effects of a binary
+  character on lineage diversification rates.
+\newblock \emph{Evolution} \textbf{71}: 1432--1442.
+
+\bibitem[{Raduski \emph{et~al.}(2012)Raduski, Haney, and
+  Igi\'{c}}]{raduski_2012}
+\textbf{Raduski~AR}, \textbf{Haney~EB}, \textbf{Igi\'{c}~B}.
+\newblock \textbf{2012}.
+\newblock The expression of self-incompatibility in angiosperms is bimodal.
+\newblock \emph{Evolution} \textbf{66}: 1275--1283.
+
+\bibitem[{Ramanauskas and Igi{\'c}(2017)}]{ramanauskas_2017}
+\textbf{Ramanauskas~K}, \textbf{Igi{\'c}~B}.
+\newblock \textbf{2017}.
+\newblock The evolutionary history of plant {T2/S}-type ribonucleases.
+\newblock \emph{PeerJ} \textbf{5}: e3790.
+
+\bibitem[{Ramsey and Schemske(1998)}]{ramsey_1998}
+\textbf{Ramsey~J}, \textbf{Schemske~DW}.
+\newblock \textbf{1998}.
+\newblock Pathways, mechanisms, and rates of polyploid formation in flowering
+  plants.
+\newblock \emph{Annual Review of Ecology and Systematics} \textbf{29}:
+  467--501.
+
+\bibitem[{Ramsey and Schemske(2002)}]{ramsey_2002}
+\textbf{Ramsey~J}, \textbf{Schemske~DW}.
+\newblock \textbf{2002}.
+\newblock Neopolyploidy in flowering plants.
+\newblock \emph{Annual Review of Ecology and Systematics} \textbf{33}:
+  589--639.
+
+\bibitem[{Rice \emph{et~al.}(2015)Rice, Glick, Abadi, Einhorn, Kopelman,
+  Salman-Minkov, Mayzel, Chay, and Mayrose}]{rice_2015}
+\textbf{Rice~A}, \textbf{Glick~L}, \textbf{Abadi~S}, \textbf{Einhorn~M},
+  \textbf{Kopelman~NM}, \textbf{Salman-Minkov~A}, \textbf{Mayzel~J},
+  \textbf{Chay~O}, \textbf{Mayrose~I}.
+\newblock \textbf{2015}.
+\newblock The chromosome counts database ({CCDB}) - a community resource of
+  plant chromosome numbers.
+\newblock \emph{New Phytologist} \textbf{206}: 19--26.
+
+\bibitem[{Rivero \emph{et~al.}(2019)Rivero, Sessa, and
+  Zenil-Ferguson}]{rivero_2019}
+\textbf{Rivero~R}, \textbf{Sessa~EB}, \textbf{Zenil-Ferguson~R}.
+\newblock \textbf{2019}.
+\newblock {EyeChrom} and {CCDB} curator: Visualizing chromosome count data from
+  plants.
+\newblock \emph{Applications in Plant Sciences} : e01207.
+
+\bibitem[{Robertson \emph{et~al.}(2011)Robertson, Goldberg, and
+  Igi\'c}]{robertson_2011}
+\textbf{Robertson~K}, \textbf{Goldberg~EE}, \textbf{Igi\'c~B}.
+\newblock \textbf{2011}.
+\newblock Comparative evidence for the correlated evolution of polyploidy and
+  self-compatibility in {}solanaceae.
+\newblock \emph{Evolution} \textbf{65}: 139--155.
+
+\bibitem[{S\"{a}rkinen \emph{et~al.}(2013)S\"{a}rkinen, Bohs, Olmstead, and
+  Knapp}]{sarkinen_2013}
+\textbf{S\"{a}rkinen~T}, \textbf{Bohs~L}, \textbf{Olmstead~RG},
+  \textbf{Knapp~S}.
+\newblock \textbf{2013}.
+\newblock A phylogenetic framework for evolutionary study of the nightshades
+  ({S}olanaceae): a dated 1000-tip tree.
+\newblock \emph{{BMC} Evol Biol} \textbf{13}: 214.
+
+\bibitem[{Sessa(2019)}]{sessa_2019}
+\textbf{Sessa~EB}.
+\newblock \textbf{2019}.
+\newblock Polyploidy as a mechanism for surviving global change.
+\newblock \emph{New Phytologist} \textbf{221}: 5--6.
+
+\bibitem[{Soltis \emph{et~al.}(2014)Soltis, Segovia-Salcedo, Jordon-Thaden,
+  Majure, Miles, Mavrodiev, Mei, Cortez, Soltis, and
+  Gitzendanner}]{soltis_2014}
+\textbf{Soltis~DE}, \textbf{Segovia-Salcedo~MC}, \textbf{Jordon-Thaden~I},
+  \textbf{Majure~L}, \textbf{Miles~NM}, \textbf{Mavrodiev~EV}, \textbf{Mei~W},
+  \textbf{Cortez~MB}, \textbf{Soltis~PS}, \textbf{Gitzendanner~MA}.
+\newblock \textbf{2014}.
+\newblock Are polyploids really evolutionary dead-ends (again)? {A} critical
+  reappraisal of {M}ayrose et al. (2011).
+\newblock \emph{New Phytologist} \textbf{202}: 1105--1117.
+
+\bibitem[{Soltis \emph{et~al.}(2015)Soltis, Marchant, Van~de Peer, and
+  Soltis}]{soltis_2015}
+\textbf{Soltis~PS}, \textbf{Marchant~DB}, \textbf{Van~de Peer~Y},
+  \textbf{Soltis~DE}.
+\newblock \textbf{2015}.
+\newblock Polyploidy and genome evolution in plants.
+\newblock \emph{Current Opinion in Genetics \& Development} \textbf{35}:
+  119--125.
+
+\bibitem[{Stebbins(1938)}]{stebbins1938}
+\textbf{Stebbins~GL}.
+\newblock \textbf{1938}.
+\newblock Cytological characteristics associated with the different growth
+  habits in the dicotyledons.
+\newblock \emph{American Journal of Botany} \textbf{25}: 189--198.
+
+\bibitem[{Stebbins(1950)}]{stebbins1950}
+\textbf{Stebbins~GL}.
+\newblock \textbf{1950}.
+\newblock \emph{Variation and Evolution in Plants}.
+\newblock New York: Columbia University Press.
+
+\bibitem[{Stebbins(1974)}]{stebbins1974}
+\textbf{Stebbins~GL}.
+\newblock \textbf{1974}.
+\newblock \emph{Flowering Plants: Evolution Above the Species Level}.
+\newblock Cambridge, Mass.: Belknap Press of Harvard University Press.
+
+\bibitem[{Steinbachs and Holsinger(2002)}]{steinbachs_2002}
+\textbf{Steinbachs~JE}, \textbf{Holsinger~KE}.
+\newblock \textbf{2002}.
+\newblock {S-RN}ase-mediated gametophytic self-incompatibility is ancestral in
+  eudicots.
+\newblock \emph{Molecular Biology and Evolution} \textbf{19}: 825--829.
+
+\bibitem[{Stone(2002)}]{stone_2002}
+\textbf{Stone~JL}.
+\newblock \textbf{2002}.
+\newblock Molecular mechanisms underlying the breakdown of gametophytic
+  self-incompatibility.
+\newblock \emph{The Quarterly Review of Biology} \textbf{77}: 17--30.
+
+\bibitem[{Stout and Chandler(1942)}]{stout1942}
+\textbf{Stout~AB}, \textbf{Chandler~C}.
+\newblock \textbf{1942}.
+\newblock Hereditary transmission of induced tetraploidy and compatibility in
+  fertilization.
+\newblock \emph{Science} \textbf{96}: 257--258.
+
+\bibitem[{Tarasov(2019)}]{tarasov_2019}
+\textbf{Tarasov~S}.
+\newblock \textbf{2019}.
+\newblock {Integration of Anatomy Ontologies and Evo-Devo Using Structured
+  Markov Models Suggests a New Framework for Modeling Discrete Phenotypic
+  Traits}.
+\newblock \emph{Systematic Biology} .
+
+\bibitem[{{{Tomato Genome Consortium}}(2012)}]{tomato2012}
+\textbf{{{Tomato Genome Consortium}}~}.
+\newblock \textbf{2012}.
+\newblock The tomato genome sequence provides insights into fleshy fruit
+  evolution.
+\newblock \emph{Nature} \textbf{485}: 635.
+
+\bibitem[{Tsukamoto \emph{et~al.}(2005)Tsukamoto, Ando, Watanabe, Marchesi, and
+  Kao}]{tsukamoto2005}
+\textbf{Tsukamoto~T}, \textbf{Ando~T}, \textbf{Watanabe~H},
+  \textbf{Marchesi~E}, \textbf{Kao~T-h}.
+\newblock \textbf{2005}.
+\newblock Duplication of the {S}-locus {F}-box gene is associated with
+  breakdown of pollen function in an {S}-haplotype identified in a natural
+  population of self-incompatible \emph{{P}etunia axillaris}.
+\newblock \emph{Plant Molecular Biology} \textbf{57}: 141--153.
+
+\bibitem[{Wu and Tanksley(2010)}]{wu_2010a}
+\textbf{Wu~F}, \textbf{Tanksley~SD}.
+\newblock \textbf{2010}.
+\newblock Chromosomal evolution in the plant family {S}olanaceae.
+\newblock \emph{BMC Genomics} \textbf{11}: 182.
+
+\bibitem[{Xie \emph{et~al.}(2010)Xie, Lewis, Fan, Kuo, and Chen}]{xie_2010}
+\textbf{Xie~W}, \textbf{Lewis~PO}, \textbf{Fan~Y}, \textbf{Kuo~L},
+  \textbf{Chen~M-H}.
+\newblock \textbf{2010}.
+\newblock Improving marginal likelihood estimation for bayesian phylogenetic
+  model selection.
+\newblock \emph{Systematic Biology} \textbf{60}: 150--160.
+
+\bibitem[{Zenil-Ferguson \emph{et~al.}(2017)Zenil-Ferguson, Ponciano, and
+  Burleigh}]{zenilferguson_2017}
+\textbf{Zenil-Ferguson~R}, \textbf{Ponciano~JM}, \textbf{Burleigh~JG}.
+\newblock \textbf{2017}.
+\newblock Testing the association of phenotypes with polyploidy: An example
+  using herbaceous and woody eudicots.
+\newblock \emph{Evolution} \textbf{71}: 1138--1148.
+
+\bibitem[{Zhan \emph{et~al.}(2016)Zhan, Drori, Goldberg, Otto, and
+  Mayrose}]{zhan_2016}
+\textbf{Zhan~SH}, \textbf{Drori~M}, \textbf{Goldberg~EE}, \textbf{Otto~SP},
+  \textbf{Mayrose~I}.
+\newblock \textbf{2016}.
+\newblock Phylogenetic evidence for cladogenetic polyploidization in land
+  plants.
+\newblock \emph{American Journal of Botany} \textbf{103}: 1252--1258.
+
+\end{thebibliography}

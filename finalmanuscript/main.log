@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 AUG 2019 22:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 AUG 2019 23:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -434,7 +434,14 @@ Package cleveref Info: sorting and compressing references on input line 7493.
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)) (./main.aux)
+)) (./main.aux
+
+LaTeX Warning: Label `fig:allmodels' multiply defined.
+
+
+LaTeX Warning: Label `fig:allmodels@cref' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -452,8 +459,7 @@ LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 4.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1ptm.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -604,1005 +610,80 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 ) [2
 
 ]
-(./introduction.tex
+(./introduction.tex [3
 
-Package natbib Warning: Citation `maddison_2015' on page 3 undefined on input l
-ine 13.
-
-
-Package natbib Warning: Citation `rabosky_2015' on page 3 undefined on input li
-ne 13.
-
-
-Package natbib Warning: Citation `beaulieu_2016' on page 3 undefined on input l
-ine 13.
-
-
-Package natbib Warning: Citation `rabosky_2017' on page 3 undefined on input li
-ne 13.
-
-
-Package natbib Warning: Citation `beaulieu_2016' on page 3 undefined on input l
-ine 14.
-
-
-Package natbib Warning: Citation `caetano_2018' on page 3 undefined on input li
-ne 14.
-
-
-Package natbib Warning: Citation `herrera_2018' on page 3 undefined on input li
-ne 14.
-
-
-Package natbib Warning: Citation `husband_2013' on page 3 undefined on input li
-ne 19.
-
-
-Package natbib Warning: Citation `zenilferguson_2017' on page 3 undefined on in
-put line 19.
-
-
-Package natbib Warning: Citation `stebbins1938' on page 3 undefined on input li
-ne 20.
-
-
-Package natbib Warning: Citation `ramsey_2002' on page 3 undefined on input lin
-e 21.
-
-
-Package natbib Warning: Citation `sessa_2019' on page 3 undefined on input line
- 21.
-
-
-Package natbib Warning: Citation `mayrose_2011' on page 3 undefined on input li
-ne 22.
-
-
-Package natbib Warning: Citation `mayrose_2015' on page 3 undefined on input li
-ne 22.
-
-
-Package natbib Warning: Citation `soltis_2014' on page 3 undefined on input lin
-e 23.
-
-
-Package natbib Warning: Citation `landis_2018' on page 3 undefined on input lin
-e 23.
-
-
-Package natbib Warning: Citation `soltis_2015' on page 3 undefined on input lin
-e 24.
-
-
-Package natbib Warning: Citation `dodsworth_2015' on page 3 undefined on input 
-line 24.
-
-
-Package natbib Warning: Citation `mayrose_2011' on page 3 undefined on input li
-ne 25.
-
-
-Package natbib Warning: Citation `mayrose_2015' on page 3 undefined on input li
-ne 25.
-
-
-Package natbib Warning: Citation `barrett2013' on page 3 undefined on input lin
-e 27.
-
-
-Package natbib Warning: Citation `stebbins1974' on page 3 undefined on input li
-ne 28.
-
-
-Package natbib Warning: Citation `igic_2008' on page 3 undefined on input line 
-28.
-
-
-Package natbib Warning: Citation `goldberg_2010' on page 3 undefined on input l
-ine 29.
-
-
-Package natbib Warning: Citation `devos2014' on page 3 undefined on input line 
-30.
-
-
-Package natbib Warning: Citation `freyman_2019' on page 3 undefined on input li
-ne 30.
-
-[3
-
-]
-
-Package natbib Warning: Citation `stebbins1950' on page 4 undefined on input li
-ne 34.
-
-
-Package natbib Warning: Citation `levin_1975' on page 4 undefined on input line
- 35.
-
-
-Package natbib Warning: Citation `ramsey_1998' on page 4 undefined on input lin
-e 35.
-
-
-Package natbib Warning: Citation `barringer2007' on page 4 undefined on input l
-ine 35.
-
-
-Package natbib Warning: Citation `barrett2008' on page 4 undefined on input lin
-e 35.
-
-
-Package natbib Warning: Citation `husband2008' on page 4 undefined on input lin
-e 35.
-
-
-Package natbib Warning: Citation `stout1942' on page 4 undefined on input line 
-36.
-
-
-Package natbib Warning: Citation `lewis1947' on page 4 undefined on input line 
-36.
-
-
-Package natbib Warning: Citation `kubo2010' on page 4 undefined on input line 3
-8.
-
-
-Package natbib Warning: Citation `entani1999' on page 4 undefined on input line
- 39.
-
-
-Package natbib Warning: Citation `tsukamoto2005' on page 4 undefined on input l
-ine 39.
-
-
-Package natbib Warning: Citation `kubo2010' on page 4 undefined on input line 3
-9.
-
-
-Package natbib Warning: Citation `hauck_2002' on page 4 undefined on input line
- 40.
-
-
-Package natbib Warning: Citation `nunes_2006' on page 4 undefined on input line
- 40.
-
-
-Package natbib Warning: Citation `igic_2001' on page 4 undefined on input line 
-41.
-
-
-Package natbib Warning: Citation `steinbachs_2002' on page 4 undefined on input
- line 41.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 4 undefined on input 
-line 42.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 4 undefined on input 
-line 51.
-
-
-Package natbib Warning: Citation `maddison_2007' on page 4 undefined on input l
-ine 54.
-
-
-Package natbib Warning: Citation `fitzjohn_2012' on page 4 undefined on input l
-ine 54.
-
-
-Package natbib Warning: Citation `maddison_2007' on page 4 undefined on input l
-ine 55.
-
-
-Package natbib Warning: Citation `beaulieu_2016' on page 4 undefined on input l
-ine 56.
-
-
-Package natbib Warning: Citation `beaulieu_2016' on page 4 undefined on input l
-ine 57.
-
-) (./methods.tex [4]
+] [4]) (./methods.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 3.
-
-
-Package natbib Warning: Citation `rice_2015' on page 5 undefined on input line 
-8.
-
-
-Package natbib Warning: Citation `rivero_2019' on page 5 undefined on input lin
-e 8.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 5 undefined on input 
-line 11.
-
-
-Package natbib Warning: Citation `bennett_2005' on page 5 undefined on input li
-ne 11.
-
-
-Package natbib Warning: Citation `bennett_2005' on page 5 undefined on input li
-ne 13.
-
-
-Package natbib Warning: Citation `olmstead_2007' on page 5 undefined on input l
-ine 15.
-
-[5]
-
-Package natbib Warning: Citation `igic_2006' on page 6 undefined on input line 
-19.
-
-
-Package natbib Warning: Citation `goldberg_2010' on page 6 undefined on input l
-ine 19.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 6 undefined on input 
-line 19.
-
-
-Package natbib Warning: Citation `goldberg_2012' on page 6 undefined on input l
-ine 19.
-
-
-Package natbib Warning: Citation `raduski_2012' on page 6 undefined on input li
-ne 21.
-
-
-Package natbib Warning: Citation `solsource' on page 6 undefined on input line 
-27.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 6 undefined on input 
-line 29.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 6 undefined on input 
-line 30.
-
-
-Package natbib Warning: Citation `sarkinen_2013' on page 6 undefined on input l
-ine 35.
-
-
-LaTeX Warning: Reference `figure:stateclassifications' on page 1 undefined on i
-nput line 38.
-
+ [5]
 
 LaTeX Warning: Reference `suppfigure:stateclassifications' on page 1 undefined 
 on input line 38.
 
-
-Package natbib Warning: Citation `maddison_2007' on page 6 undefined on input l
-ine 53.
-
-
-Package natbib Warning: Citation `fitzjohn_2012' on page 6 undefined on input l
-ine 53.
-
-
-Package natbib Warning: Citation `beaulieu_2016' on page 6 undefined on input l
-ine 53.
-
-
-LaTeX Warning: Reference `fig:allmodels' on page 1 undefined on input line 55.
-
-[6]
-
-Package natbib Warning: Citation `mayrose_2011' on page 7 undefined on input li
-ne 60.
-
-
-Package natbib Warning: Citation `maddison_2015' on page 7 undefined on input l
-ine 61.
-
-
-Package natbib Warning: Citation `rabosky_2015' on page 7 undefined on input li
-ne 61.
-
-
-Package natbib Warning: Citation `beaulieu_2016' on page 7 undefined on input l
-ine 64.
-
-
-LaTeX Warning: Reference `table:bayesfactors' on page 1 undefined on input line
- 69.
-
-
-Package natbib Warning: Citation `goldberg_2010' on page 7 undefined on input l
-ine 77.
-
-
-Package natbib Warning: Citation `sarkinen_2013' on page 7 undefined on input l
-ine 77.
-
-
-LaTeX Warning: Reference `table:M11M15' on page 1 undefined on input line 78.
-
-
-Package natbib Warning: Citation `freyman_2019' on page 7 undefined on input li
-ne 79.
-
-
-Package natbib Warning: Citation `ramanauskas_2017' on page 7 undefined on inpu
-t line 82.
-
-
-Package natbib Warning: Citation `ioerger_1990' on page 7 undefined on input li
-ne 83.
-
-
-Package natbib Warning: Citation `igic_2006' on page 7 undefined on input line 
-83.
-
-[7]
-
-Package natbib Warning: Citation `caetano_2018' on page 8 undefined on input li
-ne 102.
-
-
-Package natbib Warning: Citation `huang_2018' on page 8 undefined on input line
- 102.
-
-
-LaTeX Warning: Reference `figure:stateclassifications' on page 1 undefined on i
-nput line 109.
-
-
-Package natbib Warning: Citation `tarasov_2019' on page 8 undefined on input li
-ne 112.
-
-
-Package natbib Warning: Citation `tarasov_2019' on page 8 undefined on input li
-ne 114.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 122.
-
-[8]
-
-Package natbib Warning: Citation `brunet2001' on page 9 undefined on input line
- 137.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 9 undefined on input 
-line 137.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 9 undefined on input 
-line 141.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 9 undefined on input 
-line 143.
-
+[6] [7] [8] [9]
 
 Package mathptmx Warning: There are no bold math fonts on input line 146.
 
-
-Package natbib Warning: Citation `robertson_2011' on page 9 undefined on input 
-line 148.
-
-
-Package natbib Warning: Citation `leslie_1945' on page 9 undefined on input lin
-e 155.
-
-[9]
-
-Package natbib Warning: Citation `hoehna_2016' on page 10 undefined on input li
-ne 163.
-
-
-Package natbib Warning: Citation `fitzjohn_2009' on page 10 undefined on input 
-line 165.
-
-
-Package natbib Warning: Citation `solsource' on page 10 undefined on input line
- 165.
-
-
-Package natbib Warning: Citation `metropolis1953equation' on page 10 undefined 
-on input line 168.
-
-
-Package natbib Warning: Citation `Hastings1970' on page 10 undefined on input l
-ine 168.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 1
-71.
-
-
-LaTeX Warning: Reference `suppfigure:IDCDCPnodipAB' on page 1 undefined on inpu
-t line 171.
-
-
-LaTeX Warning: Reference `suppfigure:IDCDCPnodip' on page 1 undefined on input 
-line 171.
-
-
-LaTeX Warning: Reference `suppfigure:ICAB' on page 1 undefined on input line 17
-1.
-
-
-LaTeX Warning: Reference `suppfigure:IC' on page 1 undefined on input line 171.
-
-
-
-LaTeX Warning: Reference `suppfigure:DPnodipAB' on page 1 undefined on input li
-ne 171.
-
-
-LaTeX Warning: Reference `suppfigure:DPnodip' on page 1 undefined on input line
- 171.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 1
-74.
-
-
-LaTeX Warning: Reference `suppfigure:IDCDCPnodipABasr' on page 1 undefined on i
-nput line 174.
-
-
-LaTeX Warning: Reference `suppfigure:IDCDCPnodipasr' on page 1 undefined on inp
-ut line 174.
-
-
-LaTeX Warning: Reference `suppfigure:ICABasr' on page 1 undefined on input line
- 174.
-
-
-LaTeX Warning: Reference `suppfigure:ICasr' on page 1 undefined on input line 1
-74.
-
-
-LaTeX Warning: Reference `suppfigure:DPnodipABasr' on page 1 undefined on input
- line 174.
-
-
-LaTeX Warning: Reference `suppfigure:DPnodipasr' on page 1 undefined on input l
-ine 174.
-
-
-Package natbib Warning: Citation `xie_2010' on page 10 undefined on input line 
-178.
-
-
-Package natbib Warning: Citation `hoehna_2016' on page 10 undefined on input li
-ne 178.
-
-
-LaTeX Warning: Reference `table:bayesfactors' on page 1 undefined on input line
- 179.
-
-[10]
-
-LaTeX Warning: Reference `supptable:M21M25' on page 1 undefined on input line 1
-83.
-
-
-LaTeX Warning: Reference `supptable:M16M20' on page 1 undefined on input line 1
-83.
-
-
-LaTeX Warning: Reference `supptable:M6M10' on page 1 undefined on input line 18
-3.
-
-
-LaTeX Warning: Reference `table:M11M15' on page 1 undefined on input line 183.
-
-
-LaTeX Warning: Reference `table:bayesfactors' on page 1 undefined on input line
- 183.
-
-
-LaTeX Warning: Reference `supptable:testaddhidden' on page 1 undefined on input
- line 184.
-
-
-LaTeX Warning: Reference `suppfigure:lumpedIC' on page 1 undefined on input lin
-e 185.
-
-
-LaTeX Warning: Reference `suppfigure:lumpedDP' on page 1 undefined on input lin
-e 185.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 185.
-
-
-LaTeX Warning: Reference `figure:lumped' on page 1 undefined on input line 185.
-
-
-
-LaTeX Warning: Reference `suppfigure:asymmetric' on page 1 undefined on input l
-ine 186.
-
-
-LaTeX Warning: Reference `supptable:asymmetry' on page 1 undefined on input lin
-e 186.
-
-
-LaTeX Warning: Reference `suppfigure:alldip' on page 1 undefined on input line 
-187.
-
-
-LaTeX Warning: Reference `supptable:testdiploidization' on page 1 undefined on 
-input line 187.
-
-
-Package natbib Warning: Citation `kass1995' on page 11 undefined on input line 
-192.
-
+[10] [11]
 \openout4 = `main.ttt'.
 
-(main.ttt)
+ (main.ttt)
 \openout3 = `main.fff'.
 
- (main.fff)
+ (main.fff)) (./results.tex [12] [13]) (./discussion.tex
+[14] [15] [16] [17]) (./supplement.tex [18]
 \openout5 = `main.efsuppfigure'.
 
  (main.efsuppfigure)
 \openout6 = `main.efsupptable'.
 
- (main.efsupptable)) (./results.tex
 
-Package natbib Warning: Citation `mayrose_2011' on page 11 undefined on input l
-ine 9.
+(main.efsupptable)) [19] (./main.bbl [20
 
-
-Package natbib Warning: Citation `mayrose_2015' on page 11 undefined on input l
-ine 9.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 1
-0.
-
-
-LaTeX Warning: Reference `suppfigure:alldip' on page 1 undefined on input line 
-10.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 1
-1.
-
-
-LaTeX Warning: Reference `suppfigure:alldip' on page 1 undefined on input line 
-11.
-
-
-LaTeX Warning: Reference `table:bayesfactors' on page 1 undefined on input line
- 12.
-
-
-LaTeX Warning: Reference `supptable:M6M10' on page 1 undefined on input line 13
-.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 1
-8.
-
-
-Package natbib Warning: Citation `goldberg_2010' on page 11 undefined on input 
-line 18.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 1
-9.
-
-
-LaTeX Warning: Reference `table:M11M15' on page 1 undefined on input line 20.
-
-[11]
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 2
-5.
-
-
-LaTeX Warning: Reference `suppfigure:alldip' on page 1 undefined on input line 
-25.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 2
-7.
-
-
-LaTeX Warning: Reference `suppfigure:alldip' on page 1 undefined on input line 
-27.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 2
-9.
-
-
-LaTeX Warning: Reference `suppfigure:alldip' on page 1 undefined on input line 
-30.
-
-
-LaTeX Warning: Reference `supptable:M16M20' on page 1 undefined on input line 3
-1.
-
-
-LaTeX Warning: Reference `supptable:M21M25' on page 1 undefined on input line 3
-1.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 33.
-
-
-LaTeX Warning: Reference `figure:lumped' on page 1 undefined on input line 33.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 34.
-
-
-LaTeX Warning: Reference `suppfigure:lumpedDP' on page 1 undefined on input lin
-e 34.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 37.
-
-
-LaTeX Warning: Reference `figure:lumped' on page 1 undefined on input line 37.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 38.
-
-
-LaTeX Warning: Reference `suppfigure:lumpedIC' on page 1 undefined on input lin
-e 38.
-
-
-LaTeX Warning: Reference `supptable:M21M25' on page 1 undefined on input line 5
-4.
-
-
-LaTeX Warning: Reference `supptable:M16M20' on page 1 undefined on input line 5
-4.
-
-
-LaTeX Warning: Reference `supptable:M6M10' on page 1 undefined on input line 54
-.
-
-
-LaTeX Warning: Reference `table:M11M15' on page 1 undefined on input line 54.
-
-
-LaTeX Warning: Reference `table:bayesfactors' on page 1 undefined on input line
- 54.
-
-
-LaTeX Warning: Reference `supptable:testaddhidden' on page 1 undefined on input
- line 57.
-
-[12]
-
-LaTeX Warning: Reference `suppfigure:lumpedIC' on page 1 undefined on input lin
-e 61.
-
-
-LaTeX Warning: Reference `suppfigure:lumpedDP' on page 1 undefined on input lin
-e 61.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 61.
-
-
-LaTeX Warning: Reference `supptable:asymmetry' on page 1 undefined on input lin
-e 65.
-
-
-LaTeX Warning: Reference `suppfigure:asymmetric' on page 1 undefined on input l
-ine 65.
-
-
-LaTeX Warning: Reference `suppfigure:IDCDCPnodipABasr' on page 1 undefined on i
-nput line 66.
-
-
-LaTeX Warning: Reference `suppfigure:ICABasr' on page 1 undefined on input line
- 66.
-
-
-LaTeX Warning: Reference `suppfigure:DPnodipABasr' on page 1 undefined on input
- line 66.
-
-
-LaTeX Warning: Reference `supptable:testdiploidization' on page 1 undefined on 
-input line 69.
-
-
-LaTeX Warning: Reference `suppfigure:alldip' on page 1 undefined on input line 
-71.
-
-
-LaTeX Warning: Reference `figure:pathways' on page 1 undefined on input line 80
-.
-
-
-LaTeX Warning: Reference `suppfigure:IDCDCPnodip' on page 1 undefined on input 
-line 82.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 13 undefined on input
- line 84.
-
-[13]
-
-LaTeX Warning: Reference `figure:pathways' on page 1 undefined on input line 91
-.
-
-) (./discussion.tex
-
-Package natbib Warning: Citation `lewontin_1970' on page 14 undefined on input 
-line 6.
-
-
-Package natbib Warning: Citation `mayrose_2011' on page 14 undefined on input l
-ine 18.
-
-
-Package natbib Warning: Citation `mayrose_2015' on page 14 undefined on input l
-ine 18.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 1
-9.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 1
-9.
-
-
-Package natbib Warning: Citation `goldberg_2010' on page 14 undefined on input 
-line 21.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 2
-1.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 2
-3.
-
-
-LaTeX Warning: Reference `figure:netdivall' on page 1 undefined on input line 2
-8.
-
-[14]
-
-LaTeX Warning: Reference `supptable:testaddhidden' on page 1 undefined on input
- line 34.
-
-
-LaTeX Warning: Reference `suppfigure:lumpedIC' on page 1 undefined on input lin
-e 37.
-
-
-LaTeX Warning: Reference `suppfigure:lumpedDP' on page 1 undefined on input lin
-e 37.
-
-
-LaTeX Warning: Reference `supptable:testaddhidden' on page 1 undefined on input
- line 38.
-
-
-Package natbib Warning: Citation `beaulieu_2016' on page 15 undefined on input 
-line 40.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 48.
-
-
-LaTeX Warning: Reference `figure:lumped' on page 1 undefined on input line 48.
-
-
-Package natbib Warning: Citation `mayrose_2011' on page 15 undefined on input l
-ine 54.
-
-
-Package natbib Warning: Citation `goldberg_2012' on page 15 undefined on input 
-line 54.
-
-
-Package natbib Warning: Citation `magnuson-ford_2012' on page 15 undefined on i
-nput line 54.
-
-
-Package natbib Warning: Citation `goldberg_2012' on page 15 undefined on input 
-line 55.
-
-
-Package natbib Warning: Citation `zhan_2016' on page 15 undefined on input line
- 55.
-
-
-Package natbib Warning: Citation `freyman_2019' on page 15 undefined on input l
-ine 55.
-
-
-Package natbib Warning: Citation `goldberg_2012' on page 15 undefined on input 
-line 57.
-
-[15]
-
-LaTeX Warning: Reference `figure:pathways' on page 1 undefined on input line 62
-.
-
-
-Package natbib Warning: Citation `lewis1979' on page 16 undefined on input line
- 68.
-
-
-Package natbib Warning: Citation `ramsey_1998' on page 16 undefined on input li
-ne 68.
-
-
-LaTeX Warning: Reference `figure:pathways' on page 1 undefined on input line 70
-.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 16 undefined on input
- line 70.
-
-
-Package natbib Warning: Citation `miller_2000' on page 16 undefined on input li
-ne 76.
-
-
-Package natbib Warning: Citation `robertson_2011' on page 16 undefined on input
- line 77.
-
-
-Package natbib Warning: Citation `miller_2000' on page 16 undefined on input li
-ne 83.
-
-
-Package natbib Warning: Citation `mable_2004' on page 16 undefined on input lin
-e 83.
-
-[16]
-
-Package natbib Warning: Citation `dodsworth_2015' on page 17 undefined on input
- line 92.
-
-
-Package natbib Warning: Citation `mandakova_2018' on page 17 undefined on input
- line 92.
-
-
-LaTeX Warning: Reference `suppfigure:alldip' on page 1 undefined on input line 
-94.
-
-
-LaTeX Warning: Reference `supptable:testdiploidization' on page 1 undefined on 
-input line 95.
-
-
-Package natbib Warning: Citation `ku2000' on page 17 undefined on input line 10
-1.
-
-
-Package natbib Warning: Citation `blanc2004' on page 17 undefined on input line
- 101.
-
-
-Package natbib Warning: Citation `tomato2012' on page 17 undefined on input lin
-e 102.
-
-
-Package natbib Warning: Citation `sarkinen_2013' on page 17 undefined on input 
-line 102.
-
-
-Package natbib Warning: Citation `wu_2010a' on page 17 undefined on input line 
-106.
-
-
-Package natbib Warning: Citation `igic_2006' on page 17 undefined on input line
- 109.
-
-
-Package natbib Warning: Citation `stone_2002' on page 17 undefined on input lin
-e 109.
-
-
-Package natbib Warning: Citation `mcclure_2009' on page 17 undefined on input l
-ine 109.
-
-
-Package natbib Warning: Citation `barrett1996' on page 17 undefined on input li
-ne 120.
-
-) [17] [18]
-No file main.bbl.
-AED endfloat: Processing end Figures and Tables (./main.fff [19] [20]
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 38.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 38.
-
-[21] [22]) (./main.ttt [23] [24]
+] [21] [22])
+AED endfloat: Processing end Figures and Tables [23] (./main.fff [24] [25]
+[26] [27]) (./main.ttt [28] [29]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 33.
 
-[25]) (./main.efsuppfigure
+[30]) (./main.efsuppfigure
 Package hyperref Info: bookmark level for unknown suppfigure defaults to 0 on i
 nput line 3.
- [26] [27] [28] [29] [30] [31] [32] [33] [34]
-[35] [36] [37] [38] [39]
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 100.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 100.
-
-[40]
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 107.
-
-
-LaTeX Warning: Reference `table:lumped' on page 1 undefined on input line 107.
-
-[41]
-
-LaTeX Warning: Reference `supptable:asymmetry' on page 1 undefined on input lin
-e 114.
-
-
-LaTeX Warning: Reference `supptable:asymmetry' on page 1 undefined on input lin
-e 114.
-
-[42] [43]) (./main.efsupptable
+ [31] [32] [33] [34] [35] [36] [37] [38] [39]
+[40] [41] [42] [43] [44] [45] [46] [47] [48]) (./main.efsupptable
 Package hyperref Info: bookmark level for unknown supptable defaults to 0 on in
 put line 12.
- [44]
+ [49]
 Overfull \hbox (3.9555pt too wide) in paragraph at lines 19--28
 [][] 
  []
 
-[45] [46] [47] [48] [49])
+[50] [51] [52] [53] [54])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
+ (./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: F3013EDD2157D13F998B42C09B9E9DC1;1868.
 
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
-(./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  B469577176FB7783AEC9D2F0326178F7;1814.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
  ) 
 Here is how much of TeX's memory you used:
- 10596 strings out of 493089
- 169728 string characters out of 6134842
- 283427 words of memory out of 5000000
- 13790 multiletter control sequences out of 15000+600000
+ 10864 strings out of 493089
+ 174934 string characters out of 6134842
+ 286427 words of memory out of 5000000
+ 13971 multiletter control sequences out of 15000+600000
  39951 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,13n,40p,1447b,434s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,13n,40p,1447b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
@@ -1616,10 +697,10 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive
 e1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on main.pdf (49 pages, 201134 bytes).
+Output written on main.pdf (54 pages, 243884 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
- 117 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 915 PDF objects out of 1000 (max. 8388607)
+ 835 compressed objects within 9 object streams
+ 199 named destinations out of 1000 (max. 500000)
+ 217 words of extra memory for PDF output out of 10000 (max. 10000000)
 
