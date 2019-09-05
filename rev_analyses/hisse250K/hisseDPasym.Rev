@@ -1,0 +1,211 @@
+################################################################################
+#
+# RevBayes Analysis: Bayesian inference of diversification rates under a
+#                    character-dependent birth-death model.
+#                    Here each transition rate between observed states is
+#                    drawn from an independent exponentially distributed
+#                    rate. The transition rates within hidden states are
+#                    all equal and drawn from another exponentially
+#                    distributed rate. Assymetric rates between hidden state
+#
+#
+# Modified by RZF
+# 04/30/2019
+################################################################################
+
+#######################
+# Reading in the Data #
+#######################
+setOption("useScaling","true")
+NUM_STATES = 2
+NUM_HIDDEN = 2
+NUM_RATES = NUM_STATES * NUM_HIDDEN
+
+###### This just defines a single model for all sites #######
+
+### Read in sequence data for both genes
+
+observed_phylogeny <- readTrees("/home/eeg/shared/twostatesse/hisse/fullmatchtree.nex")[1]
+
+#Reading correctly a csv file
+data <- readCharacterDataDelimited("/home/eeg/shared/twostatesse/hisse/binaryploidy2.tsv",stateLabels=2,type="NaturalNumbers",delimiter="\t",headers=FALSE)
+# we need to expand the data to the hidden states
+data_exp <- data.expandCharacters( NUM_HIDDEN )
+
+# Get some useful variables from the data. We need these later on.
+taxa <- observed_phylogeny.taxa()
+
+# set my move index
+mvi = 0
+mni = 0
+
+H = 0.587405
+
+
+
+####################
+# Create the rates #
+####################
+
+### Specify a prior on the diversification and turnover rate
+
+### Create the constant prior parameters of the diversification rates
+rate_mean <- ln( ln(651.0/2.0) / observed_phylogeny.rootAge() )
+rate_sd <- 2*H
+
+for (i in 1:NUM_STATES) {
+### Create a lognormal distributed variable for the diversification rate
+speciation_alpha[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
+moves[++mvi] = mvSlide(speciation_alpha[i],delta=0.20,tune=true,weight=3.0)
+
+
+### Create a lognormal distributed variable for the turnover rate
+### Create a lognormal distributed variable for the turnover rate
+extinction_alpha[i] ~ dnNormal(mean=rate_mean,sd=rate_sd)
+moves[++mvi] = mvSlide(extinction_alpha[i],delta=0.20,tune=true,weight=3.0)
+}
+
+
+for (i in 1:NUM_HIDDEN) {
+
+### Create an exponential distributed variable for the diversification rate
+speciation_beta[i] ~ dnExp(1.0)
+moves[++mvi] = mvScale(speciation_beta[i],lambda=0.20,tune=true,weight=2.0)
+
+### Create an normal distributed variable for the turnover rate
+extinction_beta[i] ~ dnNormal(0.0,1.0)
+moves[++mvi] = mvSlide(extinction_beta[i],delta=0.20,tune=true,weight=2.0)
+
+}
+
+for (j in 1:NUM_HIDDEN) {
+for (i in 1:NUM_STATES) {
+if ( j == 1) {
+speciation[i] := exp( speciation_alpha[i] )
+extinction[i] := exp( extinction_alpha[i] )
+} else {
+index = i+(j*NUM_STATES)-NUM_STATES
+speciation[index] := speciation[index-NUM_STATES] * exp( speciation_beta[j-1] )
+extinction[index] := exp( extinction_alpha[i] + extinction_beta[j-1] )
+}
+}
+}
+
+
+#########################################################
+# Set up the transition rate matrix for observed states #
+#########################################################
+## I defined very loosely my gamma priors for rates in the Q-mat
+shape_pr := 0.5
+rate_pr := 1
+############### Alternative definition or rate parameter
+# Each transition rate between observed states are drawn
+# from an exponential distribution with a mean of 10
+# character state transitions over the tree.
+# rate_pr := observed_phylogeny.treeLength() / 10
+
+rate_12 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+rate_21 ~ dnGamma(shape=shape_pr, rate=rate_pr)
+moves[++mvi] = mvScale( rate_12, weight=2 )
+moves[++mvi] = mvScale( rate_21, weight=2 )
+
+Q := [ rate_12, rate_21]
+
+
+#########################################################
+# Set up the transition rate matrix for hidden states #
+#########################################################
+
+# We assume the transitions among the hidden states
+# are all equal and drawn from an exponential distriubtion.
+hidden_rate1 ~ dnExponential(rate_pr)
+moves[++mvi] = mvScale(hidden_rate1,lambda=0.2,tune=true,weight=5)
+hidden_rate2 ~ dnExponential(rate_pr)
+moves[++mvi] = mvScale(hidden_rate2,lambda=0.2,tune=true,weight=5)
+#### Here the hidden rates should go (alpha,beta, alpha, beta) for assymetrical models
+R[1]:= hidden_rate1
+R[2]:= hidden_rate2
+R[3]:= hidden_rate1
+R[4]:= hidden_rate2
+
+
+######################################################################
+# Create the rate matrix for the combined observed and hidden states #
+######################################################################
+# States here are 1=0A, 2=1A, 3=0B, 4=1B
+rate_matrix := fnHiddenStateRateMatrix(Q, R, rescaled=false)
+
+#####################################
+# Set up the root state frequencies #
+#####################################
+
+### Create a constant variable with the prior probabilities of each rate category at the root.
+rate_category_prior ~ dnDirichlet( rep(1,NUM_RATES) )
+moves[++mvi] = mvBetaSimplex(rate_category_prior,tune=true,weight=2)
+moves[++mvi] = mvDirichletSimplex(rate_category_prior,tune=true,weight=2)
+
+
+### Create the fix parameter for the age of the root set to the observed age
+root <- observed_phylogeny.rootAge()
+
+
+### rho is the probability of sampling species at the present
+### I did not add any sampling of species but it is posible by setting this rho parameter
+### fix this to 651/3000
+rho <- observed_phylogeny.ntips()/3000
+
+#### construct a variable for the tree drawn from a birth death process
+timetree ~ dnCDBDP( rootAge           = root,
+speciationRates   = speciation,
+extinctionRates   = extinction,
+Q                 = rate_matrix,
+pi                = rate_category_prior,
+rho               = rho,
+delta             = 1.0,
+condition         = "time" )
+
+### clamp the model with the "observed" tree
+timetree.clamp( observed_phylogeny )
+timetree.clampCharData( data_exp )
+
+
+
+
+#############
+# The Model #
+#############
+
+
+### workspace model wrapper ###
+mymodel = model(rate_matrix)
+
+### set up the monitors that will output parameter values to file and screen
+monitors[++mni] = mnModel(filename="/home/eeg/shared/twostatesse/hisse/output/HiSSE_DPasym100K.log", printgen=1)
+monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=100, withTips=true, withStartStates=false, filename="/home/eeg/shared/twostatesse/hisse/output/anc_states_HiSSE_DPasym100K.log")
+monitors[++mni] = mnScreen(printgen=10, Q, R)
+
+
+################
+# The Analysis #
+################
+
+### workspace mcmc
+mymcmc = mcmc(mymodel, monitors, moves, nruns=1, moveschedule="random")
+
+### pre-burnin to tune the proposals
+mymcmc.burnin(generations=5000,tuningInterval=100)
+
+### run the MCMC
+mymcmc.run(generations=200000)
+
+##############################
+# Summarize ancestral states #
+##############################
+
+#observed_phylogeny <- readTrees("basicdata/fullmatchtree.nex")[1]
+#anc_states = readAncestralStateTrace("/home/eeg/shared/twostatesse/hisse/output/anc_states_HiSSE_polynodipasymmetry250K.log")
+#anc_tree = ancestralStateTree(tree=observed_phylogeny, ancestral_state_trace_vector=anc_states, include_start_states=false, file="/home/eeg/shared/twostatesse/hisse/output/anc_states_summaryHiSSEnodiptreeasymmetry250K.tree", burnin=5000, summary_statistic="MAP", site=0)
+
+q()
+
+

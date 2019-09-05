@@ -25,3 +25,8 @@ Solanum_centrale          0  0  1
 Solanum_esuriale          1  1  0
 Solanum_ellipticum        1  1  0
 Jaltomata_auriculata      0  1  0
+
+
+2. Species where Rosana some info about csomes
+Nicotiana_undulata - 24 csomes but CD CP- This had one record of USDA of polyploid but many more evidence for diploid= Solution CD
+Jaltomata_auriculata-24 new record for diploid by Rosana

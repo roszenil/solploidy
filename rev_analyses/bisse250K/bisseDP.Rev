@@ -12,7 +12,7 @@
 setOption("useScaling","true")
 NUM_STATES = 2
 ### Read in the data
-observed_phylogeny <- readTrees("basicdata/fullmatchtree.nex")[1]
+observed_phylogeny <- readTrees("/home/eeg/shared/twostatesse/bisse/fullmatchtree.nex")[1]
 data <- readCharacterDataDelimited("/home/eeg/shared/twostatesse/bisse/binaryploidy2.tsv",stateLabels=2,type="NaturalNumbers",delimiter="\t",headers=FALSE)
 
 # Get some useful variables from the data. We need these later on.
@@ -32,8 +32,8 @@ H = 0.587405
 ### Specify a prior on the diversification and turnover rate
 
 ### Create the constant prior parameters of the diversification rates
-## Number of surviving lineages is 595
-rate_mean <- ln( ln(595/2.0) / observed_phylogeny.rootAge() )
+## Number of surviving lineages is 651
+rate_mean <- ln( ln(651/2.0) / observed_phylogeny.rootAge() )
 rate_sd <- 2*H
 
 for (i in 1:NUM_STATES) {
@@ -94,7 +94,7 @@ root <- observed_phylogeny.rootAge()
 
 ### I did not add any sampling of species but it is posible by setting this rho parameter
 ### rho is the probability of sampling species at the present
-### fix this to 595/3000
+### fix this to 651/3000
 rho <- observed_phylogeny.ntips()/3000
 
 
@@ -127,11 +127,9 @@ timetree.clampCharData( data )
 mymodel = model(rate_matrix)
 
 ### set up the monitors that will output parameter values to file and screen
-monitors[++mni] = mnFile(filename="/home/eeg/shared/twostatesse/bisse/output/BiSSE_polydip.trees", printgen=1, timetree)
 monitors[++mni] = mnModel(filename="/home/eeg/shared/twostatesse/bisse/output/BiSSE_polydip250K.log", printgen=1)
 ##This monitor was the one giving me trouble type has to be the same that data, however I'm not hundred percent sure whether tree should be the stochastic tree assigned by the clamp or the observed_phylogeny. Will and Sebastian have different inputs
-
-monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=1, withTips=true, withStartStates=false, filename="/home/eeg/shared/twostatesse/bisse/output/anc_states_BiSSE_polydip250K.log")
+monitors[++mni] = mnJointConditionalAncestralState(tree=timetree, cdbdp=timetree, type="NaturalNumbers", printgen=100, withTips=true, withStartStates=false, filename="/home/eeg/shared/twostatesse/bisse/output/anc_states_BiSSE_polydip250K.log")
 monitors[++mni] = mnScreen(printgen=10, rate_12, rate_21, speciation, extinction)
 
 
@@ -146,14 +144,14 @@ mymcmc = mcmc(mymodel, monitors, moves, nruns=1, moveschedule="random")
 mymcmc.burnin(generations=5000,tuningInterval=100)
 
 ### run the MCMC
-mymcmc.run(generations=250000)
+mymcmc.run(generations=200000)
 
 ##############################
 # Summarize ancestral states #
 ##############################
 
 
-anc_states = readAncestralStateTrace("/home/eeg/shared/twostatesse/bisse/output/anc_states_BiSSE_polydip250K.log")
+#anc_states = readAncestralStateTrace("/home/eeg/shared/twostatesse/bisse/output/anc_states_BiSSE_polydip250K.log")
 #anc_tree = ancestralStateTree(tree=observed_phylogeny, ancestral_state_trace_vector=anc_states, include_start_states=false, file="/home/eeg/shared/twostatesse/bisse/output/anc_states_summaryBiSSEtree250K.tree", burnin=5000, summary_statistic="MAP", site=0)
 
 q()

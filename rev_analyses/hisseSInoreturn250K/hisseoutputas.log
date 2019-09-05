@@ -1,0 +1,27 @@
+
+RevBayes version (1.0.9)
+Build from development (f78150) on Mon Aug 27 15:34:37 CDT 2018
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("/home/eeg/shared/twostatesse/hissesinoret/hissesinoretasym.Rev")
+   Processing file "/home/eeg/shared/twostatesse/hissesinoret/hissesinoretasym.Rev"
+   Attempting to read the contents of file "fullmatchtree.nex"
+   Successfully read file
+   Could not compute lnProb for node timetree.
+   (((Pantacantha_ameghinoi[&index=651]:8.428555,Combe...
+
+   Drawing new initial states ...
+
+   Running burn-in phase of Monte Carlo sampler for 5000 iterations.
+   This simulation runs 1 independent replicate.
+   The simulator uses 13 different moves in a random move schedule with 36 moves per iteration
+
+Progress:
+0---------------25---------------50---------------75--------------100
+**********

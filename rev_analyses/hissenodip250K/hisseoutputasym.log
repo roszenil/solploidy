@@ -1,0 +1,27 @@
+
+RevBayes version (1.0.9)
+Build from development (f78150) on Mon Aug 27 15:34:37 CDT 2018
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("/home/eeg/shared/twostatesse/hissesinoret/hissenodipasym.Rev")
+   Error:	Could not open file "/home/eeg/shared/twostatesse/hissesinoret/hissenodipasym.Rev"
+> 
+RevBayes version (1.0.9)
+Build from development (f78150) on Mon Aug 27 15:34:37 CDT 2018
+
+Visit the website www.RevBayes.com for more information about RevBayes.
+
+RevBayes is free software released under the GPL license, version 3. Type 'license()' for details.
+
+To quit RevBayes type 'quit()' or 'q()'.
+
+
+> source("/home/eeg/shared/twostatesse/hissesinoret/hissenodipasym.Rev")
+   Error:	Could not open file "/home/eeg/shared/twostatesse/hissesinoret/hissenodipasym.Rev"
+> 
